@@ -1,0 +1,33 @@
+@mixin list-inline($alignment: left) {
+	margin: 0;
+	padding: 0;
+	> li {
+		display: inline-block;
+		@if $alignment == 'left' {
+			margin-left: 0;
+			margin-right: var(--spacing-extra-small);
+			padding: 0;
+		}
+		@elseif $alignment == 'right' {
+			margin-left: var(--spacing-extra-small);
+			margin-right: 0;
+			padding: 0;
+		}
+	}
+}
+
+ul.list-inline {
+	@include list-inline();
+}
+
+ul.list-inline--left {
+	@include list-inline(left);
+}
+
+ul.list-inline--right {
+	@include list-inline(right);
+}
+
+ul.list-inline--center {
+	@include list-inline(center);
+}

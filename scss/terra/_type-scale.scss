@@ -1,0 +1,19 @@
+/*
+
+  TYPE SCALE
+
+*/
+
+$type-scale: (
+	-1: 0.875rem,
+	0: 1rem,
+	1: 1.25rem,
+	2: 1.5rem,
+    3: 2.0rem,
+    4: 2.5rem,
+    5: 3.0rem
+);
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}

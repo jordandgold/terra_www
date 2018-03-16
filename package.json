@@ -1,0 +1,25 @@
+{
+  "name": "su-design-system",
+  "version": "1.0.0",
+  "description": "SketchUp Design System Sandbox",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -a localhost -p 3000 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/jordandgold/su-design-system.git"
+  },
+  "author": "Jordan Gold",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jordandgold/su-design-system#readme",
+  "dependencies": {
+    "autoprefixer": "^8.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "http-server": "^0.11.1",
+    "start": "^5.1.0"
+  }
+}

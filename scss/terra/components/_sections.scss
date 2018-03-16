@@ -1,0 +1,16 @@
+.page-section {
+	padding-top: var(--spacing-large);
+	// padding-bottom: var(--spacing-large);
+}
+
+.page {
+	// padding-bottom: var(--spacing-large);
+	section:last-child {
+		padding-bottom: var(--spacing-large);
+	}
+}
+
+footer {
+	background: var(--color-trimble-gray);
+	padding: var(--spacing-medium) 0;
+}

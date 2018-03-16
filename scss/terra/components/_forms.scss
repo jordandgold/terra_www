@@ -1,0 +1,79 @@
+.effect-16 {
+    border: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--color-trimble-gray-4);
+    background-color: transparent;
+}
+
+.effect-16 ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-trimble-light-blue);
+    transition: 0.4s;
+}
+
+.effect-16:focus ~ .focus-border,
+.has-content.effect-16 ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.effect-16 ~ label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 9px;
+    color: var(--color-trimble-gray-10);
+    transition: 0.3s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+}
+
+.effect-16:focus ~ label, .has-content.effect-16 ~ label {
+    top: -16px;
+    font-size: 12px;
+    color: var(--color-trimble-light-blue);
+    transition: 0.3s;
+}
+
+input[type="text"] {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: var(--color-trimble-gray-10);
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+:focus {
+    outline: none;
+}
+
+.input-group {
+    position: relative;
+    margin: var(--spacing-small) 0 var(--spacing-medium) 0;
+}
+
+select {
+	color: var(--color-trimble-gray-10);
+    background: #ffffff;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-trimble-gray-4);
+    display: block;
+    padding: var(--spacing-extra-small) 0;
+    width: 100%;
+    border-radius: 0;
+    -webkit-appearance: button;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	padding: var(--spacing-extra-small);
+	color: var(--color-trimble-gray-10);
+	border: 1px solid var(--color-trimble-gray-4);
+}

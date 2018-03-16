@@ -1,0 +1,86 @@
+/*
+
+  TYPOGRAPHY
+
+*/
+
+@mixin header-type-setting($level: 0, $weight: 0) {
+	font-size: type-scale($level);
+	line-height: map-get($type-scale, $level) * 1.25;
+	font-weight: font-weight($weight);
+}
+
+@mixin type-setting($level: 0, $weight: 0) {
+	font-size: type-scale($level);
+	line-height: map-get($type-scale, $level) * 1.5;
+	font-weight: font-weight($weight);
+}
+
+body, html {
+	@extend .sans-serif;
+	margin: 0;
+}
+
+h1, .heading-1 {
+	@include header-type-setting(5,1);
+	@include header-font-color;
+	padding-bottom: var(--spacing-medium);
+	margin: 0;
+}
+
+h2, .heading-2 {
+	@include header-type-setting(4,1);
+	@include header-font-color;
+	padding-bottom: var(--spacing-small);
+	margin: 0;
+}
+
+h3, .heading-3 {
+	@include header-type-setting(3,1);
+	@include header-font-color;
+	padding-bottom: var(--spacing-extra-small);
+	margin: 0;
+}
+
+h4, .heading-4 {
+	@include header-type-setting(2,1);
+	@include header-font-color;
+	padding-bottom: var(--spacing-extra-small);
+	margin: 0;
+}
+
+h5, .heading-5 {
+	@include header-type-setting(1,1);
+	@include header-font-color;
+	padding-bottom: var(--spacing-extra-small);
+	margin: 0;
+}
+
+p, .paragraph {
+	@include type-setting(0);
+	margin: 0 0 $base-line-height 0;
+}
+
+.font-size-sm {
+	@include type-setting(-1);
+}
+
+.font-size-1 {
+	@include type-setting(1);
+}
+
+.font-size-2 {
+	@include type-setting(2);
+}
+
+.font-size-3 {
+	@include type-setting(3);
+}
+
+.font-size-4 {
+	@include type-setting(4);
+}
+
+.font-size-5 {
+	@include type-setting(5);
+}

@@ -1,0 +1,125 @@
+@mixin header-font-color {
+  @extend .color-trimble-gray;
+}
+
+@mixin body-font-color {
+  @extend .color-trimble-gray-12;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin highlight-link($color, $hoverColor) {
+  @include transition(all .4s ease);
+  box-shadow: inset 0 -0.25em 0 $color;
+  line-height: 1;
+  &:hover {
+    box-shadow: inset 0 -0.2em 0 $hoverColor;
+  }
+}
+
+@import 'colors';
+@import 'backgrounds';
+@import 'box-shadow';
+@import 'font-family';
+@import 'font-weight';
+@import 'heights';
+@import 'line-height';
+@import 'media-queries';
+@import 'normalize';
+@import 'spacing';
+@import 'text-align';
+@import 'type-scale';
+@import 'typography';
+@import 'grid';
+@import 'z-index';
+
+.side-nav {
+  width: 14rem;
+  position: fixed;
+  left: 0;
+  border-right: 1px solid var(--color-trimble-gray-4);
+  min-height: 100%;
+  &__logo {
+    margin-top: var(--spacing-medium);
+    padding: 0 var(--spacing-medium);
+  }
+  &__main-nav {
+    @include type-setting(-1);
+    margin-top: var(--spacing-medium);
+    padding: 0 var(--spacing-medium);
+    list-style: none;
+    > li {
+      padding: var(--spacing-extra-small) 0;
+      > a {
+        display: block;
+      }
+    }
+  }
+}
+
+.main-content {
+  margin-left: 14rem;
+  height: auto;
+}
+
+a,
+a:visited,
+a:active,
+a:focus {
+  @include transition(all .4s ease);
+  font-weight: font-weight(1);
+  color: var(--color-trimble-blue);
+  text-decoration: none;
+  &:hover {
+    color: var(--color-trimble-light-blue);
+  }
+}
+
+body,
+html {
+  @include body-font-color;
+  height: 100%;
+}
+
+body {
+  padding-top: var(--spacing-extra-large);
+  &.no-nav {
+    padding-top: 0;
+  }
+}
+
+.main-content {
+  @extend .height-100;
+}
+
+.baseline-grid {
+  @include transition(opacity 0.2s ease-out);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.guide {
+  margin-bottom: 1 * $base-line-height;
+  &, &:before, &:after {    
+    height: $base-line-height;
+    width: 100%;
+    outline: 1px solid turquoise;
+  }
+}
+
+@import 'components/components';

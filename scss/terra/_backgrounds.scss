@@ -1,0 +1,21 @@
+.bg-trimble-blue {
+	background-color: var(--color-trimble-blue);
+}
+
+@each $i in $colors{
+  .bg-#{nth($i, 1)} {
+    background: nth($i, 2);
+  }
+  .color-#{nth($i, 1)} {
+    color:nth($i, 2);
+  }
+}
+
+@each $i in $grays{
+  .bg-#{nth($i, 1)} {
+    background: nth($i, 2);
+  }
+  .color-#{nth($i, 1)} {
+    color:nth($i, 2);
+  }
+}

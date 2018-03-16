@@ -1,0 +1,88 @@
+/*
+
+  BUTTONS
+
+*/
+
+@mixin button($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null) {
+    background-color: $bgColor;
+    border: .15rem solid $borderColor;
+    color: $color;
+    // border-radius: .15rem;
+    height: 2.25rem;
+    padding: 0 1.5rem;
+    margin: 0.95rem 0 0 0;
+    text-decoration: none;
+    line-height: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        @if ($borderColor == $bgColor) {
+            cursor: pointer;
+            color: $color;
+            background-color: darken($bgColor, 10%);
+            border-color: darken($borderColor, 10%);
+        } @else if ($bgHoverColor) {
+            cursor: pointer;
+            color: #ffffff;
+            background-color: $bgHoverColor;
+            border-color: $bgHoverColor;
+        } @else {
+            cursor: pointer;
+            color: #ffffff;
+            background-color: $borderColor;
+            border-color: $borderColor;
+        }
+    }
+}
+
+a.button,
+.button {
+    @include button(map-get($colors, trimble-blue), map-get($colors, white));
+    @include type-setting(0,1);
+}
+
+a.button--outline,
+.button--outline {
+    @include button(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-7), map-get($grays, trimble-gray));
+    @include type-setting(0,1);
+}
+
+// .button {
+//     @include button(map-get($colors, trimble-blue), white);
+//     @include type-setting(0,1);
+// }
+
+// .button--red {
+//     @include button(map-get($colors, sketchup-red), white);
+//     @include type-setting(0,1);
+// }
+
+// .button--outline {
+//     @include button(transparent, map-get($colors, trimble-blue), map-get($colors, trimble-blue));
+//     @include type-setting(0,1);
+// }
+
+// /*
+
+//   BUTTONS
+
+// */
+
+// @mixin button($bgColor, $color, $borderColor: $bgColor) {
+//     background-color: $bgColor;
+//     border: .15rem solid $borderColor;
+//     color: $color;
+//     border-radius: .15rem;
+//     display: inline-block;
+//     padding: .475rem 1.75rem;
+//     margin: .25rem 0;
+//     text-decoration: none;
+//     transition: all 200ms ease-in-out;
+//     &:hover {
+//         cursor: pointer;
+//         background-color: darken($bgColor, 10%);
+//         border-color: darken($borderColor, 10%);
+//     }
+// }

@@ -1,0 +1,10 @@
+$font-weight: (
+	-1: 300,
+	0: 400,
+	1: 600,
+	2: 800,
+);
+
+@function font-weight($weight) {
+  @return map-get($font-weight, $weight);
+}
