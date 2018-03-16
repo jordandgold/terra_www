@@ -8,3 +8,11 @@ v 1.0.0
 Install dependencies
 
 `npm install`
+
+Start the server
+
+`npm start`
+
+Run the gulp sass compile task
+
+`gulp sass:watch`
