@@ -1,0 +1,46 @@
+.pricing-table {
+	@extend .row;
+    position: relative;
+    top: calc(var(--spacing-extra-extra-extra-large)* -1);
+    margin-bottom: calc(var(--spacing-extra-extra-large) * -1) !important;
+	// display: flex;
+	&__column {
+		@extend .col-sm;
+		// flex: 1;
+		width: 100%;
+		position: relative;
+		.product {
+			@include box-shadow-2;
+			@extend .bg-white;
+			height: 100%;
+			width: auto;
+			position: relative;
+			&__content {
+				padding:
+					var(--spacing-large)
+					var(--spacing-large)
+					var(--spacing-extra-extra-large)
+					var(--spacing-large);
+				&__name {
+					@include heading-4;
+					display: block;
+					text-align: center;
+				}
+				&__price {
+					@include heading-3;
+					display: block;
+					text-align: center;
+				}
+				&__options {
+					@include list-unstyled;
+				}
+			}
+			.cta {
+				width: 100%;
+				position: absolute;
+				bottom: var(--spacing-medium);
+				text-align: center;
+			}
+		}
+	}
+}

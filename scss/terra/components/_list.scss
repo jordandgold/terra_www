@@ -31,3 +31,11 @@ ul.list-inline--right {
 ul.list-inline--center {
 	@include list-inline(center);
 }
+
+@mixin list-unstyled {
+	list-style: none;
+	padding: 0;
+	> li {
+		padding: var(--spacing-extra-small) 0;
+	}
+}

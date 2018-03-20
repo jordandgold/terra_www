@@ -7,12 +7,13 @@
 .dropdown {
   position: relative;
   > .dropdown-menu {
+    @include box-shadow-2;
     // border: 1px solid var(--color-trimble-gray-3);
-    width: 15em;
+    width: 12.5em;
     position: absolute;
     top: 100%;
-    padding: 1em;
-    left: -1em;
+    padding: var(--spacing-small);
+    left: 0;
     visibility: hidden;
     opacity: 0;
     float: left;
@@ -20,6 +21,7 @@
     list-style: none;
     transform: translateY(-20px);
     transition: all 225ms;
+    background: var(--color-white);
     li {
       a {
         color: var(--color-trimble-gray-10);

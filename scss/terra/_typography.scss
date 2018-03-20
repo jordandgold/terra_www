@@ -21,44 +21,68 @@ body, html {
 	margin: 0;
 }
 
-h1, .heading-1 {
+@mixin heading-1 {
 	@include header-type-setting(5,1);
 	@include header-font-color;
 	padding-bottom: var(--spacing-medium);
 	margin: 0;
 }
 
-h2, .heading-2 {
+h1 {
+	@include heading-1;
+}
+
+@mixin heading-2 {
 	@include header-type-setting(4,1);
 	@include header-font-color;
 	padding-bottom: var(--spacing-small);
 	margin: 0;
 }
 
-h3, .heading-3 {
+h2 {
+	@include heading-2;
+}
+
+@mixin heading-3 {
 	@include header-type-setting(3,1);
 	@include header-font-color;
 	padding-bottom: var(--spacing-extra-small);
 	margin: 0;
 }
 
-h4, .heading-4 {
+h3 {
+	@include heading-3;
+}
+
+@mixin heading-4 {
 	@include header-type-setting(2,1);
 	@include header-font-color;
 	padding-bottom: var(--spacing-extra-small);
 	margin: 0;
 }
 
-h5, .heading-5 {
+h4 {
+	@include heading-4;
+}
+
+@mixin heading-5 {
 	@include header-type-setting(1,1);
 	@include header-font-color;
 	padding-bottom: var(--spacing-extra-small);
 	margin: 0;
 }
 
-p, .paragraph {
+h5 {
+	@include heading-5;
+}
+
+@mixin font-size-paragraph {
 	@include type-setting(0);
 	margin: 0 0 $base-line-height 0;
+}
+
+p {
+	@include font-size-paragraph;
 }
 
 .font-size-sm {
