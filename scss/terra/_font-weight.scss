@@ -8,3 +8,7 @@ $font-weight: (
 @function font-weight($weight) {
   @return map-get($font-weight, $weight);
 }
+
+@mixin font-weight($weight) {
+  font-weight: map-get($font-weight, $weight);
+}

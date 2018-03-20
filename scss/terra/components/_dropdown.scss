@@ -8,6 +8,7 @@
   position: relative;
   > .dropdown-menu {
     @include box-shadow-2;
+    @include border-radius-1;
     // border: 1px solid var(--color-trimble-gray-3);
     width: 12.5em;
     position: absolute;
@@ -23,6 +24,8 @@
     transition: all 225ms;
     background: var(--color-white);
     li {
+      padding-top: var(--spacing-extra-small);
+      padding-bottom: var(--spacing-extra-small);
       a {
         color: var(--color-trimble-gray-10);
         &:hover {

@@ -635,11 +635,6 @@ p {
   font-weight: 400;
   margin: 0 0 1.75rem 0; }
 
-.font-size-sm {
-  font-size: 0.875rem;
-  line-height: 1.3125rem;
-  font-weight: 400; }
-
 .font-size-1 {
   font-size: 1.25rem;
   line-height: 1.875rem;
@@ -1365,6 +1360,7 @@ a.button--outline,
   position: relative; }
   .dropdown > .dropdown-menu {
     box-shadow: 0 25px 30px 0 rgba(36, 50, 66, 0.08);
+    border-radius: .125rem;
     width: 12.5em;
     position: absolute;
     top: 100%;
@@ -1378,10 +1374,13 @@ a.button--outline,
     transform: translateY(-20px);
     transition: all 225ms;
     background: var(--color-white); }
-    .dropdown > .dropdown-menu li a {
-      color: var(--color-trimble-gray-10); }
-      .dropdown > .dropdown-menu li a:hover {
-        color: var(--color-trimble-gray-10--darker); }
+    .dropdown > .dropdown-menu li {
+      padding-top: var(--spacing-extra-small);
+      padding-bottom: var(--spacing-extra-small); }
+      .dropdown > .dropdown-menu li a {
+        color: var(--color-trimble-gray-10); }
+        .dropdown > .dropdown-menu li a:hover {
+          color: var(--color-trimble-gray-10--darker); }
     .dropdown > .dropdown-menu.show {
       display: block; }
   .dropdown.open > .dropdown-menu {
@@ -1543,6 +1542,7 @@ ul.list-inline--center {
     position: relative; }
     .pricing-table__column .product {
       box-shadow: 0 25px 30px 0 rgba(36, 50, 66, 0.08);
+      border-radius: .25rem;
       height: 100%;
       width: auto;
       position: relative; }
@@ -1555,13 +1555,15 @@ ul.list-inline--center {
           padding-bottom: var(--spacing-extra-small);
           margin: 0;
           display: block;
-          text-align: center; }
+          text-align: center;
+          margin-bottom: var(--spacing-small); }
         .pricing-table__column .product__content__price {
           font-size: 2rem;
           line-height: 2.5rem;
           font-weight: 600;
           padding-bottom: var(--spacing-extra-small);
           margin: 0;
+          font-weight: 300;
           display: block;
           text-align: center; }
         .pricing-table__column .product__content__options {
@@ -1572,7 +1574,7 @@ ul.list-inline--center {
       .pricing-table__column .product .cta {
         width: 100%;
         position: absolute;
-        bottom: var(--spacing-medium);
+        bottom: var(--spacing-large);
         text-align: center; }
 
 .page-section {
