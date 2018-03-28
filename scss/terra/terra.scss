@@ -1,9 +1,26 @@
 @mixin header-font-color {
-  // @extend .color-trimble-gray;
+  color: var(--color-trimble-gray);
 }
 
 @mixin body-font-color {
-  @extend .color-trimble-gray-12;
+  color: var(--color-trimble-gray-12);
+}
+
+@mixin z-index($level) {
+  z-index: $level;
+}
+
+@mixin skin($skin) {
+  @if ($skin == 'inverse') {
+    *,
+    [class^="heading"] {
+      color: #ffffff;
+    }
+  }
+}
+
+.inverse {
+  @include skin(inverse);
 }
 
 @mixin transition($args...) {
@@ -90,6 +107,11 @@ html {
 
 body {
   padding-top: var(--spacing-extra-large);
+  // .page {
+  //   > *:first-child {
+  //     height: calc(100% + var(--spacing-extra-large));
+  //   }
+  // }
   &.no-nav {
     padding-top: 0;
   }

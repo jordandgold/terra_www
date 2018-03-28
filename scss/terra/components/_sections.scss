@@ -5,12 +5,15 @@
 
 .page {
 	// padding-bottom: var(--spacing-large);
-	section:last-child {
+	.page-section:last-child {
 		padding-bottom: var(--spacing-large);
 	}
 }
 
-footer {
-	background: var(--color-trimble-gray);
+footer.main-footer {
+	@include background-color(trimble-gray-2);
 	padding: var(--spacing-medium) 0;
+	.footer-links {
+		@include list-unstyled;
+	}
 }

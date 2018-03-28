@@ -1,0 +1,18 @@
+.card {
+	background: #ffffff;
+	@include box-shadow-2;
+	&__content {
+		padding: var(--spacing-small);
+		&__heading {
+			@include heading-5;
+			margin-bottom: var(--spacing-extra-extra-small);
+		}
+	}
+	&__image {
+		display: block;
+		background-size: cover;
+		height: 0;
+		padding-bottom: 50%;
+		margin-bottom: var(--spacing-small);
+	}
+}

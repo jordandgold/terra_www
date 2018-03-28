@@ -4,7 +4,7 @@
 
 */
 
-@mixin button($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null) {
+@mixin button($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null, $colorHover: $color) {
     background-color: $bgColor;
     border: .15rem solid $borderColor;
     color: $color;
@@ -20,20 +20,18 @@
     &:hover {
         @if ($borderColor == $bgColor) {
             cursor: pointer;
-            color: $color;
             background-color: darken($bgColor, 10%);
             border-color: darken($borderColor, 10%);
         } @else if ($bgHoverColor) {
             cursor: pointer;
-            color: #ffffff;
             background-color: $bgHoverColor;
             border-color: $bgHoverColor;
         } @else {
             cursor: pointer;
-            color: #ffffff;
             background-color: $borderColor;
             border-color: $borderColor;
         }
+        color: $colorHover;
     }
 }
 
@@ -45,44 +43,30 @@ a.button,
 
 a.button--outline,
 .button--outline {
-    @include button(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-7), map-get($grays, trimble-gray));
+    @include button(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-7), map-get($grays, trimble-gray), map-get($colors, white));
     @include type-setting(0,1);
 }
 
-// .button {
-//     @include button(map-get($colors, trimble-blue), white);
-//     @include type-setting(0,1);
-// }
+a.button--red,
+.button--red {
+    @include button(map-get($colors, tekla-red), map-get($colors, white));
+    @include type-setting(0,1);
+}
 
-// .button--red {
-//     @include button(map-get($colors, sketchup-red), white);
-//     @include type-setting(0,1);
-// }
+a.button--outline--white,
+.button--white {
+    @include button(transparent, map-get($colors, white), map-get($colors, white), map-get($colors, white), map-get($colors, trimble-gray));
+    @include type-setting(0,1);
+}
 
-// .button--outline {
-//     @include button(transparent, map-get($colors, trimble-blue), map-get($colors, trimble-blue));
-//     @include type-setting(0,1);
-// }
+a.button--yellow,
+.button--yellow {
+    @include button(map-get($colors, trimble-yellow), map-get($colors, white));
+    @include type-setting(0,1);
+}
 
-// /*
-
-//   BUTTONS
-
-// */
-
-// @mixin button($bgColor, $color, $borderColor: $bgColor) {
-//     background-color: $bgColor;
-//     border: .15rem solid $borderColor;
-//     color: $color;
-//     border-radius: .15rem;
-//     display: inline-block;
-//     padding: .475rem 1.75rem;
-//     margin: .25rem 0;
-//     text-decoration: none;
-//     transition: all 200ms ease-in-out;
-//     &:hover {
-//         cursor: pointer;
-//         background-color: darken($bgColor, 10%);
-//         border-color: darken($borderColor, 10%);
-//     }
-// }
+a.button--light-blue,
+.button--light-blue {
+    @include button(map-get($colors, trimble-light-blue), map-get($colors, white));
+    @include type-setting(0,1);
+}

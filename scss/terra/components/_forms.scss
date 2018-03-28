@@ -1,59 +1,124 @@
-.effect-16 {
-    border: 0;
-    padding: 4px 0;
-    border-bottom: 1px solid var(--color-trimble-gray-4);
-    background-color: transparent;
-}
+// .effect-16 {
+//     border: 0;
+//     padding: 4px 0;
+//     border-bottom: 1px solid var(--color-trimble-gray-4);
+//     background-color: transparent;
+//     position: relative;
+//     z-index: 1;
+// }
 
-.effect-16 ~ .focus-border {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-trimble-light-blue);
-    transition: 0.4s;
-}
+// .effect-16 ~ .focus-border {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 0;
+//     height: 2px;
+//     background-color: var(--color-trimble-light-blue);
+//     transition: 0.4s;
+//     z-index: 1;
+// }
 
-.effect-16:focus ~ .focus-border,
-.has-content.effect-16 ~ .focus-border {
-    width: 100%;
-    transition: 0.4s;
-}
+// .effect-16:focus ~ .focus-border,
+// .has-content.effect-16 ~ .focus-border {
+//     width: 100%;
+//     transition: 0.4s;
+// }
 
-.effect-16 ~ label {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 9px;
-    color: var(--color-trimble-gray-10);
-    transition: 0.3s;
-    z-index: -1;
-    letter-spacing: 0.5px;
-}
+// .effect-16 ~ label {
+//     position: absolute;
+//     left: 0;
+//     width: 100%;
+//     top: var(--spacing-extra-small);
+//     color: var(--color-trimble-gray-10);
+//     transition: 0.3s;
+//     z-index: 0;
+//     letter-spacing: 0.5px;
+//     text-align: left;
+// }
 
-.effect-16:focus ~ label, .has-content.effect-16 ~ label {
-    top: -16px;
-    font-size: 12px;
-    color: var(--color-trimble-light-blue);
-    transition: 0.3s;
-}
-
-input[type="text"] {
-    font: 15px/24px "Lato", Arial, sans-serif;
-    color: var(--color-trimble-gray-10);
-    width: 100%;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-}
-
-:focus {
-    outline: none;
-}
+// input[type="text"] {
+//     line-height: 2em;
+//     color: var(--color-trimble-gray-10);
+//     width: 100%;
+//     box-sizing: border-box;
+//     letter-spacing: 1px;
+// }
 
 .input-group {
     position: relative;
     margin: var(--spacing-small) 0 var(--spacing-medium) 0;
+    input[type="text"] {
+        line-height: 2em;
+        color: var(--color-trimble-gray-10);
+        width: 100%;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+        border: 0;
+        padding: 4px 0;
+        border-bottom: 1px solid var(--color-trimble-gray-4);
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
+        ~ .focus-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-trimble-light-blue);
+            transition: 0.4s;
+            z-index: 1;
+        }
+        ~ label {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: var(--spacing-extra-small);
+            color: var(--color-trimble-gray-10);
+            transition: 0.3s;
+            z-index: 0;
+            letter-spacing: 0.5px;
+            text-align: left;
+        }
+        &:focus,
+        &.has-content {
+            ~ label {
+                @include font-size(-1);
+                top: calc(var(--spacing-small) * -1);
+                color: var(--color-trimble-light-blue);
+                transition: 0.3s;
+            }
+            ~ .focus-border {
+                width: 100%;
+                transition: 0.4s;
+            }
+        }
+    }
+    .input-lg {
+        @include font-size(1);
+    }
+}
+
+// .effect-16:focus ~ label,
+// .effect-16.has-content ~ label {
+//     @include font-size(-1);
+//     top: calc(var(--spacing-small) * -1);
+//     color: var(--color-trimble-light-blue);
+//     // opacity: 0.5;
+//     transition: 0.3s;
+// }
+
+.inverse {
+    input[type="text"] {
+        color: #ffffff;
+        &.effect-16 ~ label {
+            color: #ffffff;
+        }
+    }
+}
+
+:focus {
+    outline: none;
 }
 
 select {

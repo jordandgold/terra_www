@@ -68,29 +68,33 @@
 	<nav class="side-nav">
 		<div class="side-nav__logo">
 			<a href="/">
-				<img src="assets/logo.svg" alt="SketchUp" />
+				<img src="assets/sketchup/sketchup-logo.svg" alt="SketchUp" />
 			</a>
 		</div>
 		<ul class="side-nav__main-nav">
 			<li><a href="#">Getting Started</a></li>
 			<li><a href="#">Guidelines</a></li>
 			<li><a href="#">Style</a></li>
-			<li><a href="#">Components</a></li>
+			<li class="expandable-menu">
+				<a href="#">Components</a>
+				<ul class="expandable-menu">
+				</ul>
+			</li>
 		</ul>
 	</nav>
 	<div class="main-content">
 		<div class="page">
-			<header class="hero bg-trimble-gray-2">
+			<header class="hero intro inverse terra-bg">
 				<div class="container-fluid wrap text-left text-center-xs">
 					<div class="row">
 						<div class="col-md-12 col-lg-8">
-							<h1>SketchUp Design System</h1>
+							<h1>Terra Design System</h1>
 							<p class="font-size-1">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan massa in erat semper, non lobortis sapien porta. Donec rutrum malesuada mauris, vel scelerisque urna pulvinar laoreet. Maecenas at rutrum neque. In in lectus mauris. Aliquam erat volutpat.
 							</p>
 							<ul class="list-inline--right">
-								<li><a href="#" class="button">Download</a></li>
-								<li><a href="#" class="button--outline">Fork on GitHub</a></li>
+								<li><a href="#" class="button--light-blue">Download</a></li>
+								<li><a href="#" class="button--outline--white">Fork on GitHub</a></li>
 							</ul>
 						</div>
 					</div>
@@ -241,15 +245,6 @@
 				</div>
 			</section>
 		</div>
-		<footer class="bg-trimble-gray-2">
-			<div class="container-fluid wrap">
-				<div class="row">
-					<div class="col-sm-12">
-						<span>Copyright &copy; SketchUp 2018</span>
-					</div>
-				</div>
-			</div>
-		</footer>
 	</div>
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"

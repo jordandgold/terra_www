@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
-.sans-serif {
+@mixin font-sans-serif {
 	font-family: 
 		'avenir next', avenir,
 		'Lato',
@@ -19,7 +19,7 @@
 		sans-serif;
 }
 
-.serif {
+@mixin font-serif {
 	font-family:
 		georgia,
 		times,
