@@ -19,7 +19,7 @@
 			width: 100%;
 			padding: var(--spacing-medium);
 			background: #ffffff;
-			@include border-radius-1;
+			@include border-radius(1);
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			li {
@@ -46,7 +46,8 @@
 	top: 0;
 	display: block;
 	width: 100%;
-	height: 5.25rem;
+	// 4.5rem
+	@extend .height-3;
 	border-bottom: 1px solid var(--color-trimble-gray-3);
 	[class^='container'] {
 		&:after {
@@ -56,7 +57,7 @@
 		}
 		.logo {
 			float: left;
-			padding-top: 1.25rem;
+			padding-top: var(--spacing-small);
 			> a {
 				> img {
 					@extend .height-2;
@@ -65,18 +66,42 @@
 		}
 		> ul {
 			float: right;
-			// margin-top: var(--spacing-small);
-			// margin-bottom: var(--spacing-small);
 			margin: 0;
 			padding: 0;
 			> li {
 				display: inline-block;
-				// padding-left: var(--spacing-small);
-				// padding-right: var(--spacing-small);
 				padding: var(--spacing-small);
-				> a {
+				> a:not(.button) {
 					margin: 0;
-					line-height: 3.5rem;
+					line-height: 2.25rem;
+					display: inline-block;
+				}
+			}
+			> .user-account {
+				// border-left: 1px solid var(--color-trimble-gray-3);
+				margin: 0;
+				padding-right: 0;
+				a {
+					.user-photo {
+						width: 1.75rem;
+						height: 1.75rem;
+						border-radius: 50%;
+						background: var(--color-trimble-gray);
+						display: inline-block;
+						margin: 0;
+						padding: 0;
+						position: relative;
+						top: var(--spacing-extra-small);
+						margin-top: calc(var(--spacing-small) * -1)
+					}
+				}
+				span {
+					line-height: 2.25rem;
+				}
+				> .dropdown-menu {
+					right: -2rem;
+				    left: unset;
+				    width: 10em;
 				}
 			}
 			@include mega-menu;

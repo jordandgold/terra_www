@@ -21,6 +21,17 @@ body, html {
 	margin: 0;
 }
 
+@mixin heading-mega {
+	@include header-type-setting(6,1);
+	@include header-font-color;
+	padding-bottom: var(--spacing-medium);
+	margin: 0;
+}
+
+.heading-mega {
+	@include heading-mega;
+}
+
 @mixin heading-1 {
 	@include header-type-setting(5,1);
 	@include header-font-color;

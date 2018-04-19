@@ -1,9 +1,6 @@
 .hero {
 	padding-top: var(--spacing-extra-extra-large);
 	padding-bottom: var(--spacing-extra-extra-large);
-	p {
-		@include font-size(1)
-	}
 }
 
 .hero.intro {
@@ -11,4 +8,15 @@
 	padding-bottom: var(--spacing-extra-extra-extra-large);
 	background-size: cover;
 	background-position: center center;
+	position: relative;
+	.dimensional-asset {
+		position: absolute;
+		bottom: -15em;
+		right: 0;
+		max-width: 40%;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
 }

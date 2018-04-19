@@ -5,15 +5,16 @@
 */
 
 @mixin button($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null, $colorHover: $color) {
+    @include border-radius(1);
     background-color: $bgColor;
-    border: .15rem solid $borderColor;
+    border: .05rem solid $borderColor;
     color: $color;
     // border-radius: .15rem;
-    height: 2.25rem;
+    height: 2.15rem;
     padding: 0 1.5rem;
-    margin: 0.95rem 0 0 0;
+    // margin: 0.95rem 0 0 0;
     text-decoration: none;
-    line-height: 1rem;
+    line-height: 2.15rem;
     display: inline-flex;
     align-items: center;
     transition: all 200ms ease-in-out;
@@ -43,7 +44,7 @@ a.button,
 
 a.button--outline,
 .button--outline {
-    @include button(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-7), map-get($grays, trimble-gray), map-get($colors, white));
+    @include button(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-5), map-get($grays, trimble-gray), map-get($colors, white));
     @include type-setting(0,1);
 }
 

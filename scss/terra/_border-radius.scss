@@ -1,19 +1,11 @@
-@mixin border-radius-0 {
-    border-radius: 0;
-}
+$border-radius-scale: (
+	0: 0,
+	1: .125rem,
+	2: .25rem,
+	3: .5rem,
+	4: 1rem,
+);
 
-@mixin border-radius-1 {
-    border-radius: .125rem;
-}
-
-@mixin border-radius-2 {
-    border-radius: .25rem;
-}
-
-@mixin border-radius-3 {
-    border-radius: .5rem;
-}
-
-@mixin border-radius-4 {
-    border-radius: 1rem;
+@mixin border-radius($size) {
+    border-radius: map-get($border-radius-scale, $size);
 }

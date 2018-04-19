@@ -33,17 +33,32 @@
 				</li>
 				<li><a href="#">Education</a></li>
 				<li><a href="#">Learn</a></li>
-				<li><a href="#" class="button--outline">Get SketchUp</a></li>
+				<li><a href="#" class="button button--outline">Get SketchUp</a></li>
+				<li class="user-account dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<div class="user-photo"></div>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>Welcome, Jordan!</li>
+						<li class="divider"></li>
+						<li><a href="#">My Account</a></li>
+						<li><a href="#">Subscriptions</a></li>
+						<li><a href="#">Help &amp; Support</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</nav>
 	<div class="page">
-		<header class="hero intro" style="background-image: url(./assets/sketchup/intro-bg.jpg);">
+		<header class="hero intro">
 			<div class="container-fluid wrap">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-offset-6 text-right text-center-xs">
-						<div class="heading-1">Think in 3D.<br />Draw in 3D.</div>
-						<p>
+					<div class="col-xs-12 col-sm-6 text-center-xs">
+						<div class="heading-mega">Think in 3D.<br />Draw in 3D.</div>
+						<p class="font-size-2">
+							SketchUp Pro 2018.<br />
 							Have some fun while you're at it.
 						</p>
 						<ul class="list-inline--left">
@@ -52,6 +67,9 @@
 						</ul>
 					</div>
 				</div>
+			</div>
+			<div class="dimensional-asset">
+				<img src="./assets/sketchup/intro-3d-figure.png" alt="SketchUp" />
 			</div>
 		</header>
 		<section class="featurette">
@@ -74,7 +92,7 @@
 			<div class="container-fluid wrap">
 				<div class="row">
 					<div class="col-sm-12 text-center">
-						<div class="heading-2">Find a 3D model of anything</div>
+						<div class="heading-2">Find a 3D model of anything <i class="flaticon-magnifying-glass"></i></div>
 					</div>
 				</div>
 				<div class="row">
@@ -83,6 +101,7 @@
 							<div class="input-group">
 					        	<input class="effect-16 input-lg" type="text" placeholder="">
 					        	<label>Search 3D Warehouse</label>
+					        	<i class="flaticon-magnifying-glass"></i>
 					            <span class="focus-border"></span>
 					        </div>
 						</form>

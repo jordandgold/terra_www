@@ -10,12 +10,13 @@
 		width: 100%;
 		position: relative;
 		.product {
-			@include box-shadow-2;
-			@include border-radius-2;
+			@include box-shadow-1;
+			@include border-radius(2);
 			@extend .bg-white;
 			height: 100%;
 			width: auto;
 			position: relative;
+			transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
 			&__content {
 				padding:
 					var(--spacing-large)
@@ -43,6 +44,10 @@
 				position: absolute;
 				bottom: var(--spacing-large);
 				text-align: center;
+			}
+			&:hover {
+				@include box-shadow-2;
+				transform: translateY(-6px);
 			}
 		}
 	}

@@ -11,7 +11,8 @@ $type-scale: (
 	2: 1.5rem,
     3: 2.0rem,
     4: 2.5rem,
-    5: 3.0rem
+    5: 3.0rem,
+    6: 4.0rem
 );
 
 @function type-scale($level) {

@@ -4,11 +4,25 @@
 
 */
 
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: var(--spacing-extra-small);
+  vertical-align: middle;
+  border-top: 4px solid var(--color-trimble-gray-10);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 0 solid var(--color-trimble-gray-10);
+  overflow: hidden;
+  transition: 200ms ease;
+}
+
 .dropdown {
   position: relative;
   > .dropdown-menu {
-    @include box-shadow-2;
-    @include border-radius-1;
+    @include box-shadow-1;
+    @include border-radius(1);
     // border: 1px solid var(--color-trimble-gray-3);
     width: 12.5em;
     position: absolute;
@@ -44,6 +58,7 @@
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
+      @include box-shadow-2;
     }
   }
 }
