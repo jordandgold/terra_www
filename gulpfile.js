@@ -14,23 +14,23 @@ gulp.task('default', function() {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./scss/style.scss')
+  return gulp.src('./public/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('css', ['sass'], function () {
     var processors = [
         autoprefixer({browsers: ['last 1 version']}),
     ];
-    return gulp.src('./css/*.css')
+    return gulp.src('./public/css/*.css')
         .pipe(postcss(processors))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./public/css'));
 });
 
  
 gulp.task('sass:watch', function () {
-  gulp.watch('./scss/**/*.scss', ['sass']);
+  gulp.watch('./public/scss/**/*.scss', ['sass']);
 });
 
 gulp.task('build', ['sass', 'css']);

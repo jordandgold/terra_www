@@ -1,0 +1,63 @@
+/*
+
+  COLORS
+
+*/
+
+$colors: (
+    sketchup-red: #ec2227,
+    tekla-red: #d52a33,
+    trimble-blue: #005f9e,
+    trimble-light-blue: #009ad9,
+    trimble-yellow: #ffbe00,
+    white: #ffffff,
+);
+
+$grays: (
+    trimble-gray: #363545,
+    trimble-gray-1: #F9F9FB,
+    trimble-gray-2: #F3F3F7,
+    trimble-gray-3: #EAEAEF,
+    trimble-gray-4: #E2E2E7,
+    trimble-gray-5: #D0D0D7,
+    trimble-gray-6: #BFBFC6,
+    trimble-gray-7: #AEAEB6,
+    trimble-gray-8: #9D9DA6,
+    trimble-gray-9: #8C8B96,
+    trimble-gray-10: #7B7A86,
+    trimble-gray-11: #6A6976,
+    trimble-gray-12: #595868,
+    trimble-gray-13: #474655,
+    trimble-gray-14: #363545,
+    trimble-gray-15: #262533,
+    trimble-gray-16: #1B1A26,
+    trimble-gray-17: #0B0A12,
+);
+
+:root {
+    --transparent: transparent;
+    --color-white: #ffffff;
+    --color-sketchup-red: #ec2227;
+    --color-tekla-red: #d52a33;
+    --color-trimble-blue: #005f9e;
+    --color-trimble-light-blue: #009ad9;
+    --color-trimble-yellow: #ffbe00;
+    --color-trimble-gray: #363545;
+    --color-trimble-gray-1: #F9F9FB;
+    --color-trimble-gray-2: #F3F3F7;
+    --color-trimble-gray-3: #EAEAEF;
+    --color-trimble-gray-4: #E2E2E7;
+    --color-trimble-gray-5: #D0D0D7;
+    --color-trimble-gray-6: #BFBFC6;
+    --color-trimble-gray-7: #AEAEB6;
+    --color-trimble-gray-8: #9D9DA6;
+    --color-trimble-gray-9: #8C8B96;
+    --color-trimble-gray-10: #7B7A86;
+    --color-trimble-gray-11: #6A6976;
+    --color-trimble-gray-12: #595868;
+    --color-trimble-gray-13: #474655;
+    --color-trimble-gray-14: #363545;
+    --color-trimble-gray-15: #262533;
+    --color-trimble-gray-16: #1B1A26;
+    --color-trimble-gray-17: #0B0A12;
+}

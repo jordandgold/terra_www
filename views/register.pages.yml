@@ -1,0 +1,4 @@
+- name: pricing
+  url: /pricing
+- name: sketchup-pro
+  url: /products/sketchup-pro

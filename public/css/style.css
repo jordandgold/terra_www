@@ -10,96 +10,30 @@
 */
 :root {
   --transparent: transparent;
-  --color-sketchup-red: $color;
-  --color-tekla-red: $color;
-  --color-trimble-blue: $color;
-  --color-trimble-light-blue: $color;
-  --color-trimble-yellow: $color;
-  --color-white: $color;
-  --color-trimble-gray: $color;
-  --color-trimble-gray-1: $color;
-  --color-trimble-gray-2: $color;
-  --color-trimble-gray-3: $color;
-  --color-trimble-gray-4: $color;
-  --color-trimble-gray-5: $color;
-  --color-trimble-gray-6: $color;
-  --color-trimble-gray-7: $color;
-  --color-trimble-gray-8: $color;
-  --color-trimble-gray-9: $color;
-  --color-trimble-gray-10: $color;
-  --color-trimble-gray-11: $color;
-  --color-trimble-gray-12: $color;
-  --color-trimble-gray-13: $color;
-  --color-trimble-gray-14: $color;
-  --color-trimble-gray-15: $color;
-  --color-trimble-gray-16: $color;
-  --color-trimble-gray-17: $color;
-  --color-trimble-gray: $gray;
-  --color-trimble-gray-1: $gray;
-  --color-trimble-gray-2: $gray;
-  --color-trimble-gray-3: $gray;
-  --color-trimble-gray-4: $gray;
-  --color-trimble-gray-5: $gray;
-  --color-trimble-gray-6: $gray;
-  --color-trimble-gray-7: $gray;
-  --color-trimble-gray-8: $gray;
-  --color-trimble-gray-9: $gray;
-  --color-trimble-gray-10: $gray;
-  --color-trimble-gray-11: $gray;
-  --color-trimble-gray-12: $gray;
-  --color-trimble-gray-13: $gray;
-  --color-trimble-gray-14: $gray;
-  --color-trimble-gray-15: $gray;
-  --color-trimble-gray-16: $gray;
-  --color-trimble-gray-17: $gray;
-  --color-sketchup-red--darker: darken($color, 10%);
-  --color-tekla-red--darker: darken($color, 10%);
-  --color-trimble-blue--darker: darken($color, 10%);
-  --color-trimble-light-blue--darker: darken($color, 10%);
-  --color-trimble-yellow--darker: darken($color, 10%);
-  --color-white--darker: darken($color, 10%);
-  --color-trimble-gray--darker: darken($color, 10%);
-  --color-trimble-gray-1--darker: darken($color, 10%);
-  --color-trimble-gray-2--darker: darken($color, 10%);
-  --color-trimble-gray-3--darker: darken($color, 10%);
-  --color-trimble-gray-4--darker: darken($color, 10%);
-  --color-trimble-gray-5--darker: darken($color, 10%);
-  --color-trimble-gray-6--darker: darken($color, 10%);
-  --color-trimble-gray-7--darker: darken($color, 10%);
-  --color-trimble-gray-8--darker: darken($color, 10%);
-  --color-trimble-gray-9--darker: darken($color, 10%);
-  --color-trimble-gray-10--darker: darken($color, 10%);
-  --color-trimble-gray-11--darker: darken($color, 10%);
-  --color-trimble-gray-12--darker: darken($color, 10%);
-  --color-trimble-gray-13--darker: darken($color, 10%);
-  --color-trimble-gray-14--darker: darken($color, 10%);
-  --color-trimble-gray-15--darker: darken($color, 10%);
-  --color-trimble-gray-16--darker: darken($color, 10%);
-  --color-trimble-gray-17--darker: darken($color, 10%);
-  --color-sketchup-red--lighter: lighten($color, 10%);
-  --color-tekla-red--lighter: lighten($color, 10%);
-  --color-trimble-blue--lighter: lighten($color, 10%);
-  --color-trimble-light-blue--lighter: lighten($color, 10%);
-  --color-trimble-yellow--lighter: lighten($color, 10%);
-  --color-white--lighter: lighten($color, 10%);
-  --color-trimble-gray--lighter: lighten($color, 10%);
-  --color-trimble-gray-1--lighter: lighten($color, 10%);
-  --color-trimble-gray-2--lighter: lighten($color, 10%);
-  --color-trimble-gray-3--lighter: lighten($color, 10%);
-  --color-trimble-gray-4--lighter: lighten($color, 10%);
-  --color-trimble-gray-5--lighter: lighten($color, 10%);
-  --color-trimble-gray-6--lighter: lighten($color, 10%);
-  --color-trimble-gray-7--lighter: lighten($color, 10%);
-  --color-trimble-gray-8--lighter: lighten($color, 10%);
-  --color-trimble-gray-9--lighter: lighten($color, 10%);
-  --color-trimble-gray-10--lighter: lighten($color, 10%);
-  --color-trimble-gray-11--lighter: lighten($color, 10%);
-  --color-trimble-gray-12--lighter: lighten($color, 10%);
-  --color-trimble-gray-13--lighter: lighten($color, 10%);
-  --color-trimble-gray-14--lighter: lighten($color, 10%);
-  --color-trimble-gray-15--lighter: lighten($color, 10%);
-  --color-trimble-gray-16--lighter: lighten($color, 10%);
-  --color-trimble-gray-17--lighter: lighten($color, 10%); }
+  --color-white: #ffffff;
+  --color-sketchup-red: #ec2227;
+  --color-tekla-red: #d52a33;
+  --color-trimble-blue: #005f9e;
+  --color-trimble-light-blue: #009ad9;
+  --color-trimble-yellow: #ffbe00;
+  --color-trimble-gray: #363545;
+  --color-trimble-gray-1: #F9F9FB;
+  --color-trimble-gray-2: #F3F3F7;
+  --color-trimble-gray-3: #EAEAEF;
+  --color-trimble-gray-4: #E2E2E7;
+  --color-trimble-gray-5: #D0D0D7;
+  --color-trimble-gray-6: #BFBFC6;
+  --color-trimble-gray-7: #AEAEB6;
+  --color-trimble-gray-8: #9D9DA6;
+  --color-trimble-gray-9: #8C8B96;
+  --color-trimble-gray-10: #7B7A86;
+  --color-trimble-gray-11: #6A6976;
+  --color-trimble-gray-12: #595868;
+  --color-trimble-gray-13: #474655;
+  --color-trimble-gray-14: #363545;
+  --color-trimble-gray-15: #262533;
+  --color-trimble-gray-16: #1B1A26;
+  --color-trimble-gray-17: #0B0A12; }
 
 .bg-trimble-blue {
   background-color: var(--color-trimble-blue); }
@@ -139,114 +73,6 @@
 
 .color-white {
   color: #ffffff; }
-
-.bg-trimble-gray {
-  background: #363545; }
-
-.color-trimble-gray {
-  color: #363545; }
-
-.bg-trimble-gray-1 {
-  background: #F9F9FB; }
-
-.color-trimble-gray-1 {
-  color: #F9F9FB; }
-
-.bg-trimble-gray-2 {
-  background: #F3F3F7; }
-
-.color-trimble-gray-2 {
-  color: #F3F3F7; }
-
-.bg-trimble-gray-3 {
-  background: #EAEAEF; }
-
-.color-trimble-gray-3 {
-  color: #EAEAEF; }
-
-.bg-trimble-gray-4 {
-  background: #E2E2E7; }
-
-.color-trimble-gray-4 {
-  color: #E2E2E7; }
-
-.bg-trimble-gray-5 {
-  background: #D0D0D7; }
-
-.color-trimble-gray-5 {
-  color: #D0D0D7; }
-
-.bg-trimble-gray-6 {
-  background: #BFBFC6; }
-
-.color-trimble-gray-6 {
-  color: #BFBFC6; }
-
-.bg-trimble-gray-7 {
-  background: #AEAEB6; }
-
-.color-trimble-gray-7 {
-  color: #AEAEB6; }
-
-.bg-trimble-gray-8 {
-  background: #9D9DA6; }
-
-.color-trimble-gray-8 {
-  color: #9D9DA6; }
-
-.bg-trimble-gray-9 {
-  background: #8C8B96; }
-
-.color-trimble-gray-9 {
-  color: #8C8B96; }
-
-.bg-trimble-gray-10 {
-  background: #7B7A86; }
-
-.color-trimble-gray-10 {
-  color: #7B7A86; }
-
-.bg-trimble-gray-11 {
-  background: #6A6976; }
-
-.color-trimble-gray-11 {
-  color: #6A6976; }
-
-.bg-trimble-gray-12 {
-  background: #595868; }
-
-.color-trimble-gray-12 {
-  color: #595868; }
-
-.bg-trimble-gray-13 {
-  background: #474655; }
-
-.color-trimble-gray-13 {
-  color: #474655; }
-
-.bg-trimble-gray-14 {
-  background: #363545; }
-
-.color-trimble-gray-14 {
-  color: #363545; }
-
-.bg-trimble-gray-15 {
-  background: #262533; }
-
-.color-trimble-gray-15 {
-  color: #262533; }
-
-.bg-trimble-gray-16 {
-  background: #1B1A26; }
-
-.color-trimble-gray-16 {
-  color: #1B1A26; }
-
-.bg-trimble-gray-17 {
-  background: #0B0A12; }
-
-.color-trimble-gray-17 {
-  color: #0B0A12; }
 
 .bg-trimble-gray {
   background: #363545; }
@@ -2018,8 +1844,7 @@ a.button--outline--white,
   .button--white:hover {
     cursor: pointer;
     background-color: #ffffff;
-    border-color: #ffffff;
-    color: #363545; }
+    border-color: #ffffff; }
 
 a.button--yellow,
 .button--yellow {
@@ -2432,7 +2257,7 @@ ul.list-inline--center {
         text-align: center; }
       .pricing-table__column .product:hover {
         box-shadow: 0 25px 30px 0 rgba(36, 50, 66, 0.08);
-        transform: translateY(-6px); }
+        transform: translateY(-3px); }
 
 .page-section {
   padding-top: var(--spacing-large); }
@@ -2441,7 +2266,6 @@ ul.list-inline--center {
   padding-bottom: var(--spacing-large); }
 
 footer.main-footer {
-  background-color: #F3F3F7;
   padding: var(--spacing-medium) 0; }
   footer.main-footer .footer-links {
     list-style: none;

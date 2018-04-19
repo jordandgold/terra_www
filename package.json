@@ -1,25 +1,26 @@
 {
-  "name": "su-design-system",
-  "version": "1.0.0",
-  "description": "SketchUp Design System Sandbox",
-  "main": "index.html",
+  "name": "terra-design-system",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "http-server -a localhost -p 3000 -o"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js localhost 3000"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/jordandgold/su-design-system.git"
-  },
-  "author": "Jordan Gold",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/jordandgold/su-design-system#readme",
+  "author": "Jordan Gold <jordandgold@gmail.com>",
+  "license": "BSD",
   "dependencies": {
-    "autoprefixer": "^8.2.0",
+    "autoprefixer": "^8.0.0",
+    "express": "^4.7.2",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.3",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.2.1",
     "http-server": "^0.11.1",
-    "start": "^5.1.0"
+    "js-yaml": "^3.11.0",
+    "yaml-js": "^0.2.3"
   }
 }
