@@ -23,15 +23,25 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 function createPages() {
 
-    let page_registry = yaml.safeLoad(fileSync.readFileSync('./views/register.pages.yml', 'utf8'));
+    let page_registry = yaml.safeLoad(fileSync.readFileSync('./views/register.pages.yml', 'utf8')),
+        component_registry = yaml.safeLoad(fileSync.readFileSync('./views/pages/components/register.components.yml', 'utf8'));
 
     page_registry.forEach((page)=>{
 
-        let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages' + page.url + '/data.yml'));
+        let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages/' + page.url + '/data.yml'));
 
-        app.get(page.url, function (req, res) {
-            // let data = yaml.safeLoad(fileSync.readFileSync('./views/pages' + page.url + '/data.yml', 'utf8'));
-            res.render('pages' + page.url + '/' + page.name, input_data);
+        app.get('/' + page.url, function (req, res) {
+            res.render('pages/' + page.url + '/' + page.name, input_data);
+        });
+
+    });
+
+    component_registry.forEach((component)=>{
+
+        let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages/components/' + component + '/data.yml'));
+
+        app.get('/components/' + component, function (req, res) {
+            res.render('pages/components/' + component + '/' + component, input_data);
         });
 
     });

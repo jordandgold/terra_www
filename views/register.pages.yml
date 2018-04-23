@@ -1,4 +1,8 @@
 - name: pricing
-  url: /pricing
+  url: pricing
 - name: sketchup-pro
-  url: /products/sketchup-pro
+  url: products/sketchup-pro
+- name: sketchup-pro
+  url: products/sketchup-pro
+- name: components
+  url: components

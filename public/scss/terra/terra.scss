@@ -63,30 +63,6 @@
 @import 'grid';
 @import 'z-index';
 
-.side-nav {
-  width: 14rem;
-  position: fixed;
-  left: 0;
-  border-right: 1px solid var(--color-trimble-gray-4);
-  min-height: 100%;
-  &__logo {
-    margin-top: var(--spacing-medium);
-    padding: 0 var(--spacing-medium);
-  }
-  &__main-nav {
-    @include type-setting(-1);
-    margin-top: var(--spacing-medium);
-    padding: 0 var(--spacing-medium);
-    list-style: none;
-    > li {
-      padding: var(--spacing-extra-small) 0;
-      > a {
-        display: block;
-      }
-    }
-  }
-}
-
 .main-content {
   margin-left: 14rem;
   height: auto;
