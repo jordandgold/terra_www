@@ -8,6 +8,7 @@
 	font-size: type-scale($level);
 	line-height: map-get($type-scale, $level) * 1.25;
 	font-weight: font-weight($weight);
+	display: block;
 }
 
 @mixin type-setting($level: 0, $weight: 0) {
@@ -47,7 +48,7 @@ h1,
 @mixin heading-2 {
 	@include header-type-setting(4,1);
 	@include header-font-color;
-	padding-bottom: var(--spacing-small);
+	padding-bottom: var(--spacing-medium);
 	margin: 0;
 }
 
@@ -59,33 +60,36 @@ h2,
 @mixin heading-3 {
 	@include header-type-setting(3,1);
 	@include header-font-color;
-	padding-bottom: var(--spacing-extra-small);
+	padding-bottom: var(--spacing-medium);
 	margin: 0;
 }
 
-h3 {
+h3,
+.heading-3 {
 	@include heading-3;
 }
 
 @mixin heading-4 {
 	@include header-type-setting(2,1);
 	@include header-font-color;
-	padding-bottom: var(--spacing-extra-small);
+	padding-bottom: var(--spacing-medium);
 	margin: 0;
 }
 
-h4 {
+h4,
+.heading-4 {
 	@include heading-4;
 }
 
 @mixin heading-5 {
 	@include header-type-setting(1,1);
 	@include header-font-color;
-	padding-bottom: var(--spacing-extra-small);
+	padding-bottom: var(--spacing-medium);
 	margin: 0;
 }
 
-h5 {
+h5,
+.heading-5 {
 	@include heading-5;
 }
 

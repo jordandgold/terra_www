@@ -2,7 +2,11 @@
   url: pricing
 - name: sketchup-pro
   url: products/sketchup-pro
-- name: sketchup-pro
-  url: products/sketchup-pro
+- name: sketchup-free
+  url: products/sketchup-free
 - name: components
   url: components
+- name: license-manager
+  url: license-manager
+- name: sketchup-pro
+  url: buy/sketchup-pro

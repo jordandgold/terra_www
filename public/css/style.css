@@ -68,7 +68,7 @@
 .color-trimble-yellow {
   color: #ffbe00; }
 
-.bg-white, .main-nav, .pricing-table__column .product {
+.bg-white, .pricing-table__column .product {
   background: #ffffff; }
 
 .color-white {
@@ -1019,6 +1019,7 @@ body, html {
   font-size: 4rem;
   line-height: 5rem;
   font-weight: 600;
+  display: block;
   color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-medium);
   margin: 0; }
@@ -1028,6 +1029,7 @@ h1,
   font-size: 3rem;
   line-height: 3.75rem;
   font-weight: 600;
+  display: block;
   color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-medium);
   margin: 0; }
@@ -1037,32 +1039,39 @@ h2,
   font-size: 2.5rem;
   line-height: 3.125rem;
   font-weight: 600;
+  display: block;
   color: var(--color-trimble-gray);
-  padding-bottom: var(--spacing-small);
+  padding-bottom: var(--spacing-medium);
   margin: 0; }
 
-h3 {
+h3,
+.heading-3 {
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 600;
+  display: block;
   color: var(--color-trimble-gray);
-  padding-bottom: var(--spacing-extra-small);
+  padding-bottom: var(--spacing-medium);
   margin: 0; }
 
-h4 {
+h4,
+.heading-4 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-weight: 600;
+  display: block;
   color: var(--color-trimble-gray);
-  padding-bottom: var(--spacing-extra-small);
+  padding-bottom: var(--spacing-medium);
   margin: 0; }
 
-h5 {
+h5,
+.heading-5 {
   font-size: 1.25rem;
   line-height: 1.5625rem;
   font-weight: 600;
+  display: block;
   color: var(--color-trimble-gray);
-  padding-bottom: var(--spacing-extra-small);
+  padding-bottom: var(--spacing-medium);
   margin: 0; }
 
 p {
@@ -1103,7 +1112,7 @@ small {
   font-weight: 400; }
 
 :root {
-  --gutter-width: 4rem;
+  --gutter-width: 3rem;
   --outer-margin: 4rem;
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
@@ -1133,6 +1142,11 @@ small {
 .wrap {
   box-sizing: border-box;
   max-width: 85rem;
+  margin: 0 auto; }
+
+.narrow {
+  box-sizing: border-box;
+  max-width: 65rem;
   margin: 0 auto; }
 
 .row, .pricing-table {
@@ -1871,6 +1885,11 @@ a.button--light-blue,
     border-color: #0076a6;
     color: #ffffff; }
 
+a.button--block,
+.button--block {
+  display: block;
+  width: 100%; }
+
 .card {
   background: #ffffff;
   box-shadow: 0 25px 30px 0 rgba(36, 50, 66, 0.08); }
@@ -1880,8 +1899,9 @@ a.button--light-blue,
       font-size: 1.25rem;
       line-height: 1.5625rem;
       font-weight: 600;
+      display: block;
       color: var(--color-trimble-gray);
-      padding-bottom: var(--spacing-extra-small);
+      padding-bottom: var(--spacing-medium);
       margin: 0;
       margin-bottom: var(--spacing-extra-extra-small); }
   .card__image {
@@ -1976,51 +1996,59 @@ a.button--light-blue,
 .input-group {
   position: relative;
   margin: var(--spacing-small) 0 var(--spacing-medium) 0; }
-  .input-group input[type="text"] {
-    line-height: 2em;
-    color: var(--color-trimble-gray-10);
-    width: 100%;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-    border: 0;
-    padding: 4px 0;
-    border-bottom: 1px solid var(--color-trimble-gray-4);
-    background-color: transparent;
-    position: relative;
-    z-index: 1; }
-    .input-group input[type="text"] ~ .focus-border {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--color-trimble-light-blue);
-      transition: 0.4s;
-      z-index: 1; }
-    .input-group input[type="text"] ~ label {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      top: var(--spacing-extra-small);
+  .input-group .input-wrap {
+    position: relative; }
+    .input-group .input-wrap input[type="text"] {
+      line-height: 2em;
       color: var(--color-trimble-gray-10);
-      transition: 0.3s;
-      z-index: 0;
-      letter-spacing: 0.5px;
-      text-align: left; }
-    .input-group input[type="text"]:focus ~ label, .input-group input[type="text"].has-content ~ label {
-      font-size: 0.875rem;
-      line-height: 1.3125rem;
-      font-weight: 400;
-      top: calc(var(--spacing-small) * -1);
-      color: var(--color-trimble-light-blue);
-      transition: 0.3s; }
-    .input-group input[type="text"]:focus ~ .focus-border, .input-group input[type="text"].has-content ~ .focus-border {
       width: 100%;
-      transition: 0.4s; }
+      box-sizing: border-box;
+      letter-spacing: 1px;
+      border: 0;
+      padding: 4px 0;
+      border-bottom: 1px solid var(--color-trimble-gray-4);
+      background-color: transparent;
+      position: relative;
+      z-index: 1; }
+      .input-group .input-wrap input[type="text"] ~ .focus-border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-trimble-light-blue);
+        transition: 0.4s;
+        z-index: 1; }
+      .input-group .input-wrap input[type="text"] ~ label {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: var(--spacing-extra-small);
+        color: var(--color-trimble-gray-10);
+        transition: 0.3s;
+        z-index: 0;
+        letter-spacing: 0.5px;
+        text-align: left; }
+      .input-group .input-wrap input[type="text"]:focus ~ label, .input-group .input-wrap input[type="text"].has-content ~ label {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+        font-weight: 400;
+        top: calc(var(--spacing-small) * -1);
+        color: var(--color-trimble-light-blue);
+        transition: 0.3s; }
+      .input-group .input-wrap input[type="text"]:focus ~ .focus-border, .input-group .input-wrap input[type="text"].has-content ~ .focus-border {
+        width: 100%;
+        transition: 0.4s; }
   .input-group .input-lg {
     font-size: 1.25rem;
     line-height: 1.875rem;
     font-weight: 400; }
+  .input-group .input-help {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    padding-top: var(--spacing-small);
+    display: block; }
 
 .inverse input[type="text"] {
   color: #ffffff; }
@@ -2063,7 +2091,8 @@ textarea {
       position: absolute;
       bottom: -15em;
       right: 0;
-      max-width: 40%; }
+      max-width: 40%;
+      z-index: 12; }
       .hero--intro .dimensional-asset img {
         max-width: 100%;
         height: auto; }
@@ -2116,6 +2145,7 @@ ul.list-inline--center {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: 10;
+  background: #ffffff;
   position: fixed;
   top: 0;
   display: block;
@@ -2219,8 +2249,8 @@ ul.list-inline--center {
 
 .panel {
   display: block;
-  padding: var(--spacing-medium);
-  background: var(--color-trimble-gray-2);
+  padding: var(--spacing-large);
+  background: var(--color-white);
   border: 1px solid var(--color-trimble-gray-4);
   margin: var(--spacing-medium) 0; }
 
@@ -2244,8 +2274,9 @@ ul.list-inline--center {
           font-size: 1.5rem;
           line-height: 1.875rem;
           font-weight: 600;
+          display: block;
           color: var(--color-trimble-gray);
-          padding-bottom: var(--spacing-extra-small);
+          padding-bottom: var(--spacing-medium);
           margin: 0;
           display: block;
           text-align: center;
@@ -2254,8 +2285,9 @@ ul.list-inline--center {
           font-size: 2rem;
           line-height: 2.5rem;
           font-weight: 600;
+          display: block;
           color: var(--color-trimble-gray);
-          padding-bottom: var(--spacing-extra-small);
+          padding-bottom: var(--spacing-medium);
           margin: 0;
           font-weight: 300;
           display: block;
@@ -2281,12 +2313,18 @@ ul.list-inline--center {
   padding-bottom: var(--spacing-large); }
 
 footer.main-footer {
+  border-top: 1px solid var(--color-trimble-gray-3);
   padding: var(--spacing-medium) 0; }
   footer.main-footer .footer-links {
     list-style: none;
     padding: 0; }
     footer.main-footer .footer-links > li {
       padding: var(--spacing-extra-small) 0; }
+
+table {
+  width: 100%; }
+  table tr th {
+    text-align: left; }
 
 .hero.intro.terra-bg {
   background-image: url(../assets/terra-bg.jpg);

@@ -4,15 +4,13 @@
 
 */
 
-@mixin button($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null, $colorHover: $color) {
+@mixin button-base($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null, $colorHover: $color) {
     @include border-radius(1);
     background-color: $bgColor;
     border: .05rem solid $borderColor;
     color: $color;
-    // border-radius: .15rem;
     height: 2.15rem;
     padding: 0 1.5rem;
-    // margin: 0.95rem 0 0 0;
     text-decoration: none;
     line-height: 2.15rem;
     display: inline-flex;
@@ -38,36 +36,42 @@
 
 a.button,
 .button {
-    @include button(map-get($colors, trimble-blue), map-get($colors, white));
+    @include button-base(map-get($colors, trimble-blue), map-get($colors, white));
     @include type-setting(0,1);
 }
 
 a.button--outline,
 .button--outline {
-    @include button(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-5), map-get($grays, trimble-gray), map-get($colors, white));
+    @include button-base(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-5), map-get($grays, trimble-gray), map-get($colors, white));
     @include type-setting(0,1);
 }
 
 a.button--red,
 .button--red {
-    @include button(map-get($colors, tekla-red), map-get($colors, white));
+    @include button-base(map-get($colors, tekla-red), map-get($colors, white));
     @include type-setting(0,1);
 }
 
 a.button--outline--white,
 .button--white {
-    @include button(transparent, map-get($colors, white), map-get($colors, white), map-get($colors, white), map-get($colors, trimble-gray));
+    @include button-base(transparent, map-get($colors, white), map-get($colors, white), map-get($colors, white), map-get($colors, trimble-gray));
     @include type-setting(0,1);
 }
 
 a.button--yellow,
 .button--yellow {
-    @include button(map-get($colors, trimble-yellow), map-get($colors, white));
+    @include button-base(map-get($colors, trimble-yellow), map-get($colors, white));
     @include type-setting(0,1);
 }
 
 a.button--light-blue,
 .button--light-blue {
-    @include button(map-get($colors, trimble-light-blue), map-get($colors, white));
+    @include button-base(map-get($colors, trimble-light-blue), map-get($colors, white));
     @include type-setting(0,1);
+}
+
+a.button--block,
+.button--block {
+    display: block;
+    width: 100%;
 }

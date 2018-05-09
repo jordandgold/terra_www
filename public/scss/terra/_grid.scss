@@ -1,5 +1,5 @@
 :root {
-  --gutter-width: 4rem;
+  --gutter-width: 3rem;
   --outer-margin: 4rem;
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
@@ -35,6 +35,12 @@
 .wrap {
   box-sizing: border-box;
   max-width: 85rem;
+  margin: 0 auto;
+}
+
+.narrow {
+  box-sizing: border-box;
+  max-width: 65rem;
   margin: 0 auto;
 }
 
