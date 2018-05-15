@@ -65,8 +65,20 @@
 @import 'z-index';
 
 .main-content {
-  margin-left: 14rem;
   height: auto;
+  @include for-size(tablet-portrait-up) {
+    margin-left: 20rem;
+  }
+}
+
+.markup-panel {
+  .panel {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  pre[class*="language-"] {
+    margin-top: 0;
+  }
 }
 
 a,
@@ -74,22 +86,28 @@ a:visited,
 a:active,
 a:focus {
   @include transition(all .4s ease);
-  font-weight: font-weight(1);
-  color: var(--color-trimble-blue);
+  font-weight: font-weight(0);
+  color: map-get($colors, blue);
   text-decoration: none;
   &:hover {
-    color: var(--color-trimble-light-blue);
+    color: map-get($colors, blue);
+    text-decoration: underline;
   }
 }
 
 body,
 html {
   @include body-font-color;
+  background: $body-bg-color;
   height: 100%;
 }
 
+// ::selection {
+//   background: map-get($colors, blue);
+// }
+
 body {
-  padding-top: var(--spacing-large);
+  padding-top: 4rem;
   // .page {
   //   > *:first-child {
   //     height: calc(100% + var(--spacing-extra-large));

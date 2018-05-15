@@ -1,98 +1,104 @@
-// .effect-16 {
-//     border: 0;
-//     padding: 4px 0;
-//     border-bottom: 1px solid var(--color-trimble-gray-4);
-//     background-color: transparent;
-//     position: relative;
-//     z-index: 1;
-// }
-
-// .effect-16 ~ .focus-border {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 0;
-//     height: 2px;
-//     background-color: var(--color-trimble-light-blue);
-//     transition: 0.4s;
-//     z-index: 1;
-// }
-
-// .effect-16:focus ~ .focus-border,
-// .has-content.effect-16 ~ .focus-border {
-//     width: 100%;
-//     transition: 0.4s;
-// }
-
-// .effect-16 ~ label {
-//     position: absolute;
-//     left: 0;
-//     width: 100%;
-//     top: var(--spacing-extra-small);
-//     color: var(--color-trimble-gray-10);
-//     transition: 0.3s;
-//     z-index: 0;
-//     letter-spacing: 0.5px;
-//     text-align: left;
-// }
-
-// input[type="text"] {
-//     line-height: 2em;
-//     color: var(--color-trimble-gray-10);
-//     width: 100%;
-//     box-sizing: border-box;
-//     letter-spacing: 1px;
-// }
+@mixin input-base() {
+    @include border-radius(1);
+    line-height: 1;
+    color: map-get($colors, gray-10);
+    box-sizing: border-box;
+    padding: var(--spacing-extra-small) var(--spacing-small);
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    border: .05rem solid map-get($colors, gray-5);
+    background-color: transparent;
+}
 
 .input-group {
     position: relative;
-    margin: var(--spacing-small) 0 var(--spacing-medium) 0;
+    padding: var(--spacing-small) 0;
+    > label {
+        @include type-setting(-1,0);
+        display: block;
+        padding-bottom: var(--spacing-extra-small);
+    }
     .input-wrap {
         position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            right: .75rem;
+            transform: translateY(-50%);
+        }
+        > label {
+            @include type-setting(-1,0);
+            display: block;
+            padding-bottom: var(--spacing-extra-small);
+        }
         input[type="text"] {
-            line-height: 2em;
-            color: var(--color-trimble-gray-10);
-            width: 100%;
-            box-sizing: border-box;
-            letter-spacing: 1px;
-            border: 0;
-            padding: 4px 0;
-            border-bottom: 1px solid var(--color-trimble-gray-4);
-            background-color: transparent;
+            @include input-base();
             position: relative;
             z-index: 1;
-            ~ .focus-border {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background-color: var(--color-trimble-light-blue);
-                transition: 0.4s;
-                z-index: 1;
+            border: .05rem solid map-get($colors, gray-5);
+            transition: box-shadow 200ms ease-in-out;
+            &:focus {
+                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
             }
-            ~ label {
-                position: absolute;
-                left: 0;
-                width: 100%;
-                top: var(--spacing-extra-small);
-                color: var(--color-trimble-gray-10);
-                transition: 0.3s;
-                z-index: 0;
-                letter-spacing: 0.5px;
-                text-align: left;
-            }
-            &:focus,
-            &.has-content {
+            &.focus-effect {
                 ~ label {
-                    @include font-size(-1);
-                    top: calc(var(--spacing-small) * -1);
-                    color: var(--color-trimble-light-blue);
-                    transition: 0.3s;
-                }
-                ~ .focus-border {
+                    @include type-setting(0,0);
+                    position: absolute;
+                    left: .75rem;
                     width: 100%;
-                    transition: 0.4s;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: map-get($colors, gray-8);
+                    transition: 0.3s;
+                    z-index: 0;
+                    text-align: left;
+                    padding-bottom: 0;
+                }
+                &:focus,
+                &.has-content,
+                &.success,
+                &.error {
+                    ~ label {
+                        @include font-size(-1);
+                        top: -1.25rem;
+                        transform: translateY(0);
+                        transition: 0.3s;
+                        left: 0;
+                    }
+                    ~ .focus-border {
+                        width: 100%;
+                        transition: 0.4s;
+                    }
+                }
+                &.success {
+                    border-color: map-get($colors, green);
+                    ~ label {
+                        color: map-get($colors, green);
+                    }
+                    ~ .focus-border {
+                        background-color: map-get($colors, green);
+                    }
+                    ~ i {
+                        &:before {
+                            color: map-get($colors, green);
+                        }
+                    }
+                }
+                &.error {
+                    border-color: map-get($colors, red);
+                    ~ label {
+                        color: map-get($colors, red);
+                    }
+                    ~ .focus-border {
+                        background-color: map-get($colors, red);
+                    }
+                    ~ i {
+                        &:before {
+                            color: map-get($colors, red);
+                        }
+                    }
                 }
             }
         }
@@ -107,19 +113,10 @@
     }
 }
 
-// .effect-16:focus ~ label,
-// .effect-16.has-content ~ label {
-//     @include font-size(-1);
-//     top: calc(var(--spacing-small) * -1);
-//     color: var(--color-trimble-light-blue);
-//     // opacity: 0.5;
-//     transition: 0.3s;
-// }
-
 .inverse {
     input[type="text"] {
         color: #ffffff;
-        &.effect-16 ~ label {
+        &.focus-effect ~ label {
             color: #ffffff;
         }
     }
@@ -129,17 +126,20 @@
     outline: none;
 }
 
+// select {
+//     @include input-base();
+//     padding: var(--spacing-extra-small) 0;
+//     background: #ffffff;
+//     border-left: 0;
+//     border-top: 0;
+//     border-right: 0;
+//     border-bottom: 1px solid var(--color-trimble-gray-4);
+//     border-radius: 0;
+//     -webkit-appearance: button;
+// }
+
 select {
-	color: var(--color-trimble-gray-10);
-    background: #ffffff;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--color-trimble-gray-4);
-    display: block;
-    padding: var(--spacing-extra-small) 0;
-    width: 100%;
-    border-radius: 0;
+    @include input-base(); 
     -webkit-appearance: button;
 }
 

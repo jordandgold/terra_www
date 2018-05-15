@@ -1,5 +1,17 @@
 /* Height Scale */
 
+$heights: (
+    1: 1.75rem,
+    2: 2.25rem,
+    3: 4rem,
+    4: 8rem,
+    5: 16rem,
+);
+
+@mixin height($level) {
+    height: map-get($heights, $level);
+}
+
 .height-1 {
     height: 1.75rem;
 }

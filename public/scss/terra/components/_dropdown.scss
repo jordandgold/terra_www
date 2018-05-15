@@ -20,13 +20,30 @@
 
 .dropdown {
   position: relative;
+  > a {
+    position: relative;
+    padding-right: 1rem;
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      transition: transform 200ms ease-in-out; 
+      &:before {
+        font-size: 0.75rem;
+        color: map-get($colors, gray-8);
+      }
+    }
+  }
   > .dropdown-menu {
     @include box-shadow-1;
-    @include border-radius(1);
-    // border: 1px solid var(--color-trimble-gray-3);
+    @include border-radius(2);
+    // border-top-left-radius: 0px;
+    // border-top-right-radius: 0px;
+    border: 1px solid map-get($colors, gray-4);
     width: 12.5em;
     position: absolute;
-    top: 100%;
+    top: calc(100%);
     padding: var(--spacing-small);
     left: 0;
     visibility: hidden;

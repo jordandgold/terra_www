@@ -72,7 +72,7 @@ h3,
 @mixin heading-4 {
 	@include header-type-setting(2,1);
 	@include header-font-color;
-	padding-bottom: var(--spacing-medium);
+	padding-bottom: var(--spacing-small);
 	margin: 0;
 }
 
@@ -84,7 +84,7 @@ h4,
 @mixin heading-5 {
 	@include header-type-setting(1,1);
 	@include header-font-color;
-	padding-bottom: var(--spacing-medium);
+	padding-bottom: var(--spacing-small);
 	margin: 0;
 }
 

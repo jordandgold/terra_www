@@ -1,8 +1,16 @@
 table {
 	width: 100%;
+	border-collapse: collapse;
 	tr {
 		th {
+			padding: var(--spacing-small) 0;
+			margin: 0;
 			text-align: left;
+			border-bottom: 1px solid map-get($colors, gray-5);
+		}
+		td {
+			padding: var(--spacing-extra-small) 0;
+			border-bottom: 1px solid map-get($colors, gray-5);
 		}
 	}
 }

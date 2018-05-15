@@ -5,17 +5,16 @@
 */
 
 @mixin button-base($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null, $colorHover: $color) {
+    @include type-setting(0,0);
     @include border-radius(1);
     background-color: $bgColor;
-    border: .05rem solid $borderColor;
+    border: .05rem solid darken($borderColor, 8%);
     color: $color;
-    height: 2.15rem;
-    padding: 0 1.5rem;
+    padding: var(--spacing-extra-small) var(--spacing-small);
     text-decoration: none;
-    line-height: 2.15rem;
-    display: inline-flex;
-    align-items: center;
-    transition: all 200ms ease-in-out;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
     &:hover {
         @if ($borderColor == $bgColor) {
             cursor: pointer;
@@ -31,43 +30,112 @@
             border-color: $borderColor;
         }
         color: $colorHover;
+        text-decoration: none;
+    }
+    &:active {
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+    }
+}
+
+[class*="button"] {
+    i {
+        padding-left: .5rem;
     }
 }
 
 a.button,
 .button {
-    @include button-base(map-get($colors, trimble-blue), map-get($colors, white));
-    @include type-setting(0,1);
+    @include button-base(
+        map-get($colors, blue),
+        map-get($colors, white)
+    );
 }
 
 a.button--outline,
 .button--outline {
-    @include button-base(transparent, map-get($grays, trimble-gray-11), map-get($grays, trimble-gray-5), map-get($grays, trimble-gray), map-get($colors, white));
-    @include type-setting(0,1);
+    @include button-base(
+        transparent,
+        map-get($colors, gray-11),
+        map-get($colors, gray-5),
+        map-get($colors, gray),
+        map-get($colors, white)
+    );
 }
 
-a.button--red,
-.button--red {
-    @include button-base(map-get($colors, tekla-red), map-get($colors, white));
-    @include type-setting(0,1);
+a.button--danger,
+.button--danger {
+    @include button-base(
+        map-get($colors, red),
+        map-get($colors, white)
+    );
 }
 
 a.button--outline--white,
 .button--white {
-    @include button-base(transparent, map-get($colors, white), map-get($colors, white), map-get($colors, white), map-get($colors, trimble-gray));
-    @include type-setting(0,1);
+    @include button-base(
+        transparent,
+        map-get($colors, white),
+        map-get($colors, white),
+        map-get($colors, white),
+        map-get($colors, gray)
+    );
 }
 
-a.button--yellow,
-.button--yellow {
-    @include button-base(map-get($colors, trimble-yellow), map-get($colors, white));
-    @include type-setting(0,1);
+a.button--success,
+.button--success {
+    @include button-base(
+        map-get($colors, green),
+        map-get($colors, white)
+    );
 }
 
-a.button--light-blue,
-.button--light-blue {
-    @include button-base(map-get($colors, trimble-light-blue), map-get($colors, white));
-    @include type-setting(0,1);
+a.button--alert,
+.button--alert {
+    @include button-base(
+        map-get($colors, yellow),
+        map-get($colors, gray)
+    );
+}
+
+a.button--light,
+.button--light {
+    @include button-base(
+        map-get($colors, gray-2),
+        map-get($colors, gray)
+    );
+}
+
+a.button--dark,
+.button--dark {
+    @include button-base(
+        map-get($colors, gray),
+        map-get($colors, white)
+    );
+}
+
+a.button--link,
+.button--link {
+    @include button-base(
+        transparent,
+        map-get($colors, blue)
+    );
+    &:hover {
+        text-decoration: underline;
+    }
+    &:active {
+        box-shadow: none;
+    }
+}
+
+a.button--large,
+.button--large {
+    @include type-setting(1,0);
+}
+
+a.button--small,
+.button--small {
+    @include type-setting(-1,0);
+    \padding: var(--spacing-extra-extra-small) var(--spacing-small);
 }
 
 a.button--block,

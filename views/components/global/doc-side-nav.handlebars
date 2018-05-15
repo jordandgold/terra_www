@@ -1,0 +1,36 @@
+<nav class="side-nav">
+	{{!-- <div class="side-nav__logo">
+		<a href="/">
+			<img src="/assets/sketchup/sketchup-logo.svg" alt="SketchUp" />
+		</a>
+	</div> --}}
+	<div class="side-nav__section">
+		<div class="input-group">
+			<label>Select a Theme</label>
+			<select>
+				<option>Alpha</option>
+				<option>Beta</option>
+				<option>Delta</option>
+			</select>
+        </div>
+	</div>
+	<ul class="tree-menu">
+		<li ><div class="heading-5">Documentation</div></li>
+		<li {{#is name "Getting Started"}} class="active"{{else}}{{/is}}><a href="#">Getting Started</a></li>
+		<li><a href="#">Guidelines</a></li>
+		<li class="expandable">
+			<a href="#">Style</a>
+			<i class="fas fa-chevron-left"></i>
+		</li>
+		<li class="expandable expanded">
+			<a href="#">Components</a>
+			<i class="fas fa-chevron-left"></i>
+			<ul class="expandable-menu">
+				<li><a href="/documentation/components/accordion">Accordion</a></li>
+				<li><a href="/documentation/components/button">Button</a></li>
+				<li><a href="/documentation/components/dropdown">Dropdown</a></li>
+				<li><a href="/documentation/components/forms">Forms</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>

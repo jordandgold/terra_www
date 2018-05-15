@@ -10,7 +10,7 @@
 		width: 100%;
 		position: relative;
 		.product {
-			@include box-shadow-1;
+			@include box-shadow-2;
 			@include border-radius(2);
 			@extend .bg-white;
 			height: 100%;
@@ -46,7 +46,7 @@
 				text-align: center;
 			}
 			&:hover {
-				@include box-shadow-2;
+				@include box-shadow-3;
 				transform: translateY(-3px);
 			}
 		}
