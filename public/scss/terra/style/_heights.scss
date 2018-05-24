@@ -12,24 +12,48 @@ $heights: (
     height: map-get($heights, $level);
 }
 
+@mixin max-height($level) {
+    max-height: map-get($heights, $level);
+}
+
 .height-1 {
-    height: 1.75rem;
+    @include height(1);
 }
 
 .height-2 {
-    height: 2.25rem;
+    @include height(2);
 }
 
 .height-3 {
-    height: 4rem;
+    @include height(3);
 }
 
 .height-4 {
-    height: 8rem;
+    @include height(4);
 }
 
 .height-5 {
-    height: 16rem;
+    @include height(5);
+}
+
+.max-height-1 {
+    @include max-height(1);
+}
+
+.max-height-2 {
+    @include max-height(2);
+}
+
+.max-height-3 {
+    @include max-height(3);
+}
+
+.max-height-4 {
+    @include max-height(4);
+}
+
+.max-height-5 {
+    @include max-height(5);
 }
 
 /* Height Percentages - Based off of height of parent */
@@ -74,4 +98,8 @@ $heights: (
 
 .min-vh-100 {
     min-height: 100vh;
+}
+
+.width-25 {
+    width: 25%;
 }

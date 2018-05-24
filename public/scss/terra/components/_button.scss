@@ -6,7 +6,7 @@
 
 @mixin button-base($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null, $colorHover: $color) {
     @include type-setting(0,0);
-    @include border-radius(1);
+    @include border-radius('all','small');
     background-color: $bgColor;
     border: .05rem solid darken($borderColor, 8%);
     color: $color;
@@ -34,6 +34,11 @@
     }
     &:active {
         box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    i {
+        &:before {
+            color: $color;
+        }
     }
 }
 

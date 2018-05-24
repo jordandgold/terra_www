@@ -1,6 +1,6 @@
-{{> global/docs-header}}
+{{> global/header}}
 
-	{{> global/doc-side-nav}}
+	{{> global/side-nav}}
 
 	<div class="main-content">
 		<div class="page">
@@ -9,8 +9,10 @@
 			
 			{{{ body }}}
 
+			{{> component/media-queries }}
+
 		</div>
-		{{> global/docs-footer}}
+		{{> global/footer}}
 	</div>
 
-{{> global/docs-page-bottom}}
+{{> global/page-bottom}}

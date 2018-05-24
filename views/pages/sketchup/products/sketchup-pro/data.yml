@@ -2,5 +2,5 @@
 #   title: SketchUp Pro
 #   path: products/sketchup-pro
 
-layout: 'main'
+layout: 'sketchup/main'
 title: 'SketchUp Pro | SketchUp'

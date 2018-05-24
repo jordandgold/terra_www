@@ -1,5 +1,5 @@
 @mixin input-base() {
-    @include border-radius(1);
+    @include border-radius('all','small');
     line-height: 1;
     color: map-get($colors, gray-10);
     box-sizing: border-box;
@@ -40,7 +40,8 @@
             border: .05rem solid map-get($colors, gray-5);
             transition: box-shadow 200ms ease-in-out;
             &:focus {
-                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
+                            0 0 0 2px rgba(map-get($colors, blue),.2);
             }
             &.focus-effect {
                 ~ label {

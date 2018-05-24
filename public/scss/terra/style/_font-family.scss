@@ -25,3 +25,12 @@
 		times,
 		serif;
 }
+
+@mixin font-code {
+	font-family:
+		Consolas,
+		Monaco,
+		'Andale Mono',
+		'Ubuntu Mono',
+		monospace;
+}

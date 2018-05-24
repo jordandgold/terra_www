@@ -45,24 +45,25 @@
   }
 }
 
-@import 'colors';
+@import 'style/colors';
 @import 'variables';
-@import 'backgrounds';
-@import 'box-shadow';
-@import 'border-radius';
-@import 'font-family';
-@import 'font-weight';
-@import 'heights';
-@import 'icons';
-@import 'line-height';
-@import 'media-queries';
-@import 'normalize';
-@import 'spacing';
-@import 'text-align';
-@import 'type-scale';
-@import 'typography';
-@import 'grid';
-@import 'z-index';
+@import 'style/backgrounds';
+@import 'style/box-shadow';
+@import 'style/border-radius';
+@import 'style/flex';
+@import 'style/font-family';
+@import 'style/font-weight';
+@import 'style/heights';
+@import 'style/icons';
+@import 'style/line-height';
+@import 'style/media-queries';
+@import 'style/normalize';
+@import 'style/spacing';
+@import 'style/text-align';
+@import 'style/type-scale';
+@import 'style/typography';
+@import 'style/grid';
+@import 'style/z-index';
 
 .main-content {
   height: auto;
@@ -95,11 +96,39 @@ a:focus {
   }
 }
 
+.inverse {
+  a,
+  a:visited,
+  a:active,
+  a:focus {
+    @include transition(all .4s ease);
+    font-weight: font-weight(0);
+    color: map-get($colors, white);
+    text-decoration: none;
+    &:hover {
+      color: map-get($colors, white);
+      text-decoration: underline;
+    }
+  }
+}
+
+[data-href] {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 body,
 html {
   @include body-font-color;
   background: $body-bg-color;
   height: 100%;
+}
+
+ul {
+  li {
+
+  }
 }
 
 // ::selection {

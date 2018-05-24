@@ -1,4 +1,9 @@
 layout: 'component-page'
 title: 'Button | Terra Design System'
 name: 'Button'
+parent: 'Components'
 tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+mixins:
+  - name: a
+    parameters: test
+    description: test

@@ -1,0 +1,51 @@
+.card {
+	@include border-radius('all','medium');
+    border: 1px solid map-get($colors, gray-4);
+    background: #ffffff;
+    position: relative;
+    &__badge {
+    	@include type-setting(-1,'bold')
+    	@include border-radius('bottom-left','medium');
+    	@include border-radius('bottom-right','medium');
+	    position: absolute;
+	    top: 0;
+	    right: var(--spacing-medium);
+	    background-color: rgba(54,52,69,0.8);
+	    padding: var(--spacing-extra-extra-small) var(--spacing-small);
+	    color: #ffffff;
+    }
+	&__body {
+		padding: var(--spacing-medium);
+		&__heading {
+			@include heading-5;
+			margin-bottom: var(--spacing-extra-extra-small);
+		}
+	}
+	&__footer {
+		border-top: 1px solid map-get($colors, gray-4);
+		padding: var(--spacing-small) var(--spacing-medium);
+	}
+	&__image {
+		// display: block;
+		// background-size: cover;
+		// height: 0;
+		// padding-bottom: 50%;
+		// margin-bottom: var(--spacing-small);
+		// max-width: 100%;
+		overflow: hidden;
+		&--top {
+			@include border-radius('top-left','none');
+			@include border-radius('top-right','none');
+			max-width: 100%;
+		}
+		&--left {
+			@include border-radius('top-left','none');
+			@include border-radius('bottom-left','none');
+			max-width: 100%;
+		}
+		> img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

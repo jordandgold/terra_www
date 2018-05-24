@@ -1,8 +1,8 @@
 $font-weight: (
-	-1: 300,
-	0: 400,
-	1: 600,
-	2: 800,
+	'light': 300,
+	'normal': 400,
+	'bold': 600,
+	'black': 800,
 );
 
 @function font-weight($weight) {

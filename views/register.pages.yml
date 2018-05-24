@@ -1,2 +1,4 @@
 - name: getting-started
   url: documentation/getting-started
+- name: accessibility
+  url: documentation/style/accessibility

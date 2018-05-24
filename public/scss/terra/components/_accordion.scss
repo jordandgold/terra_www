@@ -1,3 +1,47 @@
 .accordion {
-	
+	@include border-radius('all','medium');
+	border: 1px solid map-get($colors, gray-3);
+	&__heading {
+		padding: var(--spacing-small) var(--spacing-medium);
+		position: relative;
+		display: block;
+		i {
+			position: absolute;
+			top: 1em;
+			right: var(--spacing-medium);
+			color: map-get($colors, gray);
+			transform: rotate(0deg);
+			transition: transform 200ms ease-in-out;
+		}
+	}
+	&__collapsed {
+		display: none;
+		&__content {
+			border-top: 1px solid map-get($colors, gray-3);
+			padding: var(--spacing-medium);
+		}
+	}
+	&.expanded {
+		.accordion__heading {
+			i {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}
+
+.accordion-group {
+	.accordion {
+		@include border-radius('all','none');
+		border-bottom: 0;
+		&:first-child {
+			@include border-radius('top-left','medium');
+			@include border-radius('top-right','medium');
+		}
+		&:last-child {
+			@include border-radius('bottom-left','medium');
+			@include border-radius('bottom-right','medium');
+			border-bottom: 1px solid map-get($colors, gray-3);
+		}
+	}
 }

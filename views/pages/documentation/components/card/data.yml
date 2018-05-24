@@ -1,0 +1,5 @@
+layout: 'component-page'
+title: 'Card | Terra Design System'
+name: 'Card'
+parent: 'Components'
+tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'

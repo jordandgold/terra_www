@@ -8,10 +8,10 @@ var express = require('express'),
 
 // Create `ExpressHandlebars` instance with a default layout.
 var hbs = exphbs.create({
-    defaultLayout: 'main',
+    defaultLayout: 'full-width',
     partialsDir: [
         'views/components/'
-    ]
+    ],
 });
 
 var helpers = require('handlebars-helpers')();
@@ -22,33 +22,6 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, '/public')));
-
-// function createPages() {
-
-//     let page_registry = yaml.safeLoad(fileSync.readFileSync('./views/register.pages.yml', 'utf8')),
-//         component_registry = yaml.safeLoad(fileSync.readFileSync('./views/pages/components/register.components.yml', 'utf8'));
-
-//     page_registry.forEach((page)=>{
-
-//         let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages/' + page.url + '/data.yml'));
-
-//         app.get('/' + page.url, function (req, res) {
-//             res.render('pages/' + page.url + '/' + page.name, input_data);
-//         });
-
-//     });
-
-//     component_registry.forEach((component)=>{
-
-//         let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages/components/' + component + '/data.yml'));
-
-//         app.get('/components/' + component, function (req, res) {
-//             res.render('pages/components/' + component + '/' + component, input_data);
-//         });
-
-//     });
-
-// }
 
 function createPages() {
 
@@ -77,9 +50,26 @@ function createPages() {
 
 }
 
-// app.get('/', function (req, res) {
-//     res.render('pages/homepage/homepage', {layout: 'main', title: 'SketchUp | 3D For Everyone'});
-// });
+function createSketchUp() {
+
+    let page_registry = yaml.safeLoad(fileSync.readFileSync('./views/pages/sketchup/register.pages.yml', 'utf8'));
+
+    page_registry.forEach((page)=>{
+
+        let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages/sketchup/' + page.url + '/data.yml'));
+
+        app.get('/sketchup/' + page.url, function (req, res) {
+            res.render('pages/sketchup/' + page.url + '/' + page.name, input_data);
+        });
+
+    });
+
+    app.get('/sketchup/', function (req, res) {
+        let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages/sketchup/homepage/data.yml'));
+        res.render('pages/sketchup/homepage/homepage', input_data);
+    });
+
+}
 
 app.get('/', function (req, res) {
     let input_data = yaml.safeLoad(fileSync.readFileSync('./views/pages/homepage/data.yml'));
@@ -87,15 +77,11 @@ app.get('/', function (req, res) {
 });
 
 createPages();
+createSketchUp();
 
 app.get('*', function(req, res){
-  res.render('pages/404/404', {layout: 'main', title: 'SketchUp | 3D For Everyone'});
+  res.render('pages/404/404', {layout: 'full-width', title: '404 | Terra Design System'});
 });
-
-// app.get('/pricing', function (req, res) {
-//     let data = yaml.safeLoad(fileSync.readFileSync('./views/pages/pricing/data.yml', 'utf8'));
-//     res.render('pages/pricing/pricing', data);
-// });
 
 app.listen(3000, function () {
     console.log('server listening on: 3000');

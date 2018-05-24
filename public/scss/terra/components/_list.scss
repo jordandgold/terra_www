@@ -39,3 +39,10 @@ ul.list-inline--center {
 		padding: var(--spacing-extra-small) 0;
 	}
 }
+
+ul {
+	@include type-setting(0,'normal');
+	li {
+		padding: var(--spacing-extra-small) 0;
+	}
+}

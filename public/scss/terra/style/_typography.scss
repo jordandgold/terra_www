@@ -4,14 +4,14 @@
 
 */
 
-@mixin header-type-setting($level: 0, $weight: 0) {
+@mixin header-type-setting($level: 0, $weight: 'normal') {
 	font-size: type-scale($level);
 	line-height: map-get($type-scale, $level) * 1.25;
 	font-weight: font-weight($weight);
 	display: block;
 }
 
-@mixin type-setting($level: 0, $weight: 0) {
+@mixin type-setting($level: 0, $weight: 'normal') {
 	font-size: type-scale($level);
 	line-height: map-get($type-scale, $level) * 1.5;
 	font-weight: font-weight($weight);
@@ -23,7 +23,7 @@ body, html {
 }
 
 @mixin heading-mega {
-	@include header-type-setting(6,1);
+	@include header-type-setting(6,'bold');
 	@include header-font-color;
 	padding-bottom: var(--spacing-medium);
 	margin: 0;
@@ -34,7 +34,7 @@ body, html {
 }
 
 @mixin heading-1 {
-	@include header-type-setting(5,1);
+	@include header-type-setting(5,'bold');
 	@include header-font-color;
 	padding-bottom: var(--spacing-medium);
 	margin: 0;
@@ -46,7 +46,7 @@ h1,
 }
 
 @mixin heading-2 {
-	@include header-type-setting(4,1);
+	@include header-type-setting(4,'bold');
 	@include header-font-color;
 	padding-bottom: var(--spacing-medium);
 	margin: 0;
@@ -58,7 +58,7 @@ h2,
 }
 
 @mixin heading-3 {
-	@include header-type-setting(3,1);
+	@include header-type-setting(3,'bold');
 	@include header-font-color;
 	padding-bottom: var(--spacing-medium);
 	margin: 0;
@@ -70,7 +70,7 @@ h3,
 }
 
 @mixin heading-4 {
-	@include header-type-setting(2,1);
+	@include header-type-setting(2,'bold');
 	@include header-font-color;
 	padding-bottom: var(--spacing-small);
 	margin: 0;
@@ -82,7 +82,7 @@ h4,
 }
 
 @mixin heading-5 {
-	@include header-type-setting(1,1);
+	@include header-type-setting(1,'bold');
 	@include header-font-color;
 	padding-bottom: var(--spacing-small);
 	margin: 0;

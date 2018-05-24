@@ -1,0 +1,80 @@
+/*
+
+  ALERTS
+
+*/
+
+@mixin alert-base($highlight, $color) {
+    @include type-setting(0,0);
+    @include border-radius('all','small');
+    background-color: map-get($colors, gray-1);
+    // border: .05rem solid map-get($colors, gray-2);
+    border-left: 0.35rem solid $highlight;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: $color;
+    padding: var(--spacing-small) var(--spacing-medium);
+    display: block;
+    margin-bottom: var(--spacing-medium);
+    position: relative;
+}
+
+[class*="alert"] {
+    .close {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        opacity: 0.2;
+        i {
+            padding: 0;
+            margin: 0;
+            color: map-get($colors, gray);
+        }
+        &:hover {
+            opacity: 0.4;
+            cursor: pointer;
+        }
+    }
+}
+
+.alert {
+    @include alert-base(
+        map-get($colors, blue),
+        map-get($colors, gray)
+    );
+}
+
+.alert--danger {
+    @include alert-base(
+        map-get($colors, red),
+        map-get($colors, gray)
+    );
+}
+
+.alert--success {
+    @include alert-base(
+        map-get($colors, green),
+        map-get($colors, gray)
+    );
+}
+
+.alert--warning {
+    @include alert-base(
+        map-get($colors, yellow),
+        map-get($colors, gray)
+    );
+}
+
+.alert--light {
+    @include alert-base(
+        map-get($colors, gray-2),
+        map-get($colors, gray)
+    );
+}
+
+.alert--dark {
+    @include alert-base(
+        map-get($colors, gray),
+        map-get($colors, white)
+    );
+}
