@@ -1,3 +1,9 @@
+$box-shadows: (
+    1: 0 8px 10px 0 rgba(36, 50, 66, 0.05),
+    2: 0 15px 20px 0 rgba(36, 50, 66, 0.05),
+    3: 0 25px 30px 0 rgba(36,50,66,.08)
+);
+
 @mixin showcase-shadow {
 	box-shadow:
 		-1px 92px 99px -62px rgba(0,0,0,.26),
@@ -5,17 +11,18 @@
 	;
 }
 
-@mixin box-shadow-1 {
-	// box-shadow: 0 10px 20px rgba(36,50,66,0.19), 0 6px 6px rgba(36,50,66,0.23);
-	box-shadow: 0 8px 10px 0 rgba(36, 50, 66, 0.05)
+@mixin box-shadow($level) {
+	box-shadow: map-get($box-shadows, $level);
 }
 
-@mixin box-shadow-2 {
-	// box-shadow: 0 10px 20px rgba(36,50,66,0.19), 0 6px 6px rgba(36,50,66,0.23);
-	box-shadow: 0 15px 20px 0 rgba(36, 50, 66, 0.05);
-}
+// @mixin box-shadow-1 {
+// 	box-shadow: 0 8px 10px 0 rgba(36, 50, 66, 0.05)
+// }
 
-@mixin box-shadow-3 {
-	box-shadow: 0 25px 30px 0 rgba(36,50,66,.08);
-	// box-shadow: 0 15px 38px rgba(36, 50, 66, 0.08), 0 10px 20px rgba(36, 50, 66, 0.05);
-}
+// @mixin box-shadow-2 {
+// 	box-shadow: 0 15px 20px 0 rgba(36, 50, 66, 0.05);
+// }
+
+// @mixin box-shadow-3 {
+// 	box-shadow: 0 25px 30px 0 rgba(36,50,66,.08);
+// }

@@ -62,6 +62,11 @@
   flex-direction: column-reverse;
 }
 
+[class^='col-'] {
+  padding-right: var(--half-gutter-width, 0.5rem);
+  padding-left: var(--half-gutter-width, 0.5rem);
+}
+
 .col-xs,
 .col-xs-1,
 .col-xs-2,

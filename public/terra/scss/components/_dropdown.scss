@@ -37,7 +37,7 @@
     }
   }
   > .dropdown-menu {
-    @include box-shadow-1;
+    @include box-shadow(1);
     @include border-radius('all','medium');
     border: 1px solid map-get($colors, gray-4);
     width: 12.5em;

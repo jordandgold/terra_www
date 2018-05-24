@@ -144,6 +144,13 @@
 select {
     @include input-base(); 
     -webkit-appearance: button;
+    position: relative;
+    i {
+        position: absolute;
+        top: 50%;
+        right: .75rem;
+        transform: translateY(-50%);
+    }
 }
 
 textarea {

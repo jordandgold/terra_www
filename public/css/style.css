@@ -8,182 +8,182 @@
   COLORS
 
 */
-:root {
-  --transparent: transparent;
-  --color-white: #ffffff;
-  --color-sketchup-red: #ec2227;
-  --color-tekla-red: #d52a33;
-  --color-trimble-blue: #005f9e;
-  --color-trimble-light-blue: #009ad9;
-  --color-trimble-yellow: #ffbe00;
-  --color-trimble-gray: #363545;
-  --color-trimble-gray-1: #F9F9FB;
-  --color-trimble-gray-2: #F3F3F7;
-  --color-trimble-gray-3: #EAEAEF;
-  --color-trimble-gray-4: #E2E2E7;
-  --color-trimble-gray-5: #D0D0D7;
-  --color-trimble-gray-6: #BFBFC6;
-  --color-trimble-gray-7: #AEAEB6;
-  --color-trimble-gray-8: #9D9DA6;
-  --color-trimble-gray-9: #8C8B96;
-  --color-trimble-gray-10: #7B7A86;
-  --color-trimble-gray-11: #6A6976;
-  --color-trimble-gray-12: #595868;
-  --color-trimble-gray-13: #474655;
-  --color-trimble-gray-14: #363545;
-  --color-trimble-gray-15: #262533;
-  --color-trimble-gray-16: #1B1A26;
-  --color-trimble-gray-17: #0B0A12; }
-
-.bg-red {
-  background: #e23b43; }
-
 .color-red {
   color: #e23b43; }
-
-.bg-purple {
-  background: #674cb2; }
 
 .color-purple {
   color: #674cb2; }
 
-.bg-blue {
-  background: #218cff; }
-
 .color-blue {
   color: #218cff; }
-
-.bg-green {
-  background: #24bf7c; }
 
 .color-green {
   color: #24bf7c; }
 
-.bg-yellow {
-  background: #ffd416; }
-
 .color-yellow {
   color: #ffd416; }
-
-.bg-white, .pricing-table__column .product {
-  background: #ffffff; }
 
 .color-white {
   color: #ffffff; }
 
-.bg-gray {
-  background: #363545; }
-
 .color-gray {
   color: #363545; }
-
-.bg-gray-1 {
-  background: #F9F9FB; }
 
 .color-gray-1 {
   color: #F9F9FB; }
 
-.bg-gray-2 {
-  background: #F3F3F7; }
-
 .color-gray-2 {
   color: #F3F3F7; }
-
-.bg-gray-3 {
-  background: #EAEAEF; }
 
 .color-gray-3 {
   color: #EAEAEF; }
 
-.bg-gray-4 {
-  background: #E2E2E7; }
-
 .color-gray-4 {
   color: #E2E2E7; }
-
-.bg-gray-5 {
-  background: #D0D0D7; }
 
 .color-gray-5 {
   color: #D0D0D7; }
 
-.bg-gray-6 {
-  background: #BFBFC6; }
-
 .color-gray-6 {
   color: #BFBFC6; }
-
-.bg-gray-7 {
-  background: #AEAEB6; }
 
 .color-gray-7 {
   color: #AEAEB6; }
 
-.bg-gray-8 {
-  background: #9D9DA6; }
-
 .color-gray-8 {
   color: #9D9DA6; }
-
-.bg-gray-9 {
-  background: #8C8B96; }
 
 .color-gray-9 {
   color: #8C8B96; }
 
-.bg-gray-10 {
-  background: #7B7A86; }
-
 .color-gray-10 {
   color: #7B7A86; }
-
-.bg-gray-11 {
-  background: #6A6976; }
 
 .color-gray-11 {
   color: #6A6976; }
 
-.bg-gray-12 {
-  background: #595868; }
-
 .color-gray-12 {
   color: #595868; }
-
-.bg-gray-13 {
-  background: #474655; }
 
 .color-gray-13 {
   color: #474655; }
 
-.bg-gray-14 {
-  background: #363545; }
-
 .color-gray-14 {
   color: #363545; }
-
-.bg-gray-15 {
-  background: #262533; }
 
 .color-gray-15 {
   color: #262533; }
 
-.bg-gray-16 {
-  background: #1B1A26; }
-
 .color-gray-16 {
   color: #1B1A26; }
-
-.bg-gray-17 {
-  background: #0B0A12; }
 
 .color-gray-17 {
   color: #0B0A12; }
 
-.bg-black {
-  background: #000000; }
-
 .color-black {
   color: #000000; }
+
+:root {
+  --red: #e23b43;
+  --purple: #674cb2;
+  --blue: #218cff;
+  --green: #24bf7c;
+  --yellow: #ffd416;
+  --white: #ffffff;
+  --gray: #363545;
+  --gray-1: #F9F9FB;
+  --gray-2: #F3F3F7;
+  --gray-3: #EAEAEF;
+  --gray-4: #E2E2E7;
+  --gray-5: #D0D0D7;
+  --gray-6: #BFBFC6;
+  --gray-7: #AEAEB6;
+  --gray-8: #9D9DA6;
+  --gray-9: #8C8B96;
+  --gray-10: #7B7A86;
+  --gray-11: #6A6976;
+  --gray-12: #595868;
+  --gray-13: #474655;
+  --gray-14: #363545;
+  --gray-15: #262533;
+  --gray-16: #1B1A26;
+  --gray-17: #0B0A12;
+  --black: #000000; }
+
+.bg-red {
+  background-color: #e23b43; }
+
+.bg-purple {
+  background-color: #674cb2; }
+
+.bg-blue {
+  background-color: #218cff; }
+
+.bg-green {
+  background-color: #24bf7c; }
+
+.bg-yellow {
+  background-color: #ffd416; }
+
+.bg-white, .pricing-table__column .product {
+  background-color: #ffffff; }
+
+.bg-gray {
+  background-color: #363545; }
+
+.bg-gray-1 {
+  background-color: #F9F9FB; }
+
+.bg-gray-2 {
+  background-color: #F3F3F7; }
+
+.bg-gray-3 {
+  background-color: #EAEAEF; }
+
+.bg-gray-4 {
+  background-color: #E2E2E7; }
+
+.bg-gray-5 {
+  background-color: #D0D0D7; }
+
+.bg-gray-6 {
+  background-color: #BFBFC6; }
+
+.bg-gray-7 {
+  background-color: #AEAEB6; }
+
+.bg-gray-8 {
+  background-color: #9D9DA6; }
+
+.bg-gray-9 {
+  background-color: #8C8B96; }
+
+.bg-gray-10 {
+  background-color: #7B7A86; }
+
+.bg-gray-11 {
+  background-color: #6A6976; }
+
+.bg-gray-12 {
+  background-color: #595868; }
+
+.bg-gray-13 {
+  background-color: #474655; }
+
+.bg-gray-14 {
+  background-color: #363545; }
+
+.bg-gray-15 {
+  background-color: #262533; }
+
+.bg-gray-16 {
+  background-color: #1B1A26; }
+
+.bg-gray-17 {
+  background-color: #0B0A12; }
+
+.bg-black {
+  background-color: #000000; }
 
 .iso-bg--light {
   background-color: #F3F3F7;
@@ -209,36 +209,6 @@
 
 */
 /* Height Scale */
-.height-1 {
-  height: 1.75rem; }
-
-.height-2, .navbar [class^='container'] .logo > a > img {
-  height: 2.25rem; }
-
-.height-3 {
-  height: 4rem; }
-
-.height-4 {
-  height: 8rem; }
-
-.height-5 {
-  height: 16rem; }
-
-.max-height-1 {
-  max-height: 1.75rem; }
-
-.max-height-2 {
-  max-height: 2.25rem; }
-
-.max-height-3 {
-  max-height: 4rem; }
-
-.max-height-4 {
-  max-height: 8rem; }
-
-.max-height-5 {
-  max-height: 16rem; }
-
 /* Height Percentages - Based off of height of parent */
 .height-25 {
   height: 25%; }
@@ -1183,6 +1153,10 @@ small {
 
 .col.reverse {
   flex-direction: column-reverse; }
+
+[class^='col-'] {
+  padding-right: var(--half-gutter-width, 0.5rem);
+  padding-left: var(--half-gutter-width, 0.5rem); }
 
 .col-xs,
 .col-xs-1,
@@ -2434,7 +2408,13 @@ select {
   width: 100%;
   border: 0.05rem solid #D0D0D7;
   background-color: transparent;
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+  position: relative; }
+  select i {
+    position: absolute;
+    top: 50%;
+    right: .75rem;
+    transform: translateY(-50%); }
 
 textarea {
   display: block;
@@ -2533,6 +2513,8 @@ ul {
     padding-top: var(--spacing-small); }
     .navbar [class^='container'] .logo > a {
       color: #363545; }
+      .navbar [class^='container'] .logo > a > img {
+        height: 2.25rem; }
   .navbar [class^='container'] > ul {
     height: 4rem;
     float: right;

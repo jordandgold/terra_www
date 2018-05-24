@@ -16,44 +16,16 @@ $heights: (
     max-height: map-get($heights, $level);
 }
 
-.height-1 {
-    @include height(1);
+@each $level in $heights {
+    .height-#{$level} {
+        @include height($level);
+    }
 }
 
-.height-2 {
-    @include height(2);
-}
-
-.height-3 {
-    @include height(3);
-}
-
-.height-4 {
-    @include height(4);
-}
-
-.height-5 {
-    @include height(5);
-}
-
-.max-height-1 {
-    @include max-height(1);
-}
-
-.max-height-2 {
-    @include max-height(2);
-}
-
-.max-height-3 {
-    @include max-height(3);
-}
-
-.max-height-4 {
-    @include max-height(4);
-}
-
-.max-height-5 {
-    @include max-height(5);
+@each $level in $heights {
+    .max-height-#{$level} {
+        @include max-height($level);
+    }
 }
 
 /* Height Percentages - Based off of height of parent */

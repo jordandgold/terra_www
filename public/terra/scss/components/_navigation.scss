@@ -10,7 +10,7 @@
 	.mega-menu-dropdown {
 		> ul.mega-menu {
 			@include list-unstyled;
-			@include box-shadow-2;
+			@include box-shadow(2);
 			@include border-radius('all','small');
 			position: absolute;
 			top: 85px;
@@ -62,7 +62,7 @@
 			> a {
 				color: map-get($colors, gray);
 				> img {
-					@extend .height-2;
+					@include height(2);
 				}
 			}
 		}

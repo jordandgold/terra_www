@@ -1,0 +1,40 @@
+// colors
+
+$colors: (
+    red: #e23b43,
+    purple: #674cb2,
+    blue: #218cff,
+    green: #24bf7c,
+    yellow: #ffd416,
+    white: #ffffff,
+    gray: #363545,
+    gray-1: #F9F9FB,
+    gray-2: #F3F3F7,
+    gray-3: #EAEAEF,
+    gray-4: #E2E2E7,
+    gray-5: #D0D0D7,
+    gray-6: #BFBFC6,
+    gray-7: #AEAEB6,
+    gray-8: #9D9DA6,
+    gray-9: #8C8B96,
+    gray-10: #7B7A86,
+    gray-11: #6A6976,
+    gray-12: #595868,
+    gray-13: #474655,
+    gray-14: #363545,
+    gray-15: #262533,
+    gray-16: #1B1A26,
+    gray-17: #0B0A12,
+    black: #000000,
+);
+
+$primary-color: #218cff;
+
+// navigation
+$navigation-bg: map-get($colors, white);
+
+$body-bg-color: map-get($colors, white);
+
+// typography
+$body-font-color: map-get($colors, gray-12);
+$header-font-color: map-get($colors, gray);
