@@ -1,5 +1,6 @@
 @mixin input-base() {
     @include border-radius('all','small');
+    @include type-setting(0,0);
     line-height: 1;
     color: map-get($colors, gray-10);
     box-sizing: border-box;
@@ -44,6 +45,7 @@
                             0 0 0 2px rgba(map-get($colors, blue),.2);
             }
             &.focus-effect {
+                margin-top: var(--spacing-extra-small);
                 ~ label {
                     @include type-setting(0,0);
                     position: absolute;
@@ -63,7 +65,7 @@
                 &.error {
                     ~ label {
                         @include font-size(-1);
-                        top: -1.25rem;
+                        top: -1.5rem;
                         transform: translateY(0);
                         transition: 0.3s;
                         left: 0;

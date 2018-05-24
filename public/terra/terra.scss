@@ -1,15 +1,3 @@
-@mixin header-font-color {
-  color: var(--color-trimble-gray);
-}
-
-@mixin body-font-color {
-  color: var(--color-trimble-gray-12);
-}
-
-@mixin z-index($level) {
-  z-index: $level;
-}
-
 // access any variable
 @function v($name) {
   @return var(--#{$name});
@@ -112,15 +100,9 @@ a:focus {
   }
 }
 
-[data-href] {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 body,
 html {
-  @include body-font-color;
+
   background: $body-bg-color;
   height: 100%;
 }
@@ -131,17 +113,8 @@ ul {
   }
 }
 
-// ::selection {
-//   background: map-get($colors, blue);
-// }
-
 body {
   padding-top: 4rem;
-  // .page {
-  //   > *:first-child {
-  //     height: calc(100% + var(--spacing-extra-large));
-  //   }
-  // }
   &.no-nav {
     padding-top: 0;
   }
@@ -149,30 +122,6 @@ body {
 
 .main-content {
   @extend .height-100;
-}
-
-.baseline-grid {
-  @include transition(opacity 0.2s ease-out);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 2;
-  opacity: 0;
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.guide {
-  margin-bottom: 1 * $base-line-height;
-  &, &:before, &:after {    
-    height: $base-line-height;
-    width: 100%;
-    outline: 1px solid turquoise;
-  }
 }
 
 @import 'components/components';

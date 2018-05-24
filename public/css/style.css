@@ -1039,8 +1039,8 @@ body, html {
   font-size: 4rem;
   line-height: 5rem;
   font-weight: 600;
+  color: #363545;
   display: block;
-  color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-medium);
   margin: 0; }
 
@@ -1049,8 +1049,8 @@ h1,
   font-size: 3rem;
   line-height: 3.75rem;
   font-weight: 600;
+  color: #363545;
   display: block;
-  color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-medium);
   margin: 0; }
 
@@ -1059,8 +1059,8 @@ h2,
   font-size: 2.5rem;
   line-height: 3.125rem;
   font-weight: 600;
+  color: #363545;
   display: block;
-  color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-medium);
   margin: 0; }
 
@@ -1069,8 +1069,8 @@ h3,
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 600;
+  color: #363545;
   display: block;
-  color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-medium);
   margin: 0; }
 
@@ -1079,8 +1079,8 @@ h4,
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-weight: 600;
+  color: #363545;
   display: block;
-  color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-small);
   margin: 0; }
 
@@ -1089,8 +1089,8 @@ h5,
   font-size: 1.25rem;
   line-height: 1.5625rem;
   font-weight: 600;
+  color: #363545;
   display: block;
-  color: var(--color-trimble-gray);
   padding-bottom: var(--spacing-small);
   margin: 0; }
 
@@ -1708,6 +1708,11 @@ small {
   .last-lg {
     order: 1; } }
 
+/*
+
+  Z-INDEX
+
+*/
 .main-content {
   height: auto; }
   @media (min-width: 600px) {
@@ -1757,11 +1762,8 @@ a:focus {
     color: #ffffff;
     text-decoration: underline; }
 
-[data-href]:hover {
-  cursor: pointer; }
-
 body, html {
-  color: var(--color-trimble-gray-12);
+  color: #595868;
   background: #ffffff;
   height: 100%; }
 
@@ -1769,30 +1771,6 @@ body {
   padding-top: 4rem; }
   body.no-nav {
     padding-top: 0; }
-
-.baseline-grid {
-  -webkit-transition: opacity 0.2s ease-out;
-  -moz-transition: opacity 0.2s ease-out;
-  -ms-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 2;
-  opacity: 0; }
-  .baseline-grid:hover {
-    opacity: 1; }
-
-.guide {
-  margin-bottom: 1.75rem; }
-  .guide, .guide:before, .guide:after {
-    height: 1.75rem;
-    width: 100%;
-    outline: 1px solid turquoise; }
 
 /*
 
@@ -2225,8 +2203,8 @@ a.button--block,
       font-size: 1.25rem;
       line-height: 1.5625rem;
       font-weight: 600;
+      color: #363545;
       display: block;
-      color: var(--color-trimble-gray);
       padding-bottom: var(--spacing-small);
       margin: 0;
       margin-bottom: var(--spacing-extra-extra-small); }
@@ -2364,6 +2342,8 @@ a.button--block,
       padding-bottom: var(--spacing-extra-small); }
     .input-group .input-wrap input[type="text"] {
       border-radius: 0.125rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
       line-height: 1;
       color: #7B7A86;
       box-sizing: border-box;
@@ -2380,46 +2360,48 @@ a.button--block,
       transition: box-shadow 200ms ease-in-out; }
       .input-group .input-wrap input[type="text"]:focus {
         box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(33, 140, 255, 0.2); }
-      .input-group .input-wrap input[type="text"].focus-effect ~ label {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        position: absolute;
-        left: .75rem;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #9D9DA6;
-        transition: 0.3s;
-        z-index: 0;
-        text-align: left;
-        padding-bottom: 0; }
-      .input-group .input-wrap input[type="text"].focus-effect:focus ~ label, .input-group .input-wrap input[type="text"].focus-effect.has-content ~ label, .input-group .input-wrap input[type="text"].focus-effect.success ~ label, .input-group .input-wrap input[type="text"].focus-effect.error ~ label {
-        font-size: 0.875rem;
-        line-height: 1.3125rem;
-        font-weight: 400;
-        top: -1.25rem;
-        transform: translateY(0);
-        transition: 0.3s;
-        left: 0; }
-      .input-group .input-wrap input[type="text"].focus-effect:focus ~ .focus-border, .input-group .input-wrap input[type="text"].focus-effect.has-content ~ .focus-border, .input-group .input-wrap input[type="text"].focus-effect.success ~ .focus-border, .input-group .input-wrap input[type="text"].focus-effect.error ~ .focus-border {
-        width: 100%;
-        transition: 0.4s; }
-      .input-group .input-wrap input[type="text"].focus-effect.success {
-        border-color: #24bf7c; }
-        .input-group .input-wrap input[type="text"].focus-effect.success ~ label {
-          color: #24bf7c; }
-        .input-group .input-wrap input[type="text"].focus-effect.success ~ .focus-border {
-          background-color: #24bf7c; }
-        .input-group .input-wrap input[type="text"].focus-effect.success ~ i:before {
-          color: #24bf7c; }
-      .input-group .input-wrap input[type="text"].focus-effect.error {
-        border-color: #e23b43; }
-        .input-group .input-wrap input[type="text"].focus-effect.error ~ label {
-          color: #e23b43; }
-        .input-group .input-wrap input[type="text"].focus-effect.error ~ .focus-border {
-          background-color: #e23b43; }
-        .input-group .input-wrap input[type="text"].focus-effect.error ~ i:before {
-          color: #e23b43; }
+      .input-group .input-wrap input[type="text"].focus-effect {
+        margin-top: var(--spacing-extra-small); }
+        .input-group .input-wrap input[type="text"].focus-effect ~ label {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          position: absolute;
+          left: .75rem;
+          width: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #9D9DA6;
+          transition: 0.3s;
+          z-index: 0;
+          text-align: left;
+          padding-bottom: 0; }
+        .input-group .input-wrap input[type="text"].focus-effect:focus ~ label, .input-group .input-wrap input[type="text"].focus-effect.has-content ~ label, .input-group .input-wrap input[type="text"].focus-effect.success ~ label, .input-group .input-wrap input[type="text"].focus-effect.error ~ label {
+          font-size: 0.875rem;
+          line-height: 1.3125rem;
+          font-weight: 400;
+          top: -1.5rem;
+          transform: translateY(0);
+          transition: 0.3s;
+          left: 0; }
+        .input-group .input-wrap input[type="text"].focus-effect:focus ~ .focus-border, .input-group .input-wrap input[type="text"].focus-effect.has-content ~ .focus-border, .input-group .input-wrap input[type="text"].focus-effect.success ~ .focus-border, .input-group .input-wrap input[type="text"].focus-effect.error ~ .focus-border {
+          width: 100%;
+          transition: 0.4s; }
+        .input-group .input-wrap input[type="text"].focus-effect.success {
+          border-color: #24bf7c; }
+          .input-group .input-wrap input[type="text"].focus-effect.success ~ label {
+            color: #24bf7c; }
+          .input-group .input-wrap input[type="text"].focus-effect.success ~ .focus-border {
+            background-color: #24bf7c; }
+          .input-group .input-wrap input[type="text"].focus-effect.success ~ i:before {
+            color: #24bf7c; }
+        .input-group .input-wrap input[type="text"].focus-effect.error {
+          border-color: #e23b43; }
+          .input-group .input-wrap input[type="text"].focus-effect.error ~ label {
+            color: #e23b43; }
+          .input-group .input-wrap input[type="text"].focus-effect.error ~ .focus-border {
+            background-color: #e23b43; }
+          .input-group .input-wrap input[type="text"].focus-effect.error ~ i:before {
+            color: #e23b43; }
   .input-group .input-lg {
     font-size: 1.25rem;
     line-height: 1.875rem;
@@ -2440,6 +2422,8 @@ a.button--block,
 
 select {
   border-radius: 0.125rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   line-height: 1;
   color: #7B7A86;
   box-sizing: border-box;
@@ -2712,8 +2696,8 @@ ul.tree-menu {
           font-size: 1.5rem;
           line-height: 1.875rem;
           font-weight: 600;
+          color: #363545;
           display: block;
-          color: var(--color-trimble-gray);
           padding-bottom: var(--spacing-small);
           margin: 0;
           display: block;
@@ -2723,8 +2707,8 @@ ul.tree-menu {
           font-size: 2rem;
           line-height: 2.5rem;
           font-weight: 600;
+          color: #363545;
           display: block;
-          color: var(--color-trimble-gray);
           padding-bottom: var(--spacing-medium);
           margin: 0;
           display: block;

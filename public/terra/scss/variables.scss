@@ -30,5 +30,11 @@ $colors: (
 
 $primary-color: #218cff;
 
+// navigation
 $navigation-bg: map-get($colors, white);
+
 $body-bg-color: map-get($colors, white);
+
+// typography
+$body-font-color: map-get($colors, gray-12);
+$header-font-color: map-get($colors, gray);
