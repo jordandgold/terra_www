@@ -1,0 +1,29 @@
+a,
+a:visited,
+a:active,
+a:focus {
+  transition: all .4s ease;
+  font-weight: font-weight(0);
+  color: map-get($colors, blue);
+  text-decoration: none;
+  &:hover {
+    color: map-get($colors, blue);
+    text-decoration: underline;
+  }
+}
+
+.inverse {
+  a,
+  a:visited,
+  a:active,
+  a:focus {
+    transition: all .4s ease;
+    font-weight: font-weight(0);
+    color: map-get($colors, white);
+    text-decoration: none;
+    &:hover {
+      color: map-get($colors, white);
+      text-decoration: underline;
+    }
+  }
+}

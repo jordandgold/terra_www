@@ -41,10 +41,10 @@
 }
 
 .navbar {
-	@include transition(all .5s ease);
 	@include z-index(10);
 	@include height(3);
 	background: $navigation-bg;
+	transition: all .5s ease;
 	position: fixed;
 	top: 0;
 	display: block;

@@ -1,0 +1,27 @@
+body,
+html {
+  color: $body-font-color;
+  background: $body-bg-color;
+  height: 100%;
+}
+
+body {
+  padding-top: 4rem;
+  &.no-nav {
+    padding-top: 0;
+  }
+}
+
+a,
+a:visited,
+a:active,
+a:focus {
+  transition: all .4s ease;
+  font-weight: font-weight(0);
+  color: map-get($colors, blue);
+  text-decoration: none;
+  &:hover {
+    color: map-get($colors, blue);
+    text-decoration: underline;
+  }
+}
