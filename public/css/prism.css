@@ -57,7 +57,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: var(--color-trimble-gray-1);
+	background: var(--color-gray-1);
 }
 
 /* Inline code */

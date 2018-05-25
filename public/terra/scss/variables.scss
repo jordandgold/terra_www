@@ -28,11 +28,32 @@ $colors: (
     black: #000000,
 );
 
-$primary-color: #218cff;
+// colors
+
+$brand-1: map-get($colors, blue);
+$brand-2: map-get($colors, blue);
+$brand-3: map-get($colors, blue);
+
+$ui-1: map-get($colors, white);
+$ui-2: map-get($colors, gray-2);
+$ui-3: map-get($colors, gray-4);
+$ui-4: map-get($colors, gray-8);
+$ui-5: map-get($colors, gray-10);
+$ui-6: map-get($colors, gray-12);
+
+$text-1: map-get($colors, gray);
+$text-2: map-get($colors, gray-12);
+
+$inverse-1: map-get($colors, white);
+
+$state-danger: map-get($colors, red);
+$state-success: map-get($colors, green);
+$state-alert: map-get($colors, yellow);
 
 // navigation
 $navigation-bg: map-get($colors, white);
 
+// global
 $body-bg-color: map-get($colors, white);
 
 // typography

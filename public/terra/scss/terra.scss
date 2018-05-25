@@ -1,37 +1,12 @@
-// access any variable
-@function v($name) {
-  @return var(--#{$name});
-}
 
-@mixin skin($skin) {
-  @if ($skin == 'inverse') {
-    *,
-    [class^="heading"] {
-      color: #ffffff;
-    }
-  }
-}
-
-.inverse {
-  @include skin(inverse);
-}
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-
-@mixin highlight-link($color, $hoverColor) {
-  @include transition(all .4s ease);
-  box-shadow: inset 0 -0.25em 0 $color;
-  line-height: 1;
-  &:hover {
-    box-shadow: inset 0 -0.2em 0 $hoverColor;
-  }
-}
+// @mixin highlight-link($color, $hoverColor) {
+//   @include transition(all .4s ease);
+//   box-shadow: inset 0 -0.25em 0 $color;
+//   line-height: 1;
+//   &:hover {
+//     box-shadow: inset 0 -0.2em 0 $hoverColor;
+//   }
+// }
 
 @import 'variables';
 @import 'style/colors';
@@ -74,7 +49,7 @@ a,
 a:visited,
 a:active,
 a:focus {
-  @include transition(all .4s ease);
+  transition: all .4s ease;
   font-weight: font-weight(0);
   color: map-get($colors, blue);
   text-decoration: none;
@@ -89,7 +64,7 @@ a:focus {
   a:visited,
   a:active,
   a:focus {
-    @include transition(all .4s ease);
+    transition: all .4s ease;
     font-weight: font-weight(0);
     color: map-get($colors, white);
     text-decoration: none;

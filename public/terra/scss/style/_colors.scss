@@ -12,6 +12,6 @@
 
 :root {
     @each $name, $hex in $colors {
-        --#{$name}: #{$hex};
+        --color-#{$name}: #{$hex};
     }
 }
