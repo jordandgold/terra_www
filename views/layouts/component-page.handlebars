@@ -1,15 +1,13 @@
 {{> global/header}}
 
+	{{> global/navbar stay-put="true"}}
+
 	{{> global/side-nav}}
 
 	<div class="main-content">
 		<div class="page">
 
-			{{> component/documentation-hero }}
-			
-			{{{ body }}}
-
-			{{> component/media-queries }}
+{{> component/component-page }}
 
 		</div>
 		{{> global/footer narrow="true" }}

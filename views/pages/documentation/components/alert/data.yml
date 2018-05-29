@@ -1,5 +1,12 @@
 layout: 'component-page'
-title: 'Alert | Terra Design System'
-name: 'Alert'
-parent: 'Components'
-tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+page:
+  title: 'Alert | Terra Design System'
+  name: 'Alert'
+  parent: 'Components'
+  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+mixins:
+  content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+  mixins:
+    - name: 'test()'
+      parameters: 'bgColor'
+      description: 'This is a test'

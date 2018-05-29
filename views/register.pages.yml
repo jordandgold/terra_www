@@ -2,3 +2,5 @@
   url: documentation/getting-started
 - name: accessibility
   url: documentation/style/accessibility
+- name: color
+  url: documentation/style/color

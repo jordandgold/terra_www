@@ -1,0 +1,13 @@
+layout: 'component-page'
+page:
+  title: 'Color | Terra Design System'
+  name: 'Color'
+  parent: 'Style'
+  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+mixins:
+  - name: 'input-base()'
+    parameters: 'none'
+    description: 'Defines the base styles for all input fields'
+  - name: 'test()'
+    parameters: '$bgColor'
+    description: 'This is a test'

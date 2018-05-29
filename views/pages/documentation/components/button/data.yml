@@ -1,9 +1,33 @@
 layout: 'component-page'
-title: 'Button | Terra Design System'
-name: 'Button'
-parent: 'Components'
-tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+page:
+  title: 'Button | Terra Design System'
+  name: 'Button'
+  parent: 'Components'
+  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+modifiers:
+  content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+  modifiers:
+    - name: '.button--danger'
+      description: 'Selector for the danger button styles'
+    - name: '.button--success'
+      description: 'Selector for the success button styles'
+    - name: '.button--alert'
+      description: 'Selector for the alert button styles'
+    - name: '.button--light'
+      description: 'Selector for the light button styles'
+    - name: '.button--dark'
+      description: 'Selector for the dark button styles'
+    - name: '.button--outline'
+      description: 'Selector for the outline button styles'
+    - name: '.button--link'
+      description: 'Selector for the link button styles'
+    - name: '.button--large'
+      description: 'Selector for the large button styles'
+    - name: '.button--small'
+      description: 'Selector for the small button styles'
 mixins:
-  - name: a
-    parameters: test
-    description: test
+  content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+  mixins:
+    - name: 'button-base()'
+      parameters: 'bgColor, color, borderColor, bgHoverColor, colorHover'
+      description: 'Defines the base styles that create all buttons'

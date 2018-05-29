@@ -1,18 +1,21 @@
 <section class="page-section">
 	<div class="container-fluid narrow">
 		<h4>Mixins</h4> 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+		{{{ mixins.content }}}
 		<table class="table--border">
 			<tr>
 				<th>Name</th>
 				<th>Parameters</th>
 				<th>Description</th>
 			</tr>
-			<tr>
-				<td><pre>input-base()</pre></td>
-				<td>none</td>
-				<td>Defines the base styles for all input fields</td>
+			{{#each mixins.mixins}}
 			</tr>
+			
+				<td><pre>{{ name }}</pre></td>
+				<td>{{ parameters }}</td>
+				<td>{{ description }}</td>
+			</tr>
+			{{/each}}
 		</table>
 	</div>
 </section>

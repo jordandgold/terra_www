@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	var mainHeader = $('.main-nav:not(.stay-put)'),
+	var mainHeader = $('nav.navbar:not(.stay-put)'),
 		secondaryNavigation = $('.cd-secondary-nav'),
 		//this applies only if secondary nav is below intro section
 		belowNavHeroContent = $('.sub-nav-hero'),
