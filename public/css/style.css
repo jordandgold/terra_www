@@ -2769,8 +2769,9 @@ table {
   color: #ffd416; }
 
 .color-swatch {
+  box-shadow: 0 8px 10px 0 rgba(36, 50, 66, 0.05);
   width: 100%;
-  margin-bottom: var(--spacing-small); }
+  margin-bottom: var(--spacing-medium); }
   .color-swatch__color {
     width: 100%;
     height: 0;
@@ -2783,7 +2784,8 @@ table {
     color: #595868;
     text-align: center; }
   .color-swatch__hex {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: var(--spacing-extra-small); }
 
 .iso-bg--light {
   background-color: #F3F3F7;
