@@ -1718,86 +1718,74 @@ small {
 .alert {
   font-size: 1rem;
   line-height: 1.5rem;
-  border-radius: 0.125rem;
-  background-color: #F9F9FB;
-  border-left: 0.35rem solid #218cff;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  color: #363545;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative; }
-
-.alert--danger {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.125rem;
-  background-color: #F9F9FB;
-  border-left: 0.35rem solid #e23b43;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  color: #363545;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative; }
-
-.alert--success {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.125rem;
-  background-color: #F9F9FB;
-  border-left: 0.35rem solid #24bf7c;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  color: #363545;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative; }
-
-.alert--warning {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.125rem;
-  background-color: #F9F9FB;
-  border-left: 0.35rem solid #ffd416;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  color: #363545;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative; }
-
-.alert--light {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.125rem;
-  background-color: #F9F9FB;
-  border-left: 0.35rem solid #F3F3F7;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  color: #363545;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative; }
-
-.alert--dark {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.125rem;
-  background-color: #F9F9FB;
-  border-left: 0.35rem solid #363545;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  background-color: #218cff;
+  border-top: 0.25rem solid #0072ed;
   color: #ffffff;
   padding: var(--spacing-small) var(--spacing-medium);
   display: block;
   margin-bottom: var(--spacing-medium);
-  position: relative; }
+  position: relative;
+  transition: all 200ms ease-in-out; }
+
+.alert--danger {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #e23b43;
+  border-top: 0.25rem solid #cc1e26;
+  color: #ffffff;
+  padding: var(--spacing-small) var(--spacing-medium);
+  display: block;
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+  transition: all 200ms ease-in-out; }
+
+.alert--success {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #24bf7c;
+  border-top: 0.25rem solid #1c9460;
+  color: #ffffff;
+  padding: var(--spacing-small) var(--spacing-medium);
+  display: block;
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+  transition: all 200ms ease-in-out; }
+
+.alert--warning {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #ffd416;
+  border-top: 0.25rem solid #e2b800;
+  color: #363545;
+  padding: var(--spacing-small) var(--spacing-medium);
+  display: block;
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+  transition: all 200ms ease-in-out; }
+
+.alert--light {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #F3F3F7;
+  border-top: 0.25rem solid #d4d4e3;
+  color: #363545;
+  padding: var(--spacing-small) var(--spacing-medium);
+  display: block;
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+  transition: all 200ms ease-in-out; }
+
+.alert--dark {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #363545;
+  border-top: 0.25rem solid #1f1f28;
+  color: #ffffff;
+  padding: var(--spacing-small) var(--spacing-medium);
+  display: block;
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+  transition: all 200ms ease-in-out; }
 
 .accordion {
   border-radius: 0.25rem;
