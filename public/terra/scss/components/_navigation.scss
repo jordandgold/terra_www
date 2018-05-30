@@ -133,10 +133,11 @@
 	position: fixed;
 	left: 0;
 	border-right: 1px solid map-get($colors, gray-4);
-	min-height: 100%;
+	height: 100%;
 	background: map-get($colors, white);
 	transform: translateX(-100%);
 	transition: transform 500ms ease-in-out;
+	overflow-y: auto;
 	@include for-size(tablet-portrait-up) {
 		transform: translateX(0);
 	}

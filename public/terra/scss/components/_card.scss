@@ -26,12 +26,6 @@
 		padding: var(--spacing-small) var(--spacing-medium);
 	}
 	&__image {
-		// display: block;
-		// background-size: cover;
-		// height: 0;
-		// padding-bottom: 50%;
-		// margin-bottom: var(--spacing-small);
-		// max-width: 100%;
 		overflow: hidden;
 		&--top {
 			@include border-radius('top-left','none');

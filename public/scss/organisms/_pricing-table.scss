@@ -1,12 +1,8 @@
 .pricing-table {
-	@extend .row;
     position: relative;
     top: calc(var(--spacing-extra-extra-extra-large)* -1);
     margin-bottom: calc(var(--spacing-extra-extra-large) * -1) !important;
-	// display: flex;
 	&__column {
-		@extend .col-sm;
-		// flex: 1;
 		width: 100%;
 		position: relative;
 		.product {
