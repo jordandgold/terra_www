@@ -41,9 +41,9 @@ $ui-6: map-get($colors, gray-12);
 
 $text-1: map-get($colors, gray);
 $text-2: map-get($colors, gray-12);
+$text-inverse-1: map-get($colors, white);
 
-$inverse-1: map-get($colors, white);
-
+$state-default: map-get($colors, blue);
 $state-danger: map-get($colors, red);
 $state-success: map-get($colors, green);
 $state-alert: map-get($colors, yellow);

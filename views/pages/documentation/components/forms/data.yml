@@ -1,12 +1,12 @@
-layout: 'component-page'
+layout: component-page
 page:
-  title: 'Forms | Terra Design System'
-  name: 'Forms'
-  parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  title: Forms | Terra Design System
+  name: Forms
+  parent: Components
+  tagline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
-    - name: 'test()'
-      parameters: 'bgColor'
-      description: 'This is a test'
+    - name: input-base()
+      parameters: bgColor
+      description: Defines the base styles for input fields

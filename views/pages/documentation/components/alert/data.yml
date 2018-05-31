@@ -1,12 +1,15 @@
-layout: 'component-page'
+layout: component-page
 page:
-  title: 'Alert | Terra Design System'
-  name: 'Alert'
-  parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  title: Alert | Terra Design System
+  name: Alert
+  parent: Components
+  tagline: Messages to give users information that sits outside of the primary content.
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
-    - name: 'test()'
-      parameters: 'bgColor'
-      description: 'This is a test'
+    - name: alert-base()
+      parameters: none
+      description: Defines the structure of the alert
+    - name: alert-colors()
+      parameters: $highlight, $color
+      description: Defines the colors of the alert

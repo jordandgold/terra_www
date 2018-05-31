@@ -1702,90 +1702,95 @@ small {
   ALERTS
 
 */
-[class*="alert"] .close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  opacity: 0.2; }
-  [class*="alert"] .close i {
-    padding: 0;
-    margin: 0;
-    color: #363545; }
-  [class*="alert"] .close:hover {
-    opacity: 0.4;
-    cursor: pointer; }
-
 .alert {
   font-size: 1rem;
   line-height: 1.5rem;
-  background-color: #218cff;
-  border-top: 0.25rem solid #0072ed;
-  color: #ffffff;
+  border-radius: 0.25rem;
   padding: var(--spacing-small) var(--spacing-medium);
   display: block;
   margin-bottom: var(--spacing-medium);
   position: relative;
-  transition: all 200ms ease-in-out; }
+  transition: all 200ms ease-in-out;
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+  .alert__icon {
+    margin-right: var(--spacing-small); }
+    .alert__icon > i {
+      width: auto;
+      height: 100%;
+      display: inline-block; }
+      .alert__icon > i:before {
+        opacity: 0.6; }
+  .alert__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0.4;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: 0; }
+    .alert__close i {
+      padding: 0;
+      margin: 0; }
+    .alert__close:hover {
+      opacity: 0.6;
+      cursor: pointer; }
+
+.alert--default {
+  background-color: #218cff;
+  border: 0.05rem solid #0077f7;
+  color: #ffffff; }
+  .alert--default .alert__icon > i:before {
+    color: #ffffff; }
+  .alert--default .alert__close i {
+    color: #ffffff; }
 
 .alert--danger {
-  font-size: 1rem;
-  line-height: 1.5rem;
   background-color: #e23b43;
-  border-top: 0.25rem solid #cc1e26;
-  color: #ffffff;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative;
-  transition: all 200ms ease-in-out; }
+  border: 0.05rem solid #d51f28;
+  color: #ffffff; }
+  .alert--danger .alert__icon > i:before {
+    color: #ffffff; }
+  .alert--danger .alert__close i {
+    color: #ffffff; }
 
 .alert--success {
-  font-size: 1rem;
-  line-height: 1.5rem;
   background-color: #24bf7c;
-  border-top: 0.25rem solid #1c9460;
-  color: #ffffff;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative;
-  transition: all 200ms ease-in-out; }
+  border: 0.05rem solid #1e9d66;
+  color: #ffffff; }
+  .alert--success .alert__icon > i:before {
+    color: #ffffff; }
+  .alert--success .alert__close i {
+    color: #ffffff; }
 
 .alert--warning {
-  font-size: 1rem;
-  line-height: 1.5rem;
   background-color: #ffd416;
-  border-top: 0.25rem solid #e2b800;
-  color: #363545;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative;
-  transition: all 200ms ease-in-out; }
+  border: 0.05rem solid #ecc100;
+  color: #363545; }
+  .alert--warning .alert__icon > i:before {
+    color: #363545; }
+  .alert--warning .alert__close i {
+    color: #363545; }
 
 .alert--light {
-  font-size: 1rem;
-  line-height: 1.5rem;
   background-color: #F3F3F7;
-  border-top: 0.25rem solid #d4d4e3;
-  color: #363545;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative;
-  transition: all 200ms ease-in-out; }
+  border: 0.05rem solid #dbdbe7;
+  color: #363545; }
+  .alert--light .alert__icon > i:before {
+    color: #363545; }
+  .alert--light .alert__close i {
+    color: #363545; }
 
 .alert--dark {
-  font-size: 1rem;
-  line-height: 1.5rem;
   background-color: #363545;
-  border-top: 0.25rem solid #1f1f28;
-  color: #ffffff;
-  padding: var(--spacing-small) var(--spacing-medium);
-  display: block;
-  margin-bottom: var(--spacing-medium);
-  position: relative;
-  transition: all 200ms ease-in-out; }
+  border: 0.05rem solid #24232e;
+  color: #ffffff; }
+  .alert--dark .alert__icon > i:before {
+    color: #ffffff; }
+  .alert--dark .alert__close i {
+    color: #ffffff; }
 
 .accordion {
   border-radius: 0.25rem;
@@ -1840,7 +1845,8 @@ a.button,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button:hover,
   .button:hover {
     cursor: pointer;
@@ -1867,7 +1873,8 @@ a.button--outline,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--outline:hover,
   .button--outline:hover {
     cursor: pointer;
@@ -1894,7 +1901,8 @@ a.button--danger,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--danger:hover,
   .button--danger:hover {
     cursor: pointer;
@@ -1921,7 +1929,8 @@ a.button--outline--white,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--outline--white:hover,
   .button--white:hover {
     cursor: pointer;
@@ -1948,7 +1957,8 @@ a.button--success,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--success:hover,
   .button--success:hover {
     cursor: pointer;
@@ -1975,7 +1985,8 @@ a.button--alert,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--alert:hover,
   .button--alert:hover {
     cursor: pointer;
@@ -2002,7 +2013,8 @@ a.button--light,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--light:hover,
   .button--light:hover {
     cursor: pointer;
@@ -2029,7 +2041,8 @@ a.button--dark,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--dark:hover,
   .button--dark:hover {
     cursor: pointer;
@@ -2056,7 +2069,8 @@ a.button--link,
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out; }
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+  display: inline-block; }
   a.button--link:hover,
   .button--link:hover {
     cursor: pointer;
@@ -2738,6 +2752,12 @@ table {
 
 .color-text-2 {
   color: #595868; }
+
+.bg-state-default {
+  background-color: #218cff; }
+
+.color-state-default {
+  color: #218cff; }
 
 .bg-state-danger {
   background-color: #e23b43; }

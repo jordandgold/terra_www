@@ -4,73 +4,107 @@
 
 */
 
-@mixin alert-base($highlight, $color) {
+@mixin alert-base() {
     @include type-setting(0,0);
-    background-color: $highlight;
-    border-top: 0.25rem solid darken($highlight, 10%);
-    color: $color;
+    @include border-radius(all, medium);
     padding: var(--spacing-small) var(--spacing-medium);
     display: block;
     margin-bottom: var(--spacing-medium);
     position: relative;
     transition: all 200ms ease-in-out;
-}
-
-[class*="alert"] {
-    .close {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    &__icon {
+        margin-right: var(--spacing-small);
+        > i {
+            width: auto;
+            height: 100%;
+            display: inline-block;
+            &:before {
+                opacity: 0.6;
+            }
+        }
+    }
+    &__close {
         position: absolute;
-        top: 0.5rem;
+        top: 1rem;
         right: 1rem;
-        opacity: 0.2;
+        opacity: 0.4;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: 0;
         i {
             padding: 0;
             margin: 0;
-            color: map-get($colors, gray);
         }
         &:hover {
-            opacity: 0.4;
+            opacity: 0.6;
             cursor: pointer;
         }
     }
 }
 
+@mixin alert-colors($highlight, $color) {
+    background-color: $highlight;
+    border: .05rem solid darken($highlight, 8%);
+    color: $color;
+    .alert__icon {
+        > i {
+            &:before {
+                color: $color;
+            }
+        }
+    }
+    .alert__close {
+        i {
+            color: $color;
+        }
+    }
+}
+
 .alert {
-    @include alert-base(
+    @include alert-base();
+}
+
+.alert--default {
+    @include alert-colors(
         map-get($colors, blue),
         map-get($colors, white)
     );
 }
 
 .alert--danger {
-    @include alert-base(
+    @include alert-colors(
         map-get($colors, red),
         map-get($colors, white)
     );
 }
 
 .alert--success {
-    @include alert-base(
+    @include alert-colors(
         map-get($colors, green),
         map-get($colors, white)
     );
 }
 
 .alert--warning {
-    @include alert-base(
+    @include alert-colors(
         map-get($colors, yellow),
         map-get($colors, gray)
     );
 }
 
 .alert--light {
-    @include alert-base(
+    @include alert-colors(
         map-get($colors, gray-2),
         map-get($colors, gray)
     );
 }
 
 .alert--dark {
-    @include alert-base(
+    @include alert-colors(
         map-get($colors, gray),
         map-get($colors, white)
     );
