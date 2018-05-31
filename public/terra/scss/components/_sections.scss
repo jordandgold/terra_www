@@ -1,10 +1,8 @@
 .page-section {
 	padding-top: var(--spacing-large);
-	// padding-bottom: var(--spacing-large);
 }
 
 .page {
-	// padding-bottom: var(--spacing-large);
 	.page-section:last-child {
 		padding-bottom: var(--spacing-large);
 	}
@@ -12,8 +10,8 @@
 
 footer.main-footer {
 	@include background-color(trimble-gray-2);
-	border-top: 1px solid map-get($colors, gray-3);
-	background-color: map-get($colors, gray-2);
+	border-top: 1px solid $ui-3;
+	background-color: $ui-2;
 	padding: var(--spacing-medium) 0;
 	.footer-links {
 		@include list-unstyled;

@@ -41,7 +41,8 @@ $ui-6: map-get($colors, gray-12);
 
 $text-1: map-get($colors, gray);
 $text-2: map-get($colors, gray-12);
-$text-inverse-1: map-get($colors, white);
+$text-inverse: map-get($colors, white);
+$text-light: map-get($colors, white);
 
 $state-default: map-get($colors, blue);
 $state-danger: map-get($colors, red);
@@ -55,5 +56,8 @@ $navigation-bg: map-get($colors, white);
 $body-bg-color: map-get($colors, white);
 
 // typography
-$body-font-color: map-get($colors, gray-12);
-$header-font-color: map-get($colors, gray);
+$body-font-color: map-get($colors, gray-11);
+$header-font-color: map-get($colors, gray-13);
+
+$link-color: map-get($colors, blue);
+$link-hover-color: darken($link-color, 10%);

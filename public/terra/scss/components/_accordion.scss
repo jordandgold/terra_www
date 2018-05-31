@@ -1,6 +1,6 @@
 .accordion {
 	@include border-radius('all','medium');
-	border: 1px solid map-get($colors, gray-3);
+	border: 1px solid $ui-3;
 	&__heading {
 		padding: var(--spacing-small) var(--spacing-medium);
 		position: relative;
@@ -9,7 +9,7 @@
 			position: absolute;
 			top: 1em;
 			right: var(--spacing-medium);
-			color: map-get($colors, gray);
+			color: $ui-5;
 			transform: rotate(0deg);
 			transition: transform 200ms ease-in-out;
 		}
@@ -17,7 +17,7 @@
 	&__collapsed {
 		display: none;
 		&__content {
-			border-top: 1px solid map-get($colors, gray-3);
+			border-top: 1px solid $ui-3;
 			padding: var(--spacing-medium);
 		}
 	}
@@ -41,7 +41,7 @@
 		&:last-child {
 			@include border-radius('bottom-left','medium');
 			@include border-radius('bottom-right','medium');
-			border-bottom: 1px solid map-get($colors, gray-3);
+			border-bottom: 1px solid $ui-3;
 		}
 	}
 }

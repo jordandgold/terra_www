@@ -52,8 +52,8 @@
 a.button,
 .button {
     @include button-base(
-        map-get($colors, blue),
-        map-get($colors, white)
+        $state-default,
+        $text-light
     );
 }
 
@@ -61,61 +61,61 @@ a.button--outline,
 .button--outline {
     @include button-base(
         transparent,
-        map-get($colors, gray-11),
-        map-get($colors, gray-5),
-        map-get($colors, gray),
-        map-get($colors, white)
+        $text-2,
+        $ui-3,
+        $ui-6,
+        $text-light
     );
 }
 
 a.button--danger,
 .button--danger {
     @include button-base(
-        map-get($colors, red),
-        map-get($colors, white)
+        $state-danger,
+        $text-inverse
     );
 }
 
-a.button--outline--white,
-.button--white {
-    @include button-base(
-        transparent,
-        map-get($colors, white),
-        map-get($colors, white),
-        map-get($colors, white),
-        map-get($colors, gray)
-    );
-}
+// a.button--outline--white,
+// .button--white {
+//     @include button-base(
+//         transparent,
+//         map-get($colors, white),
+//         map-get($colors, white),
+//         map-get($colors, white),
+//         map-get($colors, gray)
+//     );
+// }
 
 a.button--success,
 .button--success {
     @include button-base(
-        map-get($colors, green),
-        map-get($colors, white)
+        $state-success,
+        $text-light
     );
 }
 
 a.button--alert,
 .button--alert {
     @include button-base(
-        map-get($colors, yellow),
-        map-get($colors, gray)
+        $state-alert,
+        $text-1
     );
 }
 
 a.button--light,
 .button--light {
     @include button-base(
-        map-get($colors, gray-2),
-        map-get($colors, gray)
+        $ui-2,
+        $text-1
     );
 }
 
 a.button--dark,
 .button--dark {
     @include button-base(
-        map-get($colors, gray),
-        map-get($colors, white)
+        $ui-6,
+        $text-light
     );
 }
 
@@ -123,9 +123,10 @@ a.button--link,
 .button--link {
     @include button-base(
         transparent,
-        map-get($colors, blue)
+        $link-color
     );
     &:hover {
+        color: $link-hover-color;
         text-decoration: underline;
     }
     &:active {
@@ -141,7 +142,7 @@ a.button--large,
 a.button--small,
 .button--small {
     @include type-setting(-1,0);
-    \padding: var(--spacing-extra-extra-small) var(--spacing-small);
+    padding: var(--spacing-extra-extra-small) var(--spacing-small);
 }
 
 a.button--block,

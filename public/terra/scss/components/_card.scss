@@ -1,6 +1,6 @@
 .card {
 	@include border-radius('all','medium');
-    border: 1px solid map-get($colors, gray-4);
+    border: 1px solid $ui-3;
     background: #ffffff;
     position: relative;
     &__badge {
@@ -22,7 +22,7 @@
 		}
 	}
 	&__footer {
-		border-top: 1px solid map-get($colors, gray-4);
+		border-top: 1px solid $ui-3;
 		padding: var(--spacing-small) var(--spacing-medium);
 	}
 	&__image {

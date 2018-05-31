@@ -74,8 +74,10 @@ $brandColors: (
     margin-bottom: 0;
     border-bottom: 0;
   }
+  :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
     margin-top: 0;
+    background: $ui-2;
   }
 }
 

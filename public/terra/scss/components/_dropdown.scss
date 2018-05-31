@@ -10,10 +10,10 @@
   height: 0;
   margin-left: var(--spacing-extra-small);
   vertical-align: middle;
-  border-top: 4px solid var(--color-trimble-gray-10);
+  border-top: 4px solid $ui-5;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
-  border-bottom: 0 solid var(--color-trimble-gray-10);
+  border-bottom: 0 solid $ui-5;
   overflow: hidden;
   transition: 200ms ease;
 }
@@ -22,24 +22,18 @@
   position: relative;
   > a {
     position: relative;
-    // padding-right: 1rem;
     i {
-      // position: absolute;
-      // top: 50%;
-      // transform: translateY(-50%);
-      // right: 0;
       padding-left: .5rem;
       transition: transform 200ms ease-in-out; 
       &:before {
         font-size: 0.75rem;
-        // color: map-get($colors, gray-8);
       }
     }
   }
   > .dropdown-menu {
     @include box-shadow(1);
     @include border-radius('all','medium');
-    border: 1px solid map-get($colors, gray-4);
+    border: 1px solid $ui-3;
     width: 12.5em;
     position: absolute;
     top: calc(100%);
@@ -52,15 +46,15 @@
     list-style: none;
     transform: translateY(-20px);
     transition: all 225ms;
-    background: var(--color-white);
+    background: $ui-1;
     z-index: 10;
     margin: 0.5rem 0;
     li {
       padding: var(--spacing-extra-small) var(--spacing-small);
       a {
-        color: map-get($colors, gray-10);
+        color: $ui-5;
         &:hover {
-          color: darken(map-get($colors, gray-10), 10%);
+          color: darken($ui-5, 10%);
         }
       }
       ul {
@@ -69,7 +63,7 @@
         display: block;
         padding: var(--spacing-extra-small) 0 0 0;
         margin-bottom: var(--spacing-extra-small);
-        border-bottom: 1px solid map-get($colors, gray-4);
+        border-bottom: 1px solid $ui-3;
       }
     }
     &.show {

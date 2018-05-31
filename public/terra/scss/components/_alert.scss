@@ -62,6 +62,10 @@
             color: $color;
         }
     }
+    hr {
+        opacity: 0.4;
+        background-color: $color;
+    }
 }
 
 .alert {

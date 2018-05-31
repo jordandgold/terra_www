@@ -2,14 +2,14 @@
     @include border-radius('all','small');
     @include type-setting(0,0);
     line-height: 1;
-    color: map-get($colors, gray-10);
+    color: $text-2;
     box-sizing: border-box;
     padding: var(--spacing-extra-small) var(--spacing-small);
     position: relative;
     z-index: 1;
     display: block;
     width: 100%;
-    border: .05rem solid map-get($colors, gray-5);
+    border: .05rem solid $ui-4;
     background-color: transparent;
 }
 
@@ -38,11 +38,10 @@
             @include input-base();
             position: relative;
             z-index: 1;
-            border: .05rem solid map-get($colors, gray-5);
             transition: box-shadow 200ms ease-in-out;
             &:focus {
                 box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
-                            0 0 0 2px rgba(map-get($colors, blue),.2);
+                            0 0 0 2px rgba($brand-1,.2);
             }
             &.focus-effect {
                 margin-top: var(--spacing-extra-small);
@@ -53,7 +52,7 @@
                     width: 100%;
                     top: 50%;
                     transform: translateY(-50%);
-                    color: map-get($colors, gray-8);
+                    color: $text-2;
                     transition: 0.3s;
                     z-index: 0;
                     text-align: left;
@@ -76,30 +75,30 @@
                     }
                 }
                 &.success {
-                    border-color: map-get($colors, green);
+                    border-color: $state-success;
                     ~ label {
-                        color: map-get($colors, green);
+                        color: $state-success;
                     }
                     ~ .focus-border {
-                        background-color: map-get($colors, green);
+                        background-color: $state-success;
                     }
                     ~ i {
                         &:before {
-                            color: map-get($colors, green);
+                            color: $state-success;
                         }
                     }
                 }
                 &.error {
-                    border-color: map-get($colors, red);
+                    border-color: $state-danger;
                     ~ label {
-                        color: map-get($colors, red);
+                        color: $state-danger;
                     }
                     ~ .focus-border {
-                        background-color: map-get($colors, red);
+                        background-color: $state-danger;
                     }
                     ~ i {
                         &:before {
-                            color: map-get($colors, red);
+                            color: $state-danger;
                         }
                     }
                 }
@@ -128,18 +127,6 @@
 :focus {
     outline: none;
 }
-
-// select {
-//     @include input-base();
-//     padding: var(--spacing-extra-small) 0;
-//     background: #ffffff;
-//     border-left: 0;
-//     border-top: 0;
-//     border-right: 0;
-//     border-bottom: 1px solid var(--color-trimble-gray-4);
-//     border-radius: 0;
-//     -webkit-appearance: button;
-// }
 
 select {
     @include input-base(); 
