@@ -104,9 +104,9 @@
                 }
             }
         }
-    }
-    .input-lg {
-        @include font-size(1);
+        &.input-lg {
+            @include font-size(1);
+        }
     }
     .input-help {
         @include type-setting(-1,0);

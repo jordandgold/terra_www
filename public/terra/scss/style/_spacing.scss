@@ -1,11 +1,72 @@
+$spacing-scale: (
+	'none': 0rem,
+	'extra-extra-small': .21875rem,
+	'extra-small': .4375rem,
+	'small': .875rem,
+	'medium': 1.75rem,
+	'large': 3.5rem,
+	'extra-large': 5.25rem,
+	'extra-extra-large': 7rem,
+	'extra-extra-extra-large': 8.75rem,
+);
+
 :root {
-  --spacing-none: 0;
-  --spacing-extra-extra-small: .21875rem;
-  --spacing-extra-small: .4375rem;
-  --spacing-small: .875rem;
-  --spacing-medium: 1.75rem;
-  --spacing-large: 3.5rem;
-  --spacing-extra-large: 5.25rem;
-  --spacing-extra-extra-large: 7rem;
-  --spacing-extra-extra-extra-large: 8.75rem;
+    @each $size, $value in $spacing-scale {
+        --spacing-#{$size}: #{$value};
+    }
+}
+
+// padding all
+@each $size, $value in $spacing-scale {
+
+	// padding
+    .padding-all-#{$size} {
+        padding: $value;
+    }
+    .padding-h-#{$size} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+    .padding-v-#{$size} {
+        padding-top: $value;
+        padding-left: $value;
+    }
+    .padding-top-#{$size} {
+        padding-top: $value;
+    }
+    .padding-right-#{$size} {
+        padding-right: $value;
+    }
+    .padding-bottom-#{$size} {
+        padding-bottom: $value;
+    }
+    .padding-left-#{$size} {
+        padding-left: $value;
+    }
+
+    //margin
+    .margin-all-#{$size} {
+        margin: $value;
+    }
+    .margin-h-#{$size} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+    .margin-v-#{$size} {
+        margin-top: $value;
+        margin-left: $value;
+    }
+    .margin-top-#{$size} {
+        margin-top: $value;
+    }
+    .margin-right-#{$size} {
+        margin-right: $value;
+    }
+    .margin-bottom-#{$size} {
+        margin-bottom: $value;
+    }
+    .margin-left-#{$size} {
+        margin-left: $value;
+    }
+
 }
