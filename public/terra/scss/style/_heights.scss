@@ -1,34 +1,32 @@
-/* Height Scale */
+/*
 
-$heights: (
-    1: 1.75rem,
-    2: 2.25rem,
-    3: 4rem,
-    4: 8rem,
-    5: 16rem,
-);
+    Heights
+
+*/
+
+// Height helper classes - Based off of $height-scale
 
 @mixin height($level) {
-    height: map-get($heights, $level);
+    height: map-get($height-scale, $level);
 }
 
 @mixin max-height($level) {
-    max-height: map-get($heights, $level);
+    max-height: map-get($height-scale, $level);
 }
 
-@each $level in $heights {
+@each $level in $height-scale {
     .height-#{$level} {
         @include height($level);
     }
 }
 
-@each $level in $heights {
+@each $level in $height-scale {
     .max-height-#{$level} {
         @include max-height($level);
     }
 }
 
-/* Height Percentages - Based off of height of parent */
+// Height Percentages - Based off of height of parent
 
 .height-25 {
     height: 25%;
@@ -50,7 +48,7 @@ $heights: (
     min-height: 100%;
 }
 
-/* Screen Height Percentage */
+// Screen Height Percentage
 
 .vh-25 {
     height: 25vh;

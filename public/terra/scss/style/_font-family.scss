@@ -7,16 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
 @mixin font-sans-serif {
-	font-family: 
-		// 'avenir next', avenir,
-		'Lato',
-		-apple-system, BlinkMacSystemFont,
-		'avenir next', avenir,
-		'helvetica neue', helvetica,
-		ubuntu,
-		roboto, noto,
-		'segoe ui', arial,
-		sans-serif;
+	font-family: $font-sans-serif;
 }
 
 @mixin font-serif {

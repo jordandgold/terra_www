@@ -4,6 +4,53 @@
 
 */
 
+@mixin dropdown-menu-base() {
+  @include box-shadow(1);
+  @include border-radius('all','medium');
+  border: 1px solid $ui-3;
+  width: 12.5em;
+  position: absolute;
+  top: calc(100%);
+  padding: var(--spacing-extra-small) 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  float: left;
+  text-align: left;
+  list-style: none;
+  transform: translateY(-20px);
+  transition:
+    transform 225ms ease-in-out,
+    opacity 225ms ease-in-out;
+  background: $ui-1;
+  z-index: 10;
+  margin: 0.5rem 0;
+  li {
+    padding: 0;
+    a {
+      color: $ui-5;
+      padding: var(--spacing-extra-extra-small) var(--spacing-small);
+      display: block;
+      &:hover {
+        color: darken($ui-5, 10%);
+        background: $ui-2;
+        text-decoration: none;
+      }
+    }
+    ul {
+    }
+    &.separator {
+      display: block;
+      padding: var(--spacing-extra-small) 0 0 0;
+      margin-bottom: var(--spacing-extra-small);
+      border-bottom: 1px solid $ui-3;
+    }
+  }
+  &.show {
+    display: block;
+  }
+}
+
 .caret {
   display: inline-block;
   width: 0;
@@ -18,7 +65,7 @@
   transition: 200ms ease;
 }
 
-.dropdown {
+@mixin dropdown-parent() {
   position: relative;
   > a {
     position: relative;
@@ -30,44 +77,15 @@
       }
     }
   }
+}
+
+@mixin dropdown-menu() {
+  @include dropdown-parent();
   > .dropdown-menu {
-    @include box-shadow(1);
-    @include border-radius('all','medium');
-    border: 1px solid $ui-3;
-    width: 12.5em;
-    position: absolute;
-    top: calc(100%);
-    padding: var(--spacing-extra-small) 0;
-    left: 0;
-    visibility: hidden;
-    opacity: 0;
-    float: left;
-    text-align: left;
-    list-style: none;
-    transform: translateY(-20px);
-    transition: all 225ms;
-    background: $ui-1;
-    z-index: 10;
-    margin: 0.5rem 0;
-    li {
-      padding: var(--spacing-extra-small) var(--spacing-small);
-      a {
-        color: $ui-5;
-        &:hover {
-          color: darken($ui-5, 10%);
-        }
-      }
-      ul {
-      }
-      &.separator {
-        display: block;
-        padding: var(--spacing-extra-small) 0 0 0;
-        margin-bottom: var(--spacing-extra-small);
-        border-bottom: 1px solid $ui-3;
-      }
-    }
-    &.show {
-      display: block;
+    @include dropdown-menu-base();
+    &--left {
+      left: unset;
+      right: 0;
     }
   }
   &.open {
@@ -77,4 +95,8 @@
       transform: translateY(0);
     }
   }
+}
+
+.dropdown {
+  @include dropdown-menu();
 }

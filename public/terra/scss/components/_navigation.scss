@@ -43,31 +43,62 @@
 .navbar {
 	@include z-index(10);
 	@include height(3);
-	background: $navigation-bg;
-	transition: all .5s ease;
+	background: $nav-bg;
+	transition: transform .5s ease;
 	position: fixed;
 	top: 0;
 	display: block;
 	width: 100%;
 	border-bottom: 1px solid $ui-3;
+	&__toggle {
+		@include height(3);
+		float: right;
+		display: none;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		background: transparent;
+		@include for-size(phone-only) {
+			display: inline-block;
+		}
+		.line {
+			width: 25px;
+			height: 2px;
+			background-color: $ui-5;
+			display: block;
+			margin: 5px auto;
+			transition: all 0.3s ease-in-out;
+		}
+		&.is-active .line:nth-child(1){
+			transform: translateY(7px);
+		}
+		&.is-active .line:nth-child(3){
+			transform: translateY(-7px);
+		}
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	&__branding {
+		float: left;
+		padding-top: var(--spacing-small);
+		> a {
+			> img {
+				@include height(2);
+			}
+		}
+	}
 	[class^='container'] {
 		&:after {
 			content: '';
 			display: block;
 			clear: both;
 		}
-		.logo {
-			float: left;
-			padding-top: var(--spacing-small);
-			> a {
-				> img {
-					@include height(2);
-				}
-			}
-		}
+	}
+	&__nav {
+		float: right;
 		> ul {
 			@include height(3);
-			float: right;
 			margin: 0;
 			padding: 0;
 			display: table;
@@ -77,49 +108,125 @@
 				display: table-cell;
 				vertical-align: middle;
 				> a:not(.button) {
+					color: $nav-link-color;
 					margin: 0;
 					line-height: 2.25rem;
 					display: inline-block;
+					&:hover {
+						color: $nav-link-hover;
+					}
+					@include for-size(phone-only) {
+						display: block;
+					}
 				}
 				.input-group {
 					margin: 0;
 				}
 			}
-			> li.dropdown.open {
-				> .dropdown-menu {
-					transform: translateY(-.5rem);
+			@include for-size(tablet-portrait-up) {
+		        > li.dropdown {
+					@include dropdown-menu();
+					&.open {
+						> .dropdown-menu {
+							transform: translateY(-1rem);
+						}
+					}
 				}
-			}
-			> .user-account {
-				margin: 0;
-				padding-right: 0;
-				a {
-					.user-photo {
-						width: 1.75rem;
-						height: 1.75rem;
-						border-radius: 50%;
-						background: $ui-6;
-						display: inline-block;
+		    }
+		    @include for-size(phone-only) {
+		    	> li.dropdown {
+					@include dropdown-parent();
+					li.separator {
+						display: none;
+					}
+					> .dropdown-menu {
+						@include list-unstyled();
+						display: none;
+						position: unset;
+						border: 0;
+						box-shadow: unset;
 						margin: 0;
-						padding: 0;
-						position: relative;
-						top: var(--spacing-extra-small);
-						margin-top: calc(var(--spacing-small) * -1)
+						padding-left: var(--spacing-small);
+					    float: none;
+						> li {
+							padding: 0;
+							a {
+								margin: 0;
+								padding: 0;
+								line-height: 2.25rem;
+								display: inline-block;
+								&:hover {
+									background-color: transparent;
+								}
+							}
+						}
 					}
-					&:hover {
-						text-decoration: none;
+					&.open {
+						> .dropdown-menu {
+							display: block;
+						}
 					}
 				}
-				span {
-					line-height: 2.25rem;
-				}
-				> .dropdown-menu {
-					right: -2rem;
-				    left: unset;
-				    width: 10em;
-				}
-			}
+		    }
+			// > .user-account {
+			// 	margin: 0;
+			// 	padding-right: 0;
+			// 	a {
+			// 		.user-photo {
+			// 			width: 1.75rem;
+			// 			height: 1.75rem;
+			// 			border-radius: 50%;
+			// 			background: $ui-6;
+			// 			display: inline-block;
+			// 			margin: 0;
+			// 			padding: 0;
+			// 			position: relative;
+			// 			top: var(--spacing-extra-small);
+			// 			margin-top: calc(var(--spacing-small) * -1);
+			// 		}
+			// 		&:hover {
+			// 			text-decoration: none;
+			// 		}
+			// 	}
+			// 	span {
+			// 		line-height: 2.25rem;
+			// 	}
+			// 	> .dropdown-menu {
+			// 		right: -2rem;
+			// 	    left: unset;
+			// 	    width: 10em;
+			// 	}
+			// }
 			@include mega-menu;
+		}
+		&--collapse {
+			@include for-size(phone-only) {
+				@include box-shadow(2);
+		        position: absolute;
+		        top: map-get($height-scale, 3);
+		        left: 0;
+		        width: 100%;
+		        display: block;
+		        background: $nav-bg;
+		        display: none;
+		    }
+		    > ul {
+		    	@include for-size(phone-only) {
+		    		@include container();
+			        display: block;
+			        width: 100%;
+			        height: auto;
+			        padding-top: var(--spacing-small);
+			        padding-bottom: var(--spacing-small);
+			    }
+	        	> li {
+	        		@include for-size(phone-only) {
+				        display: block;
+				        width: 100%;
+				        padding: 0;
+				    }
+	        	}
+	        }
 		}
 	}
 	&.is-hidden {

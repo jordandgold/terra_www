@@ -16,7 +16,7 @@ a,
 a:visited,
 a:active,
 a:focus {
-  transition: all .4s ease;
+  transition: color 400ms ease;
   font-weight: font-weight(0);
   color: $link-color;
   text-decoration: none;

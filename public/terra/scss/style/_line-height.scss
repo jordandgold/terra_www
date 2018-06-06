@@ -1,18 +1,3 @@
-$base-font-size: 1rem;
-$scale: 1.75;
-$base-line-height: $base-font-size * $scale;
-
-$line-height: (
-	-1: $base-line-height,
-	0: $base-line-height,
-	1: $base-line-height * 1,
-	2: $base-line-height * 1,
-	3: $base-line-height * 2,
-	4: $base-line-height * 2,
-	5: $base-line-height * 2,
-);
-
-// Again, we can make a helper function:
 @function line-height($level) {
   @return map-get($line-height, $level);
 }

@@ -1,3 +1,9 @@
+/*
+
+  Forms
+
+*/
+
 @mixin input-base() {
     @include border-radius('all','small');
     @include type-setting(0,0);
@@ -34,7 +40,9 @@
             display: block;
             padding-bottom: var(--spacing-extra-small);
         }
-        input[type="text"] {
+        input[type="text"],
+        input[type="email"],
+        textarea {
             @include input-base();
             position: relative;
             z-index: 1;
@@ -105,7 +113,9 @@
             }
         }
         &.input-lg {
-            @include font-size(1);
+            input[type="text"] {
+                @include font-size(1);
+            }
         }
     }
     .input-help {

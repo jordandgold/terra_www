@@ -1,14 +1,8 @@
-$spacing-scale: (
-	'none': 0rem,
-	'extra-extra-small': .21875rem,
-	'extra-small': .4375rem,
-	'small': .875rem,
-	'medium': 1.75rem,
-	'large': 3.5rem,
-	'extra-large': 5.25rem,
-	'extra-extra-large': 7rem,
-	'extra-extra-extra-large': 8.75rem,
-);
+/*
+
+	Spacing scale
+
+*/
 
 :root {
     @each $size, $value in $spacing-scale {
@@ -29,7 +23,7 @@ $spacing-scale: (
     }
     .padding-v-#{$size} {
         padding-top: $value;
-        padding-left: $value;
+        padding-bottom: $value;
     }
     .padding-top-#{$size} {
         padding-top: $value;
@@ -54,7 +48,7 @@ $spacing-scale: (
     }
     .margin-v-#{$size} {
         margin-top: $value;
-        margin-left: $value;
+        margin-bottom: $value;
     }
     .margin-top-#{$size} {
         margin-top: $value;

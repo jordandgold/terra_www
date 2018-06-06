@@ -87,4 +87,9 @@ jQuery(document).ready(function($){
 
 	    }
 	}
+
+	$(".navbar__toggle").click(function(){
+		$(this).toggleClass("is-active");
+	});
+
 });

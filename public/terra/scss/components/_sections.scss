@@ -1,12 +1,19 @@
 .page-section {
 	padding-top: var(--spacing-large);
-}
-
-.page {
-	.page-section:last-child {
+	padding-bottom: var(--spacing-large);
+	&__sub-section {
 		padding-bottom: var(--spacing-large);
 	}
+	&__sub-section:last-child {
+		padding-bottom: 0;
+	}
 }
+
+// .page {
+// 	.page-section:last-child {
+// 		padding-bottom: var(--spacing-large);
+// 	}
+// }
 
 footer.main-footer {
 	@include background-color(trimble-gray-2);

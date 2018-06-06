@@ -1,9 +1,8 @@
-$font-weight: (
-	'light': 300,
-	'normal': 400,
-	'bold': 600,
-	'black': 800,
-);
+/*
+
+  Font Weight
+
+*/
 
 @function font-weight($weight) {
   @return map-get($font-weight, $weight);
