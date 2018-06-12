@@ -22,99 +22,99 @@
 .input-group {
     position: relative;
     padding: var(--spacing-small) 0;
+    &:first-child:not(:only-of-type) {
+        padding-top: 0;
+    }
+    &:last-child:not(:only-of-type) {
+        padding-bottom: 0;
+    }
+    &:only-of-type {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     > label {
-        @include type-setting(-1,0);
+        @include type-setting(0,0);
         display: block;
         padding-bottom: var(--spacing-extra-small);
     }
-    .input-wrap {
+    i {
+        position: absolute;
+        top: 50%;
+        right: .75rem;
+        transform: translateY(-50%);
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    textarea {
+        @include input-base();
         position: relative;
-        i {
+        z-index: 1;
+        transition: box-shadow 200ms ease-in-out;
+        &:focus {
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
+                        0 0 0 2px rgba($brand-1,.2);
+        }
+        ~ label {
+            @include type-setting(0,0);
             position: absolute;
+            left: .75rem;
+            width: 100%;
             top: 50%;
-            right: .75rem;
             transform: translateY(-50%);
+            color: $text-2;
+            transition: 0.3s;
+            z-index: 0;
+            text-align: left;
+            padding-bottom: 0;
         }
-        > label {
-            @include type-setting(-1,0);
-            display: block;
-            padding-bottom: var(--spacing-extra-small);
-        }
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            @include input-base();
-            position: relative;
-            z-index: 1;
-            transition: box-shadow 200ms ease-in-out;
-            &:focus {
-                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
-                            0 0 0 2px rgba($brand-1,.2);
+        &:focus,
+        &.has-content,
+        &.success,
+        &.error {
+            ~ label {
+                @include font-size(-1);
+                top: -1.5rem;
+                transform: translateY(0);
+                transition: 0.3s;
+                left: 0;
             }
-            &.focus-effect {
-                margin-top: var(--spacing-extra-small);
-                ~ label {
-                    @include type-setting(0,0);
-                    position: absolute;
-                    left: .75rem;
-                    width: 100%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: $text-2;
-                    transition: 0.3s;
-                    z-index: 0;
-                    text-align: left;
-                    padding-bottom: 0;
-                }
-                &:focus,
-                &.has-content,
-                &.success,
-                &.error {
-                    ~ label {
-                        @include font-size(-1);
-                        top: -1.5rem;
-                        transform: translateY(0);
-                        transition: 0.3s;
-                        left: 0;
-                    }
-                    ~ .focus-border {
-                        width: 100%;
-                        transition: 0.4s;
-                    }
-                }
-                &.success {
-                    border-color: $state-success;
-                    ~ label {
-                        color: $state-success;
-                    }
-                    ~ .focus-border {
-                        background-color: $state-success;
-                    }
-                    ~ i {
-                        &:before {
-                            color: $state-success;
-                        }
-                    }
-                }
-                &.error {
-                    border-color: $state-danger;
-                    ~ label {
-                        color: $state-danger;
-                    }
-                    ~ .focus-border {
-                        background-color: $state-danger;
-                    }
-                    ~ i {
-                        &:before {
-                            color: $state-danger;
-                        }
-                    }
+            ~ .focus-border {
+                width: 100%;
+                transition: 0.4s;
+            }
+        }
+        &.success {
+            border-color: $state-success;
+            ~ label {
+                color: $state-success;
+            }
+            ~ .focus-border {
+                background-color: $state-success;
+            }
+            ~ i {
+                &:before {
+                    color: $state-success;
                 }
             }
         }
-        &.input-lg {
-            input[type="text"] {
-                @include font-size(1);
+    }
+    &.input-lg {
+        input[type="text"] {
+            @include font-size(1);
+        }
+    }
+
+    &.error {
+        input {
+            border-color: $state-danger;
+        }
+        label {
+            color: $state-danger;
+        }
+        i {
+            &:before {
+                color: $state-danger;
             }
         }
     }
@@ -140,7 +140,7 @@
 
 select {
     @include input-base(); 
-    -webkit-appearance: button;
+    -webkit-appearance: none;
     position: relative;
     i {
         position: absolute;
@@ -150,10 +150,36 @@ select {
     }
 }
 
+.select-wrap {
+    position: relative;
+    &:after {
+        content: "\f078";
+        color: $ui-4;
+        font-family: Font Awesome\ 5 Free;
+        font-weight: 900;
+        font-size: 0.75rem;
+        position: absolute;
+        right: map-get($spacing-scale, small);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        text-align: center;
+        pointer-events: none;
+        box-sizing: border-box;   
+    }
+}
+
 textarea {
 	display: block;
 	width: 100%;
 	padding: var(--spacing-extra-small);
 	color: var(--color-trimble-gray-10);
 	border: 1px solid var(--color-trimble-gray-4);
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }

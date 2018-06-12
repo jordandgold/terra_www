@@ -16,6 +16,7 @@
     vertical-align: middle;
     transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
     display: inline-block;
+    text-align: center;
     &:hover {
         @if ($borderColor == $bgColor) {
             cursor: pointer;
@@ -24,7 +25,7 @@
         } @else if ($bgHoverColor) {
             cursor: pointer;
             background-color: $bgHoverColor;
-            border-color: $bgHoverColor;
+            border-color: $borderColor;
         } @else {
             cursor: pointer;
             background-color: $borderColor;
@@ -35,6 +36,7 @@
     }
     &:active {
         box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+        background-color: darken($bgColor, 20%);
     }
     i {
         &:before {
@@ -147,6 +149,7 @@ a.button--small,
 
 a.button--block,
 .button--block {
+    padding: var(--spacing-extra-small) 0;
     display: block;
     width: 100%;
 }

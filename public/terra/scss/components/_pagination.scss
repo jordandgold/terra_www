@@ -1,0 +1,35 @@
+ul.pagination {
+	@include list-inline();
+	margin-top: map-get($spacing-scale, medium);
+	margin-bottom: map-get($spacing-scale, medium);
+	display: flex;
+	text-align: center;
+    justify-content: center !important;
+	li {
+		margin: 0;
+		padding: 0;
+		a {
+			@include button-base(
+		        transparent,
+		        $brand-1,
+		        $ui-3,
+		        $ui-2,
+		        $brand-1
+		    );
+		    margin: 0;
+		}
+		&:first-child:not(:only-child) {
+			a {
+				border-right: 0;
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px;
+			}
+		}
+		&:last-child:not(:only-child) {
+			a {
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+			}
+		}
+	}
+}

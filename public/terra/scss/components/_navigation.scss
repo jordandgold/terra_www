@@ -258,10 +258,42 @@
 }
 
 ul.tree-menu {
-	@include type-setting(-1,'normal');
-	margin-top: var(--spacing-medium);
-	padding: 0 var(--spacing-medium);
+	// @include type-setting(-1,'normal');
+	// margin-top: var(--spacing-medium);
+	margin: 0;
+	padding: 0 0 0 var(--spacing-extra-small);
 	list-style: none;
+	li {
+		padding: 0 0 0 var(--spacing-extra-small);
+		i {
+			position: absolute;
+			top: .7rem;
+			left: -.25rem;
+			transition: transform 200ms ease-in-out; 
+			&:before {
+				font-size: 0.75rem;
+			}
+		}
+		ul {
+			// @include type-setting(-1,'normal');
+			padding: 0 0 0 var(--spacing-small);
+			list-style: none;
+			li {
+				padding: 0 0 0 var(--spacing-extra-small);
+				> a {
+					@include border-radius('all','small');
+					padding: var(--spacing-extra-small) 0;
+					display: block;
+				}
+			}
+		}
+		&.active {
+			> a {
+				@include font-weight(bold);
+				color: $text-2;
+			}
+		}
+	}
 	> li {
 		position: relative;
 		padding: 0 0 0 var(--spacing-small);

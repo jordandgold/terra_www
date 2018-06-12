@@ -11,9 +11,9 @@
     display: block;
     margin-bottom: var(--spacing-medium);
     position: relative;
-    transition: all 200ms ease-in-out;
-    display: flex;
-    flex-direction: row;
+    // transition: all 200ms ease-in-out;
+    // display: flex;
+    // flex-direction: row;
     height: 100%;
     &__icon {
         margin-right: var(--spacing-small);
@@ -46,25 +46,33 @@
     }
 }
 
-@mixin alert-colors($highlight, $color) {
-    background-color: $highlight;
-    border: .05rem solid darken($highlight, 8%);
-    color: $color;
+@mixin alert-colors($color, $fontColor: $color) {
+    background-color: lighten($color, 40%);
+    border: .05rem solid darken($color, 10%);
+    color: darken($color, 20%);
     .alert__icon {
         > i {
             &:before {
-                color: $color;
+                color: darken($color, 20%);
             }
         }
     }
     .alert__close {
         i {
-            color: $color;
+            color: darken($color, 15%);
         }
     }
     hr {
         opacity: 0.4;
-        background-color: $color;
+        background-color: darken($color, 10%);
+    }
+    a {
+        color: darken($color, 20%);
+        text-decoration: underline;
+        &:hover {
+            color: darken($color, 10%);
+            text-decoration: underline;
+        }
     }
 }
 
@@ -102,7 +110,7 @@
 
 .alert--light {
     @include alert-colors(
-        map-get($colors, gray-2),
+        map-get($colors, gray-9),
         map-get($colors, gray)
     );
 }

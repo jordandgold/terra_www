@@ -13,18 +13,17 @@
   top: calc(100%);
   padding: var(--spacing-extra-small) 0;
   left: 0;
-  visibility: hidden;
-  opacity: 0;
   float: left;
   text-align: left;
   list-style: none;
   transform: translateY(-20px);
-  transition:
-    transform 225ms ease-in-out,
-    opacity 225ms ease-in-out;
+  opacity: 0;
+  // display: none;
+  visibility: hidden;
   background: $ui-1;
   z-index: 10;
   margin: 0.5rem 0;
+  transition: transform 225ms, opacity 225ms, visibility 225ms;
   li {
     padding: 0;
     a {
@@ -51,19 +50,19 @@
   }
 }
 
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: var(--spacing-extra-small);
-  vertical-align: middle;
-  border-top: 4px solid $ui-5;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  border-bottom: 0 solid $ui-5;
-  overflow: hidden;
-  transition: 200ms ease;
-}
+// .caret {
+//   display: inline-block;
+//   width: 0;
+//   height: 0;
+//   margin-left: var(--spacing-extra-small);
+//   vertical-align: middle;
+//   border-top: 4px solid $ui-5;
+//   border-right: 4px solid transparent;
+//   border-left: 4px solid transparent;
+//   border-bottom: 0 solid $ui-5;
+//   overflow: hidden;
+//   transition: 200ms ease;
+// }
 
 @mixin dropdown-parent() {
   position: relative;
@@ -71,7 +70,7 @@
     position: relative;
     i {
       padding-left: .5rem;
-      transition: transform 200ms ease-in-out; 
+      // transition: transform 200ms ease-in-out; 
       &:before {
         font-size: 0.75rem;
       }
@@ -91,6 +90,7 @@
   &.open {
     > .dropdown-menu {
       visibility: visible;
+      // display: block;
       opacity: 1;
       transform: translateY(0);
     }

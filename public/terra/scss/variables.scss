@@ -26,6 +26,10 @@ $colors: (
     black: #000000,
 );
 
+$su-colors: (
+    gray: #363545,
+);
+
 // color mapping
 
 $brand-1: map-get($colors, blue);
@@ -50,9 +54,9 @@ $state-success: map-get($colors, green);
 $state-alert: map-get($colors, yellow);
 
 // navigation
-$nav-bg: map-get($colors, white);
-$nav-link-color: map-get($colors, gray-10);
-$nav-link-hover: map-get($colors, gray);
+$nav-bg: map-get($su-colors, gray);
+$nav-link-color: map-get($colors, white);
+$nav-link-hover: darken($nav-link-color, 10%);
 
 // body
 $body-bg-color: map-get($colors, white);
@@ -122,6 +126,7 @@ $height-scale: (
 // spacing scale
 $spacing-scale: (
     'none': 0rem,
+    'extra-extra-extra-small': .109375rem,
     'extra-extra-small': .21875rem,
     'extra-small': .4375rem,
     'small': .875rem,

@@ -16,10 +16,10 @@ a,
 a:visited,
 a:active,
 a:focus {
-  transition: color 400ms ease;
   font-weight: font-weight(0);
   color: $link-color;
   text-decoration: none;
+  transition: color 400ms ease;
   &:hover {
     color: $link-hover-color;
     text-decoration: underline;

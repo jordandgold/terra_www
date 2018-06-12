@@ -1,0 +1,20 @@
+@mixin badge-base($bgColor, $color) {
+	@include type-setting(-1,bold);
+	@include border-radius(all, small);
+	background-color: $bgColor;
+	padding: var(--spacing-extra-extra-extra-small) var(--spacing-extra-small);
+	color: $color;
+	transition: background-color 300ms ease-in-out;
+	&:hover,
+	&:active,
+	&:visited {
+		background-color: darken($bgColor, 10%);
+		text-decoration: none;
+		color: $color;
+	}
+	&:focus {
+		background-color: darken($bgColor, 20%);
+		text-decoration: none;
+		color: $color;
+	}
+}
