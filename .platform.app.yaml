@@ -1,5 +1,8 @@
 type: "nodejs:10"
 
+# The size of the persistent disk of the application (in MB).
+disk: 2048
+
 dependencies:
   nodejs:
     pm2: "^2.5.0"
