@@ -1,0 +1,14 @@
+type: "nodejs:10"
+
+dependencies:
+  nodejs:
+    pm2: "^2.5.0"
+
+web:
+  commands:
+    start: "PM2_HOME=/app/run pm2 start server.js --no-daemon"
+
+hooks:
+  build: |
+    npm install
+#    npm start

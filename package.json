@@ -11,6 +11,7 @@
   "author": "Jordan Gold <jordandgold@gmail.com>",
   "license": "BSD",
   "dependencies": {
+    "platformsh": "^0.0.1",
     "autoprefixer": "^8.0.0",
     "express": "^4.7.2",
     "express-handlebars": "^3.0.0",
