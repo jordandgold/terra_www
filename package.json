@@ -11,7 +11,7 @@
   "author": "Jordan Gold <jordandgold@gmail.com>",
   "license": "BSD",
   "engines": {
-    "node": "4.1.1"
+    "node": "^4.7.1"
   },
   "dependencies": {
     "platformsh": "^0.0.1",
