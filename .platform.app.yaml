@@ -1,3 +1,5 @@
+name: app
+
 type: "nodejs:10"
 
 # The size of the persistent disk of the application (in MB).
