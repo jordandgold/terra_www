@@ -18,9 +18,6 @@ var helpers = require('handlebars-helpers')();
 
 var path = require('path');
 
-// Load the Platform.sh configuration
-var config= require("platformsh").config();
-
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
