@@ -18,6 +18,9 @@ var helpers = require('handlebars-helpers')();
 
 var path = require('path');
 
+// Load the Platform.sh configuration
+var config= require("platformsh").config();
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -83,6 +86,4 @@ app.get('*', function(req, res){
   res.render('pages/404/404', {layout: 'full-width', title: '404 | Terra Design System'});
 });
 
-app.listen(3000, function () {
-    console.log('server listening on: 3000');
-});
+app.listen(config.port);
