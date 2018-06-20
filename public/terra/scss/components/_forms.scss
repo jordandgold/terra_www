@@ -61,6 +61,11 @@
                 @include font-size(1);
             }
         }
+        textarea {
+            @include type-setting(0,0);
+            display: block;
+            width: 100%;
+        }
     }
     .input-help {
         @include type-setting(-1,0);
@@ -149,14 +154,6 @@ select {
         pointer-events: none;
         box-sizing: border-box;   
     }
-}
-
-textarea {
-	display: block;
-	width: 100%;
-	padding: var(--spacing-extra-small);
-	color: grayscale(10);
-	border: 1px solid grayscale(4);
 }
 
 fieldset {

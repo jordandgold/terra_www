@@ -417,10 +417,8 @@ html {
   background: #ffffff;
   height: 100%; }
 
-body {
-  padding-top: 4rem; }
-  body.no-nav {
-    padding-top: 0; }
+body.no-nav {
+  padding-top: 0; }
 
 a,
 a:visited,
@@ -2510,11 +2508,7 @@ small {
     text-decoration: none;
     color: #ffffff; }
 
-/*
-
-  BUTTONS
-
-*/
+/* BUTTONS */
 .button,
 a.button {
   font-size: 16px;
@@ -2716,26 +2710,26 @@ a.button--dark {
 .button--outline,
 a.button--outline {
   background-color: transparent;
-  border: 0.05rem solid #0090d6;
-  color: #00ACFF; }
+  border: 0.05rem solid #676771;
+  color: #595868; }
   .button--outline:visited, .button--outline:active, .button--outline:focus,
   a.button--outline:visited,
   a.button--outline:active,
   a.button--outline:focus {
-    color: #00ACFF; }
+    color: #595868; }
   .button--outline:hover,
   a.button--outline:hover {
-    color: #00ACFF;
+    color: #595868;
     text-decoration: none;
     background-color: transparent;
-    border-color: #008acc;
+    border-color: #62626b;
     cursor: pointer; }
   .button--outline:active,
   a.button--outline:active {
     background-color: transparent; }
   .button--outline i:before,
   a.button--outline i:before {
-    color: #00ACFF; }
+    color: #595868; }
 
 .button--ghost,
 a.button--ghost {
@@ -3012,6 +3006,11 @@ a.button--block {
         font-size: 20px;
         line-height: 30px;
         font-weight: 400; }
+    .input-group .input-wrap textarea {
+      font-size: 16px;
+      line-height: 24px;
+      display: block;
+      width: 100%; }
   .input-group .input-help {
     font-size: 14px;
     line-height: 21px;
@@ -3089,13 +3088,6 @@ select {
     text-align: center;
     pointer-events: none;
     box-sizing: border-box; }
-
-textarea {
-  display: block;
-  width: 100%;
-  padding: var(--spacing-extra-small);
-  color: #7B7A86;
-  border: 1px solid #E2E2E7; }
 
 fieldset {
   min-width: 0;
