@@ -2288,13 +2288,15 @@ small {
       overflow: hidden;
       max-height: 0;
       transition: max-height 300ms; }
-  .accordion.expanded .accordion__heading:after {
-    transform: rotate(-90deg); }
-  .accordion.expanded .accordion__collapse {
-    display: block; }
-  .accordion.expanded .accordion__collapse__content {
-    overflow: none;
-    max-height: initial; }
+  .accordion.expanded {
+    background: #F3F3F7; }
+    .accordion.expanded .accordion__heading:after {
+      transform: rotate(-90deg); }
+    .accordion.expanded .accordion__collapse {
+      display: block; }
+    .accordion.expanded .accordion__collapse__content {
+      overflow: none;
+      max-height: initial; }
 
 .accordion-group {
   margin-bottom: 1.75rem; }
