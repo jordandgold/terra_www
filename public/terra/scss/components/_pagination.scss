@@ -1,4 +1,4 @@
-ul.pagination {
+.pagination {
 	@include list-inline();
 	margin-top: map-get($spacing-scale, medium);
 	margin-bottom: map-get($spacing-scale, medium);
@@ -8,27 +8,39 @@ ul.pagination {
 	li {
 		margin: 0;
 		padding: 0;
-		a {
-			@include button-base(
-		        transparent,
-		        $brand-1,
-		        $ui-3,
-		        $ui-2,
-		        $brand-1
-		    );
+		a,
+		> span {
+			@include border-radius(all,small);
+			padding: var(--spacing-extra-small) var(--spacing-small);
+			border: 1px solid darken(theme-color(ui-3), 8%);
 		    margin: 0;
 		}
-		&:first-child:not(:only-child) {
-			a {
+		&:not(:first-child):not(:last-child) {
+			a,
+			> span {
+		    	border-radius: 0px;
+		    	border-right: 0px;
+		    }
+		}
+		&:first-child:not(:only-of-type) {
+			a,
+			> span {
 				border-right: 0;
 				border-top-right-radius: 0px;
 				border-bottom-right-radius: 0px;
 			}
 		}
-		&:last-child:not(:only-child) {
-			a {
+		&:last-child:not(:only-of-type) {
+			a,
+			> span {
 				border-top-left-radius: 0px;
 				border-bottom-left-radius: 0px;
+			}
+		}
+		&:only-of-type {
+			a,
+			> span {
+				border: 1px solid darken(theme-color(ui-3), 8%);
 			}
 		}
 	}

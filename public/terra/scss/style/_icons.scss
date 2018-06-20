@@ -1,3 +1,16 @@
+@mixin icon-base() {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 900;
+    font-family: Font Awesome\ 5 Free;
+}
+
+// include flaticon below
+
     /*
     Flaticon icon font: Flaticon
     Creation date: 22/06/2016 15:35

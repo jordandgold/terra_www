@@ -1,0 +1,172 @@
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+$colors: (
+    "red": #FE4200,
+    "blue": #00ACFF,
+    "green": #98F81C,
+    "yellow": #FFBF00,
+);
+
+@function grayscale($key: 14) {
+  @return map-get($grayscale, $key);
+}
+$grayscale: (
+    "white": #ffffff,
+    1: #F9F9FB,
+    2: #F3F3F7,
+    3: #EAEAEF,
+    4: #E2E2E7,
+    5: #D0D0D7,
+    6: #BFBFC6,
+    7: #AEAEB6,
+    8: #9D9DA6,
+    9: #8C8B96,
+    10: #7B7A86,
+    11: #6A6976,
+    12: #595868,
+    13: #474655,
+    14: #363545,
+    15: #262533,
+    16: #1B1A26,
+    17: #0B0A12,
+    "black": #000000,
+);
+
+@function theme-color($key: "brand-1") {
+  @return map-get($theme-colors, $key);
+}
+$theme-colors: () !default;
+$theme-colors: map-merge((
+    "brand-1":       color("red"),
+    "brand-2":       color("blue"),
+    "brand-3":       grayscale(),
+    "ui-1":          grayscale("white"),
+    "ui-2":          grayscale(2),
+    "ui-3":          grayscale(4),
+    "ui-4":          grayscale(8),
+    "ui-5":          grayscale(10),
+    "ui-6":          grayscale(12),
+    "text-1":        grayscale(14),
+    "text-2":        grayscale(12),
+    "text-inverse":  grayscale("white"),
+), $theme-colors);
+
+@function state-color($key: "info") {
+  @return map-get($state-colors, $key);
+}
+$state-colors: () !default;
+$state-colors: map-merge((
+    "default":  color("blue"),
+    "info":  color("blue"),
+    "danger":   color("red"),
+    "success":  color("green"),
+    "warning":  color("yellow"),
+    "light":    grayscale(2),
+    "dark":     grayscale(6),
+), $state-colors);
+
+// navigation
+$navbar-bg: grayscale("white");
+$navbar-link-color: theme-color("text-2");
+$navbar-link-hover: darken($navbar-link-color, 10%);
+$navbar-border: 1px solid theme-color(ui-3);
+
+// body
+$body-bg-color: grayscale("white");
+$body-font-color: grayscale(11);
+
+// headers
+$header-font-color: grayscale(13);
+
+// links
+$link-color: color("blue");
+$link-hover-color: darken($link-color, 10%);
+
+// YIQ contrast colors
+/// The text color to be used when a background is determined to be "light"
+/// @type Color
+$yiq-contrasted-dark-default: grayscale() !default;
+/// The text color to be used when a background is determined to be "dark"
+/// @type Color
+$yiq-contrasted-light-default: grayscale("white") !default;
+/// The YIQ lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 & 255.
+/// @type Number
+$yiq-contrasted-threshold: 128 !default;
+/// Toggle diagnostic messages.
+/// @type Boolean
+$yiq-debug: false !default;
+
+// font family
+$font-sans-serif:
+    'Lato',
+    -apple-system, BlinkMacSystemFont,
+    'avenir next', avenir,
+    'helvetica neue', helvetica,
+    ubuntu,
+    roboto, noto,
+    'segoe ui', arial,
+    sans-serif;
+
+// font weight
+$font-weight: (
+    'light': 300,
+    'normal': 400,
+    'bold': 600,
+    'black': 800,
+);
+
+// type scale
+$type-scale: (
+    -1: 0.875rem,
+    0: 1rem,
+    1: 1.25rem,
+    2: 1.5rem,
+    3: 2.0rem,
+    4: 2.5rem,
+    5: 3.0rem,
+    6: 4.0rem
+);
+
+// type setting
+$base-font-size: 1rem;
+$scale: 1.75;
+$base-line-height: $base-font-size * $scale;
+$line-height: (
+    -1: $base-line-height,
+    0: $base-line-height,
+    1: $base-line-height * 1,
+    2: $base-line-height * 1,
+    3: $base-line-height * 2,
+    4: $base-line-height * 2,
+    5: $base-line-height * 2,
+);
+
+// heights
+$height-scale: (
+    1: 1.75rem,
+    2: 2.25rem,
+    3: 4rem,
+    4: 8rem,
+    5: 16rem,
+);
+
+// spacing scale
+@function spacing($key: medium) {
+  @return map-get($spacing-scale, $key);
+}
+$spacing-scale: (
+    'none': 0rem,
+    'extra-extra-extra-small': .109375rem,
+    'extra-extra-small': .21875rem,
+    'extra-small': .4375rem,
+    'small': .875rem,
+    'medium': 1.75rem,
+    'large': 3.5rem,
+    'extra-large': 5.25rem,
+    'extra-extra-large': 7rem,
+    'extra-extra-extra-large': 8.75rem,
+);
+
+$accordion-border-color: theme-color(ui-5);

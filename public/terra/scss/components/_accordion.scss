@@ -1,47 +1,66 @@
+
 .accordion {
-	@include border-radius('all','medium');
-	border: 1px solid $ui-3;
+	// @include border-radius('all','medium');
+	border: 1px solid $accordion-border-color;
+	margin-bottom: spacing(medium);
 	&__heading {
 		padding: var(--spacing-small) var(--spacing-medium);
 		position: relative;
 		display: block;
-		i {
+		&:after {
 			position: absolute;
 			top: 1em;
 			right: var(--spacing-medium);
-			color: $ui-5;
+			color: theme-color(ui-5);
 			transform: rotate(0deg);
 			transition: transform 200ms ease-in-out;
+		    @include icon-base();
+			content: "\f054";
+		}
+		&:hover {
+			cursor: pointer;
 		}
 	}
-	&__collapsed {
+	&__collapse {
 		display: none;
 		&__content {
-			border-top: 1px solid $ui-3;
-			padding: var(--spacing-medium);
+			// border-top: 1px solid $accordion-border-color;
+			padding: var(--spacing-small) var(--spacing-medium);
+			overflow: hidden;
+	    	max-height: 0;
+	    	transition: max-height 300ms;
 		}
 	}
 	&.expanded {
 		.accordion__heading {
-			i {
+			&:after {
 				transform: rotate(-90deg);
 			}
+		}
+		.accordion__collapse {
+			display: block;
+		}
+		.accordion__collapse__content {
+		    overflow: none;
+		    max-height: initial;
 		}
 	}
 }
 
 .accordion-group {
+	margin-bottom: spacing(medium);
 	.accordion {
 		@include border-radius('all','none');
+		margin-bottom: 0;
 		border-bottom: 0;
 		&:first-child {
-			@include border-radius('top-left','medium');
-			@include border-radius('top-right','medium');
+			// @include border-radius('top-left','medium');
+			// @include border-radius('top-right','medium');
 		}
 		&:last-child {
-			@include border-radius('bottom-left','medium');
-			@include border-radius('bottom-right','medium');
-			border-bottom: 1px solid $ui-3;
+			// @include border-radius('bottom-left','medium');
+			// @include border-radius('bottom-right','medium');
+			border-bottom: 1px solid $accordion-border-color;
 		}
 	}
 }

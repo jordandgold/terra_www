@@ -17,6 +17,9 @@
     @else if $range == tablet-portrait-up {
         @media (min-width: $phone-upper-boundary) { @content; }
     }
+    @else if $range == tablet-landscape-down {
+        @media (max-width: $tablet-portrait-upper-boundary) { @content; }
+    }
     @else if $range == tablet-landscape-up {
         @media (min-width: $tablet-portrait-upper-boundary) { @content; }
     }

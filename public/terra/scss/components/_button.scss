@@ -4,151 +4,129 @@
 
 */
 
-@mixin button-base($bgColor, $color, $borderColor: $bgColor, $bgHoverColor: null, $colorHover: $color) {
+@mixin button-variant($bg, $color: $bg, $borderColor: $bg) {
+    background-color: $bg;
+    border: .05rem solid darken($borderColor, 8%);
+    @if $bg == $color {
+        color: yiq-contrast-color($bg);
+    }
+    @else {
+        color: $color;
+    }
+    &:visited,
+    &:active,
+    &:focus {
+        @if $bg == $color {
+            color: yiq-contrast-color($bg);
+        }
+        @else {
+            color: $color;
+        }
+    }
+    &:hover {
+        @if $bg == $color {
+            color: yiq-contrast-color($bg);
+        }
+        @else {
+            color: $color;
+        }
+        background-color: darken($bg, 10%);
+        border-color: darken($borderColor, 10%);
+        cursor: pointer;
+    }
+    &:active {
+        background-color: darken($bg, 20%);
+    }
+    i {
+        &:before {
+            @if $bg == $color {
+                color: yiq-contrast-color($bg);
+            }
+            @else {
+                color: $color;
+            }
+        }
+    }
+}
+
+@mixin button-base() {
     @include type-setting(0,0);
     @include border-radius('all','small');
-    background-color: $bgColor;
-    border: .05rem solid darken($borderColor, 8%);
-    color: $color;
-    padding: var(--spacing-extra-small) var(--spacing-small);
+    padding: spacing(extra-small) spacing(small);
     text-decoration: none;
     white-space: nowrap;
     vertical-align: middle;
     transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
     display: inline-block;
     text-align: center;
-    &:hover {
-        @if ($borderColor == $bgColor) {
+    &[href] {
+        &:hover {
             cursor: pointer;
-            background-color: darken($bgColor, 10%);
-            border-color: darken($borderColor, 10%);
-        } @else if ($bgHoverColor) {
-            cursor: pointer;
-            background-color: $bgHoverColor;
-            border-color: $borderColor;
-        } @else {
-            cursor: pointer;
-            background-color: $borderColor;
-            border-color: $borderColor;
+            text-decoration: none;
         }
-        color: $colorHover;
-        text-decoration: none;
-    }
-    &:active {
-        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
-        background-color: darken($bgColor, 20%);
-    }
-    i {
-        &:before {
-            color: $color;
+        &:active {
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        i {
+            padding-left: .5rem;
+            &:before {
+                font-size: 0.75rem;
+            }
         }
     }
 }
 
-[class*="button"] {
-    i {
-        padding-left: .5rem;
-    }
+.button,
+a.button {
+    @include button-base();
 }
 
-a.button,
-.button {
-    @include button-base(
-        $state-default,
-        $text-light
-    );
+@each $color, $value in $state-colors {
+  .button--#{$color},
+  a.button--#{$color} {
+    @include button-variant($value);
+  }
 }
 
-a.button--outline,
-.button--outline {
-    @include button-base(
+.button--outline,
+a.button--outline {
+    @include button-variant(
         transparent,
-        $text-2,
-        $ui-3,
-        $ui-6,
-        $text-light
+        $link-color,
+        $link-color
     );
 }
 
-a.button--danger,
-.button--danger {
-    @include button-base(
-        $state-danger,
-        $text-inverse
-    );
-}
-
-// a.button--outline--white,
-// .button--white {
-//     @include button-base(
-//         transparent,
-//         map-get($colors, white),
-//         map-get($colors, white),
-//         map-get($colors, white),
-//         map-get($colors, gray)
-//     );
-// }
-
-a.button--success,
-.button--success {
-    @include button-base(
-        $state-success,
-        $text-light
-    );
-}
-
-a.button--alert,
-.button--alert {
-    @include button-base(
-        $state-alert,
-        $text-1
-    );
-}
-
-a.button--light,
-.button--light {
-    @include button-base(
-        $ui-2,
-        $text-1
-    );
-}
-
-a.button--dark,
-.button--dark {
-    @include button-base(
-        $ui-6,
-        $text-light
-    );
-}
-
-a.button--link,
-.button--link {
-    @include button-base(
+.button--link,
+a.button--link {
+    @include button-variant(
         transparent,
         $link-color
     );
-    &:hover {
-        color: $link-hover-color;
-        text-decoration: underline;
-    }
-    &:active {
-        box-shadow: none;
+    &[href] {
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+        }
+        &:active {
+            box-shadow: none;
+        }
     }
 }
 
-a.button--large,
-.button--large {
+.button--large,
+a.button--large {
     @include type-setting(1,0);
 }
 
-a.button--small,
-.button--small {
+.button--small,
+a.button--small {
     @include type-setting(-1,0);
     padding: var(--spacing-extra-extra-small) var(--spacing-small);
 }
 
-a.button--block,
-.button--block {
+.button--block,
+a.button--block {
     padding: var(--spacing-extra-small) 0;
     display: block;
     width: 100%;

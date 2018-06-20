@@ -1,11 +1,14 @@
 jQuery(document).ready(function($){
 
-    $('.collapse').click(function () {
-    	$(this).parent().children('.collapsed').slideToggle(200).parent().toggleClass('expanded').toggleClass('collapsed');
-    });
+    $('.accordion__heading').click(function () {
+    	/* Collapse the sibling accordions if this has a group */
+		var maybeGroup = $(this).parent().parent();
+    	if(maybeGroup && maybeGroup.hasClass('accordion-group')) {
+    		$(this).parent().siblings('.accordion').removeClass('expanded');
+    	}
 
-    $('.navbar__toggle').click(function () {
-    	$(this).parent().children('.navbar__nav--collapse').slideToggle(200).parent().toggleClass('expanded').toggleClass('collapsed');
+    	/* Adjust the one you clicked */
+    	$(this).parent().toggleClass('expanded');
     });
           
 });

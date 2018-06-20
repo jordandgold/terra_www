@@ -97,6 +97,10 @@ p {
 	@include font-size-paragraph;
 }
 
+body, html {
+	@include type-setting(0);
+}
+
 @mixin font-size($size) {
 	@include type-setting($size);
 }

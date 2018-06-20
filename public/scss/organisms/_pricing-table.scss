@@ -8,7 +8,7 @@
 		.product {
 			@include box-shadow(2);
 			@include border-radius('all','medium');
-			@extend .bg-white;
+			background: gray("white");
 			height: 100%;
 			width: auto;
 			position: relative;

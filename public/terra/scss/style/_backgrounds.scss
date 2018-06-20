@@ -4,6 +4,12 @@
     }
 }
 
+@each $name, $hex in $grayscale {
+    .bg-gray-#{$name} {
+        background-color: $hex;
+    }
+}
+
 @mixin background-color($color) {
   background-color: map-get($colors, $color);
 }

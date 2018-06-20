@@ -11,9 +11,6 @@
     display: block;
     margin-bottom: var(--spacing-medium);
     position: relative;
-    // transition: all 200ms ease-in-out;
-    // display: flex;
-    // flex-direction: row;
     height: 100%;
     &__icon {
         margin-right: var(--spacing-small);
@@ -46,10 +43,14 @@
     }
 }
 
-@mixin alert-colors($color, $fontColor: $color) {
-    background-color: lighten($color, 40%);
+@mixin alert-variant($color, $textColor: $color) {
+    background-color: transparentize($color, .9);
     border: .05rem solid darken($color, 10%);
-    color: darken($color, 20%);
+    @if $textColor == $color {
+        color: darken($textColor, 30%);
+    } @else {
+        color: $textColor;
+    }
     .alert__icon {
         > i {
             &:before {
@@ -80,44 +81,8 @@
     @include alert-base();
 }
 
-.alert--default {
-    @include alert-colors(
-        map-get($colors, blue),
-        map-get($colors, white)
-    );
-}
-
-.alert--danger {
-    @include alert-colors(
-        map-get($colors, red),
-        map-get($colors, white)
-    );
-}
-
-.alert--success {
-    @include alert-colors(
-        map-get($colors, green),
-        map-get($colors, white)
-    );
-}
-
-.alert--warning {
-    @include alert-colors(
-        map-get($colors, yellow),
-        map-get($colors, gray)
-    );
-}
-
-.alert--light {
-    @include alert-colors(
-        map-get($colors, gray-9),
-        map-get($colors, gray)
-    );
-}
-
-.alert--dark {
-    @include alert-colors(
-        map-get($colors, gray),
-        map-get($colors, white)
-    );
+@each $color, $value in $state-colors {
+  .alert--#{$color} {
+    @include alert-variant($value);
+  }
 }

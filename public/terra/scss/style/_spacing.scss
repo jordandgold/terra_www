@@ -15,52 +15,52 @@
 
 	// padding
     .padding-all-#{$size} {
-        padding: $value;
+        padding: $value !important;
     }
     .padding-h-#{$size} {
-        padding-left: $value;
-        padding-right: $value;
+        padding-left: $value !important;
+        padding-right: $value !important;
     }
     .padding-v-#{$size} {
-        padding-top: $value;
-        padding-bottom: $value;
+        padding-top: $value !important;
+        padding-bottom: $value !important;
     }
     .padding-top-#{$size} {
-        padding-top: $value;
+        padding-top: $value !important;
     }
     .padding-right-#{$size} {
-        padding-right: $value;
+        padding-right: $value !important;
     }
     .padding-bottom-#{$size} {
-        padding-bottom: $value;
+        padding-bottom: $value !important;
     }
     .padding-left-#{$size} {
-        padding-left: $value;
+        padding-left: $value !important;
     }
 
     //margin
     .margin-all-#{$size} {
-        margin: $value;
+        margin: $value !important;
     }
     .margin-h-#{$size} {
-        margin-left: $value;
-        margin-right: $value;
+        margin-left: $value !important;
+        margin-right: $value !important;
     }
     .margin-v-#{$size} {
-        margin-top: $value;
-        margin-bottom: $value;
+        margin-top: $value !important;
+        margin-bottom: $value !important;
     }
     .margin-top-#{$size} {
-        margin-top: $value;
+        margin-top: $value !important;
     }
     .margin-right-#{$size} {
-        margin-right: $value;
+        margin-right: $value !important;
     }
     .margin-bottom-#{$size} {
-        margin-bottom: $value;
+        margin-bottom: $value !important;
     }
     .margin-left-#{$size} {
-        margin-left: $value;
+        margin-left: $value !important;
     }
 
 }

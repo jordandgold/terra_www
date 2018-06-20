@@ -1,20 +1,54 @@
-@mixin badge-base($bgColor, $color) {
-	@include type-setting(-1,bold);
+
+@mixin badge-base() {
+	@include font-weight(bold);
 	@include border-radius(all, small);
-	background-color: $bgColor;
-	padding: var(--spacing-extra-extra-extra-small) var(--spacing-extra-small);
-	color: $color;
-	transition: background-color 300ms ease-in-out;
-	&:hover,
-	&:active,
-	&:visited {
-		background-color: darken($bgColor, 10%);
-		text-decoration: none;
+	font-size: 75%;
+	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) var(--spacing-extra-small);
+	line-height: 100%;
+	transition:
+		background-color 200ms ease-in-out,
+		border-color 200ms ease-in-out,
+		color 200ms ease-in-out;
+}
+
+.badge {
+	@include badge-base();
+}
+
+@mixin badge-variant($bg, $color: $bg, $border: $bg) {
+	@if $bg == $color {
+		color: yiq-contrast-color($bg);
+	}
+	@else {
 		color: $color;
 	}
-	&:focus {
-		background-color: darken($bgColor, 20%);
-		text-decoration: none;
-		color: $color;
+	border: .05rem solid $border;
+	background-color: $bg;
+	&[href] {
+		&:hover,
+		&:active {
+			background-color: darken($bg, 10%);
+			border-color: darken($bg, 10%);
+			text-decoration: none;
+			color: yiq-contrast-color($bg);
+		}
+		&:focus {
+			background-color: darken($bg, 17%);
+			border-color: darken($bg, 17%);
+			text-decoration: none;
+			color: yiq-contrast-color($bg);
+		}
 	}
+}
+
+@each $color, $value in $state-colors {
+  .badge--#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+@each $color, $value in $state-colors {
+  .badge--outline--#{$color} {
+    @include badge-variant(transparent, $value, $value);
+  }
 }
