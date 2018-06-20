@@ -15,7 +15,7 @@
     z-index: 1;
     display: block;
     width: 100%;
-    border: .05rem solid theme-color(ui-4);
+    border: .05rem solid theme-color(ui-5);
     background-color: transparent;
 }
 
@@ -55,7 +55,7 @@
             transition: box-shadow 200ms ease-in-out;
             &:focus {
                 box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
-                            0 0 0 2px rgba(state-color(info),.2);
+                            0 0 0 3px rgba(state-color(info),.25);
             }
             &.input-lg {
                 @include font-size(1);

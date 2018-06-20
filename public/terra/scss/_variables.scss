@@ -5,7 +5,7 @@
 $colors: (
     "red": #FE4200,
     "blue": #00ACFF,
-    "green": #98F81C,
+    "green": #3ab27c,
     "yellow": #FFBF00,
 );
 
@@ -64,7 +64,7 @@ $state-colors: map-merge((
     "success":  color("green"),
     "warning":  color("yellow"),
     "light":    grayscale(2),
-    "dark":     grayscale(6),
+    "dark":     grayscale(),
 ), $state-colors);
 
 // navigation
@@ -100,7 +100,7 @@ $yiq-debug: false !default;
 
 // font family
 $font-sans-serif:
-    'Lato',
+    'Open Sans',
     -apple-system, BlinkMacSystemFont,
     'avenir next', avenir,
     'helvetica neue', helvetica,
@@ -119,14 +119,15 @@ $font-weight: (
 
 // type scale
 $type-scale: (
-    -1: 0.875rem,
-    0: 1rem,
-    1: 1.25rem,
-    2: 1.5rem,
-    3: 2.0rem,
-    4: 2.5rem,
-    5: 3.0rem,
-    6: 4.0rem
+    -2: 12px,
+    -1: 14px,
+    0: 16px,
+    1: 20px,
+    2: 28px,
+    3: 36px,
+    4: 48px,
+    5: 52px,
+    6: 72px
 );
 
 // type setting

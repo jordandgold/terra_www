@@ -6,8 +6,8 @@
 
 @mixin alert-base() {
     @include type-setting(0,0);
-    @include border-radius(all, medium);
-    padding: var(--spacing-small) var(--spacing-medium);
+    // @include border-radius(all, medium);
+    padding: var(--spacing-medium);
     display: block;
     margin-bottom: var(--spacing-medium);
     position: relative;
@@ -43,14 +43,14 @@
     }
 }
 
-@mixin alert-variant($color, $textColor: $color) {
-    background-color: transparentize($color, .9);
+@mixin alert-variant($color, $bg: transparent) {
+    // background-color: transparentize($color, .9);
     border: .05rem solid darken($color, 10%);
-    @if $textColor == $color {
-        color: darken($textColor, 30%);
-    } @else {
-        color: $textColor;
-    }
+    // @if $textColor == $color {
+    //     color: darken($textColor, 30%);
+    // } @else {
+    //     color: $textColor;
+    // }
     .alert__icon {
         > i {
             &:before {

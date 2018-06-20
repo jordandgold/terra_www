@@ -5,9 +5,9 @@
 */
 
 @mixin dropdown-menu-base() {
-  @include box-shadow(1);
-  @include border-radius('all','medium');
-  border: 1px solid theme-color(ui-3);
+  @include depth(1);
+  // @include border-radius('all','medium');
+  border: 1px solid theme-color(ui-5);
   width: 12.5em;
   position: absolute;
   top: calc(100%);
@@ -16,13 +16,13 @@
   float: left;
   text-align: left;
   list-style: none;
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   opacity: 0;
   // display: none;
   visibility: hidden;
   background: theme-color(ui-1);
   z-index: 10;
-  margin: 0.5rem 0;
+  margin: 0;
   transition: transform 225ms, opacity 225ms, visibility 225ms;
   li {
     padding: 0;
@@ -42,7 +42,7 @@
       display: block;
       padding: var(--spacing-extra-small) 0 0 0;
       margin-bottom: var(--spacing-extra-small);
-      border-bottom: 1px solid theme-color(ui-3);
+      border-bottom: 1px solid theme-color(ui-5);
     }
   }
   &.show {
@@ -78,7 +78,7 @@
       visibility: visible;
       // display: block;
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(1px);
     }
   }
 }
@@ -96,17 +96,4 @@
   position: relative;
   left: unset;
   top: unset;
-  // background: white;
-  // li {
-  //   display: block;
-  //   a {
-  //     display: block;
-  //   }
-  // }
-  // .dropbutton-toggle {
-  //   display: block;
-  // }
-  // .dropbutton-action {
-
-  // }
 }

@@ -41,8 +41,8 @@
 }
 
 .navbar {
-	@include z-index(10);
 	@include height(3);
+	z-index: 10;
 	background: $navbar-bg;
 	transition: transform .5s ease;
 	position: fixed;
@@ -272,8 +272,8 @@
 		}
 		&.active {
 			> a {
-				@include font-weight(bold);
-				color: theme-color(text-2);
+				text-decoration: underline;
+				color: $link-hover-color;
 			}
 		}
 	}
@@ -287,11 +287,6 @@
 		}
 		> span {
 			padding: var(--spacing-extra-small) 0;
-		}
-		&.active {
-			> a {
-				text-decoration: underline;
-			}
 		}
 		&.expandable {
 			i {
@@ -313,11 +308,6 @@
 					> a {
 						padding: var(--spacing-extra-small) 0;
 						display: block;
-					}
-					&.active {
-						> a {
-							text-decoration: underline;
-						}
 					}
 				}
 			}

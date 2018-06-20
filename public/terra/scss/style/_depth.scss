@@ -1,0 +1,10 @@
+/*
+
+  Z-INDEX
+
+*/
+
+@mixin depth($level) {
+	@include box-shadow($level);
+	z-index: $level;
+}
