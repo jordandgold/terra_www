@@ -25,7 +25,7 @@ body, html {
 
 @mixin heading-mega {
 	@include header-type-setting(6,'bold');
-	padding-bottom: var(--spacing-medium);
+	padding-bottom: spacing(medium);
 	margin: 0;
 }
 
@@ -35,7 +35,7 @@ body, html {
 
 @mixin heading-1 {
 	@include header-type-setting(5,'bold');
-	padding-bottom: var(--spacing-medium);
+	padding-bottom: spacing(medium);
 	margin: 0;
 }
 
@@ -46,7 +46,7 @@ h1,
 
 @mixin heading-2 {
 	@include header-type-setting(4,'bold');
-	padding-bottom: var(--spacing-medium);
+	padding-bottom: spacing(medium);
 	margin: 0;
 }
 
@@ -57,7 +57,7 @@ h2,
 
 @mixin heading-3 {
 	@include header-type-setting(3,'bold');
-	padding-bottom: var(--spacing-medium);
+	padding-bottom: spacing(medium);
 	margin: 0;
 }
 
@@ -68,7 +68,7 @@ h3,
 
 @mixin heading-4 {
 	@include header-type-setting(2,'bold');
-	padding-bottom: var(--spacing-small);
+	padding-bottom: spacing(small);
 	margin: 0;
 }
 
@@ -79,7 +79,7 @@ h4,
 
 @mixin heading-5 {
 	@include header-type-setting(1,'bold');
-	padding-bottom: var(--spacing-small);
+	padding-bottom: spacing(small);
 	margin: 0;
 }
 

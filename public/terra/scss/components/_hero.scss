@@ -1,9 +1,9 @@
 .hero {
-	padding-top: var(--spacing-extra-extra-large);
-	padding-bottom: var(--spacing-extra-extra-large);
+	padding-top: spacing(extra-extra-large);
+	padding-bottom: spacing(extra-extra-large);
 	&--intro {
-		padding-top: var(--spacing-extra-extra-extra-large);
-		padding-bottom: var(--spacing-extra-extra-extra-large);
+		padding-top: spacing(extra-extra-extra-large);
+		padding-bottom: spacing(extra-extra-extra-large);
 		background-size: cover;
 		background-position: center center;
 		position: relative;
@@ -20,7 +20,7 @@
 		}
 	}
 	&--slim {
-		padding-top: var(--spacing-extra-large);
-		padding-bottom: var(--spacing-extra-large);
+		padding-top: spacing(extra-large);
+		padding-bottom: spacing(extra-large);
 	}
 }

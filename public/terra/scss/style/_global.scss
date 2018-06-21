@@ -18,8 +18,8 @@ a:active,
 a:focus {
   font-weight: font-weight(0);
   color: $link-color;
-  text-decoration: none;
-  transition: color 400ms ease;
+  text-decoration: underline;
+  transition: color 200ms ease;
   &:hover {
     color: $link-hover-color;
     text-decoration: underline;

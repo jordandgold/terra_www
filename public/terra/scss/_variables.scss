@@ -4,8 +4,8 @@
 }
 $colors: (
     "red": #FE4200,
-    "blue": #00ACFF,
-    "green": #3ab27c,
+    "blue": #009AE8,
+    "green": #49ad13,
     "yellow": #FFBF00,
 );
 
@@ -39,9 +39,7 @@ $grayscale: (
 }
 $theme-colors: () !default;
 $theme-colors: map-merge((
-    "brand-1":       color("red"),
-    "brand-2":       color("blue"),
-    "brand-3":       grayscale(),
+    "brand-1":       color("blue"),
     "ui-1":          grayscale("white"),
     "ui-2":          grayscale(2),
     "ui-3":          grayscale(4),
@@ -71,7 +69,8 @@ $state-colors: map-merge((
 $navbar-bg: grayscale("white");
 $navbar-link-color: theme-color("text-2");
 $navbar-link-hover: darken($navbar-link-color, 10%);
-$navbar-border: 1px solid theme-color(ui-3);
+$navbar-border-width: 1px;
+$navbar-border-color: theme-color(ui-3);
 
 // body
 $body-bg-color: grayscale("white");
@@ -81,8 +80,12 @@ $body-font-color: grayscale(11);
 $header-font-color: grayscale(13);
 
 // links
-$link-color: color("blue");
+$link-color: grayscale(14);
 $link-hover-color: darken($link-color, 10%);
+
+// tooltips
+$tooltip-bg: theme-color("ui-3");
+$tooltip-text-color: theme-color("text-1");
 
 // YIQ contrast colors
 /// The text color to be used when a background is determined to be "light"
@@ -131,7 +134,7 @@ $type-scale: (
 );
 
 // type setting
-$base-font-size: 1rem;
+$base-font-size: 16px;
 $scale: 1.75;
 $base-line-height: $base-font-size * $scale;
 $line-height: (
@@ -142,15 +145,19 @@ $line-height: (
     3: $base-line-height * 2,
     4: $base-line-height * 2,
     5: $base-line-height * 2,
+    6: $base-line-height * 2,
 );
 
 // heights
+@function height($key) {
+  @return map-get($height-scale, $key);
+}
 $height-scale: (
-    1: 1.75rem,
-    2: 2.25rem,
-    3: 4rem,
-    4: 8rem,
-    5: 16rem,
+    1: 24px,
+    2: 32px,
+    3: 48px,
+    4: 64px,
+    5: 96px,
 );
 
 // spacing scale
@@ -159,15 +166,15 @@ $height-scale: (
 }
 $spacing-scale: (
     'none': 0rem,
-    'extra-extra-extra-small': .109375rem,
-    'extra-extra-small': .21875rem,
-    'extra-small': .4375rem,
-    'small': .875rem,
-    'medium': 1.75rem,
-    'large': 3.5rem,
-    'extra-large': 5.25rem,
-    'extra-extra-large': 7rem,
-    'extra-extra-extra-large': 8.75rem,
+    'extra-extra-extra-small': 4px,
+    'extra-extra-small': 8px,
+    'extra-small': 12px,
+    'small': 16px,
+    'medium': 24px,
+    'large': 32px,
+    'extra-large': 48px,
+    'extra-extra-large': 64px,
+    'extra-extra-extra-large': 96px,
 );
 
 $accordion-border-color: theme-color(ui-5);

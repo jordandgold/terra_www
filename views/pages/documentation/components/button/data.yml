@@ -19,8 +19,8 @@ modifiers:
       description: 'Selector for the dark button styles'
     - name: '.button--outline'
       description: 'Selector for the outline button styles'
-    - name: '.button--link'
-      description: 'Selector for the link button styles'
+    - name: '.button--ghost'
+      description: 'Selector for the ghost button styles'
     - name: '.button--large'
       description: 'Selector for the large button styles'
     - name: '.button--small'
@@ -29,5 +29,8 @@ mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
     - name: 'button-base()'
-      parameters: 'bgColor, color, borderColor, bgHoverColor, colorHover'
+      parameters: 'none'
       description: 'Defines the base styles that create all buttons'
+    - name: 'button-variant()'
+      parameters: 'bg, color, borderColor'
+      description: 'Defines the colors for a button'

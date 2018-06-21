@@ -1,0 +1,94 @@
+
+a[data-tooltip] {
+  position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    display: none;
+  }
+}
+a[data-tooltip]::before {
+  @include depth(1);
+  @include type-setting(-1,0);
+  content: attr(data-tooltip);
+  background: $tooltip-bg;
+  color: $tooltip-text-color;
+  padding: spacing(small);
+  white-space: nowrap;
+  text-decoration: none;
+}
+a[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: '';
+}
+
+a[data-tooltip]:hover::before,
+a[data-tooltip]:hover::after {
+  display: block;
+}
+
+/** positioning **/
+
+/* left tooltip */
+a[data-tooltip][data-placement="left"]::before {
+  top: -25%;
+  right: 100%;
+  margin-right: 10px;
+}
+a[data-tooltip][data-placement="left"]::after {
+  z-index: 10;
+  border-left-color: $tooltip-bg;
+  border-right: none;
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  margin-right: 4px;
+}
+
+/* right tooltip */
+a[data-tooltip][data-placement="right"]::before {
+  top: -25%;
+  left: 100%;
+  margin-left: 10px;
+}
+a[data-tooltip][data-placement="right"]::after {
+  z-index: 10;
+  border-right-color: $tooltip-bg;
+  border-left: none;
+  top: 50%;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 4px;
+}
+
+/* top tooltip */
+a[data-tooltip][data-placement="top"]::before {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 10px;
+}
+a[data-tooltip][data-placement="top"]::after {
+  z-index: 10;
+  border-top-color: $tooltip-bg;
+  border-bottom: none;
+  bottom: 100%;
+  left: 10px;
+  margin-bottom: 4px;
+}
+
+/* bottom tooltip */
+a[data-tooltip][data-placement="bottom"]::before {
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+}
+a[data-tooltip][data-placement="bottom"]::after {
+  z-index: 10;
+  border-bottom-color: $tooltip-bg;
+  border-top: none;
+  top: 100%;
+  left: 10px;
+  margin-top: 4px;
+}

@@ -1,7 +1,7 @@
 .panel {
 	display: block;
-	padding: var(--spacing-medium);
+	padding: spacing(medium);
 	background: theme-color(ui-1);
 	border: 3px solid theme-color(ui-2);
-	margin: var(--spacing-medium) 0;
+	margin: spacing(medium) 0;
 }

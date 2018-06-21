@@ -6,12 +6,11 @@
 
 @mixin dropdown-menu-base() {
   @include depth(1);
-  // @include border-radius('all','medium');
   border: 1px solid theme-color(ui-5);
   width: 12.5em;
   position: absolute;
   top: calc(100%);
-  padding: var(--spacing-extra-small) 0;
+  padding: spacing(extra-small) 0;
   left: 0;
   float: left;
   text-align: left;
@@ -28,7 +27,7 @@
     padding: 0;
     a {
       color: theme-color(ui-5);
-      padding: var(--spacing-extra-extra-small) var(--spacing-small);
+      padding: spacing(extra-extra-small) spacing(small);
       display: block;
       &:hover {
         color: darken(theme-color(ui-5), 10%);
@@ -40,8 +39,8 @@
     }
     &.separator {
       display: block;
-      padding: var(--spacing-extra-small) 0 0 0;
-      margin-bottom: var(--spacing-extra-small);
+      padding: spacing(extra-small) 0 0 0;
+      margin-bottom: spacing(extra-small);
       border-bottom: 1px solid theme-color(ui-5);
     }
   }

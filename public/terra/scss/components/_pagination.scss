@@ -11,7 +11,7 @@
 		a,
 		> span {
 			@include border-radius(all,small);
-			padding: var(--spacing-extra-small) var(--spacing-small);
+			padding: spacing(extra-small) spacing(small);
 			border: 1px solid darken(theme-color(ui-3), 8%);
 		    margin: 0;
 		}

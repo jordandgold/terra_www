@@ -4,15 +4,15 @@
     position: relative;
     margin-bottom: map-get($spacing-scale, medium);
 	&__body {
-		padding: var(--spacing-medium);
+		padding: spacing(medium);
 		&__heading {
 			@include heading-5;
-			margin-bottom: var(--spacing-extra-extra-small);
+			margin-bottom: spacing(extra-extra-small);
 		}
 	}
 	&__footer {
 		border-top: 1px solid theme-color(ui-3);
-		padding: var(--spacing-small) var(--spacing-medium);
+		padding: spacing(small) spacing(medium);
 	}
 	&__image {
 		overflow: hidden;

@@ -4,13 +4,13 @@
 	border: 1px solid $accordion-border-color;
 	margin-bottom: spacing(medium);
 	&__heading {
-		padding: var(--spacing-small) var(--spacing-medium);
+		padding: spacing(small) spacing(medium);
 		position: relative;
 		display: block;
 		&:after {
 			position: absolute;
-			top: 1em;
-			right: var(--spacing-medium);
+			top: 1.25em;
+			right: spacing(medium);
 			color: theme-color(ui-5);
 			transform: rotate(0deg);
 			transition: transform 200ms ease-in-out;
@@ -25,7 +25,7 @@
 		display: none;
 		&__content {
 			// border-top: 1px solid $accordion-border-color;
-			padding: var(--spacing-small) var(--spacing-medium);
+			padding: spacing(small) spacing(medium);
 			overflow: hidden;
 	    	max-height: 0;
 	    	transition: max-height 300ms;

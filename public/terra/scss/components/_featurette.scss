@@ -1,6 +1,6 @@
 .featurette {
-	padding-top: var(--spacing-extra-extra-extra-large);
-	padding-bottom: var(--spacing-extra-extra-extra-large);
+	padding-top: spacing(extra-extra-extra-large);
+	padding-bottom: spacing(extra-extra-extra-large);
 	position: relative;
 	&__showcase-image--left {
 		position: absolute;
@@ -27,13 +27,13 @@
 		}
 	}
 	&__content--left {
-		padding-top: var(--spacing-extra-large);
-		padding-bottom: var(--spacing-extra-large);
+		padding-top: spacing(extra-large);
+		padding-bottom: spacing(extra-large);
 		@extend .col-sm-6;
 	}
 	&__content--right {
-		padding-top: var(--spacing-extra-large);
-		padding-bottom: var(--spacing-extra-large);
+		padding-top: spacing(extra-large);
+		padding-bottom: spacing(extra-large);
 		@extend .col-sm-6, .col-sm-offset-6;
 	}
 }

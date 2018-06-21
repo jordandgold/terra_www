@@ -7,7 +7,7 @@
 
 @mixin button-base() {
     @include type-setting(0,0);
-    padding: spacing(extra-small) spacing(small);
+    padding: spacing(extra-extra-small) spacing(small);
     text-decoration: none;
     white-space: nowrap;
     vertical-align: middle;
@@ -102,7 +102,7 @@ a.button--outline {
     @include button-variant(
         transparent,
         theme-color(text-2),
-        theme-color(ui-5)
+        theme-color(brand-1)
     );
 }
 
@@ -131,12 +131,12 @@ a.button--large {
 .button--small,
 a.button--small {
     @include type-setting(-1,0);
-    padding: var(--spacing-extra-extra-small) var(--spacing-small);
+    padding: spacing(extra-extra-extra-small) spacing(small);
 }
 
 .button--block,
 a.button--block {
-    padding: var(--spacing-extra-small) 0;
+    padding: spacing(extra-small) 0;
     display: block;
     width: 100%;
 }

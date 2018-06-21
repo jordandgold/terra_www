@@ -7,13 +7,13 @@
 @mixin alert-base() {
     @include type-setting(0,0);
     // @include border-radius(all, medium);
-    padding: var(--spacing-medium);
+    padding: spacing(medium);
     display: block;
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: spacing(medium);
     position: relative;
     height: 100%;
     &__icon {
-        margin-right: var(--spacing-small);
+        margin-right: spacing(small);
         > i {
             width: auto;
             height: 100%;
@@ -44,7 +44,7 @@
 }
 
 @mixin alert-variant($color, $bg: transparent) {
-    // background-color: transparentize($color, .9);
+    background-color: transparentize($color, .9);
     border: .05rem solid darken($color, 10%);
     // @if $textColor == $color {
     //     color: darken($textColor, 30%);

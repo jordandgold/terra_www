@@ -20,7 +20,7 @@
 			visibility: hidden;
 	  		opacity: 0;
 			width: 100%;
-			padding: var(--spacing-medium);
+			padding: spacing(medium);
 			background: #ffffff;
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
@@ -41,7 +41,7 @@
 }
 
 .navbar {
-	@include height(3);
+	@include height(4);
 	z-index: 10;
 	background: $navbar-bg;
 	transition: transform .5s ease;
@@ -49,9 +49,9 @@
 	top: 0;
 	display: block;
 	width: 100%;
-	border-bottom: $navbar-border;
+	border-bottom: $navbar-border-width solid $navbar-border-color;
 	&__toggle {
-		@include height(3);
+		@include height(4);
 		float: right;
 		display: inline-block;
 		padding: 0;
@@ -81,10 +81,10 @@
 	}
 	&__branding {
 		float: left;
-		padding-top: var(--spacing-small);
+		padding-top: spacing(extra-small);
 		> a {
 			> img {
-				@include height(2);
+				@include height(3);
 			}
 		}
 	}
@@ -98,13 +98,13 @@
 	&__nav {
 		float: right;
 		> ul {
-			@include height(3);
+			height: calc(height(4) - $navbar-border-width);
 			margin: 0;
 			padding: 0;
 			display: table;
 			> li {
 				display: inline-block;
-				padding: 0 var(--spacing-small);
+				padding: 0 spacing(extra-small);
 				display: table-cell;
 				vertical-align: middle;
 				> a:not(.button) {
@@ -146,7 +146,7 @@
 						border: 0;
 						box-shadow: unset;
 						margin: 0;
-						padding-left: var(--spacing-small);
+						padding-left: spacing(small);
 					    float: none;
 						> li {
 							padding: 0;
@@ -214,8 +214,8 @@
 		        display: block;
 		        width: 100%;
 		        height: auto;
-		        padding-top: var(--spacing-small);
-		        padding-bottom: var(--spacing-small);
+		        padding-top: spacing(extra-small);
+		        padding-bottom: spacing(extra-small);
 		    	@include for-size(tablet-landscape-up) {
 		    		display: inline-block;
 		    		width: initial;
@@ -240,10 +240,10 @@
 
 .tree-menu {
 	margin: 0;
-	padding: 0 0 0 var(--spacing-extra-small);
+	padding: 0 0 0 spacing(extra-small);
 	list-style: none;
 	li {
-		padding: 0 0 0 var(--spacing-extra-small);
+		padding: 0 0 0 spacing(extra-extra-small);
 		i {
 			position: absolute;
 			top: .7rem;
@@ -259,13 +259,13 @@
 			}
 		}
 		ul {
-			padding: 0 0 0 var(--spacing-small);
+			padding: 0 0 0 spacing(extra-small);
 			list-style: none;
 			li {
-				padding: 0 0 0 var(--spacing-extra-small);
+				padding: 0 0 0 spacing(extra-extra-small);
 				> a {
 					@include border-radius('all','small');
-					padding: var(--spacing-extra-small) 0;
+					padding: spacing(extra-small) 0;
 					display: block;
 				}
 			}
@@ -279,14 +279,14 @@
 	}
 	> li {
 		position: relative;
-		padding: 0 0 0 var(--spacing-small);
+		padding: 0 0 0 spacing(extra-small);
 		> a {
 			@include border-radius('all','small');
-			padding: var(--spacing-extra-small) 0;
+			padding: spacing(extra-extra-small) 0;
 			display: block;
 		}
 		> span {
-			padding: var(--spacing-extra-small) 0;
+			padding: spacing(extra-extra-small) 0;
 		}
 		&.expandable {
 			i {
@@ -300,13 +300,13 @@
 			}
 			> .expandable-menu {
 				list-style: none;
-				margin-left: var(--spacing-small);
+				margin-left: spacing(extra-small);
 				padding: 0;
 				display: none;
 				> li {
 					padding: 0;
 					> a {
-						padding: var(--spacing-extra-small) 0;
+						padding: spacing(extra-extra-small) 0;
 						display: block;
 					}
 				}

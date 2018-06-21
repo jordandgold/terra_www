@@ -1,7 +1,7 @@
 .pricing-table {
     position: relative;
-    top: calc(var(--spacing-extra-extra-extra-large)* -1);
-    margin-bottom: calc(var(--spacing-extra-extra-large) * -1) !important;
+    top: calc(spacing(extra-extra-extra-large)* -1);
+    margin-bottom: calc(spacing(extra-extra-large) * -1) !important;
 	&__column {
 		width: 100%;
 		position: relative;
@@ -15,15 +15,15 @@
 			transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
 			&__content {
 				padding:
-					var(--spacing-large)
-					var(--spacing-large)
-					var(--spacing-extra-extra-large)
-					var(--spacing-large);
+					spacing(large)
+					spacing(large)
+					spacing(extra-extra-large)
+					spacing(large);
 				&__name {
 					@include heading-4;
 					display: block;
 					text-align: center;
-					margin-bottom: var(--spacing-small);
+					margin-bottom: spacing(small);
 				}
 				&__price {
 					@include heading-3;
@@ -38,7 +38,7 @@
 			.cta {
 				width: 100%;
 				position: absolute;
-				bottom: var(--spacing-large);
+				bottom: spacing(large);
 				text-align: center;
 			}
 			&:hover {

@@ -1,0 +1,12 @@
+layout: 'component-page'
+page:
+  title: 'Tooltips | Terra Design System'
+  name: 'Tooltips'
+  parent: 'Components'
+  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+mixins:
+  content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+  mixins:
+    - name: 'test()'
+      parameters: 'bgColor'
+      description: 'This is a test'
