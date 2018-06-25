@@ -1,10 +1,9 @@
 .breadcrumb {
     @include border-radius(all, small);
-    padding: spacing(0) spacing(3);
+    padding: spacing(0);
     margin-top: 0;
     margin-bottom: spacing(4);
     list-style: none;
-    background-color: #F3F3F7;
     li {
         display: inline-block;
         a {

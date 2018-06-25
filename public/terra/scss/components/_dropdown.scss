@@ -47,6 +47,9 @@
       input {
         padding: spacing(2) spacing(4);
         border: 0;
+        &:focus {
+          box-shadow: none;
+        }
       }
     }
   }

@@ -54,11 +54,14 @@
             z-index: 1;
             transition: box-shadow 200ms ease-in-out;
             &:focus {
-                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
-                            0 0 0 3px rgba(state-color(info),.25);
+                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+                            // 0 0 0 3px rgba(state-color(info),.25)
             }
             &.input-lg {
                 @include font-size(1);
+            }
+            &::placeholder {
+                color: theme-color("ui-4");
             }
         }
         textarea {
@@ -113,6 +116,18 @@
         ~ label {
             display: inline-block;
         }
+    }
+}
+
+.radio-group {
+    padding-top: spacing(3);
+    padding-bottom: spacing(3);
+    > label {
+        padding-bottom: spacing(3);
+    }
+    .input-radio {
+        padding-top: spacing(0);
+        padding-bottom: spacing(0);
     }
 }
 

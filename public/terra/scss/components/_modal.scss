@@ -1,0 +1,27 @@
+.modal {
+	@include depth(2);
+	padding: spacing(7);
+	position: relative;
+	&__title {
+		@include type-setting(1,0);
+		padding-bottom: spacing(5);
+	}
+	&__close {
+        position: absolute;
+        top: spacing(5);
+        right: spacing(5);
+        opacity: 0.4;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: 0;
+        &:after {
+        	@include icon-base();
+        	content: "\f00d";
+        }
+        &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+}

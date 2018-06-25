@@ -38,7 +38,7 @@
 
 @mixin button-variant($bg, $color: $bg, $borderColor: $bg, $bgHover: $bg) {
     background-color: $bg;
-    border: $button-border-size solid darken($borderColor, 8%);
+    border: $button-border-size solid $borderColor;
     @if $bg == $color {
         color: yiq-contrast-color($bg);
     }
