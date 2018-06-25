@@ -1,8 +1,8 @@
 .page-section {
-	padding-top: spacing(large);
-	padding-bottom: spacing(large);
+	padding-top: spacing(6);
+	padding-bottom: spacing(6);
 	&__sub-section {
-		padding-bottom: spacing(large);
+		padding-bottom: spacing(6);
 	}
 	&__sub-section:last-child {
 		padding-bottom: 0;

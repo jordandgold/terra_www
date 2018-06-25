@@ -3,7 +3,7 @@
 	@include font-weight(bold);
 	@include border-radius(all, small);
 	font-size: 75%;
-	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) spacing(extra-small);
+	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) spacing(3);
 	line-height: 100%;
 	transition:
 		background-color 200ms ease-in-out,

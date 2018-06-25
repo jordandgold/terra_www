@@ -7,13 +7,13 @@
 @mixin alert-base() {
     @include type-setting(0,0);
     // @include border-radius(all, medium);
-    padding: spacing(medium);
+    padding: spacing(5);
     display: block;
-    margin-bottom: spacing(medium);
+    margin-bottom: spacing(5);
     position: relative;
     height: 100%;
     &__icon {
-        margin-right: spacing(small);
+        margin-right: spacing(4);
         > i {
             width: auto;
             height: 100%;

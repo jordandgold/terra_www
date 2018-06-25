@@ -1,18 +1,19 @@
 .card {
 	@include depth(1);
-    background: #ffffff;
+    background: $card-bg;
     position: relative;
     margin-bottom: map-get($spacing-scale, medium);
+    border-radius: $card-border-radius;
 	&__body {
-		padding: spacing(medium);
+		padding: spacing(5);
 		&__heading {
 			@include heading-5;
-			margin-bottom: spacing(extra-extra-small);
+			margin-bottom: spacing(2);
 		}
 	}
 	&__footer {
 		border-top: 1px solid theme-color(ui-3);
-		padding: spacing(small) spacing(medium);
+		padding: spacing(4) spacing(5);
 	}
 	&__image {
 		overflow: hidden;

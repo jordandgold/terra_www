@@ -1,11 +1,3 @@
-$border-radius-scale: (
-	'none': 0,
-	'small': .125rem,
-	'medium': .25rem,
-	'large': .5rem,
-	'mega': 1rem,
-);
-
 @mixin border-radius($direction, $size) {
 	@if $direction == 'all' {
 		border-radius: map-get($border-radius-scale, $size);

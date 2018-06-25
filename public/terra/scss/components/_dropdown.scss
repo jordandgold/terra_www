@@ -6,11 +6,11 @@
 
 @mixin dropdown-menu-base() {
   @include depth(1);
-  border: 1px solid theme-color(ui-5);
+  border: $dropdown-border-size solid $dropdown-border-color;
   width: 12.5em;
   position: absolute;
   top: calc(100%);
-  padding: spacing(extra-small) 0;
+  padding: spacing(3) 0;
   left: 0;
   float: left;
   text-align: left;
@@ -27,21 +27,27 @@
     padding: 0;
     a {
       color: theme-color(ui-5);
-      padding: spacing(extra-extra-small) spacing(small);
+      padding: spacing(2) spacing(4);
       display: block;
+      text-decoration: none;
       &:hover {
         color: darken(theme-color(ui-5), 10%);
         background: theme-color(ui-2);
         text-decoration: none;
       }
     }
-    ul {
-    }
     &.separator {
       display: block;
-      padding: spacing(extra-small) 0 0 0;
-      margin-bottom: spacing(extra-small);
-      border-bottom: 1px solid theme-color(ui-5);
+      padding: spacing(3) 0 0 0;
+      margin-bottom: spacing(3);
+      border-bottom: 1px solid $dropdown-border-color;
+    }
+    &.search {
+      padding: spacing(0);
+      input {
+        padding: spacing(2) spacing(4);
+        border: 0;
+      }
     }
   }
   &.show {
@@ -51,6 +57,7 @@
 
 @mixin dropdown-parent() {
   position: relative;
+  display: inline-block;
   > a {
     position: relative;
     i {

@@ -12,12 +12,12 @@
 		@if $alignment == 'left' {
 			float: left;
 			margin-left: 0;
-			margin-right: spacing(extra-small);
+			margin-right: spacing(3);
 			padding: 0;
 		}
 		@elseif $alignment == 'right' {
 			float: right;
-			margin-left: spacing(extra-small);
+			margin-left: spacing(3);
 			margin-right: 0;
 			padding: 0;
 		}
@@ -41,9 +41,9 @@ ul.list-inline--center {
 }
 
 @mixin list-base {
-	margin: spacing(small) 0;
+	margin: spacing(4) 0;
 	> li {
-		padding: spacing(extra-small) 0;
+		padding: spacing(3) 0;
 	}
 }
 
@@ -58,7 +58,7 @@ ul,
 ol {
 	@include type-setting(0,'normal');
 	li {
-		padding: spacing(extra-small) 0;
+		padding: spacing(3) 0;
 	}
 }
 
@@ -74,7 +74,7 @@ ol {
 	&--flush {
 		> li {
 			border-top: 1px solid theme-color(ui-3);
-			padding: spacing(extra-small) spacing(medium);
+			padding: spacing(3) spacing(5);
 			&:first-child {
 				border-top: 0px;
 			}

@@ -1,0 +1,21 @@
+.breadcrumb {
+    @include border-radius(all, small);
+    padding: spacing(0) spacing(3);
+    margin-top: 0;
+    margin-bottom: spacing(4);
+    list-style: none;
+    background-color: #F3F3F7;
+    li {
+        display: inline-block;
+        a {
+            text-decoration: none;
+        }
+    }
+    > li + li::before {
+        @include icon-base();
+        content: "\f054";
+        color: rgb(204, 204, 204);
+        padding: spacing(0) spacing(2);
+        font-size: 75%;
+    }
+}

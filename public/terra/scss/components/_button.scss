@@ -7,7 +7,8 @@
 
 @mixin button-base() {
     @include type-setting(0,0);
-    padding: spacing(extra-extra-small) spacing(small);
+    padding: spacing(2) spacing(4);
+    border-radius: $button-border-radius;
     text-decoration: none;
     white-space: nowrap;
     vertical-align: middle;
@@ -26,18 +27,18 @@
         &:active {
             box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
         }
-        i {
-            padding-left: .5rem;
-            &:before {
-                font-size: 0.75rem;
-            }
+    }
+    i {
+        margin-left: spacing(1);
+        &:before {
+            font-size: 1em;
         }
     }
 }
 
-@mixin button-variant($bg, $color: $bg, $borderColor: $bg) {
+@mixin button-variant($bg, $color: $bg, $borderColor: $bg, $bgHover: $bg) {
     background-color: $bg;
-    border: .05rem solid darken($borderColor, 8%);
+    border: $button-border-size solid darken($borderColor, 8%);
     @if $bg == $color {
         color: yiq-contrast-color($bg);
     }
@@ -62,7 +63,12 @@
             color: $color;
         }
         text-decoration: none;
-        background-color: darken($bg, 10%);
+        @if $bg == $bgHover {
+            background-color: darken($bg, 10%);
+        }
+        @else {
+            background-color: $bgHover;
+        }
         border-color: darken($borderColor, 10%);
         cursor: pointer;
     }
@@ -101,8 +107,9 @@ a.button {
 a.button--outline {
     @include button-variant(
         transparent,
-        theme-color(text-2),
-        theme-color(brand-1)
+        theme-color("text-2"),
+        theme-color("brand-1"),
+        theme-color("ui-2")
     );
 }
 
@@ -131,12 +138,12 @@ a.button--large {
 .button--small,
 a.button--small {
     @include type-setting(-1,0);
-    padding: spacing(extra-extra-extra-small) spacing(small);
+    padding: spacing(1) spacing(4);
 }
 
 .button--block,
 a.button--block {
-    padding: spacing(extra-small) 0;
+    padding: spacing(3) 0;
     display: block;
     width: 100%;
 }

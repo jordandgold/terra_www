@@ -65,42 +65,6 @@ $state-colors: map-merge((
     "dark":     grayscale(),
 ), $state-colors);
 
-// navigation
-$navbar-bg: grayscale("white");
-$navbar-link-color: theme-color("text-2");
-$navbar-link-hover: darken($navbar-link-color, 10%);
-$navbar-border-width: 1px;
-$navbar-border-color: theme-color(ui-3);
-
-// body
-$body-bg-color: grayscale("white");
-$body-font-color: grayscale(11);
-
-// headers
-$header-font-color: grayscale(13);
-
-// links
-$link-color: grayscale(14);
-$link-hover-color: darken($link-color, 10%);
-
-// tooltips
-$tooltip-bg: theme-color("ui-3");
-$tooltip-text-color: theme-color("text-1");
-
-// YIQ contrast colors
-/// The text color to be used when a background is determined to be "light"
-/// @type Color
-$yiq-contrasted-dark-default: grayscale() !default;
-/// The text color to be used when a background is determined to be "dark"
-/// @type Color
-$yiq-contrasted-light-default: grayscale("white") !default;
-/// The YIQ lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 & 255.
-/// @type Number
-$yiq-contrasted-threshold: 128 !default;
-/// Toggle diagnostic messages.
-/// @type Boolean
-$yiq-debug: false !default;
-
 // font family
 $font-sans-serif:
     'Open Sans',
@@ -148,6 +112,15 @@ $line-height: (
     6: $base-line-height * 2,
 );
 
+// border radius
+$border-radius-scale: (
+    'none': 0,
+    'small': .125rem,
+    'medium': .25rem,
+    'large': .5rem,
+    'mega': 1rem,
+);
+
 // heights
 @function height($key) {
   @return map-get($height-scale, $key);
@@ -165,16 +138,67 @@ $height-scale: (
   @return map-get($spacing-scale, $key);
 }
 $spacing-scale: (
-    'none': 0rem,
-    'extra-extra-extra-small': 4px,
-    'extra-extra-small': 8px,
-    'extra-small': 12px,
-    'small': 16px,
-    'medium': 24px,
-    'large': 32px,
-    'extra-large': 48px,
-    'extra-extra-large': 64px,
-    'extra-extra-extra-large': 96px,
+    0: 0rem,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 24px,
+    6: 32px,
+    7: 48px,
+    8: 64px,
+    9: 96px,
+    10: 96px,
 );
+
+// navigation
+$navbar-bg: grayscale("white");
+$navbar-link-color: theme-color("text-2");
+$navbar-link-hover: darken($navbar-link-color, 10%);
+$navbar-border-width: 1px;
+$navbar-border-color: theme-color(ui-3);
+
+// body
+$body-bg-color: grayscale("white");
+$body-font-color: grayscale(11);
+
+// headers
+$header-font-color: grayscale(13);
+
+// links
+$link-color: grayscale(14);
+$link-hover-color: darken($link-color, 10%);
+$link-highlight: true;
+$link-highlight-color: lighten(theme-color("brand-1"), 30%);
+
+// buttons
+$button-border-radius: map-get($border-radius-scale, "none");
+$button-border-size: 1px;
+
+// tooltips
+$tooltip-bg: theme-color("ui-3");
+$tooltip-text-color: theme-color("text-1");
+
+// cards
+$card-bg: theme-colors("ui-1");
+$card-border-radius: map-get($border-radius-scale, "none");
+
+// dropdowns
+$dropdown-border-size: 1px;
+$dropdown-border-color: theme-color("ui-5");
+
+// YIQ contrast colors
+/// The text color to be used when a background is determined to be "light"
+/// @type Color
+$yiq-contrasted-dark-default: grayscale() !default;
+/// The text color to be used when a background is determined to be "dark"
+/// @type Color
+$yiq-contrasted-light-default: grayscale("white") !default;
+/// The YIQ lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 & 255.
+/// @type Number
+$yiq-contrasted-threshold: 128 !default;
+/// Toggle diagnostic messages.
+/// @type Boolean
+$yiq-debug: false !default;
 
 $accordion-border-color: theme-color(ui-5);

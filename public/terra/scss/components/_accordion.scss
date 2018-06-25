@@ -2,15 +2,15 @@
 .accordion {
 	// @include border-radius('all','medium');
 	border: 1px solid $accordion-border-color;
-	margin-bottom: spacing(medium);
+	margin-bottom: spacing(5);
 	&__heading {
-		padding: spacing(small) spacing(medium);
+		padding: spacing(4) spacing(5);
 		position: relative;
 		display: block;
 		&:after {
 			position: absolute;
 			top: 1.25em;
-			right: spacing(medium);
+			right: spacing(5);
 			color: theme-color(ui-5);
 			transform: rotate(0deg);
 			transition: transform 200ms ease-in-out;
@@ -25,7 +25,7 @@
 		display: none;
 		&__content {
 			// border-top: 1px solid $accordion-border-color;
-			padding: spacing(small) spacing(medium);
+			padding: spacing(4) spacing(5);
 			overflow: hidden;
 	    	max-height: 0;
 	    	transition: max-height 300ms;
@@ -34,6 +34,7 @@
 	&.expanded {
 		background: theme-color("ui-2");
 		.accordion__heading {
+			text-decoration: none;
 			&:after {
 				transform: rotate(-90deg);
 			}
@@ -49,7 +50,7 @@
 }
 
 .accordion-group {
-	margin-bottom: spacing(medium);
+	margin-bottom: spacing(5);
 	.accordion {
 		@include border-radius('all','none');
 		margin-bottom: 0;

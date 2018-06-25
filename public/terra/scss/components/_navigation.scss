@@ -20,7 +20,7 @@
 			visibility: hidden;
 	  		opacity: 0;
 			width: 100%;
-			padding: spacing(medium);
+			padding: spacing(5);
 			background: #ffffff;
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
@@ -81,7 +81,7 @@
 	}
 	&__branding {
 		float: left;
-		padding-top: spacing(extra-small);
+		padding-top: spacing(3);
 		> a {
 			> img {
 				@include height(3);
@@ -104,7 +104,7 @@
 			display: table;
 			> li {
 				display: inline-block;
-				padding: 0 spacing(extra-small);
+				padding: 0 spacing(3);
 				display: table-cell;
 				vertical-align: middle;
 				> a:not(.button) {
@@ -146,7 +146,7 @@
 						border: 0;
 						box-shadow: unset;
 						margin: 0;
-						padding-left: spacing(small);
+						padding-left: spacing(4);
 					    float: none;
 						> li {
 							padding: 0;
@@ -162,7 +162,7 @@
 						}
 						@include for-size(tablet-landscape-down) {
 							background: transparent;
-							padding: 0 0 0 spacing(small);
+							padding: 0 0 0 spacing(4);
 							> li {
 								> a:not(.button) {
 									color: $navbar-link-color;
@@ -214,8 +214,8 @@
 		        display: block;
 		        width: 100%;
 		        height: auto;
-		        padding-top: spacing(extra-small);
-		        padding-bottom: spacing(extra-small);
+		        padding-top: spacing(3);
+		        padding-bottom: spacing(3);
 		    	@include for-size(tablet-landscape-up) {
 		    		display: inline-block;
 		    		width: initial;
@@ -227,7 +227,7 @@
 	        		@include for-size(tablet-landscape-up) {
 	        			display: inline-block;
 	        			width: initial;
-	        			padding: 0 spacing(small);
+	        			padding: 0 spacing(4);
 				    }
 	        	}
 	        }
@@ -240,10 +240,10 @@
 
 .tree-menu {
 	margin: 0;
-	padding: 0 0 0 spacing(extra-small);
+	padding: 0 0 0 spacing(3);
 	list-style: none;
 	li {
-		padding: 0 0 0 spacing(extra-extra-small);
+		padding: 0 0 0 spacing(2);
 		i {
 			position: absolute;
 			top: .7rem;
@@ -259,13 +259,13 @@
 			}
 		}
 		ul {
-			padding: 0 0 0 spacing(extra-small);
+			padding: 0 0 0 spacing(3);
 			list-style: none;
 			li {
-				padding: 0 0 0 spacing(extra-extra-small);
+				padding: 0 0 0 spacing(2);
 				> a {
 					@include border-radius('all','small');
-					padding: spacing(extra-small) 0;
+					padding: spacing(3) 0;
 					display: block;
 				}
 			}
@@ -279,14 +279,14 @@
 	}
 	> li {
 		position: relative;
-		padding: 0 0 0 spacing(extra-small);
+		padding: 0 0 0 spacing(3);
 		> a {
 			@include border-radius('all','small');
-			padding: spacing(extra-extra-small) 0;
+			padding: spacing(2) 0;
 			display: block;
 		}
 		> span {
-			padding: spacing(extra-extra-small) 0;
+			padding: spacing(2) 0;
 		}
 		&.expandable {
 			i {
@@ -300,13 +300,13 @@
 			}
 			> .expandable-menu {
 				list-style: none;
-				margin-left: spacing(extra-small);
+				margin-left: spacing(3);
 				padding: 0;
 				display: none;
 				> li {
 					padding: 0;
 					> a {
-						padding: spacing(extra-extra-small) 0;
+						padding: spacing(2) 0;
 						display: block;
 					}
 				}
@@ -329,14 +329,18 @@
 	@include list-unstyled();
 	@include list-inline();
 	display: flex;
-	margin-bottom: spacing(medium);
+	justify-content: space-between;
+  	flex-wrap: wrap;
+	margin-bottom: spacing(5);
 	li {
+		flex-grow: 1;
 		padding: 0;
 		margin: 0;
 		a {
 			@include button-base();
 			@include border-radius(all,none);
-			padding: spacing(extra-small) spacing(small);
+			display: block;
+			padding: spacing(3) spacing(4);
 			border-bottom: 1px solid darken(theme-color(ui-3), 8%);
 		}
 		&.active {

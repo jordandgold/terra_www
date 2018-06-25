@@ -10,7 +10,7 @@
     line-height: 1;
     color: theme-color(text-2);
     box-sizing: border-box;
-    padding: spacing(extra-small) spacing(small);
+    padding: spacing(3) spacing(4);
     position: relative;
     z-index: 1;
     display: block;
@@ -20,7 +20,7 @@
 }
 
 .input-group {
-    padding: spacing(extra-small) 0;
+    padding: spacing(3) 0;
     &:first-child:not(:only-of-type) {
         padding-top: 0;
     }
@@ -34,7 +34,7 @@
     label {
         @include type-setting(0,0);
         display: block;
-        padding-bottom: spacing(extra-small);
+        padding-bottom: spacing(2);
     }
     .input-wrap {
         position: relative;
@@ -70,7 +70,7 @@
     .input-help,
     .input-message {
         @include type-setting(-1,0);
-        // padding-top: spacing(small);
+        // padding-top: spacing(4);
         display: block;
     }
     // define states
@@ -98,18 +98,18 @@
 
 .input-checkbox,
 .input-radio {
-    padding-top: spacing(extra-small);
-    padding-bottom: spacing(extra-small);
+    padding-top: spacing(3);
+    padding-bottom: spacing(3);
     input[type="checkbox"] {
         display: inline-block;
-        margin-right: spacing(extra-small);
+        margin-right: spacing(3);
         ~ label {
             display: inline-block;
         }
     }
     input[type="radio"] {
         display: inline-block;
-        margin-right: spacing(extra-small);
+        margin-right: spacing(3);
         ~ label {
             display: inline-block;
         }
@@ -147,7 +147,7 @@ select {
         font-weight: 900;
         font-size: 0.75rem;
         position: absolute;
-        right: map-get($spacing-scale, small);
+        right: spacing(3);
         top: 50%;
         transform: translateY(-50%);
         z-index: 1;
@@ -160,9 +160,9 @@ select {
 fieldset {
     min-width: 0;
     padding: 0;
-    margin: 0 0 spacing(medium) 0;
+    margin: 0 0 spacing(5) 0;
     border: 0;
     legend {
-        margin-bottom: spacing(small);
+        margin-bottom: spacing(4);
     }
 }
