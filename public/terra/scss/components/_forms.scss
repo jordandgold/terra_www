@@ -181,3 +181,15 @@ fieldset {
         margin-bottom: spacing(4);
     }
 }
+
+.search-bar {
+    display: flex;
+    &__input {
+        flex-grow: 1;
+    }
+    &__submit {
+        @include input-base();
+        width: initial;
+        margin-left: 1px;
+    }
+}

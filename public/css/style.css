@@ -3214,6 +3214,27 @@ fieldset {
   fieldset legend {
     margin-bottom: 16px; }
 
+.search-bar {
+  display: flex; }
+  .search-bar__input {
+    flex-grow: 1; }
+  .search-bar__submit {
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 1;
+    color: #595868;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    border: 0.05rem solid #7B7A86;
+    background-color: transparent;
+    width: initial;
+    margin-left: 1px; }
+
 .hero {
   padding-top: 48px;
   padding-bottom: 48px; }
