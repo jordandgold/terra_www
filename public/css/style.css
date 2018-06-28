@@ -443,6 +443,10 @@ hr {
   background-color: #E2E2E7;
   border: 0; }
 
+.hidden {
+  display: none;
+  visibility: hidden; }
+
 /*
 
     Heights
@@ -2863,6 +2867,36 @@ a.button--block {
   padding: 12px 0;
   display: block;
   width: 100%; }
+
+.split-button {
+  position: relative; }
+  .split-button button {
+    display: inline-block;
+    float: left;
+    margin-left: 1px;
+    margin-right: 1px; }
+    .split-button button:last-child {
+      margin-right: 0px; }
+    .split-button button:first-child {
+      margin-left: 0px; }
+    .split-button button:only-of-type {
+      margin-left: 0px;
+      margin-right: 0px; }
+  .split-button .dropdown {
+    position: unset; }
+    .split-button .dropdown:after {
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-weight: 900;
+      font-family: Font Awesome\ 5 Free;
+      content: "\f078";
+      margin: 0;
+      padding: 0;
+      font-size: 75%; }
 
 .card {
   box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);

@@ -87,10 +87,6 @@
     }
 }
 
-//
-// button definitions
-//
-
 .button,
 a.button {
     @include button-base();
@@ -146,4 +142,34 @@ a.button--block {
     padding: spacing(3) 0;
     display: block;
     width: 100%;
+}
+
+.split-button {
+    position: relative;
+    button {
+        display: inline-block;
+        float: left;
+        margin-left: 1px;
+        margin-right: 1px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        &:first-child {
+            margin-left: 0px;
+        }
+        &:only-of-type {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+    .dropdown {
+        position: unset;
+        &:after {
+            @include icon-base();
+            content: "\f078";
+            margin: 0;
+            padding: 0;
+            font-size: 75%;
+        }
+    }
 }
