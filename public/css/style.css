@@ -2868,6 +2868,36 @@ a.button--block {
   display: block;
   width: 100%; }
 
+.button--icon,
+a.button--icon {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #595868;
+  padding: 4px 8px;
+  margin: 0rem; }
+  .button--icon:visited, .button--icon:active, .button--icon:focus,
+  a.button--icon:visited,
+  a.button--icon:active,
+  a.button--icon:focus {
+    color: #595868; }
+  .button--icon:hover,
+  a.button--icon:hover {
+    color: #595868;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer; }
+  .button--icon:active,
+  a.button--icon:active {
+    background-color: transparent; }
+  .button--icon i:before,
+  a.button--icon i:before {
+    color: #595868; }
+  .button--icon i,
+  a.button--icon i {
+    margin-left: 0;
+    font-size: 125%; }
+
 .split-button {
   position: relative; }
   .split-button button {

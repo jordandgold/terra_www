@@ -144,6 +144,20 @@ a.button--block {
     width: 100%;
 }
 
+.button--icon,
+a.button--icon {
+    @include button-variant(
+        transparent,
+        theme-color("text-2")
+    );
+    padding: spacing(1) spacing(2);
+    margin: spacing(0);
+    i {
+        margin-left: 0;
+        font-size: 125%;
+    }
+}
+
 .split-button {
     position: relative;
     button {
