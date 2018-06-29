@@ -295,7 +295,7 @@ body.has-nav {
 		&.active {
 			> a {
 				text-decoration: underline;
-				color: $link-hover-color;
+				color: $tree-menu-link-hover;
 			}
 		}
 	}
