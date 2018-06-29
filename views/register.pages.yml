@@ -2,5 +2,15 @@
   url: documentation/getting-started
 - name: accessibility
   url: documentation/style/accessibility
-- name: color
-  url: documentation/style/color
+- name: color-palette
+  url: documentation/style/color-palette
+- name: color-palette
+  url: documentation/style/color-palette
+- name: motion
+  url: documentation/style/motion
+- name: structure
+  url: documentation/style/structure
+- name: typography
+  url: documentation/style/typography
+- name: depth
+  url: documentation/style/depth

@@ -1,0 +1,6 @@
+layout: 'component-page'
+page:
+  title: 'Structure | Terra Design System'
+  name: 'Structure'
+  parent: 'Style'
+  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'

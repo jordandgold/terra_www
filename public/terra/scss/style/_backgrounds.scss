@@ -1,15 +1,8 @@
-@each $name, $hex in $colors {
+@each $name, $hex in $color-palette {
     .bg-#{$name} {
         background-color: $hex;
     }
 }
-
-@each $name, $hex in $grayscale {
-    .bg-gray-#{$name} {
-        background-color: $hex;
-    }
-}
-
 @mixin background-color($color) {
-  background-color: map-get($colors, $color);
+  background-color: map-get($color-palette, $color);
 }

@@ -1,4 +1,6 @@
-layout: 'component-page'
-title: 'Getting Started | Terra Design System'
-name: 'Getting Started'
-tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+layout: component-page
+page:
+  title: Getting Started | Terra Design System
+  name: Getting Started
+  parent:
+  tagline: Lorem ipsum dolor amet fixie food truck before they sold out, iPhone hell of chia actually portland

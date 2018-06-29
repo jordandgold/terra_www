@@ -17,7 +17,7 @@
 		    	font-size: 75%;
 		    }
 		    &:hover {
-		    	border-bottom: 1px solid darken(theme-color("ui-3"), 10%);
+		    	border-bottom: 1px solid darken($pagination-border-color, 10%);
 		    }
 		}
 		&:not(:first-child):not(:last-child) {
@@ -50,9 +50,9 @@
 		&.active {
 			a,
 			span {
-				border-bottom: 1px solid theme-color("ui-3");
+				border-bottom: 1px solid $pagination-border-color;
 				&:hover {
-			    	border-bottom: 1px solid darken(theme-color("ui-3"), 10%);
+			    	border-bottom: 1px solid darken($pagination-border-color, 10%);
 			    }
 			}
 		}

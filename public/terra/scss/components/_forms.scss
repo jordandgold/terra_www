@@ -15,8 +15,8 @@
     z-index: 1;
     display: block;
     width: 100%;
-    border: .05rem solid theme-color(ui-5);
-    background-color: transparent;
+    border: .05rem solid $input-border-color;
+    background-color: $input-bg;
 }
 
 .input-group {
@@ -32,9 +32,10 @@
         padding-bottom: 0;
     }
     label {
-        @include type-setting(0,0);
+        @include type-setting(-1,0);
         display: block;
         padding-bottom: spacing(2);
+        color: $input-label-color;
     }
     .input-wrap {
         position: relative;
@@ -52,16 +53,16 @@
             @include input-base();
             position: relative;
             z-index: 1;
-            transition: box-shadow 200ms ease-in-out;
+            transition: box-shadow 200ms ease-in-out, border-color 200ms ease-in-out;
             &:focus {
-                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
-                            // 0 0 0 3px rgba(state-color(info),.25)
+                box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15);
+                border-color: $input-focus-border-color;
             }
             &.input-lg {
                 @include font-size(1);
             }
             &::placeholder {
-                color: theme-color("ui-4");
+                color: $input-placeholder-color;
             }
         }
         textarea {
@@ -79,21 +80,21 @@
     // define states
     &.error {
         .input-message {
-            color: state-color(danger);
+            color: emotive-color(danger);
         }
         .input-wrap {
             input {
-                border-color: state-color(danger);
+                border-color: emotive-color(danger);
             }
         }
     }
     &.success {
         .input-message {
-            color: state-color(success);
+            color: emotive-color(success);
         }
         .input-wrap {
             input {
-                border-color: state-color(success);
+                border-color: emotive-color(success);
             }
         }
     }

@@ -1,5 +1,5 @@
 <nav class="side-nav">
-	<div class="side-nav__section">
+{{!-- 	<div class="side-nav__section">
 		<div class="input-group">
 			<label>Select a Theme</label>
 			<div class="select-wrap">
@@ -10,9 +10,9 @@
 				</select>
 			</div>
         </div>
-	</div>
+	</div> --}}
 	<div class="side-nav__section side-nav__section--fill-height">
-		<div class="heading-5">Documentation</div>
+		<div class="heading-6 margin-bottom-5">Documentation</div>
 		<ul class="tree-menu">
 			<li {{#is name "Getting Started"}} class="active"{{else}}{{/is}}><a href="#">Getting Started</a></li>
 			<li class="expandable {{#is page.parent "Style"}} expanded{{else}}{{/is}}">
@@ -20,12 +20,12 @@
 				<i class="fas fa-chevron-right"></i>
 				<ul class="expandable-menu">
 					<li {{#is page.name "Accessibility"}} class="active"{{else}}{{/is}}><a href="/documentation/style/accessibility">Accessibility</a></li>
-					<li {{#is page.name "Color"}} class="active"{{else}}{{/is}}><a href="/documentation/style/color">Color</a></li>
+					<li {{#is page.name "Color"}} class="active"{{else}}{{/is}}><a href="/documentation/style/color-palette">Color Palette</a></li>
 					<li {{#is page.name "Depth"}} class="active"{{else}}{{/is}}><a href="/documentation/style/depth">Depth</a></li>
 					<li {{#is page.name "Grid"}} class="active"{{else}}{{/is}}><a href="/documentation/style/grid">Grid</a></li>
 					<li {{#is page.name "Motion"}} class="active"{{else}}{{/is}}><a href="/documentation/style/motion">Motion</a></li>
 					<li {{#is page.name "Structure"}} class="active"{{else}}{{/is}}><a href="/documentation/style/structure">Structure</a></li>
-					<li {{#is page.name "Typography"}} class="active"{{else}}{{/is}}><a href="/documentation/style/typograghy">Typography</a></li>
+					<li {{#is page.name "Typography"}} class="active"{{else}}{{/is}}><a href="/documentation/style/typography">Typography</a></li>
 				</ul>
 			</li>
 			<li class="expandable {{#is page.parent "Components"}} expanded{{else}}{{/is}}">
@@ -40,6 +40,7 @@
 					<li {{#is page.name "Dropdown"}} class="active"{{else}}{{/is}}><a href="/documentation/components/dropdown">Dropdown</a></li>
 					<li {{#is page.name "Forms"}} class="active"{{else}}{{/is}}><a href="/documentation/components/forms">Forms</a></li>
 					<li {{#is page.name "Modal"}} class="active"{{else}}{{/is}}><a href="/documentation/components/modal">Modal</a></li>
+					<li {{#is page.name "Notification"}} class="active"{{else}}{{/is}}><a href="/documentation/components/notification">Notification</a></li>
 					<li {{#is page.name "Pagination"}} class="active"{{else}}{{/is}}><a href="/documentation/components/pagination">Pagination</a></li>
 					<li {{#is page.name "Tabs"}} class="active"{{else}}{{/is}}><a href="/documentation/components/tabs">Tabs</a></li>
 					<li {{#is page.name "Tooltips"}} class="active"{{else}}{{/is}}><a href="/documentation/components/tooltips">Tooltips</a></li>

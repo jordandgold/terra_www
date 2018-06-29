@@ -4,6 +4,9 @@
 
 */
 
+//
+// mixins
+
 @mixin header-type-setting($level: 0, $weight: 'normal') {
 	font-size: type-scale($level);
 	line-height: map-get($type-scale, $level) * 1.25;
@@ -18,23 +21,48 @@
 	font-weight: font-weight($weight);
 }
 
+@mixin font-size-paragraph {
+	@include type-setting(0);
+	margin: 0 0 $base-line-height 0;
+}
+
+@mixin font-size($size) {
+	@include type-setting($size);
+}
+
+
+//
+// global typography settings
+
 body, html {
 	@include font-sans-serif;
-	margin: 0;
+	@include type-setting(0);
 }
 
-@mixin heading-mega {
-	@include header-type-setting(6,'bold');
-	padding-bottom: spacing(5);
-	margin: 0;
+p {
+	@include font-size-paragraph;
 }
 
-.heading-mega {
-	@include heading-mega;
-}
+
+//
+// typography settings
+
+
+//
+// heading typography settings
+
+// @mixin heading-mega {
+// 	@include header-type-setting(6,'bold');
+// 	padding-bottom: spacing(5);
+// 	margin: 0;
+// }
+
+// .heading-mega {
+// 	@include heading-mega;
+// }
 
 @mixin heading-1 {
-	@include header-type-setting(5,'bold');
+	@include header-type-setting(4,'bold');
 	padding-bottom: spacing(5);
 	margin: 0;
 }
@@ -45,7 +73,7 @@ h1,
 }
 
 @mixin heading-2 {
-	@include header-type-setting(4,'bold');
+	@include header-type-setting(3,'bold');
 	padding-bottom: spacing(5);
 	margin: 0;
 }
@@ -56,7 +84,7 @@ h2,
 }
 
 @mixin heading-3 {
-	@include header-type-setting(3,'bold');
+	@include header-type-setting(2,'bold');
 	padding-bottom: spacing(5);
 	margin: 0;
 }
@@ -67,7 +95,7 @@ h3,
 }
 
 @mixin heading-4 {
-	@include header-type-setting(2,'bold');
+	@include header-type-setting(1,'bold');
 	padding-bottom: spacing(4);
 	margin: 0;
 }
@@ -78,7 +106,7 @@ h4,
 }
 
 @mixin heading-5 {
-	@include header-type-setting(1,'bold');
+	@include header-type-setting(0,'bold');
 	padding-bottom: spacing(4);
 	margin: 0;
 }
@@ -88,24 +116,11 @@ h5,
 	@include heading-5;
 }
 
-@mixin font-size-paragraph {
-	@include type-setting(0);
-	margin: 0 0 $base-line-height 0;
+.font-size-micro {
+	@include font-size(-2);
 }
 
-p {
-	@include font-size-paragraph;
-}
-
-body, html {
-	@include type-setting(0);
-}
-
-@mixin font-size($size) {
-	@include type-setting($size);
-}
-
-.font-size-sm,
+.font-size-mini,
 small {
 	@include font-size(-1);
 }

@@ -18,7 +18,6 @@
 	}
 	&__label {
 		@include type-setting(-1,'bold');
-		color: theme-color(text-2);
 		text-align: center;
 	}
 	&__hex {
@@ -35,23 +34,29 @@
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
     margin-top: 0;
-    background: theme-color("ui-2");
+    background: neutral-color('light-1');
   }
 }
 
 .main-content {
   height: auto;
   @include for-size("tablet-portrait-up") {
-    margin-left: 20rem;
+    margin-left: 17.5rem;
   }
 }
 
+.main-footer {
+  padding: spacing(5) 0;
+  border-top: 1px solid neutral-color('light-1');
+  height: auto;
+}
+
 .side-nav {
-  width: 20rem;
+  width: 17.5rem;
   position: fixed;
   left: 0;
-  border-right: 1px solid theme-color("ui-3");
-  background: theme-color("ui-1");
+  border-right: 1px solid neutral-color('light-1');
+  background: neutral-color('white');
   transform: translateX(-100%);
   transition: transform 500ms ease-in-out;
   overflow-y: auto;
@@ -61,13 +66,9 @@
   @include for-size(tablet-portrait-up) {
     transform: translateX(0);
   }
-  &__logo {
-    margin-top: spacing(4);
-    padding: 0 spacing(4);
-  }
   &__section {
-    padding: spacing(4);
-    border-bottom: 1px solid theme-color("ui-3");
+    padding: spacing(6);
+    border-bottom: 1px solid neutral-color('light-1');
     &--fill-height {
       flex-grow: 1;
     }

@@ -1,0 +1,6 @@
+layout: 'component-page'
+page:
+  title: 'Color Palette | Terra Design System'
+  name: 'Color Palette'
+  parent: 'Style'
+  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'

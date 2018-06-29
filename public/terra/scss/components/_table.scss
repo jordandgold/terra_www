@@ -1,25 +1,39 @@
-table {
+@mixin table-base {
 	width: 100%;
 	border-collapse: collapse;
 	tr {
 		th {
 			margin: 0;
 			text-align: left;
-			border-bottom: 1px solid theme-color(ui-3);
+			border: 0;
 		}
 		td {
-			border-bottom: 1px solid theme-color(ui-3);
+			border: 0;
 		}
 	}
 }
 
 .table {
+	@include table-base();
 	tr {
 		th {
-			padding: spacing(2);
+			@include font-weight("normal");
+			padding: spacing(3);
+			background-color: theme-color("brand-1");
+			color: neutral-color("dark-1");
 		}
 		td {
-			padding: spacing(1);
+			padding: spacing(3);
+		}
+		&:nth-child(even) {
+			td {
+				background-color: transparent;
+			}
+		}
+		&:nth-child(odd) {
+			td {
+				background-color: neutral-color("light-1");
+			}
 		}
 	}
 }

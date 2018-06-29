@@ -1,6 +1,6 @@
 layout: 'component-page'
 page:
-  title: 'Color | Terra Design System'
-  name: 'Color'
+  title: 'Depth | Terra Design System'
+  name: 'Depth'
   parent: 'Style'
   tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'

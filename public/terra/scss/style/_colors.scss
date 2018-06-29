@@ -4,14 +4,14 @@
 
 */
 
-@each $name, $hex in $colors {
+@each $name, $hex in $color-palette {
     .color-#{$name} {
         color: $hex;
     }
 }
 
 :root {
-    @each $name, $hex in $colors {
+    @each $name, $hex in $color-palette {
         --color-#{$name}: #{$hex};
     }
 }

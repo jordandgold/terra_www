@@ -6,6 +6,7 @@
 
 @mixin dropdown-menu-base() {
   @include depth(1);
+  @include type-setting(-1,'normal');
   border: $dropdown-border-size solid $dropdown-border-color;
   width: 12.5em;
   position: absolute;
@@ -17,22 +18,21 @@
   list-style: none;
   transform: translateY(-10px);
   opacity: 0;
-  // display: none;
   visibility: hidden;
-  background: theme-color(ui-1);
+  background: $dropdown-bg;
   z-index: 10;
   margin: 0;
   transition: transform 225ms, opacity 225ms, visibility 225ms;
   li {
     padding: 0;
     a {
-      color: theme-color(ui-5);
+      color: $dropdown-link-color;
       padding: spacing(2) spacing(4);
       display: block;
       text-decoration: none;
       &:hover {
-        color: darken(theme-color(ui-5), 10%);
-        background: theme-color(ui-2);
+        color: darken($dropdown-link-color, 10%);
+        background: $dropdown-link-hover-bg;
         text-decoration: none;
       }
     }
@@ -45,6 +45,7 @@
     &.search {
       padding: spacing(0);
       input {
+        @include type-setting(-1,'normal');
         padding: spacing(2) spacing(4);
         border: 0;
         &:focus {
@@ -65,7 +66,6 @@
     position: relative;
     i {
       padding-left: .5rem;
-      // transition: transform 200ms ease-in-out; 
       &:before {
         font-size: 0.75rem;
       }
@@ -85,7 +85,6 @@
   &.open {
     > .dropdown-menu {
       visibility: visible;
-      // display: block;
       opacity: 1;
       transform: translateY(1px);
     }

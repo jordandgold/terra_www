@@ -1,0 +1,6 @@
+layout: 'component-page'
+page:
+  title: 'Motion | Terra Design System'
+  name: 'Motion'
+  parent: 'Style'
+  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'

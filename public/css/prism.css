@@ -32,13 +32,13 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
-	background: #b3d4fc;
+	background: var(--color-light-1);
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-	background: #b3d4fc;
+	background: var(--color-light-1);
 }
 
 @media print {
@@ -50,14 +50,15 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: var(--spacing-4);
+	font-size: 75%;
+	padding: var(--spacing-6);
 	margin: .5em 0;
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: var(--color-gray-1);
+	background: var(--color-light-1);
 }
 
 /* Inline code */

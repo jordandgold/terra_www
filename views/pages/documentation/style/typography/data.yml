@@ -1,0 +1,5 @@
+layout: 'component-page'
+page:
+  title: 'Typography | Terra Design System'
+  name: 'Typography'
+  parent: 'Style'

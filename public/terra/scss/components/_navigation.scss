@@ -4,7 +4,8 @@
 
 */
 
-// Mega Menu Mixin
+//
+// mega menu
 
 @mixin mega-menu {
 	.mega-menu-dropdown {
@@ -16,7 +17,7 @@
 			top: 85px;
 			left: 50%;
 			transform: translate(-50%, -20px);
-	    	transition: all 225ms;
+	    	transition: all 200ms;
 			visibility: hidden;
 	  		opacity: 0;
 			width: 100%;
@@ -40,9 +41,19 @@
 	}
 }
 
+
+//
+// navigation bar
+
+// fix for body top-margin
+
+body.has-nav {
+	padding-top: $navbar-height;
+}
+
 .navbar {
-	@include height(4);
 	z-index: 10;
+	height: $navbar-height;
 	background: $navbar-bg;
 	transition: transform .5s ease;
 	position: fixed;
@@ -51,7 +62,7 @@
 	width: 100%;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
 	&__toggle {
-		@include height(4);
+		height: $navbar-height;
 		float: right;
 		display: inline-block;
 		padding: 0;
@@ -64,7 +75,7 @@
 		.line {
 			width: 25px;
 			height: 2px;
-			background-color: theme-color(ui-5);
+			background-color: red;
 			display: block;
 			margin: 5px auto;
 			transition: all 0.3s ease-in-out;
@@ -81,8 +92,11 @@
 	}
 	&__branding {
 		float: left;
-		padding-top: spacing(3);
+		// padding-top: spacing(3);
 		> a {
+			@include type-setting(0,'normal');
+			text-decoration: none;
+			line-height: $navbar-height;
 			> img {
 				@include height(3);
 			}
@@ -98,7 +112,7 @@
 	&__nav {
 		float: right;
 		> ul {
-			height: calc(height(4) - $navbar-border-width);
+			height: calc($navbar-height - $navbar-border-width);
 			margin: 0;
 			padding: 0;
 			display: table;
@@ -108,9 +122,10 @@
 				display: table-cell;
 				vertical-align: middle;
 				> a:not(.button) {
+					@include type-setting(-1,'normal');
 					color: $navbar-link-color;
 					margin: 0;
-					line-height: 2.25rem;
+					// line-height: 2.25rem;
 					display: inline-block;
 					&:hover {
 						color: $navbar-link-hover;
@@ -192,7 +207,7 @@
 		&--collapse {
 			@include box-shadow(2);
 	        position: absolute;
-	        top: map-get($height-scale, 3);
+	        top: $navbar-height;
 	        left: 0;
 	        width: 100%;
 	        display: block;
@@ -215,7 +230,7 @@
 		        width: 100%;
 		        height: auto;
 		        padding-top: spacing(3);
-		        padding-bottom: spacing(3);
+		        padding-bottom: calc(spacing(3) - 1px);
 		    	@include for-size(tablet-landscape-up) {
 		    		display: inline-block;
 		    		width: initial;
@@ -238,23 +253,31 @@
 	}
 }
 
+
+//
+// tree menu
+
 .tree-menu {
 	margin: 0;
-	padding: 0 0 0 spacing(3);
+	padding: 0 0 0 spacing(2);
 	list-style: none;
 	li {
-		padding: 0 0 0 spacing(2);
+		@include type-setting(-1,'normal');
 		i {
 			position: absolute;
-			top: .7rem;
-			left: -.25rem;
-			transition: transform 200ms ease-in-out; 
-			&:before {
-				font-size: 0.75rem;
-			}
+			top: .7em;
+			left: -.25em;
+			transition: transform 200ms ease-in-out;
+			font-size: 75%;
 		}
-		a {
+		a,
+		a:visited,
+		a:active,
+		a:focus {
+			color: $tree-menu-link-color;
+			text-decoration: none;
 			&:hover {
+				color: $tree-menu-link-hover;
 				cursor: pointer;
 			}
 		}
@@ -264,7 +287,6 @@
 			li {
 				padding: 0 0 0 spacing(2);
 				> a {
-					@include border-radius('all','small');
 					padding: spacing(3) 0;
 					display: block;
 				}
@@ -290,12 +312,13 @@
 		}
 		&.expandable {
 			i {
+				color: lighten($tree-menu-link-color, 20%);
 				position: absolute;
 				top: .7rem;
 				left: -.25rem;
 				transition: transform 200ms ease-in-out; 
 				&:before {
-					font-size: 0.75rem;
+					font-size: 100%;
 				}
 			}
 			> .expandable-menu {
@@ -325,6 +348,10 @@
 	}
 }
 
+
+//
+// nav tabs
+
 .nav-tabs {
 	@include list-unstyled();
 	@include list-inline();
@@ -341,13 +368,13 @@
 			@include border-radius(all,none);
 			display: block;
 			padding: spacing(3) spacing(4);
-			border-bottom: 1px solid darken(theme-color(ui-3), 8%);
+			border-bottom: 1px solid $nav-tabs-border-color;
 		}
 		&.active {
 			a {
-				border-left: 1px solid darken(theme-color(ui-3), 8%);
-		    	border-top: 1px solid darken(theme-color(ui-3), 8%);
-		    	border-right: 1px solid darken(theme-color(ui-3), 8%);
+				border-left: 1px solid $nav-tabs-border-color;
+		    	border-top: 1px solid $nav-tabs-border-color;
+		    	border-right: 1px solid $nav-tabs-border-color;
 				border-bottom: 0px;
 			}
 		}

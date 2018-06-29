@@ -41,13 +41,13 @@
 	}
 }
 
-@each $color, $value in $state-colors {
+@each $color, $value in $emotive-colors {
   .badge--#{$color} {
     @include badge-variant($value);
   }
 }
 
-@each $color, $value in $state-colors {
+@each $color, $value in $emotive-colors {
   .badge--outline--#{$color} {
     @include badge-variant(transparent, $value, $value);
   }

@@ -6,7 +6,6 @@
 
 @mixin alert-base() {
     @include type-setting(0,0);
-    // @include border-radius(all, medium);
     padding: spacing(5);
     display: block;
     margin-bottom: spacing(5);
@@ -46,11 +45,6 @@
 @mixin alert-variant($color, $bg: transparent) {
     background-color: transparentize($color, .9);
     border: .05rem solid darken($color, 10%);
-    // @if $textColor == $color {
-    //     color: darken($textColor, 30%);
-    // } @else {
-    //     color: $textColor;
-    // }
     .alert__icon {
         > i {
             &:before {
@@ -81,7 +75,7 @@
     @include alert-base();
 }
 
-@each $color, $value in $state-colors {
+@each $color, $value in $emotive-colors {
   .alert--#{$color} {
     @include alert-variant($value);
   }
