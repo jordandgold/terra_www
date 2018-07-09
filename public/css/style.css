@@ -4,24 +4,6 @@
 
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900");
-.color-white {
-  color: #ffffff; }
-
-.color-dark-1 {
-  color: #31393C; }
-
-.color-light-1 {
-  color: #F9F9FB; }
-
-.color-gray-1 {
-  color: #767683; }
-
-.color-gray-2 {
-  color: #AEAEB6; }
-
-.color-black {
-  color: #000000; }
-
 .color-brand-1 {
   color: #009AD9; }
 
@@ -52,13 +34,25 @@
 .color-dark {
   color: #31393C; }
 
+.color-white {
+  color: #ffffff; }
+
+.color-dark-1 {
+  color: #31393C; }
+
+.color-light-1 {
+  color: #F9F9FB; }
+
+.color-gray-1 {
+  color: #AEAEB6; }
+
+.color-gray-2 {
+  color: #767683; }
+
+.color-black {
+  color: #000000; }
+
 :root {
-  --color-white: #ffffff;
-  --color-dark-1: #31393C;
-  --color-light-1: #F9F9FB;
-  --color-gray-1: #767683;
-  --color-gray-2: #AEAEB6;
-  --color-black: #000000;
   --color-brand-1: #009AD9;
   --color-brand-2: #FFBE00;
   --color-accent-1: #4ECDC4;
@@ -68,7 +62,13 @@
   --color-success: #C0F57A;
   --color-warning: #FFF172;
   --color-light: #F9F9FB;
-  --color-dark: #31393C; }
+  --color-dark: #31393C;
+  --color-white: #ffffff;
+  --color-dark-1: #31393C;
+  --color-light-1: #F9F9FB;
+  --color-gray-1: #AEAEB6;
+  --color-gray-2: #767683;
+  --color-black: #000000; }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -369,24 +369,6 @@ template {
 [hidden] {
   display: none; }
 
-.bg-white {
-  background-color: #ffffff; }
-
-.bg-dark-1 {
-  background-color: #31393C; }
-
-.bg-light-1 {
-  background-color: #F9F9FB; }
-
-.bg-gray-1 {
-  background-color: #767683; }
-
-.bg-gray-2 {
-  background-color: #AEAEB6; }
-
-.bg-black {
-  background-color: #000000; }
-
 .bg-brand-1 {
   background-color: #009AD9; }
 
@@ -416,6 +398,24 @@ template {
 
 .bg-dark {
   background-color: #31393C; }
+
+.bg-white {
+  background-color: #ffffff; }
+
+.bg-dark-1 {
+  background-color: #31393C; }
+
+.bg-light-1 {
+  background-color: #F9F9FB; }
+
+.bg-gray-1 {
+  background-color: #AEAEB6; }
+
+.bg-gray-2 {
+  background-color: #767683; }
+
+.bg-black {
+  background-color: #000000; }
 
 /*
 
@@ -2903,7 +2903,7 @@ a.button--block {
 a.button--icon {
   background-color: transparent;
   border: 1px solid transparent;
-  color: #AEAEB6;
+  color: #767683;
   padding: 4px 8px;
   margin: 0rem;
   outline: none;
@@ -2912,10 +2912,10 @@ a.button--icon {
   a.button--icon:visited,
   a.button--icon:active,
   a.button--icon:focus {
-    color: #AEAEB6; }
+    color: #767683; }
   .button--icon:hover,
   a.button--icon:hover {
-    color: #AEAEB6;
+    color: #767683;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
@@ -2925,7 +2925,7 @@ a.button--icon {
     background-color: transparent; }
   .button--icon i:before,
   a.button--icon i:before {
-    color: #AEAEB6; }
+    color: #767683; }
   .button--icon i,
   a.button--icon i {
     margin-left: 0;
@@ -2935,7 +2935,7 @@ a.button--icon {
     text-decoration: underline; }
     .button--icon:hover i:before,
     a.button--icon:hover i:before {
-      color: #767683 !important; }
+      color: #AEAEB6 !important; }
   .button--icon:active,
   a.button--icon:active {
     box-shadow: none; }

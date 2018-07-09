@@ -7,28 +7,28 @@ $neutral-colors: map-merge((
     'white':    #ffffff,
     'dark-1':   #31393C,
     'light-1':  #F9F9FB,
-    'gray-1':   #767683,
-    'gray-2':   #AEAEB6,
+    'gray-1':   #AEAEB6,
+    'gray-2':   #767683,
     'black':    #000000,
 ), $neutral-colors);
 
-@function theme-color($key: 'brand-1') {
-  @return map-get($theme-colors, $key);
+@function brand-color($key: 'brand-1') {
+  @return map-get($brand-colors, $key);
 }
-$theme-colors: () !default;
-$theme-colors: map-merge((
+$brand-colors: () !default;
+$brand-colors: map-merge((
     'brand-1':  #009AD9,
     'brand-2':  #FFBE00,
     'accent-1': #4ECDC4,
-), $theme-colors);
+), $brand-colors);
 
 @function emotive-color($key: 'info') {
   @return map-get($emotive-colors, $key);
 }
 $emotive-colors: () !default;
 $emotive-colors: map-merge((
-    'default':  theme-color('brand-1'),
-    'info':     theme-color('brand-1'),
+    'default':  brand-color('brand-1'),
+    'info':     brand-color('brand-1'),
     'danger':   #F57362,
     'success':  #C0F57A,
     'warning':  #FFF172,
@@ -43,7 +43,7 @@ $emotive-colors: map-merge((
   }
   @return $collection;
 }
-$color-palette: map-collect($neutral-colors, $theme-colors, $emotive-colors); 
+$color-palette: map-collect($brand-colors, $emotive-colors, $neutral-colors); 
 
 // font family
 $font-sans-serif:
@@ -139,14 +139,14 @@ $navbar-border-width: 1px;
 $navbar-border-color: neutral-color('light-1');
 
 // navigation tabs
-$nav-tabs-border-color: neutral-color('gray-2');
+$nav-tabs-border-color: neutral-color('gray-1');
 
 // tree menu
-$tree-menu-link-color: neutral-color('gray-1');
+$tree-menu-link-color: neutral-color('gray-2');
 $tree-menu-link-hover: darken($navbar-link-color, 10%);
 
 // pagination
-$pagination-border-color: neutral-color('gray-1');
+$pagination-border-color: neutral-color('gray-2');
 
 // body
 $body-bg-color: neutral-color('white');
@@ -156,10 +156,10 @@ $body-font-color: neutral-color('dark-1');
 $header-font-color: neutral-color('dark-1');
 
 // links
-$link-color: theme-color('brand-1');
+$link-color: brand-color('brand-1');
 $link-hover-color: darken($link-color, 10%);
 $link-highlight: true;
-$link-highlight-color: lighten(theme-color('brand-1'), 30%);
+$link-highlight-color: lighten(brand-color('brand-1'), 30%);
 
 // buttons
 $button-border-radius: map-get($border-radius-scale, 'none');
@@ -192,8 +192,8 @@ $accordion-border-color: neutral-color('dark-1');
 $input-bg: neutral-color('white');
 $input-border-color: neutral-color('dark-1');
 $input-label-color: neutral-color('dark-1');
-$input-placeholder-color: neutral-color('gray-1');
-$input-focus-border-color: theme-color('brand-1');
+$input-placeholder-color: neutral-color('gray-2');
+$input-focus-border-color: brand-color('brand-1');
 
 // YIQ contrast colors
 /// The text color to be used when a background is determined to be 'light'

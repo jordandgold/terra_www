@@ -73,7 +73,7 @@ ol {
 	@include list-unstyled();
 	&--flush {
 		> li {
-			border-top: 1px solid theme-color(ui-3);
+			border-top: 1px solid brand-color(ui-3);
 			padding: spacing(3) spacing(5);
 			&:first-child {
 				border-top: 0px;

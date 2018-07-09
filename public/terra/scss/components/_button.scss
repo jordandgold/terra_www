@@ -104,9 +104,9 @@ a.button {
 a.button--outline {
     @include button-variant(
         transparent,
-        theme-color("text-2"),
-        theme-color("brand-1"),
-        theme-color("ui-2")
+        brand-color("text-2"),
+        brand-color("brand-1"),
+        brand-color("ui-2")
     );
 }
 
@@ -115,7 +115,7 @@ a.button--ghost {
     @include button-variant(
         transparent,
         $link-color,
-        theme-color("brand-1"),
+        brand-color("brand-1"),
     );
     border-top: 0px;
     border-left: 0px;
@@ -125,7 +125,7 @@ a.button--ghost {
         &:hover {
             color: $link-hover-color;
             text-decoration: underline;
-            border-bottom-color: theme-color("brand-1");
+            border-bottom-color: brand-color("brand-1");
         }
         &:active {
             box-shadow: none;

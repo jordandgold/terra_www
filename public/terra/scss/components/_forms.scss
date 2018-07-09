@@ -8,7 +8,7 @@
     @include border-radius('all','none');
     @include type-setting(0,0);
     line-height: 1;
-    color: theme-color(text-2);
+    color: brand-color(text-2);
     box-sizing: border-box;
     padding: spacing(3) spacing(4);
     position: relative;
@@ -164,7 +164,7 @@ select {
     position: relative;
     &:after {
         content: "\f078";
-        color: theme-color(ui-4);
+        color: brand-color(ui-4);
         font-family: Font Awesome\ 5 Free;
         font-weight: 900;
         font-size: 0.75rem;
