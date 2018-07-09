@@ -2,12 +2,12 @@
 	padding-top: spacing(10);
 	padding-bottom: spacing(10);
 	&__sub-section {
-		padding-bottom: spacing(6);
+		padding-bottom: spacing(7);
 	}
 	&__sub-section:first-child {
-		padding-top: calc(spacing(6) * 2);
+		padding-top: calc(spacing(7) * 2);
 	}
 	&__sub-section:last-child {
-		padding-bottom: calc(spacing(6) * 2);
+		padding-bottom: calc(spacing(7) * 2);
 	}
 }

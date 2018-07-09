@@ -1,11 +1,13 @@
 {{> component/documentation-hero }}
 
-{{{ body }}}
-
-{{#if modifiers }}
-{{> component/modifiers }}
-{{/if}}
-
-{{#if mixins }}
-{{> component/mixins }}
-{{/if}}
+<section class="page-section">
+	<div class="container-fluid narrow">
+		{{{ body }}}
+		{{#if modifiers }}
+			{{> component/modifiers }}
+		{{/if}}
+		{{#if mixins }}
+			{{> component/mixins }}
+		{{/if}}
+	</div>
+</section>

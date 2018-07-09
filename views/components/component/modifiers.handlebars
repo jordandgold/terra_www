@@ -1,19 +1,17 @@
-<section class="page-section">
-	<div class="container-fluid narrow">
-		<h4>Modifiers</h4> 
-		{{{ modifiers.content }}}
-		<table class="table">
-			<tr>
-				<th>Name</th>
-				<th>Description</th>
-			</tr>
-			{{#each modifiers.modifiers }}
-			</tr>
-			
-				<td><pre>{{ name }}</pre></td>
-				<td>{{ description }}</td>
-			</tr>
-			{{/each}}
-		</table>
-	</div>
-</section>
+<div class="page-section__sub-section">
+	<h4>Modifiers</h4> 
+	{{{ modifiers.content }}}
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		{{#each modifiers.modifiers }}
+		</tr>
+		
+			<td><pre>{{ name }}</pre></td>
+			<td>{{ description }}</td>
+		</tr>
+		{{/each}}
+	</table>
+</div>

@@ -126,9 +126,11 @@ body.has-nav {
 					color: $navbar-link-color;
 					margin: 0;
 					// line-height: 2.25rem;
+					text-decoration: none;
 					display: inline-block;
 					&:hover {
 						color: $navbar-link-hover;
+						text-decoration: none;
 					}
 					@include for-size(tablet-portrait-down) {
 						display: block;

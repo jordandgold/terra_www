@@ -1,21 +1,19 @@
-<section class="page-section">
-	<div class="container-fluid narrow">
-		<h4>Mixins</h4> 
-		{{{ mixins.content }}}
-		<table class="table">
-			<tr>
-				<th>Name</th>
-				<th>Parameters</th>
-				<th>Description</th>
-			</tr>
-			{{#each mixins.mixins}}
-			</tr>
-			
-				<td><pre>{{ name }}</pre></td>
-				<td>{{ parameters }}</td>
-				<td>{{ description }}</td>
-			</tr>
-			{{/each}}
-		</table>
-	</div>
-</section>
+<div class="page-section__sub-section">
+	<h4>Mixins</h4> 
+	{{{ mixins.content }}}
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Parameters</th>
+			<th>Description</th>
+		</tr>
+		{{#each mixins.mixins}}
+		</tr>
+		
+			<td><pre>{{ name }}</pre></td>
+			<td>{{ parameters }}</td>
+			<td>{{ description }}</td>
+		</tr>
+		{{/each}}
+	</table>
+</div>

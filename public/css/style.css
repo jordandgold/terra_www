@@ -3190,6 +3190,15 @@ a.button--icon {
       .input-group .input-wrap input[type="password"]::placeholder,
       .input-group .input-wrap textarea::placeholder {
         color: #767683; }
+      .input-group .input-wrap input[type="text"]:disabled,
+      .input-group .input-wrap input[type="email"]:disabled,
+      .input-group .input-wrap input[type="file"]:disabled,
+      .input-group .input-wrap input[type="password"]:disabled,
+      .input-group .input-wrap textarea:disabled {
+        color: rgba(49, 57, 60, 0.3);
+        border-color: rgba(49, 57, 60, 0.3);
+        background: rgba(49, 57, 60, 0.05);
+        cursor: not-allowed; }
     .input-group .input-wrap textarea {
       font-size: 20px;
       line-height: 30px;
@@ -3467,7 +3476,7 @@ body.has-nav {
   top: 0;
   display: block;
   width: 100%;
-  border-bottom: 1px solid #AEAEB6; }
+  border-bottom: 1px solid #F9F9FB; }
   .navbar__toggle {
     height: 64px;
     float: right;
@@ -3524,9 +3533,11 @@ body.has-nav {
           font-weight: 400;
           color: #31393C;
           margin: 0;
+          text-decoration: none;
           display: inline-block; }
           .navbar__nav > ul > li > a:not(.button):hover {
-            color: #1a1e20; }
+            color: #1a1e20;
+            text-decoration: none; }
         .navbar__nav > ul > li .input-group {
           margin: 0; }
       @media (max-width: 900px) {
@@ -3846,11 +3857,11 @@ body.has-nav {
   padding-top: 96px;
   padding-bottom: 96px; }
   .page-section__sub-section {
-    padding-bottom: 32px; }
+    padding-bottom: 40px; }
   .page-section__sub-section:first-child {
-    padding-top: calc(spacing(6) * 2); }
+    padding-top: calc(spacing(7) * 2); }
   .page-section__sub-section:last-child {
-    padding-bottom: calc(spacing(6) * 2); }
+    padding-bottom: calc(spacing(7) * 2); }
 
 .table {
   width: 100%;

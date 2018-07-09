@@ -64,6 +64,12 @@
             &::placeholder {
                 color: $input-placeholder-color;
             }
+            &:disabled {
+                color: transparentize($input-border-color, .7);
+                border-color: transparentize($input-border-color, .7);
+                background: transparentize($input-border-color, .95);
+                cursor: not-allowed;
+            }
         }
         textarea {
             @include type-setting(0,0);
