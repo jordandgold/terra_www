@@ -32,6 +32,7 @@
         margin-left: spacing(1);
         &:before {
             font-size: 1em;
+            transition: color 200ms ease-in-out;
         }
     }
 }
@@ -154,13 +155,26 @@ a.button--block {
 a.button--icon {
     @include button-variant(
         transparent,
-        theme-color("text-2")
+        neutral-color("gray-2")
     );
     padding: spacing(1) spacing(2);
     margin: spacing(0);
+    outline: none;
+    border: 0;
     i {
         margin-left: 0;
         font-size: 125%;
+    }
+    &:hover {
+        text-decoration: underline;
+        i {
+            &:before {
+                color: neutral-color("gray-1") !important;
+            }
+        }
+    }
+    &:active {
+        box-shadow: none;
     }
 }
 

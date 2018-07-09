@@ -2646,7 +2646,8 @@ a.button {
     margin-left: 4px; }
     .button i:before,
     a.button i:before {
-      font-size: 1em; }
+      font-size: 1em;
+      transition: color 200ms ease-in-out; }
 
 .button--default,
 a.button--default {
@@ -2886,10 +2887,19 @@ a.button--block {
 a.button--icon {
   background-color: transparent;
   border: 1px solid transparent;
+  color: #AEAEB6;
   padding: 4px 8px;
-  margin: 0rem; }
+  margin: 0rem;
+  outline: none;
+  border: 0; }
+  .button--icon:visited, .button--icon:active, .button--icon:focus,
+  a.button--icon:visited,
+  a.button--icon:active,
+  a.button--icon:focus {
+    color: #AEAEB6; }
   .button--icon:hover,
   a.button--icon:hover {
+    color: #AEAEB6;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
@@ -2897,10 +2907,22 @@ a.button--icon {
   .button--icon:active,
   a.button--icon:active {
     background-color: transparent; }
+  .button--icon i:before,
+  a.button--icon i:before {
+    color: #AEAEB6; }
   .button--icon i,
   a.button--icon i {
     margin-left: 0;
     font-size: 125%; }
+  .button--icon:hover,
+  a.button--icon:hover {
+    text-decoration: underline; }
+    .button--icon:hover i:before,
+    a.button--icon:hover i:before {
+      color: #767683 !important; }
+  .button--icon:active,
+  a.button--icon:active {
+    box-shadow: none; }
 
 .split-button {
   position: relative; }
@@ -2936,15 +2958,15 @@ a.button--icon {
   border-radius: 0; }
   .card__body {
     padding: 24px; }
-    .card__body__heading {
-      font-size: 20px;
-      line-height: 25px;
-      font-weight: 600;
-      color: #31393C;
-      display: block;
-      padding-bottom: 16px;
-      margin: 0;
-      margin-bottom: 8px; }
+  .card__title {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 600;
+    color: #31393C;
+    display: block;
+    padding-bottom: 16px;
+    margin: 0;
+    margin-bottom: 8px; }
   .card__footer {
     padding: 0rem 24px 16px 24px; }
   .card__image {
@@ -3786,7 +3808,8 @@ body.has-nav {
       .nav-tabs li a i {
         margin-left: 4px; }
         .nav-tabs li a i:before {
-          font-size: 1em; }
+          font-size: 1em;
+          transition: color 200ms ease-in-out; }
     .nav-tabs li.active a {
       border-left: 1px solid #AEAEB6;
       border-top: 1px solid #AEAEB6;

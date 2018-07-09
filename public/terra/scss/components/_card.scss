@@ -6,10 +6,10 @@
     border-radius: $card-border-radius;
 	&__body {
 		padding: spacing(5);
-		&__heading {
-			@include heading-5;
-			margin-bottom: spacing(2);
-		}
+	}
+	&__title {
+		@include heading-5;
+		margin-bottom: spacing(2);
 	}
 	&__footer {
 		padding: spacing(0) spacing(5) spacing(4) spacing(5);
