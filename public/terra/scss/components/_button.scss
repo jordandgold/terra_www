@@ -124,7 +124,7 @@ a.button--ghost {
     &[href] {
         &:hover {
             color: $link-hover-color;
-            text-decoration: underline;
+            text-decoration: none;
             border-bottom-color: brand-color("brand-1");
         }
         &:active {

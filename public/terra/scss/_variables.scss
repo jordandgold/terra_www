@@ -173,8 +173,8 @@ $button-border-radius: map-get($border-radius-scale, 'none');
 $button-border-size: 1px;
 
 // tooltips
-$tooltip-bg: neutral-color('light-1');
-$tooltip-text-color: neutral-color('dark-1');
+$tooltip-bg: neutral-color('dark-1');
+$tooltip-text-color: neutral-color('white');
 
 // cards
 $card-bg: neutral-color('white');
