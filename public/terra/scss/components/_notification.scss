@@ -1,0 +1,83 @@
+/*
+
+  Notifications
+
+*/
+
+@mixin notification-base() {
+    @include type-setting(0,0);
+    @include depth(4);
+    padding: spacing(5);
+    display: block;
+    margin-bottom: spacing(5);
+    position: relative;
+    height: 100%;
+    &__icon {
+        margin-right: spacing(4);
+        > i {
+            width: auto;
+            height: 100%;
+            display: inline-block;
+            &:before {
+                opacity: 0.6;
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        opacity: 0.4;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: 0;
+        i {
+            padding: 0;
+            margin: 0;
+        }
+        &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin notification-variant($color, $bg: transparent) {
+    background-color: $color;
+    border: .05rem solid darken($color, 10%);
+    .notification__icon {
+        > i {
+            &:before {
+                color: darken($color, 20%);
+            }
+        }
+    }
+    .notification__close {
+        i {
+            color: darken($color, 15%);
+        }
+    }
+    hr {
+        opacity: 0.4;
+        background-color: darken($color, 10%);
+    }
+    a {
+        color: lighten($color, 20%);
+        text-decoration: underline;
+        &:hover {
+            color: lighten($color, 10%);
+            text-decoration: underline;
+        }
+    }
+}
+
+.notification {
+    @include notification-base();
+}
+
+@each $color, $value in $emotive-colors {
+  .notification--#{$color} {
+    @include notification-variant($value);
+  }
+}

@@ -1,6 +1,5 @@
 @mixin table-base {
 	width: 100%;
-	border-collapse: collapse;
 	tr {
 		th {
 			margin: 0;
@@ -15,6 +14,7 @@
 
 .table {
 	@include table-base();
+	border-spacing: 1px;
 	tr {
 		th {
 			@include font-weight("normal");

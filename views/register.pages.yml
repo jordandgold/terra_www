@@ -4,10 +4,6 @@
   url: documentation/style/accessibility
 - name: color-palette
   url: documentation/style/color-palette
-- name: color-palette
-  url: documentation/style/color-palette
-- name: motion
-  url: documentation/style/motion
 - name: structure
   url: documentation/style/structure
 - name: typography

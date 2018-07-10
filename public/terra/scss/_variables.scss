@@ -28,7 +28,7 @@ $brand-colors: map-merge((
 $emotive-colors: () !default;
 $emotive-colors: map-merge((
     'default':  brand-color('brand-1'),
-    'info':     brand-color('brand-1'),
+    'info':     brand-color('accent-1'),
     'danger':   #F57362,
     'success':  #C0F57A,
     'warning':  #FFF172,
@@ -136,7 +136,7 @@ $navbar-bg: neutral-color('white');
 $navbar-link-color: neutral-color('dark-1');
 $navbar-link-hover: darken($navbar-link-color, 10%);
 $navbar-border-width: 1px;
-$navbar-border-color: neutral-color('light-1');
+$navbar-border-color: neutral-color('gray-1');
 
 // navigation tabs
 $nav-tabs-border-color: neutral-color('gray-1');
