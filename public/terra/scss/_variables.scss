@@ -139,7 +139,14 @@ $navbar-border-width: 1px;
 $navbar-border-color: neutral-color('gray-1');
 
 // navigation tabs
-$nav-tabs-border-color: neutral-color('gray-1');
+$nav-tabs-link-color: neutral-color('gray-2');
+$nav-tabs-link-hover: neutral-color('dark-1');
+$nav-tabs-border-color: neutral-color('gray-2');
+
+// compact tabs
+$compact-tabs-link-color: neutral-color('gray-2');
+$compact-tabs-link-hover: neutral-color('dark-1');
+$compact-tabs-underline-color: neutral-color('dark-1');
 
 // tree menu
 $tree-menu-link-color: neutral-color('gray-2');

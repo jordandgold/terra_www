@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
 	$('.markup-panel').each(function(){
-		var markup = $(this).find('.panel').html();
+		var markup = $(this).find('.markup-panel__example').html();
 		var escapedMarkup = escapeHtml(markup);
 		var trimMarkup = $.trim(markup);
 		var html = Prism.highlight(trimMarkup, Prism.languages.html, 'html');

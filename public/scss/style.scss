@@ -42,14 +42,14 @@
 }
 
 .markup-panel {
-  .panel {
-    margin-bottom: 0;
-    border-bottom: 0;
+  &__example {
+    margin-bottom: spacing(7);
   }
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
     margin-top: 0;
     background: neutral-color('light-1');
+    border: 1px solid neutral-color('gray-1');
   }
 }
 
