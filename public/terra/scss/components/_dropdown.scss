@@ -65,9 +65,9 @@
   > a {
     position: relative;
     i {
-      padding-left: .5rem;
+      padding-left: spacing(2);
       &:before {
-        font-size: 0.75rem;
+        font-size: 75%;
       }
     }
   }

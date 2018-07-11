@@ -47,20 +47,6 @@ p {
 //
 // typography settings
 
-
-//
-// heading typography settings
-
-// @mixin heading-mega {
-// 	@include header-type-setting(6,'bold');
-// 	padding-bottom: spacing(5);
-// 	margin: 0;
-// }
-
-// .heading-mega {
-// 	@include heading-mega;
-// }
-
 @mixin heading-1 {
 	@include header-type-setting(4,'bold');
 	padding-bottom: spacing(5);
@@ -115,6 +101,10 @@ h5,
 .heading-5 {
 	@include heading-5;
 }
+
+
+//
+// type scale utility classes
 
 .font-size-micro {
 	@include font-size(-2);

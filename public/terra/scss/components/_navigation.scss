@@ -314,7 +314,7 @@ body.has-nav {
 		}
 		&.expandable {
 			i {
-				color: lighten($tree-menu-link-color, 20%);
+				color: lighten($tree-menu-link-color, 10%);
 				position: absolute;
 				top: .7rem;
 				left: -.25rem;
@@ -338,6 +338,7 @@ body.has-nav {
 			}
 			&.expanded {
 				> a {
+					color: $tree-menu-link-hover;
 				}
 				i {
 					transform: rotate(90deg);

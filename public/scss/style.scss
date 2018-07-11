@@ -40,6 +40,22 @@
     text-align: center;
   }
 }
+.grid-box {
+  width: 100%;
+  height: height(4);
+  position: relative;
+  background: neutral-color('gray-1');
+  margin-bottom: spacing(5);
+  span {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: neutral-color('white');
+  }
+}
 
 .markup-panel {
   &__example {

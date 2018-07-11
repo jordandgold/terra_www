@@ -14,7 +14,7 @@
 	<div class="side-nav__section side-nav__section--fill-height">
 		<div class="heading-6 margin-bottom-5">Documentation</div>
 		<ul class="tree-menu">
-			<li {{#is name "Getting Started"}} class="active"{{else}}{{/is}}><a href="/documentation/getting-started">Getting Started</a></li>
+			<li {{#is page.name "Getting Started"}} class="active"{{else}}{{/is}}><a href="/documentation/getting-started">Getting Started</a></li>
 			<li class="expandable {{#is page.parent "Style"}} expanded{{else}}{{/is}}">
 				<a data-href="#">Style</a>
 				<i class="fas fa-chevron-right"></i>
