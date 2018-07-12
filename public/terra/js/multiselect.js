@@ -31,17 +31,30 @@ jQuery(document).ready(function($){
 
 	    // add search functionality
     	if ($this.hasClass('search')) {
-    		var searchFilterMarkup = '<div class="search-filter"><input type="text" id="searchFilter" placeholder="search" /></div>',
-    			searchFilter = 'div.search-filter input';
-	    	$list.append(searchFilterMarkup);
-	    	$list.append('<div rel="hide" class="no-results">No results found</div>');
-	    	$(searchFilter).on('keyup', function(){
-	    		var options = $('.select-options').children('li:not([rel="hide"])'),
+
+    		// var searchFilterMarkup = '<div class="search-filter"><input type="text" id="searchFilter" placeholder="search" /></div>',
+    		// 	searchFilter = 'div.search-filter input';
+
+			var $searchFilter = $('<div />', {
+		        'class': 'search-filter'
+	    	}).appendTo($list);
+
+			var $searchFilterInput = $('<input />', {
+		        'id': 'searchFilter',
+		        'type': 'text',
+		        'placeholder': 'search'
+	    	}).appendTo($searchFilter);
+
+	    	// $list.append(searchFilterMarkup);
+	    	// $list.append('<div rel="hide" class="no-results">No results found</div>');
+
+	    	$searchFilterInput.on('keyup', function(){
+	    		var options = $('.select-options-wrap').children('li:not([rel="hide"])'),
 	    			filter = $(this).val().toUpperCase();
 				for (i = 0; i < options.length; i++) {
 
 					// count results
-					var resultsCount = $('.select-options').children('li:not([rel="hide"]):visible').length;
+					var resultsCount = $('.select-options-wrap').children('li:not([rel="hide"]):visible').length;
 
 					// check if any matching results
 					if (options[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -59,41 +72,45 @@ jQuery(document).ready(function($){
 				}
 			});
 	    }
-  
-    for (var i = 0; i < numberOfOptions; i++) {
-        $('<li />', {
-            text: $this.children('option').eq(i).text(),
-            rel: $this.children('option').eq(i).val()
-        }).appendTo($list);
-    }
-  
-    var $listItems = $list.children('li');
-  
-    $styledSelect.click(function(e) {
-        e.stopPropagation();
-        $('div.select-styled.active').not(this).each(function(){
-            $(this).removeClass('active').next('ul.select-options').toggleClass('show');
-        });
-        $(this).toggleClass('active').next('ul.select-options').toggleClass('show');
-    });
-  
-    $listItems.click(function(e) {
-        e.stopPropagation();
-        $styledSelect.text($(this).text()).removeClass('active');
-        $this.val($(this).attr('rel'));
-        $list.removeClass('show');
-        //console.log($this.val());
-    });
-  
-    $(document).click(function() {
-        $styledSelect.removeClass('active');
-        $list.removeClass('show');
-    });
 
-    $(searchFilter).click(function(event){
-	    event.stopPropagation();
+	    var $optionsWrap = $('<div />', {
+	        'class': 'select-options-wrap'
+		}).appendTo($list);
+	  
+	    for (var i = 0; i < numberOfOptions; i++) {
+	        $('<li />', {
+	            text: $this.children('option').eq(i).text(),
+	            rel: $this.children('option').eq(i).val()
+	        }).appendTo($optionsWrap);
+	    }
+	  
+	    var $listItems = $list.children('.select-options-wrap').children('li');
+	  
+	    $styledSelect.click(function(e) {
+	        e.stopPropagation();
+	        $('div.select-styled.active').not(this).each(function(){
+	            $(this).removeClass('active').next('ul.select-options').toggleClass('show');
+	        });
+	        $(this).toggleClass('active').next('ul.select-options').toggleClass('show');
+	    });
+	  
+	    $listItems.click(function(e) {
+	        e.stopPropagation();
+	        $styledSelect.text($(this).text()).removeClass('active');
+	        $this.val($(this).attr('rel'));
+	        $list.removeClass('show');
+	        //console.log($this.val());
+	    });
+	  
+	    $(document).click(function() {
+	        $styledSelect.removeClass('active');
+	        $list.removeClass('show');
+	    });
+
+	    $($searchFilterInput).click(function(event){
+		    event.stopPropagation();
+		});
+
 	});
-
-});
 
 });

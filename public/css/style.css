@@ -3436,6 +3436,9 @@ fieldset {
       border-bottom: 1px solid #31393C; }
   .select-options.show {
     display: block; }
+  .select-options .select-options-wrap {
+    max-height: 288px;
+    overflow: scroll; }
   .select-options .search-filter {
     position: relative; }
     .select-options .search-filter input {
