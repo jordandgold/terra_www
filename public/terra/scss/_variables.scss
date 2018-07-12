@@ -202,6 +202,14 @@ $input-label-color: neutral-color('dark-1');
 $input-placeholder-color: neutral-color('gray-2');
 $input-focus-border-color: brand-color('brand-1');
 
+// checkboxes
+$checkbox-border-color: $input-border-color;
+$checkbox-fill-color: brand-color('brand-1');
+
+// radio buttons
+$radio-border-color: $input-border-color;
+$radio-fill-color: brand-color('brand-1');
+
 // YIQ contrast colors
 /// The text color to be used when a background is determined to be 'light'
 /// @type Color
