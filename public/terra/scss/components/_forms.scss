@@ -6,8 +6,7 @@
 
 @mixin input-base() {
     @include border-radius('all','none');
-    @include type-setting(0,0);
-    line-height: 1;
+    @include type-setting(-1,0);
     color: brand-color(text-2);
     box-sizing: border-box;
     padding: spacing(3) spacing(4);
@@ -17,6 +16,7 @@
     width: 100%;
     border: .05rem solid $input-border-color;
     background-color: $input-bg;
+    // box-sizing: content-box;
 }
 
 .input-group {
@@ -149,7 +149,7 @@
 }
 
 select {
-    @include input-base(); 
+    @include input-base();
     -webkit-appearance: none;
     position: relative;
     i {
@@ -198,5 +198,69 @@ fieldset {
         @include input-base();
         width: initial;
         margin-left: 1px;
+    }
+} 
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.select-styled {
+    @include input-base();
+    display: block;
+    width: initial;
+    &:after {
+        @include icon-base();
+        content: "\f078";
+        font-size: 75%;
+        margin-left: spacing(4);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1.5em;
+    }
+    &:hover {
+    }
+}
+
+.select-options {
+    @include dropdown-menu-base();
+    display: block;
+    width: -webkit-fill-available;
+    .search-filter {
+        position: relative;
+        input {
+            @include input-base();
+            border: 0;
+            background: transparent;
+        }
+        &:after {
+            @include icon-base();
+            content: "\f002";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: spacing(4);
+            color: neutral-color('gray-1');
+        }
+    }
+    li {
+        @include dropdown-menu-links();
+        &[rel="hide"] {
+            display: none;
+        }
+    }
+    &.show {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(1px);
     }
 }

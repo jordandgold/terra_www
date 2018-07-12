@@ -35,23 +35,43 @@
 	</div>
 </div>
 <div class="page-section__sub-section">
+	<h4>Select</h4>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+	<div class="markup-panel">
+		<div class="markup-panel__example">
+<select class="dropdown">
+	<option value="hide">Select a color</option>
+	<option value="Red">Red</option>
+	<option value="Green">Green</option>
+	<option value="Blue">Blue</option>
+	<option value="Yellow">Yellow</option>
+</select>
+		</div>
+		<pre><code class="language-markup"></code></pre>
+	</div>
+</div>
+<div class="page-section__sub-section">
 	<h4>Search Select</h4>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
 <div class="dropdown dropdown-search">
-	<a data-toggle="dropdown" role="button" class="dropdown-trigger button button--outline">Default <i class="fas fa-chevron-down"></i></a>
-	<ul class="dropdown-menu">		
-		<li class="search">
+	<a data-toggle="dropdown" role="button" class="dropdown-trigger button button--outline">Select a color <i class="fas fa-chevron-down"></i></a>
+	<ul class="dropdown-menu">
+		<div class="dropdown-search__filter">
 			<div class="input-group">
 				<div class="input-wrap">
-			    	<input type="text" placeholder="Search">
-			        <i class="fi flaticon-magnifying-glass"></i>
+			    	<input id="search-filter" type="text" placeholder="Search" value="">
+			    	<i class="fas fa-search"></i>
 			    </div>
 			</div>
-		</li>
-		<li><a href="#">Dropdown Item</a></li>
-		<li><a href="#">Another Item</a></li>
+		</div>
+		<div class="dropdown-search__results">
+			<li><a href="#">Red</a></li>
+			<li><a href="#">Green</a></li>
+			<li><a href="#">Blue</a></li>
+			<li><a href="#">Yellow</a></li>
+		</div>
 	</ul>
 </div>
 		</div>

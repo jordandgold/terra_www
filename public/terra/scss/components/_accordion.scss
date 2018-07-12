@@ -1,6 +1,5 @@
 
 .accordion {
-	// @include border-radius('all','medium');
 	border: 1px solid $accordion-border-color;
 	margin-bottom: spacing(5);
 	&__heading {
@@ -19,12 +18,12 @@
 		}
 		&:hover {
 			cursor: pointer;
+			text-decoration: none;
 		}
 	}
 	&__collapse {
 		display: none;
 		&__content {
-			// border-top: 1px solid $accordion-border-color;
 			padding: spacing(4) spacing(5);
 			overflow: hidden;
 	    	max-height: 0;
