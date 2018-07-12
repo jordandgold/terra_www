@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
     		var searchFilterMarkup = '<div class="search-filter"><input type="text" id="searchFilter" placeholder="search" /></div>',
     			searchFilter = 'div.search-filter input';
 	    	$list.append(searchFilterMarkup);
-	    	$list.append('<li rel="hide" class="no-results" style="display: none;">No results found</li>');
+	    	$list.append('<div rel="hide" class="no-results">No results found</div>');
 	    	$(searchFilter).on('keyup', function(){
 	    		var options = $('.select-options').children('li:not([rel="hide"])'),
 	    			filter = $(this).val().toUpperCase();

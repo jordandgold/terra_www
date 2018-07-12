@@ -228,6 +228,10 @@ fieldset {
     }
     &:hover {
     }
+    &.active {
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15);
+        border-color: $input-focus-border-color;
+    }
 }
 
 .select-options {
@@ -253,9 +257,14 @@ fieldset {
     }
     li {
         @include dropdown-menu-links();
-        &[rel="hide"] {
-            display: none;
-        }
+    }
+    [rel="hide"] {
+        display: none;
+    }
+    .no-results {
+        cursor: default;
+        color: neutral-color('gray-1');
+        padding: spacing(2) spacing(4);
     }
     &.show {
         display: block;
