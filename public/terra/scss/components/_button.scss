@@ -29,9 +29,9 @@
         }
     }
     i {
-        margin-left: spacing(1);
+        margin-left: spacing(3);
         &:before {
-            font-size: 1em;
+            font-size: 75%;
             transition: color 200ms ease-in-out;
         }
     }

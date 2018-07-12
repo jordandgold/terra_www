@@ -2664,10 +2664,10 @@ a.button {
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); }
   .button i,
   a.button i {
-    margin-left: 4px; }
+    margin-left: 12px; }
     .button i:before,
     a.button i:before {
-      font-size: 1em;
+      font-size: 75%;
       transition: color 200ms ease-in-out; }
 
 .button--default,
@@ -3037,7 +3037,6 @@ a.button--icon {
     opacity: 0;
     visibility: hidden;
     background: #ffffff;
-    z-index: 10;
     margin: 0;
     transition: transform 225ms, opacity 225ms, visibility 225ms; }
     .dropdown > .dropdown-menu li {
@@ -3097,7 +3096,6 @@ a.button--icon {
   opacity: 0;
   visibility: hidden;
   background: #ffffff;
-  z-index: 10;
   margin: 0;
   transition: transform 225ms, opacity 225ms, visibility 225ms;
   transform: none;
@@ -3413,7 +3411,6 @@ fieldset {
   opacity: 0;
   visibility: hidden;
   background: #ffffff;
-  z-index: 10;
   margin: 0;
   transition: transform 225ms, opacity 225ms, visibility 225ms;
   display: block;
@@ -3437,8 +3434,9 @@ fieldset {
   .select-options.show {
     display: block; }
   .select-options .select-options-wrap {
-    max-height: 288px;
-    overflow: scroll; }
+    max-height: 240px;
+    overflow: scroll;
+    width: -webkit-fill-available; }
   .select-options .search-filter {
     position: relative; }
     .select-options .search-filter input {
@@ -4212,9 +4210,9 @@ body.has-nav {
       .nav-tabs li a[href]:active {
         box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); }
       .nav-tabs li a i {
-        margin-left: 4px; }
+        margin-left: 12px; }
         .nav-tabs li a i:before {
-          font-size: 1em;
+          font-size: 75%;
           transition: color 200ms ease-in-out; }
       .nav-tabs li a:hover {
         color: #31393C; }
@@ -4276,9 +4274,9 @@ body.has-nav {
       .compact-tabs li a[href]:active {
         box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); }
       .compact-tabs li a i {
-        margin-left: 4px; }
+        margin-left: 12px; }
         .compact-tabs li a i:before {
-          font-size: 1em;
+          font-size: 75%;
           transition: color 200ms ease-in-out; }
       .compact-tabs li a:hover {
         color: #31393C; }

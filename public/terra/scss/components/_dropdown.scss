@@ -32,7 +32,6 @@
   opacity: 0;
   visibility: hidden;
   background: $dropdown-bg;
-  z-index: 10;
   margin: 0;
   transition: transform 225ms, opacity 225ms, visibility 225ms;
   li {

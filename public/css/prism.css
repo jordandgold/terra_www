@@ -54,6 +54,7 @@ pre[class*="language-"] {
 	padding: var(--spacing-6);
 	margin: .5em 0;
 	overflow: auto;
+	max-height: 20em;
 }
 
 :not(pre) > code[class*="language-"],
