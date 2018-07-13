@@ -4021,7 +4021,7 @@ body.has-nav {
   .notification--default .notification__icon > i:before {
     color: #005273; }
   .notification--default .notification__close i {
-    color: #00648d; }
+    color: #ffffff; }
   .notification--default hr {
     opacity: 0.4;
     background-color: #0076a6; }
@@ -4038,7 +4038,7 @@ body.has-nav {
   .notification--info .notification__icon > i:before {
     color: #288d86; }
   .notification--info .notification__close i {
-    color: #2da199; }
+    color: #ffffff; }
   .notification--info hr {
     opacity: 0.4;
     background-color: #33b5ac; }
@@ -4055,7 +4055,7 @@ body.has-nav {
   .notification--danger .notification__icon > i:before {
     color: #e3270e; }
   .notification--danger .notification__close i {
-    color: #f0331a; }
+    color: #ffffff; }
   .notification--danger hr {
     opacity: 0.4;
     background-color: #f24832; }
@@ -4072,7 +4072,7 @@ body.has-nav {
   .notification--success .notification__icon > i:before {
     color: #93ee1b; }
   .notification--success .notification__close i {
-    color: #9ef033; }
+    color: #ffffff; }
   .notification--success hr {
     opacity: 0.4;
     background-color: #aaf14b; }
@@ -4089,7 +4089,7 @@ body.has-nav {
   .notification--warning .notification__icon > i:before {
     color: #ffe70c; }
   .notification--warning .notification__close i {
-    color: #ffe926; }
+    color: #ffffff; }
   .notification--warning hr {
     opacity: 0.4;
     background-color: #ffec3f; }
@@ -4106,7 +4106,7 @@ body.has-nav {
   .notification--light .notification__icon > i:before {
     color: #bcbcd2; }
   .notification--light .notification__close i {
-    color: #cbcbdc; }
+    color: #ffffff; }
   .notification--light hr {
     opacity: 0.4;
     background-color: #dadae7; }
@@ -4123,7 +4123,7 @@ body.has-nav {
   .notification--dark .notification__icon > i:before {
     color: #030404; }
   .notification--dark .notification__close i {
-    color: #0f1112; }
+    color: #ffffff; }
   .notification--dark hr {
     opacity: 0.4;
     background-color: #1a1e20; }

@@ -111,7 +111,7 @@
     width: 17.5rem;
   }
   .navbar__branding {
-    padding-left: spacing(6);
+    padding-left: spacing(6); 
     @include for-size(tablet-landscape-up) {
       padding: 0 spacing(6);
     }

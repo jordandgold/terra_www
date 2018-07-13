@@ -55,7 +55,7 @@
     }
     .notification__close {
         i {
-            color: darken($color, 15%);
+            color: neutral-color('white');
         }
     }
     hr {
