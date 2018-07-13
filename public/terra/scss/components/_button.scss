@@ -155,7 +155,7 @@ a.button--block {
 a.button--icon {
     @include button-variant(
         transparent,
-        neutral-color("gray-2")
+        neutral-color("gray-1")
     );
     padding: spacing(1) spacing(2);
     margin: spacing(0);
@@ -163,13 +163,15 @@ a.button--icon {
     border: 0;
     i {
         margin-left: 0;
-        font-size: 125%;
+        &:before {
+            font-size: 125%;
+        }
     }
     &:hover {
         text-decoration: underline;
         i {
             &:before {
-                color: neutral-color("gray-1") !important;
+                color: neutral-color("gray-2") !important;
             }
         }
     }

@@ -1,21 +1,35 @@
 <nav class="navbar {{#if stay-put}}stay-put{{else}}{{/if}}">
-	<div class="container-fluid {{#if wrap}}wrap{{/if}}">
+	<div class="navbar__left">
 		<div class="navbar__branding">
 			<a href="/">
 				<strong>Terra</strong> Design System
 			</a>
 		</div>
-		<button class="navbar__toggle" type="button" data-toggle="collapse" data-target=".collapse">
-			<span class="line"></span>
-			<span class="line"></span>
-			<span class="line"></span>
-		</button>
-		<div class="navbar__nav navbar__nav--collapse">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/documentation/getting-started">Documentation</a></li>
-				<li><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="button button--info">Download</a></li>
-			</ul>
+	</div>
+	<div class="navbar__right">
+		<div class="container-fluid narrow">
+			<button class="navbar__toggle" type="button" data-toggle="collapse" data-target=".collapse">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</button>
+			<div class="navbar__nav navbar__nav--collapse">
+				<ul>
+					<li style="width: 500px;">
+						<div class="search-bar input-group">
+							<div class="search-bar__input">
+								<div class="input-wrap">
+							    	<input type="text" placeholder="search">
+							    </div>
+						    </div>
+							<button class="search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
+						</div>
+					</li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/documentation/getting-started">Documentation</a></li>
+					<li><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="button button--info">Download</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </nav>

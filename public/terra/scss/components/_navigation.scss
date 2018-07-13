@@ -92,7 +92,6 @@ body.has-nav {
 	}
 	&__branding {
 		float: left;
-		// padding-top: spacing(3);
 		> a {
 			@include type-setting(0,'normal');
 			text-decoration: none;
@@ -121,11 +120,11 @@ body.has-nav {
 				padding: 0 spacing(3);
 				display: table-cell;
 				vertical-align: middle;
+				height: 100%;
 				> a:not(.button) {
 					@include type-setting(-1,'normal');
 					color: $navbar-link-color;
 					margin: 0;
-					// line-height: 2.25rem;
 					text-decoration: none;
 					display: inline-block;
 					&:hover {
@@ -234,17 +233,21 @@ body.has-nav {
 		        padding-top: spacing(3);
 		        padding-bottom: calc(spacing(3) - 1px);
 		    	@include for-size(tablet-landscape-up) {
-		    		display: inline-block;
+		    		display: table;
 		    		width: initial;
+		    		padding-top: 0;
+		    		padding-bottom: 0;
+		    		height: $navbar-height;
 			    }
 	        	> li {
 	        		display: block;
 			        width: 100%;
 			        padding: 0;
 	        		@include for-size(tablet-landscape-up) {
-	        			display: inline-block;
+	        			display: table-cell;
 	        			width: initial;
 	        			padding: 0 spacing(4);
+	        			vertical-align: middle;
 				    }
 	        	}
 	        }
