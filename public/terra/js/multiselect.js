@@ -190,7 +190,7 @@ jQuery(document).ready(function($){
 	        $styledSelect.find('span.label').hide();
 
 	        // add value to styled select
-	        $styledSelect.append('<span class="badge badge--info option" data-rel="' + $(this).attr('rel') + '">' + $(this).text() + '<button type="button" class="badge__close" aria-label="Remove Option"><span aria-hidden="true">Remove Option</span></button></span>');
+	        $styledSelect.append('<span class="badge badge--light option" data-rel="' + $(this).attr('rel') + '">' + $(this).text() + '<button type="button" class="badge__close" aria-label="Remove Option"><span aria-hidden="true">Remove Option</span></button></span>');
 	        var rel = $(this).attr('rel');
 
 	        // select corresponding value
