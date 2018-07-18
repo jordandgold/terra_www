@@ -1,26 +1,39 @@
 
 // colors
-@function neutral-color($key: 14) {
-  @return map-get($neutral-colors, $key);
+@function grayscale($key: 'dark-0') {
+  @return map-get($grayscale, $key);
 }
-$neutral-colors: () !default;
-$neutral-colors: map-merge((
-    'white':    #ffffff,
-    'dark-1':   #31393C,
-    'light-1':  #F9F9FB,
-    'gray-1':   #AEAEB6,
-    'gray-2':   #767683,
-    'black':    #000000,
-), $neutral-colors);
+$grayscale: () !default;
+$grayscale: map-merge((
+    'white':   #ffffff,
+    'light-0': #f9f9fb,
+    'light-1': #f3f3f7,
+    'gray-0':  #eaeaef,
+    'gray-1':  #e2e2e7,
+    'gray-2':  #d0d0d7,
+    'gray-3':  #bfbfc6,
+    'gray-4':  #aeaeb6,
+    'gray-5':  #9d9da6,
+    'gray-6':  #8c8b96,
+    'gray-7':  #7b7a86,
+    'gray-8':  #6a6976,
+    'gray-9':  #595868,
+    'gray-10': #474655,
+    'dark-0':  #363545,
+    'dark-1':  #262533,
+    'dark-2':  #1b1a26,
+    'dark-3':  #0b0a12,
+    'black':   #000000,
+), $grayscale);
 
 @function brand-color($key: 'brand-1') {
   @return map-get($brand-colors, $key);
 }
 $brand-colors: () !default;
 $brand-colors: map-merge((
-    'brand-1':  #009AD9,
+    'brand-1':  #00437B,
     'brand-2':  #FFBE00,
-    'accent-1': #4ECDC4,
+    'accent-1': #009AD9,
 ), $brand-colors);
 
 @function emotive-color($key: 'info') {
@@ -28,13 +41,13 @@ $brand-colors: map-merge((
 }
 $emotive-colors: () !default;
 $emotive-colors: map-merge((
-    'default':  brand-color('brand-1'),
+    'default':  brand-color('accent-1'),
     'info':     brand-color('accent-1'),
-    'danger':   #F57362,
-    'success':  #C0F57A,
-    'warning':  #FFF172,
-    'light':    neutral-color('light-1'),
-    'dark':     neutral-color('dark-1'),
+    'danger':   #C81922,
+    'success':  #5E9331,
+    'warning':  #FFBE00,
+    'light':    grayscale('light-1'),
+    'dark':     grayscale('dark-1'),
 ), $emotive-colors);
 
 @function map-collect($maps...) {
@@ -44,7 +57,7 @@ $emotive-colors: map-merge((
   }
   @return $collection;
 }
-$color-palette: map-collect($brand-colors, $emotive-colors, $neutral-colors); 
+$color-palette: map-collect($brand-colors, $emotive-colors, $grayscale); 
 
 // font family
 $font-sans-serif:
@@ -136,35 +149,35 @@ $spacing-scale: (
 
 // navigation bar
 $navbar-height: height(4);
-$navbar-bg: neutral-color('white');
-$navbar-link-color: neutral-color('dark-1');
-$navbar-link-hover: darken($navbar-link-color, 10%);
+$navbar-bg: grayscale('white');
+$navbar-link-color: grayscale('gray-7');
+$navbar-link-hover: grayscale('dark-1');
 $navbar-border-width: 1px;
-$navbar-border-color: neutral-color('gray-1');
+$navbar-border-color: grayscale('gray-1');
 
 // navigation tabs
-$nav-tabs-link-color: neutral-color('gray-2');
-$nav-tabs-link-hover: neutral-color('dark-1');
-$nav-tabs-border-color: neutral-color('gray-2');
+$nav-tabs-link-color: grayscale('gray-2');
+$nav-tabs-link-hover: grayscale('dark-1');
+$nav-tabs-border-color: grayscale('gray-2');
 
 // compact tabs
-$compact-tabs-link-color: neutral-color('gray-2');
-$compact-tabs-link-hover: neutral-color('dark-1');
-$compact-tabs-underline-color: neutral-color('dark-1');
+$compact-tabs-link-color: grayscale('gray-2');
+$compact-tabs-link-hover: grayscale('dark-1');
+$compact-tabs-underline-color: grayscale('dark-1');
 
 // tree menu
-$tree-menu-link-color: neutral-color('gray-1');
-$tree-menu-link-hover: neutral-color('dark-1');
+$tree-menu-link-color: grayscale('gray-6');
+$tree-menu-link-hover: grayscale('dark-1');
 
 // pagination
-$pagination-border-color: neutral-color('gray-2');
+$pagination-border-color: grayscale('gray-2');
 
 // body
-$body-bg-color: neutral-color('white');
-$body-font-color: neutral-color('dark-1');
+$body-bg-color: grayscale('white');
+$body-font-color: grayscale('dark-1');
 
 // headers
-$header-font-color: neutral-color('dark-1');
+$header-font-color: grayscale('dark-1');
 
 // links
 $link-color: brand-color('brand-1');
@@ -177,34 +190,34 @@ $button-border-radius: map-get($border-radius-scale, 'none');
 $button-border-size: 1px;
 
 // tooltips
-$tooltip-bg: neutral-color('dark-1');
-$tooltip-text-color: neutral-color('white');
+$tooltip-bg: grayscale('dark-1');
+$tooltip-text-color: grayscale('white');
 
 // cards
-$card-bg: neutral-color('white');
+$card-bg: grayscale('white');
 $card-border-radius: map-get($border-radius-scale, 'none');
 
 // dropdowns
 $dropdown-border-size: 1px;
-$dropdown-border-color: neutral-color('dark-1');
-$dropdown-bg: neutral-color('white');
-$dropdown-link-color: neutral-color('dark-1');
-$dropdown-link-hover-bg: neutral-color('light-1');
+$dropdown-border-color: grayscale('dark-1');
+$dropdown-bg: grayscale('white');
+$dropdown-link-color: grayscale('dark-1');
+$dropdown-link-hover-bg: grayscale('light-1');
 
 // panels
-$panel-bg: neutral-color('white');
-$panel-border-color: neutral-color('light-1');
+$panel-bg: grayscale('white');
+$panel-border-color: grayscale('light-1');
 
 // accordion
-$accordion-bg: neutral-color('white');
-$accordion-border-color: neutral-color('dark-1');
+$accordion-bg: grayscale('white');
+$accordion-border-color: grayscale('dark-1');
 
 // form input
-$input-bg: neutral-color('white');
+$input-bg: grayscale('white');
 $input-border-radius: border-radius('none');
-$input-border-color: neutral-color('dark-1');
-$input-label-color: neutral-color('dark-1');
-$input-placeholder-color: neutral-color('gray-2');
+$input-border-color: grayscale('dark-1');
+$input-label-color: grayscale('dark-1');
+$input-placeholder-color: grayscale('gray-2');
 $input-focus-border-color: brand-color('brand-1');
 
 // checkboxes
@@ -215,13 +228,18 @@ $checkbox-fill-color: brand-color('brand-1');
 $radio-border-color: $input-border-color;
 $radio-fill-color: brand-color('brand-1');
 
+// tables
+$table-header-bg: brand-color('accent-1');
+$table-row-bg-even: transparent;
+$table-row-bg-odd: grayscale('light-1');
+
 // YIQ contrast colors
 /// The text color to be used when a background is determined to be 'light'
 /// @type Color
-$yiq-contrasted-dark-default: neutral-color('dark-1') !default;
+$yiq-contrasted-dark-default: grayscale('dark-1') !default;
 /// The text color to be used when a background is determined to be 'dark'
 /// @type Color
-$yiq-contrasted-light-default: neutral-color('white') !default;
+$yiq-contrasted-light-default: grayscale('white') !default;
 /// The YIQ lightness value that determines when the lightness of color changes from 'dark' to 'light'. Acceptable values are between 0 & 255.
 /// @type Number
 $yiq-contrasted-threshold: 128 !default;

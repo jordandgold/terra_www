@@ -19,20 +19,20 @@
 		th {
 			@include font-weight("normal");
 			padding: spacing(3);
-			background-color: brand-color("brand-1");
-			color: neutral-color("dark-1");
+			background-color: $table-header-bg;
+			color: yiq-contrast-color($table-header-bg);
 		}
 		td {
 			padding: spacing(3);
 		}
 		&:nth-child(even) {
 			td {
-				background-color: transparent;
+				background-color: $table-row-bg-even;
 			}
 		}
 		&:nth-child(odd) {
 			td {
-				background-color: neutral-color("light-1");
+				background-color: $table-row-bg-odd;
 			}
 		}
 	}

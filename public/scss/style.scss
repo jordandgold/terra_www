@@ -9,7 +9,7 @@
 .color-swatch {
 	@include box-shadow(1);
 	width: 100%;
-	margin-bottom: spacing(medium);
+	margin-bottom: spacing(4);
 	&__color {
 		width: 100%;
 		height: 0;
@@ -44,7 +44,7 @@
   width: 100%;
   height: height(4);
   position: relative;
-  background: neutral-color('gray-1');
+  background: brand-color('accent-1');
   margin-bottom: spacing(5);
   span {
     display: block;
@@ -53,7 +53,7 @@
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    color: neutral-color('white');
+    color: grayscale('white');
   }
 }
 
@@ -64,8 +64,8 @@
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
     margin-top: 0;
-    background: neutral-color('light-1');
-    border: 1px solid neutral-color('gray-1');
+    background: grayscale('light-1');
+    border: 1px solid grayscale('gray-1');
   }
 }
 
@@ -78,7 +78,7 @@
 
 .main-footer {
   padding: spacing(5) 0;
-  border-top: 1px solid neutral-color('gray-1');
+  border-top: 1px solid grayscale('gray-1');
   height: auto;
 }
 
@@ -86,8 +86,8 @@
   width: 17.5rem;
   position: fixed;
   left: 0;
-  border-right: 1px solid neutral-color('gray-1');
-  background: neutral-color('white');
+  border-right: 1px solid grayscale('gray-1');
+  background: grayscale('white');
   transform: translateX(-100%);
   transition: transform 500ms ease-in-out;
   overflow-y: auto;
@@ -99,7 +99,7 @@
   }
   &__section {
     padding: spacing(6);
-    border-bottom: 1px solid neutral-color('gray-1');
+    border-bottom: 1px solid ne utral-color('gray-1');
     &--fill-height {
       flex-grow: 1;
     }

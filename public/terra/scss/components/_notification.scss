@@ -46,6 +46,7 @@
 @mixin notification-variant($color, $bg: transparent) {
     background-color: $color;
     border: .05rem solid darken($color, 10%);
+    color: yiq-contrast-color($color);
     .notification__icon {
         > i {
             &:before {
