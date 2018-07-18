@@ -184,17 +184,17 @@ jQuery(document).ready(function($){
 	    $listItems.click(function(event) {
 
 	        event.stopPropagation();
-	        
+
 	        // replace text with selected option
 	        $(this).hide();
 	        $styledSelect.find('span.label').hide();
 
-	        // close dropdown
-	        // $styledSelect.removeClass('active');
+	        // add value to styled select
 	        $styledSelect.append('<span class="badge badge--info option" data-rel="' + $(this).attr('rel') + '">' + $(this).text() + '<button type="button" class="badge__close" aria-label="Remove Option"><span aria-hidden="true">Remove Option</span></button></span>');
-	        $this.val($(this).attr('rel'));
-	        // $list.removeClass('show');
-	        console.log($this.val());
+	        var rel = $(this).attr('rel');
+
+	        // select corresponding value
+	        $this.find('option[value="' + rel + '"]').attr('selected', true);
 	    });
 
 	    // prevent dropdown from closing
@@ -207,6 +207,7 @@ jQuery(document).ready(function($){
 	    	event.stopPropagation();
 	    	var rel = $(this).parent().attr('data-rel');
 	    	$listItems.next('li[rel="' + rel + '"]').show();
+	    	$this.find('option[value="' + rel + '"]').attr('selected', false);
 			$(this).parent().remove();
 			if (!$styledSelect.find('.option').length) {
 	    		$styledSelect.find('.label').show();
