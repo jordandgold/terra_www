@@ -1,14 +1,30 @@
 
 @mixin badge-base() {
-	@include font-weight(bold);
 	@include border-radius(all, small);
-	font-size: 75%;
+	@include type-setting(-1, 'bold');
 	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) spacing(3);
 	line-height: 100%;
-	transition:
-		background-color 200ms ease-in-out,
-		border-color 200ms ease-in-out,
-		color 200ms ease-in-out;
+	padding: spacing(1);
+	margin: 0 spacing(2) 0 0;
+	transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
+	&:last-child {
+		margin-right: 0;
+	}
+	&__close {
+        opacity: 0.4;
+        padding: 0;
+        margin: 0 0 0 spacing(1);
+        background: transparent;
+        border: 0;
+        &:after {
+        	@include icon-base();
+        	content: "\f00d";
+        }
+        &:hover {
+        	cursor: pointer;
+        	opacity: 0.6;
+        }
+	}
 }
 
 .badge {

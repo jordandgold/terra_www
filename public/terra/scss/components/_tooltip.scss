@@ -1,11 +1,12 @@
 a[data-tooltip] {
   position: relative;
-  &::before,
-  &::after {
+  &:before,
+  &:after {
     position: absolute;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
-  &::before {
+  &:before {
     @include depth(1);
     @include type-setting(-1,0);
     content: attr(data-tooltip);
@@ -15,23 +16,24 @@ a[data-tooltip] {
     white-space: nowrap;
     text-decoration: none;
   }
-  &::after {
+  &:after {
     width: 0;
     height: 0;
     border: 10px solid transparent;
     content: '';
   }
-  &:hover::before,
-  &:hover::after {
-    display: block;
+  &:hover:before,
+  &:hover:after {
+    visibility: visible;
+    opacity: 1;
   }
   &[data-direction="left"] {
-    &::before {
+    &:before {
       top: -25%;
       right: 100%;
       margin-right: 10px;
     }
-    &::after {
+    &:after {
       z-index: 10;
       border-left-color: $tooltip-bg;
       border-right: none;
@@ -42,12 +44,12 @@ a[data-tooltip] {
     }
   }
   &[data-direction="right"] {
-    &::before {
+    &:before {
       top: -25%;
       left: 100%;
       margin-left: 10px;
     }
-    &::after {
+    &:after {
       z-index: 10;
       border-right-color: $tooltip-bg;
       border-left: none;
@@ -58,12 +60,12 @@ a[data-tooltip] {
     }
   }
   &[data-direction="top"] {
-    &::before {
+    &:before {
       bottom: 100%;
       left: 0;
       margin-bottom: 10px;
     }
-    &::after {
+    &:after {
       z-index: 10;
       border-top-color: $tooltip-bg;
       border-bottom: none;
@@ -73,12 +75,12 @@ a[data-tooltip] {
     }
   }
   &[data-direction="bottom"] {
-    &::before {
+    &:before {
       top: 100%;
       left: 0;
       margin-top: 10px;
     }
-    &::after {
+    &:after {
       z-index: 10;
       border-bottom-color: $tooltip-bg;
       border-top: none;

@@ -1,4 +1,5 @@
 
+// colors
 @function neutral-color($key: 14) {
   @return map-get($neutral-colors, $key);
 }
@@ -92,6 +93,9 @@ $line-height: (
 );
 
 // border radius
+@function border-radius($key) {
+  @return map-get($border-radius-scale, $key);
+}
 $border-radius-scale: (
     'none': 0,
     'small': .125rem,
@@ -117,7 +121,7 @@ $height-scale: (
   @return map-get($spacing-scale, $key);
 }
 $spacing-scale: (
-    0: 0rem,
+    0: 0px,
     1: 4px,
     2: 8px,
     3: 12px,
@@ -197,6 +201,7 @@ $accordion-border-color: neutral-color('dark-1');
 
 // form input
 $input-bg: neutral-color('white');
+$input-border-radius: border-radius('none');
 $input-border-color: neutral-color('dark-1');
 $input-label-color: neutral-color('dark-1');
 $input-placeholder-color: neutral-color('gray-2');
