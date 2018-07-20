@@ -1,11 +1,22 @@
 .modal {
 	@include depth(2);
-	padding: spacing(7);
+    width: 100%;
+    margin: spacing(4);
 	position: relative;
+    transition: transform 225ms ease-in-out;
+    width: auto;
 	&__title {
 		@include type-setting(1,0);
 		padding-bottom: spacing(5);
 	}
+    &__content {
+        padding: spacing(7);
+    }
+    &__wrap {
+        background: $modal-bg;
+        margin: 0 auto;
+        position: relative;
+    }
 	&__close {
         position: absolute;
         top: spacing(5);
@@ -22,6 +33,42 @@
         &:hover {
             opacity: 0.6;
             cursor: pointer;
+        }
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal--full-page {
+    @include z-index(10);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparentize($modal-overlay-bg, 0.25);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    &.open {
+        opacity:1;
+        visibility:visible;
+        .modal {
+            transform: translateY(-50%);
+        }
+    }
+    .modal {
+        position: relative;
+        top: 50%;
+        transform: translateY(calc(-50% + 20px));
+        width: 600px;
+        margin: 0 auto;
+        &__wrap {
+            @include for-size(desktop-up) {
+                width: 100%;
+            }
         }
     }
 }

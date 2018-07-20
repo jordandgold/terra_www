@@ -161,7 +161,7 @@ $nav-tabs-link-hover: grayscale('dark-1');
 $nav-tabs-border-color: grayscale('gray-2');
 
 // compact tabs
-$compact-tabs-link-color: grayscale('gray-2');
+$compact-tabs-link-color: grayscale('gray-7');
 $compact-tabs-link-hover: grayscale('dark-1');
 $compact-tabs-underline-color: grayscale('dark-1');
 
@@ -180,7 +180,7 @@ $body-font-color: grayscale('dark-1');
 $header-font-color: grayscale('dark-1');
 
 // links
-$link-color: brand-color('brand-1');
+$link-color: brand-color('accent-1');
 $link-hover-color: darken($link-color, 10%);
 $link-highlight: true;
 $link-highlight-color: lighten(brand-color('brand-1'), 30%);
@@ -188,6 +188,8 @@ $link-highlight-color: lighten(brand-color('brand-1'), 30%);
 // buttons
 $button-border-radius: map-get($border-radius-scale, 'none');
 $button-border-size: 1px;
+$button-icon-color: grayscale('gray-4');
+$button-icon-hover: grayscale('gray-6');
 
 // tooltips
 $tooltip-bg: grayscale('dark-1');
@@ -232,6 +234,10 @@ $radio-fill-color: brand-color('brand-1');
 $table-header-bg: brand-color('accent-1');
 $table-row-bg-even: transparent;
 $table-row-bg-odd: grayscale('light-1');
+
+// modals
+$modal-bg: grayscale('white');
+$modal-overlay-bg: grayscale('dark-1');
 
 // YIQ contrast colors
 /// The text color to be used when a background is determined to be 'light'

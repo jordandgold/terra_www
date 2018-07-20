@@ -56,11 +56,11 @@
   display: inline-block;
   > a {
     position: relative;
-    i {
-      padding-left: spacing(2);
-      &:before {
-        font-size: 75%;
-      }
+    &:after {
+      @include icon-base();
+      content: "\f078";
+      font-size: 75%;
+      margin-left: spacing(3);
     }
   }
 }
