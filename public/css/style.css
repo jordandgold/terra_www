@@ -4745,6 +4745,25 @@ a[data-tooltip] {
     transform: translateY(-50%);
     text-align: center; }
 
+.structure-block {
+  position: relative;
+  margin-bottom: 12px; }
+  .structure-block label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 12px;
+    position: absolute;
+    top: 0; }
+  .structure-block__box {
+    display: inline-block;
+    margin-left: 3em; }
+  .structure-block--molecule .structure-block__box {
+    background: #FFBE00; }
+  .structure-block--page .structure-block__box {
+    background: #009AD9; }
+
 .grid-box {
   width: 100%;
   height: 64px;

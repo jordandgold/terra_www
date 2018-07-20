@@ -122,6 +122,33 @@
     }
 }
 
+.structure-block {
+    position: relative;
+    margin-bottom: spacing(3);
+    label {
+        @include type-setting(-1, 'normal');
+        display: inline-block;
+        margin-right: spacing(3);
+        position: absolute;
+        top: 0;
+    }
+    &__box {
+        display: inline-block;
+        margin-left: 3em;
+    }
+    &--molecule {
+        .structure-block__box {
+            background: brand-color('brand-2');
+        }
+
+    }
+    &--page {
+        .structure-block__box {
+            background: brand-color('accent-1');
+        }
+    }
+}
+
 .grid-box {
     width: 100%;
     height: height(4);
