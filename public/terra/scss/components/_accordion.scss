@@ -28,13 +28,18 @@
 	&.expanded {
 		background: darken($accordion-bg, 10%);
 		.accordion__content {
-			display: block;
+			// display: block;
 		}
 		.accordion__heading {
 			text-decoration: none;
 			&:after {
 				transform: rotate(-90deg);
 			}
+		}
+	}
+	&.show {
+		.accordion__content {
+			display: block;
 		}
 	}
 }

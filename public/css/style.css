@@ -2465,12 +2465,12 @@ small {
     padding: 16px 24px; }
   .accordion.expanded {
     background: #e6e6e6; }
-    .accordion.expanded .accordion__content {
-      display: block; }
     .accordion.expanded .accordion__heading {
       text-decoration: none; }
       .accordion.expanded .accordion__heading:after {
         transform: rotate(-90deg); }
+  .accordion.show .accordion__content {
+    display: block; }
 
 .accordion-group {
   margin-bottom: 24px; }
