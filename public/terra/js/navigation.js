@@ -88,8 +88,14 @@ jQuery(document).ready(function($){
 	    }
 	}
 
-	$(".navbar__toggle").click(function(){
-		$(this).toggleClass("is-active");
-	});
+	/* This is for the Mobile Navbar Menu */
+    $('.navbar__toggle').click(function () {
+    	$(this).toggleClass("is-active");
+    	$(this).parent().children('.navbar__nav--collapse').slideToggle().toggleClass('expanded');
+    });
+
+	// $(".navbar__toggle").click(function(){
+	// 	$(this).toggleClass("is-active");
+	// });
 
 });

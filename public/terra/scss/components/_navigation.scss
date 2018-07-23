@@ -75,7 +75,7 @@ body.has-nav {
 		.line {
 			width: 25px;
 			height: 2px;
-			background-color: red;
+			background-color: $navbar-menu-icon-color;
 			display: block;
 			margin: 5px auto;
 			transition: all 0.3s ease-in-out;
@@ -115,6 +115,12 @@ body.has-nav {
 			margin: 0;
 			padding: 0;
 			display: table;
+			@include for-size(tablet-landscape-up) {
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				flex-direction: row;
+			}
 			> li {
 				display: inline-block;
 				padding: 0 spacing(3);
@@ -224,6 +230,7 @@ body.has-nav {
 				position: static;
 	        	top: unset;
 	        	left: unset;
+	        	display: flex !important;
 		    }
 		    > ul {
 		    	@include container();

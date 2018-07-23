@@ -130,7 +130,7 @@ $height-scale: (
 );
 
 // spacing scale
-@function spacing($key: medium) {
+@function spacing($key) {
   @return map-get($spacing-scale, $key);
 }
 $spacing-scale: (
@@ -141,10 +141,15 @@ $spacing-scale: (
     4: 16px,
     5: 24px,
     6: 32px,
-    7: 40px,
-    8: 48px,
-    9: 64px,
-    10: 96px,
+    7: 48px,
+    8: 64px,
+    9: 72px,
+    10: 80px,
+    11: 96px,
+    12: 120px,
+    13: 144px,
+    14: 176px,
+    15: 200px,
 );
 
 // navigation bar
@@ -154,6 +159,7 @@ $navbar-link-color: grayscale('gray-7');
 $navbar-link-hover: grayscale('dark-1');
 $navbar-border-width: 1px;
 $navbar-border-color: grayscale('gray-1');
+$navbar-menu-icon-color: grayscale('gray-3');
 
 // navigation tabs
 $nav-tabs-link-color: grayscale('gray-7');
@@ -212,6 +218,7 @@ $panel-border-color: grayscale('light-1');
 
 // accordion
 $accordion-bg: grayscale('white');
+$accordion-expanded-bg: grayscale('light-1');
 $accordion-border-color: grayscale('dark-1');
 
 // form input
