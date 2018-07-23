@@ -181,7 +181,7 @@
 .main-content {
     height: auto;
     @include for-size("tablet-portrait-up") {
-        margin-left: 17.5rem;
+        // margin-left: 17.5rem;
     }
 }
 
@@ -192,26 +192,16 @@
 }
 
 .side-nav {
-    width: 17.5rem;
-    position: fixed;
-    left: 0;
     border-right: 1px solid grayscale('gray-1');
     background: grayscale("white");
-    transform: translateX(-100%);
     transition: transform 500ms ease-in-out;
-    overflow-y: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    @include for-size(tablet-portrait-up) {
-        transform: translateX(0);
-    }
+    height: calc(100vh - 64px);
+    position: sticky;
+    top: $navbar-height;
+    overflow: scroll;
     &__section {
-        padding: spacing(6);
-        border-bottom: 1px solid neutral-color('gray-1');
-        &--fill-height {
-            flex-grow: 1;
-        }
+        padding-top: spacing(6);
+        padding-bottom: spacing(6);
     }
 }
 

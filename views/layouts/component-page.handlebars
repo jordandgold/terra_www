@@ -2,15 +2,18 @@
 
 	{{> global/navbar stay-put="true"}}
 
-	{{> global/side-nav}}
-
-	<div class="main-content">
-		<div class="page">
-
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+				{{> global/side-nav}}
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-10">
+				<div class="main-content">
 {{> component/component-page }}
-
+					{{> global/footer narrow="true" }}
+				</div>
+			</div>
 		</div>
-		{{> global/footer narrow="true" }}
 	</div>
 
 {{> global/page-bottom}}

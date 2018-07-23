@@ -25,6 +25,11 @@
   margin-left: auto;
 }
 
+.margin-fix {
+  margin-left: calc(-1 * var(--outer-margin, 2rem));
+  margin-right: calc(-1 * var(--outer-margin, 2rem));
+}
+
 .container-fluid {
   padding-right: var(--outer-margin, 2rem);
   padding-left: var(--outer-margin, 2rem);

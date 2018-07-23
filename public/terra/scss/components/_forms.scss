@@ -8,7 +8,7 @@
     @include type-setting(-1,0);
     color: brand-color(text-2);
     box-sizing: border-box;
-    padding: spacing(3) spacing(4);
+    padding: spacing(2) spacing(4);
     position: relative;
     z-index: 1;
     display: block;
@@ -304,6 +304,7 @@ fieldset {
         top: 50%;
         transform: translateY(-50%);
         right: 1.5em;
+        color: $drodown-arrow-color;
     }
     &:hover {
     }

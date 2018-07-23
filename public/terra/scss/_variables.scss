@@ -211,6 +211,7 @@ $dropdown-border-color: grayscale('dark-1');
 $dropdown-bg: grayscale('white');
 $dropdown-link-color: grayscale('dark-1');
 $dropdown-link-hover-bg: grayscale('light-1');
+$drodown-arrow-color: grayscale('gray-6');
 
 // panels
 $panel-bg: grayscale('white');
@@ -227,7 +228,7 @@ $input-border-radius: border-radius('none');
 $input-border-color: grayscale('dark-1');
 $input-label-color: grayscale('dark-1');
 $input-placeholder-color: grayscale('gray-2');
-$input-focus-border-color: brand-color('brand-1');
+$input-focus-border-color: brand-color('accent-1');
 
 // checkboxes
 $checkbox-border-color: $input-border-color;

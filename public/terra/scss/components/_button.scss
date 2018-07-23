@@ -104,9 +104,8 @@ a.button {
 a.button--outline {
     @include button-variant(
         transparent,
-        brand-color("text-2"),
-        brand-color("brand-1"),
-        brand-color("ui-2")
+        brand-color('accent-1'),
+        grayscale('gray-4'),
     );
 }
 
