@@ -9,13 +9,14 @@
 		display: block;
 		text-decoration: none;
 		&:after {
+			@include icon-base();
 			position: absolute;
 			top: 1em;
 			right: spacing(5);
 			transform: rotate(0deg);
 			transition: transform 200ms ease-in-out;
-		    @include icon-base();
 			content: "\f053";
+			color: $accordion-arrow-color;
 		}
 		&:hover {
 			cursor: pointer;

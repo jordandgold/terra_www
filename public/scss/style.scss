@@ -24,6 +24,13 @@
     transform-origin: $transforms;
 }
 
+.navbar__brand {
+    $size: height(1);
+    height: $size * 2;
+    width: $size * 1.8;
+    display: inline-block;
+}
+
 .logo {
     $size: height(1);
     $color: #ccc;

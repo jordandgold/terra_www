@@ -174,6 +174,7 @@ $compact-tabs-underline-color: grayscale('dark-1');
 // tree menu
 $tree-menu-link-color: grayscale('gray-6');
 $tree-menu-link-hover: grayscale('dark-1');
+$tree-menu-left-padding: spacing(3);
 
 // pagination
 $pagination-border-color: grayscale('gray-2');
@@ -207,7 +208,8 @@ $card-border-radius: map-get($border-radius-scale, 'none');
 
 // dropdowns
 $dropdown-border-size: 1px;
-$dropdown-border-color: grayscale('dark-1');
+$dropdown-border-color: grayscale('gray-4');
+$dropdown-border-radius: border-radius('small');
 $dropdown-bg: grayscale('white');
 $dropdown-link-color: grayscale('dark-1');
 $dropdown-link-hover-bg: grayscale('light-1');
@@ -221,11 +223,12 @@ $panel-border-color: grayscale('light-1');
 $accordion-bg: grayscale('white');
 $accordion-expanded-bg: grayscale('light-1');
 $accordion-border-color: grayscale('dark-1');
+$accordion-arrow-color: grayscale('gray-6');
 
 // form input
 $input-bg: grayscale('white');
-$input-border-radius: border-radius('none');
-$input-border-color: grayscale('dark-1');
+$input-border-radius: border-radius('small');
+$input-border-color: grayscale('gray-4');
 $input-label-color: grayscale('dark-1');
 $input-placeholder-color: grayscale('gray-2');
 $input-focus-border-color: brand-color('accent-1');

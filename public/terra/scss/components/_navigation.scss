@@ -58,7 +58,8 @@ body.has-nav {
 	transition: transform .5s ease;
 	position: fixed;
 	top: 0;
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	width: -webkit-fill-available;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
 	padding-left: var(--outer-margin);
@@ -111,7 +112,7 @@ body.has-nav {
 		}
 	}
 	&__nav {
-		float: right;
+		flex: 1;
 		> ul {
 			height: calc($navbar-height - $navbar-border-width);
 			margin: 0;
@@ -273,7 +274,7 @@ body.has-nav {
 
 .tree-menu {
 	margin: 0;
-	padding: 0 0 0 spacing(2);
+	padding: 0 0 0 spacing(3);
 	list-style: none;
 	li {
 		@include type-setting(-1,'normal');
@@ -295,17 +296,6 @@ body.has-nav {
 				cursor: pointer;
 			}
 		}
-		ul {
-			padding: 0 0 0 spacing(3);
-			list-style: none;
-			li {
-				padding: 0 0 0 spacing(2);
-				> a {
-					padding: spacing(3) 0;
-					display: block;
-				}
-			}
-		}
 		&.active {
 			> a {
 				color: $tree-menu-link-hover;
@@ -314,25 +304,25 @@ body.has-nav {
 	}
 	> li {
 		position: relative;
-		padding: 0 0 0 spacing(3);
+		padding: 0 0 0 $tree-menu-left-padding;
 		> a {
 			@include border-radius('all','small');
-			padding: spacing(2) 0;
+			padding: spacing(1) 0;
 			display: block;
 		}
 		> span {
-			padding: spacing(2) 0;
+			padding: spacing(1) 0;
 		}
 		&.expandable {
-			i {
+			&:before {
+				@include icon-base();
+				content: "\f054";
 				color: lighten($tree-menu-link-color, 10%);
 				position: absolute;
-				top: .7rem;
-				left: -.25rem;
-				transition: transform 200ms ease-in-out; 
-				&:before {
-					font-size: 100%;
-				}
+				top: 1em;
+				left: calc(-1 * #{$tree-menu-left-padding});
+				transition: transform 200ms ease-in-out;
+				font-size: 75%;
 			}
 			> .expandable-menu {
 				list-style: none;
@@ -342,7 +332,7 @@ body.has-nav {
 				> li {
 					padding: 0;
 					> a {
-						padding: spacing(2) 0;
+						padding: spacing(1) 0;
 						display: block;
 					}
 				}
@@ -351,7 +341,7 @@ body.has-nav {
 				> a {
 					color: $tree-menu-link-hover;
 				}
-				i {
+				&:before {
 					transform: rotate(90deg);
 				}
 				> .expandable-menu {

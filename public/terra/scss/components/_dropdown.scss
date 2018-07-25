@@ -20,6 +20,7 @@
   @include depth(1);
   @include type-setting(-1,'normal');
   border: $dropdown-border-size solid $dropdown-border-color;
+  border-radius: $dropdown-border-radius;
   min-width: 12.5em;
   position: absolute;
   top: calc(100%);
