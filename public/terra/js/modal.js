@@ -1,11 +1,12 @@
 jQuery(document).ready(function($){
 
-	$('.trigger').click(function() {
-		$('.modal--full-page').toggleClass('open');
+	$('[data-toggle=modal]').click(function() {
+		var modalName = $(this).attr('data-target');
+		$(modalName).toggleClass('open');
 		$('body').toggleClass('modal-open');
 		return false;
 	});
-	$('.modal__close').click(function() {
+	$('[data-close=modal]').click(function() {
 		$(this).parent().parent().parent().toggleClass('open');
 		$('body').toggleClass('modal-open');
 	});
