@@ -3917,7 +3917,7 @@ fieldset {
 .search-bar {
   display: flex; }
   .search-bar__input {
-    flex-grow: 1; }
+    flex: 1; }
   .search-bar__submit {
     font-size: 16px;
     line-height: 24px;
@@ -4076,14 +4076,6 @@ fieldset {
     visibility: visible;
     opacity: 1;
     transform: translateY(1px); }
-
-.form-inline {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  flex: 1;
-  padding-left: 32px;
-  padding-right: 32px; }
 
 .hero {
   padding-top: 80px;
