@@ -5,7 +5,7 @@
 		<div class="markup-panel__example">
 <div class="modal">
 	<div class="modal__wrap">
-		<button type="button" class="modal__close" aria-label="Close"></button>
+		<button type="button" class="modal__close" aria-label="Close" data-close="modal"></button>
 		<div class="modal__content">
 			<div class="modal__title">Modal title</div>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
@@ -25,7 +25,10 @@
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
+<!-- trigger -->
 <button type="button" class="button button--default" aria-label="Open" data-toggle="modal" data-target="#modal-1">Open Modal</button>
+
+<!-- modal -->
 <div class="modal--full-page" role="dialog" id="modal-1">
 	<div class="modal">
 		<div class="modal__wrap">
