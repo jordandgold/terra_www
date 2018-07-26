@@ -216,6 +216,7 @@ code {
 }
 
 .main-footer {
+    @include type-setting(-1,'normal');
     padding: spacing(5) 0;
     border-top: 1px solid grayscale('gray-1');
     height: auto;
