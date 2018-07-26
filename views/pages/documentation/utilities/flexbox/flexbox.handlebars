@@ -4,10 +4,10 @@
 	<p><b>Flex Container</b></p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row">
+<div class="flexbox flex-row">
 	This is a flex container.
 </div>
-<div class="flex-inline flex-row">
+<div class="flexbox-inline flex-row">
 	This is a flex container.
 </div>
 		</div>
@@ -19,13 +19,13 @@
 	<p>The flex direction property tells the flex container on which direction to stack the flex item children. This property creates the <a href="https://www.w3.org/TR/css-flexbox-1/#main-axis" target="_blank">main axis</a> for the flex box. To stack them along the horizontal axis, use <code>.flex-row</code>, or <code>.flex-row-reverse</code> to reverse the stack order.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row">
+<div class="flexbox flex-row">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
 	<div class="pad-all-3">Flex Item 4</div>
 </div>
-<div class="flex flex-row-reverse">
+<div class="flexbox flex-row-reverse">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
@@ -37,11 +37,11 @@
 	<p>To stack the flex items along the vertical axis, use <code>.flex-column</code>, or <code>.flex-column-reverse</code> to reverse the stack order.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-column">
+<div class="flexbox flex-column">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 </div>
-<div class="flex flex-column-reverse">
+<div class="flexbox flex-column-reverse">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 </div>
@@ -54,13 +54,13 @@
 	<p>The flex-wrap property tells the flex items whether they should fit into a single line or multiple lines. In order to wrap the flex items use <code>.flex-wrap</code>, or to reverse the wrap order, use <code>.flex-wrap-reverse</code></p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row flex-wrap">
+<div class="flexbox flex-row flex-wrap">
 	<div class="pad-all-3 width-40">Flex Item 1</div>
 	<div class="pad-all-3 width-40">Flex Item 2</div>
 	<div class="pad-all-3 width-40">Flex Item 3</div>
 	<div class="pad-all-3 width-40">Flex Item 4</div>
 </div>
-<div class="flex flex-row flex-wrap-reverse">
+<div class="flexbox flex-row flex-wrap-reverse">
 	<div class="pad-all-3 width-40">Flex Item 1</div>
 	<div class="pad-all-3 width-40">Flex Item 2</div>
 	<div class="pad-all-3 width-40">Flex Item 3</div>
@@ -76,19 +76,19 @@
 	<p>The justify-content property tells the flex items how to align on the <a href="https://www.w3.org/TR/css-flexbox-1/#main-axis" target="_blank">main axis</a> of the flex box. For basic alignment, you can choose from <code>.justify-content-start</code>, <code>.justify-content-end</code> and <code>.justify-content-center</code>.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row justify-content-start">
+<div class="flexbox flex-row justify-content-start">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
 	<div class="pad-all-3">Flex Item 4</div>
 </div>
-<div class="flex flex-row justify-content-end">
+<div class="flexbox flex-row justify-content-end">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
 	<div class="pad-all-3">Flex Item 4</div>
 </div>
-<div class="flex flex-row justify-content-center">
+<div class="flexbox flex-row justify-content-center">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
@@ -100,13 +100,13 @@
 	<p>You can also space the flex items evenly across the flex box with <code>.justify-content-between</code> and <code>.justify-content-around</code>.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row justify-content-between">
+<div class="flexbox flex-row justify-content-between">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
 	<div class="pad-all-3">Flex Item 4</div>
 </div>
-<div class="flex flex-row justify-content-around">
+<div class="flexbox flex-row justify-content-around">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
@@ -121,25 +121,25 @@
 	<p>The align-items property tells the flex items how to align on the cross-axis, which is perpendicular to the <a href="https://www.w3.org/TR/css-flexbox-1/#main-axis" target="_blank">main axis</a> of the flex box. For basic alignment, you can choose from <code>.align-items-start</code>, <code>.align-items-end</code>, <code>.align-items-center</code> and <code>.align-items-baseline</code>.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row align-items-start height-7">
+<div class="flexbox flex-row align-items-start height-7">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
 	<div class="pad-all-3">Flex Item 4</div>
 </div>
-<div class="flex flex-row align-items-end height-7">
+<div class="flexbox flex-row align-items-end height-7">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
 	<div class="pad-all-3">Flex Item 4</div>
 </div>
-<div class="flex flex-row align-items-center height-7">
+<div class="flexbox flex-row align-items-center height-7">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
 	<div class="pad-all-3">Flex Item 4</div>
 </div>
-<div class="flex flex-row align-items-baseline height-7">
+<div class="flexbox flex-row align-items-baseline height-7">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
@@ -151,7 +151,7 @@
 	<p>You can also stretch the items with <code>.align-items-stretch</code>.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row align-items-stretch height-7">
+<div class="flexbox flex-row align-items-stretch height-7">
 	<div class="pad-all-3">Flex Item 1</div>
 	<div class="pad-all-3">Flex Item 2</div>
 	<div class="pad-all-3">Flex Item 3</div>
@@ -166,12 +166,42 @@
 	<p>The align-self property is applied directly to the flex items. The alignment options follow the same rules for the align-items property, the only difference is it's directly applied to a flex item instead of a flex box. You can choose from <code>.align-self-start</code>, <code>.align-self-end</code>, <code>.align-self-center</code>, <code>.align-self-baseline</code> and <code>.align-self-stretch</code>.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="flex flex-row height-7">
+<div class="flexbox flex-row height-7">
 	<div class="pad-all-3 align-self-start">Flex Item 1</div>
 	<div class="pad-all-3 align-self-end">Flex Item 2</div>
 	<div class="pad-all-3 align-self-center">Flex Item 3</div>
 	<div class="pad-all-3 align-self-baseline">Flex Item 4</div>
 	<div class="pad-all-3 align-self-stretch">Flex Item 5</div>
+</div>
+		</div>
+		<pre><code class="language-markup"></code></pre>
+	</div>
+</div>
+<div class="page-section__sub-section">
+	<h4>Align Content</h4>
+	<p>The align-content property aligns the rows of flex items to the flex container when there is extra space on the cross-axis. You can choose from <code>.align-content-start</code>, <code>.align-content-end</code>, <code>.align-content-center</code>, <code>.align-content-between</code>, <code>.align-content-around</code> and <code>.align-content-stretch</code>.</p>
+	<div class="markup-panel">
+		<div class="markup-panel__example">
+<div class="flexbox flex-row flex-wrap align-content-between height-10">
+	<div class="pad-all-3 width-40">Flex Item 1</div>
+	<div class="pad-all-3 width-40">Flex Item 2</div>
+	<div class="pad-all-3 width-40">Flex Item 3</div>
+	<div class="pad-all-3 width-40">Flex Item 4</div>
+</div>
+		</div>
+		<pre><code class="language-markup"></code></pre>
+	</div>
+</div>
+<div class="page-section__sub-section">
+	<h4>Flex Grow</h4>
+	<p>When <code>.flex</code> is applied to a flex item, the item will take up the remaining space along the main axis. Use <code>.flex-0</code> to unset this property.</p>
+	<div class="markup-panel">
+		<div class="markup-panel__example">
+<div class="flexbox flex-row flex-wrap">
+	<div class="pad-all-3">Flex Item 1</div>
+	<div class="pad-all-3 flex">Flex Item 2</div>
+	<div class="pad-all-3">Flex Item 3</div>
+	<div class="pad-all-3">Flex Item 4</div>
 </div>
 		</div>
 		<pre><code class="language-markup"></code></pre>
