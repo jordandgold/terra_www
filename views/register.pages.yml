@@ -12,3 +12,5 @@
   url: documentation/style/depth
 - name: grid
   url: documentation/style/grid
+- name: flexbox
+  url: documentation/utilities/flexbox

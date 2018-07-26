@@ -57,7 +57,16 @@ $emotive-colors: map-merge((
   }
   @return $collection;
 }
-$color-palette: map-collect($brand-colors, $emotive-colors, $grayscale); 
+$color-palette: map-collect($brand-colors, $emotive-colors, $grayscale);
+
+@function type-color($key: 'normal') {
+  @return map-get($type-colors, $key);
+}
+$type-colors: () !default;
+$type-colors: map-merge((
+    'normal':   grayscale('dark-1'),
+    'inverse':  grayscale('white'),
+), $type-colors);
 
 // font family
 $font-sans-serif:
@@ -126,7 +135,12 @@ $height-scale: (
     2: 32px,
     3: 48px,
     4: 64px,
-    5: 96px,
+    5: 72px,
+    6: 96px,
+    7: 120px,
+    8: 144px,
+    9: 176px,
+    10: 200px
 );
 
 // spacing scale
@@ -154,10 +168,10 @@ $spacing-scale: (
 
 // navigation bar
 $navbar-height: height(4);
-$navbar-bg: grayscale('white');
-$navbar-link-color: grayscale('gray-7');
-$navbar-link-hover: grayscale('dark-1');
-$navbar-border-width: 1px;
+$navbar-bg: grayscale('dark-0');
+$navbar-link-color: grayscale('gray-4');
+$navbar-link-hover: grayscale('gray-8');
+$navbar-border-width: 0px;
 $navbar-border-color: grayscale('gray-1');
 $navbar-menu-icon-color: grayscale('gray-3');
 
@@ -181,7 +195,7 @@ $pagination-border-color: grayscale('gray-2');
 
 // body
 $body-bg-color: grayscale('white');
-$body-font-color: grayscale('dark-1');
+$body-font-color: type-color('normal');
 
 // headers
 $header-font-color: grayscale('dark-1');
@@ -249,6 +263,12 @@ $table-row-bg-odd: grayscale('light-1');
 // modals
 $modal-bg: grayscale('white');
 $modal-overlay-bg: grayscale('dark-1');
+
+// media query breakpoints
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1800px;
 
 // YIQ contrast colors
 /// The text color to be used when a background is determined to be 'light'

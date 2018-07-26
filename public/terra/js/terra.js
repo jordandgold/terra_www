@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 		var escapedMarkup = escapeHtml(markup);
 		var trimMarkup = $.trim(markup);
 		var html = Prism.highlight(trimMarkup, Prism.languages.html, 'html');
-		$(this).parent().find('.language-markup').html(html);
+		$(this).find('.language-markup').html(html);
 	});
 
 	function escapeHtml(unsafe) {

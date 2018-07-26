@@ -26,14 +26,6 @@ a:focus {
   }
 }
 
-p a {
-  &:hover {
-    @if $link-highlight {
-      background: $link-highlight-color;
-    }
-  }
-}
-
 hr {
   width: 100%;
   height: 1px;

@@ -31,9 +31,24 @@
     display: inline-block;
 }
 
+.markup-panel {
+    div.flex,
+    div.flex-inline {
+        border: 1px solid grayscale('gray-1');
+        padding: spacing(3);
+        margin-bottom: spacing(3);
+        > div {
+            border: 1px solid darken(brand-color('accent-1'), 10%);
+            padding: spacing(3);
+            color: type-color('inverse');
+            background-color: brand-color('accent-1');
+        }
+    }
+}
+
 .logo {
     $size: height(1);
-    $color: #ccc;
+    $color: grayscale('gray-3');
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -76,12 +91,13 @@
         $border-color: grayscale('gray-4');
         $border-width: $size * .05;
         opacity: 1;
+        transition: opacity 225ms ease-in-out;
         &:hover {
             opacity: 0.85;
         }
         .cube {
             span {
-                background: #fff;
+                background: grayscale('dark-0');
                 box-shadow: inset (-$border-width/4) (-$border-width/4) 0 $border-width $border-color;
             }
             &:nth-child(2) {
@@ -156,10 +172,16 @@
     }
 }
 
+code {
+    color: #ff00ff;
+    background: transparentize(#ff00ff, 0.9)
+}
+
 .grid-box {
-    width: 100%;
+    width: -webkit-fill-available;
     height: height(4);
     position: relative;
+    border: 1px solid darken(brand-color('accent-1'), 10%);
     background: brand-color('accent-1');
     margin-bottom: spacing(5);
     span {
@@ -174,6 +196,7 @@
 }
 
 .markup-panel {
+    margin-bottom: spacing(7);
     &__example {
         margin-bottom: spacing(7);
     }

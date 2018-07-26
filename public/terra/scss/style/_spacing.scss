@@ -14,27 +14,27 @@
 @each $size, $value in $spacing-scale {
 
 	// padding
-    .padding-all-#{$size} {
+    .pad-all-#{$size} {
         padding: $value !important;
     }
-    .padding-h-#{$size} {
+    .pad-h-#{$size} {
         padding-left: $value !important;
         padding-right: $value !important;
     }
-    .padding-v-#{$size} {
+    .pad-v-#{$size} {
         padding-top: $value !important;
         padding-bottom: $value !important;
     }
-    .padding-top-#{$size} {
+    .pad-top-#{$size} {
         padding-top: $value !important;
     }
-    .padding-right-#{$size} {
+    .pad-right-#{$size} {
         padding-right: $value !important;
     }
-    .padding-bottom-#{$size} {
+    .pad-bottom-#{$size} {
         padding-bottom: $value !important;
     }
-    .padding-left-#{$size} {
+    .pad-left-#{$size} {
         padding-left: $value !important;
     }
 

@@ -14,9 +14,9 @@
     max-height: map-get($height-scale, $level);
 }
 
-@each $level in $height-scale {
+@each $level, $value in $height-scale {
     .height-#{$level} {
-        @include height($level);
+        height: $value;
     }
 }
 
@@ -68,8 +68,4 @@
 
 .min-vh-100 {
     min-height: 100vh;
-}
-
-.width-25 {
-    width: 25%;
 }
