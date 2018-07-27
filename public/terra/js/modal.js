@@ -10,5 +10,11 @@ jQuery(document).ready(function($){
 		$(this).parent().parent().parent().toggleClass('open');
 		$('body').toggleClass('modal-open');
 	});
+	$('.modal--full-page').click(function() {
+		$(this).toggleClass('open');
+		$('body').toggleClass('modal-open');
+	}).children().click(function(e) {
+	  return false;
+	});
 
 }); 
