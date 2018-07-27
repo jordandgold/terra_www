@@ -41,7 +41,7 @@ ul.list-inline--center {
 }
 
 @mixin list-base {
-	margin: spacing(4) 0;
+	margin: 0 0 $base-line-height 0;
 	> li {
 		padding: spacing(3) 0;
 	}
@@ -50,8 +50,17 @@ ul.list-inline--center {
 @mixin list-unstyled {
 	@include list-base();
 	padding: 0;
-	margin: 0;
 	list-style: none;
+}
+
+.list-unstyled {
+	@include list-unstyled();
+}
+
+.list-condensed {
+	li {
+		padding: 0;
+	}
 }
 
 ul,

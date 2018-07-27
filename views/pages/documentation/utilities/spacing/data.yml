@@ -1,0 +1,6 @@
+layout: 'component-page'
+page:
+  title: 'Spacing | Terra Design System'
+  name: 'Spacing'
+  parent: 'Utilities'
+  tagline: 'Terra has a predefined set of spacing sizes which can easily be referenced with utility classes.'

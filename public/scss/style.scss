@@ -195,6 +195,12 @@ code {
     }
 }
 
+.box {
+    display: inline-block;
+    background: grayscale('dark-0');
+    color: type-color('inverse');
+}
+
 .markup-panel {
     margin-bottom: spacing(7);
     &__example {

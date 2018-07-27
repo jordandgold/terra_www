@@ -14,3 +14,5 @@
   url: documentation/style/grid
 - name: flexbox
   url: documentation/utilities/flexbox
+- name: spacing
+  url: documentation/utilities/spacing
