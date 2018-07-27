@@ -38,10 +38,10 @@
         padding: spacing(3);
         margin-bottom: spacing(3);
         > div {
-            border: 1px solid darken(brand-color('accent-1'), 10%);
+            border: 1px solid darken(brand-color('brand-2'), 10%);
             padding: spacing(3);
             color: type-color('inverse');
-            background-color: brand-color('accent-1');
+            background-color: brand-color('brand-2');
         }
     }
 }
@@ -161,13 +161,13 @@
     }
     &--molecule {
         .structure-block__box {
-            background: brand-color('brand-2');
+            background: brand-color('brand-1');
         }
 
     }
     &--page {
         .structure-block__box {
-            background: brand-color('accent-1');
+            background: brand-color('brand-2');
         }
     }
 }
@@ -181,8 +181,8 @@ code {
     width: -webkit-fill-available;
     height: height(4);
     position: relative;
-    border: 1px solid darken(brand-color('accent-1'), 10%);
-    background: brand-color('accent-1');
+    border: 1px solid darken(brand-color('brand-2'), 10%);
+    background: brand-color('brand-2');
     margin-bottom: spacing(5);
     span {
         display: block;
@@ -197,7 +197,8 @@ code {
 
 .box {
     display: inline-block;
-    background: grayscale('dark-0');
+    border: 1px solid darken(brand-color('brand-2'), 10%);
+    background-color: brand-color('brand-2');
     color: type-color('inverse');
 }
 

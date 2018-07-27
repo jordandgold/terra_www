@@ -31,9 +31,8 @@ $grayscale: map-merge((
 }
 $brand-colors: () !default;
 $brand-colors: map-merge((
-    'brand-1':  #00437B,
-    'brand-2':  #FFBE00,
-    'accent-1': #009AD9,
+    'brand-1':  #2b6fdb,
+    'brand-2':  #d16100,
 ), $brand-colors);
 
 @function emotive-color($key: 'info') {
@@ -41,13 +40,13 @@ $brand-colors: map-merge((
 }
 $emotive-colors: () !default;
 $emotive-colors: map-merge((
-    'default':  brand-color('accent-1'),
-    'info':     brand-color('accent-1'),
-    'danger':   #C81922,
-    'success':  #5E9331,
+    'primary':  brand-color('brand-1'),
+    'secondary':     brand-color('brand-2'),
+    'danger':   #ce2740,
+    'success':  #1cb260,
     'warning':  #FFBE00,
     'light':    grayscale('light-1'),
-    'dark':     grayscale('dark-1'),
+    'dark':     grayscale('dark-0'),
 ), $emotive-colors);
 
 @function map-collect($maps...) {
@@ -201,16 +200,18 @@ $body-font-color: type-color('normal');
 $header-font-color: grayscale('dark-1');
 
 // links
-$link-color: brand-color('accent-1');
+$link-color: brand-color('brand-2');
 $link-hover-color: darken($link-color, 10%);
 $link-highlight: true;
 $link-highlight-color: lighten(brand-color('brand-1'), 30%);
 
 // buttons
-$button-border-radius: map-get($border-radius-scale, 'none');
+$button-border-radius: border-radius('small');
 $button-border-size: 1px;
 $button-icon-color: grayscale('gray-4');
 $button-icon-hover: grayscale('gray-6');
+$button-outline-text-color: brand-color(';');
+$button-outline-border-color: grayscale('gray-4');
 
 // tooltips
 $tooltip-bg: grayscale('dark-1');
@@ -236,8 +237,9 @@ $panel-border-color: grayscale('light-1');
 // accordion
 $accordion-bg: grayscale('white');
 $accordion-expanded-bg: grayscale('light-1');
-$accordion-border-color: grayscale('dark-1');
-$accordion-arrow-color: grayscale('gray-6');
+$accordion-border-color: grayscale('gray-4');
+$accordion-arrow-color: grayscale('gray-4');
+$accordion-border-radius: border-radius('small');
 
 // form input
 $input-bg: grayscale('white');
@@ -245,7 +247,7 @@ $input-border-radius: border-radius('small');
 $input-border-color: grayscale('gray-4');
 $input-label-color: grayscale('dark-1');
 $input-placeholder-color: grayscale('gray-2');
-$input-focus-border-color: brand-color('accent-1');
+$input-focus-border-color: brand-color('brand-2');
 
 // checkboxes
 $checkbox-border-color: $input-border-color;
@@ -256,7 +258,7 @@ $radio-border-color: $input-border-color;
 $radio-fill-color: brand-color('brand-1');
 
 // tables
-$table-header-bg: brand-color('accent-1');
+$table-header-bg: brand-color('brand-2');
 $table-row-bg-even: transparent;
 $table-row-bg-odd: grayscale('light-1');
 

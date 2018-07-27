@@ -104,8 +104,8 @@ a.button {
 a.button--outline {
     @include button-variant(
         transparent,
-        brand-color('accent-1'),
-        grayscale('gray-4'),
+        $button-outline-text-color,
+        $button-outline-border-color,
     );
 }
 
@@ -114,7 +114,7 @@ a.button--ghost {
     @include button-variant(
         transparent,
         $link-color,
-        brand-color("accent-1"),
+        $link-color,
     );
     border-top: 0px;
     border-left: 0px;

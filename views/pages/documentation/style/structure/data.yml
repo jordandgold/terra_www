@@ -3,4 +3,4 @@ page:
   title: 'Structure | Terra Design System'
   name: 'Structure'
   parent: 'Style'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: 'Structure and spacing will define a consistency between components, their parts, and their relationship with other components.'
