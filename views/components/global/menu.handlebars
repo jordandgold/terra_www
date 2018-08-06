@@ -5,9 +5,16 @@
 		<li {{#is page.name "Accessibility"}} class="active"{{else}}{{/is}}><a href="/documentation/style/accessibility">Accessibility</a></li>
 		<li {{#is page.name "Color Palette"}} class="active"{{else}}{{/is}}><a href="/documentation/style/color-palette">Color Palette</a></li>
 		<li {{#is page.name "Depth"}} class="active"{{else}}{{/is}}><a href="/documentation/style/depth">Depth</a></li>
-		<li {{#is page.name "Grid"}} class="active"{{else}}{{/is}}><a href="/documentation/style/grid">Grid</a></li>
 		<li {{#is page.name "Structure"}} class="active"{{else}}{{/is}}><a href="/documentation/style/structure">Structure</a></li>
 		<li {{#is page.name "Typography"}} class="active"{{else}}{{/is}}><a href="/documentation/style/typography">Typography</a></li>
+	</ul>
+</li>
+<li class="expandable {{#is page.parent "Utilities"}} expanded{{else}}{{/is}}">
+	<a data-href="#">Structure</a>
+	<ul class="expandable-menu">
+		<li {{#is page.name "Flexbox"}} class="active"{{else}}{{/is}}><a href="/documentation/structure/flexbox">Flexbox</a></li>
+		<li {{#is page.name "Grid"}} class="active"{{else}}{{/is}}><a href="/documentation/structure/grid">Grid</a></li>
+		<li {{#is page.name "Spacing"}} class="active"{{else}}{{/is}}><a href="/documentation/structure/spacing">Spacing</a></li>
 	</ul>
 </li>
 <li class="expandable {{#is page.parent "Components"}} expanded{{else}}{{/is}}">
@@ -25,12 +32,5 @@
 		<li {{#is page.name "Pagination"}} class="active"{{else}}{{/is}}><a href="/documentation/components/pagination">Pagination</a></li>
 		<li {{#is page.name "Tabs"}} class="active"{{else}}{{/is}}><a href="/documentation/components/tabs">Tabs</a></li>
 		<li {{#is page.name "Tooltips"}} class="active"{{else}}{{/is}}><a href="/documentation/components/tooltips">Tooltips</a></li>
-	</ul>
-</li>
-<li class="expandable {{#is page.parent "Utilities"}} expanded{{else}}{{/is}}">
-	<a data-href="#">Utilities</a>
-	<ul class="expandable-menu">
-		<li {{#is page.name "Flexbox"}} class="active"{{else}}{{/is}}><a href="/documentation/utilities/flexbox">Flexbox</a></li>
-		<li {{#is page.name "Spacing"}} class="active"{{else}}{{/is}}><a href="/documentation/utilities/spacing">Spacing</a></li>
 	</ul>
 </li>
