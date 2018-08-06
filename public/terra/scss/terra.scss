@@ -1,31 +1,33 @@
 
-// variables
+// settings
 @import 'variables';
 @import 'functions';
 
-// structure css
+// structure
+@import 'structure/flex';
+@import 'structure/height';
+@import 'structure/media-queries';
+@import 'structure/spacing';
+@import 'structure/text-align';
+@import 'structure/grid';
+@import 'structure/width';
+
+// style
 @import 'style/colors';
 @import 'style/normalize';
 @import 'style/backgrounds';
 @import 'style/box-shadow';
 @import 'style/border-radius';
 @import 'style/depth';
-@import 'style/flex';
 @import 'style/font-family';
 @import 'style/font-weight';
 @import 'style/global';
-@import 'style/height';
 @import 'style/icons';
 @import 'style/line-height';
-@import 'style/media-queries';
-@import 'style/spacing';
-@import 'style/text-align';
 @import 'style/type-scale';
 @import 'style/typography';
-@import 'style/grid';
-@import 'style/width';
 
-// component css
+// components
 @import 'components/alert';
 @import 'components/accordion';
 @import 'components/badge';

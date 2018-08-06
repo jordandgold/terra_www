@@ -65,16 +65,16 @@
         }
         text-decoration: none;
         @if $bg == $bgHover {
-            background-color: darken($bg, 10%);
+            background-color: darken($bg, 7%);
         }
         @else {
             background-color: $bgHover;
         }
-        border-color: darken($borderColor, 20%);
+        border-color: darken($borderColor, 12%);
         cursor: pointer;
     }
     &:active {
-        background-color: darken($bg, 20%);
+        background-color: darken($bg, 12%);
     }
     i {
         &:before {
@@ -192,11 +192,18 @@ a.button--icon {
         display: inline-block;
         float: left;
         margin-right: 1px;
-        &:last-child {
+        &:first-of-type {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        &:last-of-type {
             margin-right: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
         }
         &:only-of-type {
             margin-right: 0px;
+            border-radius: initial;
         }
     }
     .dropdown {
