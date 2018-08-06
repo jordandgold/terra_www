@@ -32,13 +32,14 @@ jQuery(document).ready(function($){
 
 	    	$list.append('<div rel="hide" class="no-results">No results found</div>');
 
+	    	// keyup search functionality
 	    	$searchFilterInput.on('keyup', function(){
-	    		var options = $('.select-options-wrap').children('li:not([rel="hide"])'),
+	    		var options = $list.find('.select-options-wrap').children('li:not([rel="hide"])'),
 	    			filter = $(this).val().toUpperCase();
 				for (i = 0; i < options.length; i++) {
 
 					// count results
-					var resultsCount = $('.select-options-wrap').children('li:not([rel="hide"]):visible').length;
+					var resultsCount = $list.find('.select-options-wrap').children('li:not([rel="hide"]):visible').length;
 
 					// check if any matching results
 					if (options[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -49,9 +50,9 @@ jQuery(document).ready(function($){
 
 					// display no results
 					if (resultsCount == 0) {
-						$('.no-results').show();
+						$list.find('.no-results').show();
 					} else {
-						$('.no-results').hide();
+						$list.find('.no-results').hide();
 					}
 				}
 			});
@@ -118,9 +119,6 @@ jQuery(document).ready(function($){
 	    // add search functionality
     	if ($this.hasClass('search')) {
 
-    		// var searchFilterMarkup = '<div class="search-filter"><input type="text" id="searchFilter" placeholder="search" /></div>',
-    		// 	searchFilter = 'div.search-filter input';
-
 			var $searchFilter = $('<div />', {
 		        'class': 'search-filter'
 	    	}).appendTo($list);
@@ -136,12 +134,12 @@ jQuery(document).ready(function($){
 
 	    	// keyup search functionality
 	    	$searchFilterInput.on('keyup', function(){
-	    		var options = $('.select-options-wrap').children('li:not([rel="hide"])'),
+	    		var options = $list.find('.select-options-wrap').children('li:not([rel="hide"])'),
 	    			filter = $(this).val().toUpperCase();
 				for (i = 0; i < options.length; i++) {
 
 					// count results
-					var resultsCount = $('.select-options-wrap').children('li:not([rel="hide"]):visible').length;
+					var resultsCount = $list.find('.select-options-wrap').children('li:not([rel="hide"]):visible').length;
 
 					// check if any matching results
 					if (options[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -152,9 +150,9 @@ jQuery(document).ready(function($){
 
 					// display no results
 					if (resultsCount == 0) {
-						$('.no-results').show();
+						$list.find('.no-results').show();
 					} else {
-						$('.no-results').hide();
+						$list.find('.no-results').hide();
 					}
 				}
 			});
