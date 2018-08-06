@@ -267,6 +267,9 @@ $table-row-bg-odd: grayscale('light-1');
 $modal-bg: grayscale('white');
 $modal-overlay-bg: grayscale('dark-1');
 
+// alerts
+$alert-border-radius: border-radius('small');
+
 // media query breakpoints
 $phone-upper-boundary: 600px;
 $tablet-portrait-upper-boundary: 900px;
