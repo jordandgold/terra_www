@@ -50,6 +50,10 @@ jQuery(document).ready(function($){
 	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
 	    	//if scrolling down...
 	    	mainHeader.addClass('is-hidden');
+	    	//close dropdowns
+	    	mainHeader.find('.navbar__nav').find('.dropdown.open').each(function(){
+	    		$(this).removeClass('open');
+	    	});
 	    }
 	}
 

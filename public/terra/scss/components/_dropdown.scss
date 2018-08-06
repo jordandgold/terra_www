@@ -5,6 +5,7 @@
 */
 
 @mixin dropdown-menu-links() {
+  @include type-setting(-1,'normal');
   color: $dropdown-link-color;
   padding: spacing(2) spacing(4);
   display: block;
@@ -18,7 +19,6 @@
 
 @mixin dropdown-menu-base() {
   @include depth(1);
-  @include type-setting(-1,'normal');
   border: $dropdown-border-size solid $dropdown-border-color;
   border-radius: $dropdown-border-radius;
   min-width: 12.5em;
@@ -45,6 +45,25 @@
       padding: spacing(3) 0 0 0;
       margin-bottom: spacing(3);
       border-bottom: 1px solid $dropdown-border-color;
+    }
+    .no-link {
+      @include type-setting(-2,'bold');
+      padding: spacing(2) spacing(4);
+      text-transform: uppercase;
+      color: $dropdown-no-link-color;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 spacing(3) 0;
+      &:last-child {
+        margin: 0;
+      }
+      li {
+        a {
+          @include dropdown-menu-links();
+        }
+      }
     }
   }
   &.show {

@@ -93,14 +93,16 @@ body.has-nav {
 			cursor: pointer;
 		}
 	}
-	&__branding {
-		float: left;
+	&__brand {
+		height: $navbar-height;
+	    display: inline-block;
 		> a {
 			@include type-setting(0,'normal');
 			text-decoration: none;
 			line-height: $navbar-height;
 			> img {
-				@include height(3);
+				@include height(2);
+				padding: spacing(4) 0;
 			}
 		}
 	}
@@ -112,7 +114,6 @@ body.has-nav {
 		}
 	}
 	&__nav {
-		flex: 1;
 		> ul {
 			height: calc($navbar-height - $navbar-border-width);
 			margin: 0;
@@ -188,8 +189,8 @@ body.has-nav {
 						@include for-size(tablet-landscape-down) {
 							background: transparent;
 							padding: 0 0 0 spacing(4);
-							> li {
-								> a:not(.button) {
+							li {
+								a:not(.button) {
 									color: $navbar-link-color;
 									margin: 0;
 									line-height: 2.25rem;
@@ -241,7 +242,7 @@ body.has-nav {
 		        width: 100%;
 		        height: auto;
 		        padding-top: spacing(3);
-		        padding-bottom: calc(spacing(3) - 1px);
+		        padding-bottom: spacing(4);
 		    	@include for-size(tablet-landscape-up) {
 		    		display: table;
 		    		width: initial;

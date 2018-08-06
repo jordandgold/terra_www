@@ -109,6 +109,13 @@ a.button--outline {
     );
 }
 
+.inverse-color {
+    .button--outline,
+    a.button--outline {
+        color: type-color('inverse');
+    }
+}
+
 .button--ghost,
 a.button--ghost {
     @include button-variant(

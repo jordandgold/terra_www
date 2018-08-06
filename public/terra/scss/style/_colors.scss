@@ -15,3 +15,10 @@
         --color-#{$name}: #{$hex};
     }
 }
+
+.inverse-color {
+	color: type-color('inverse') !important;
+	*:not(a) {
+		color: type-color('inverse') !important;
+	}
+}
