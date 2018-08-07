@@ -14,8 +14,12 @@ gulp.task('default', function() {
 });
 
 gulp.task('sass', function () {
+  var processors = [
+      autoprefixer({browsers: ['last 1 version']}),
+  ];
   return gulp.src('./public/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(processors))
     .pipe(gulp.dest('./public/css'));
 });
 
