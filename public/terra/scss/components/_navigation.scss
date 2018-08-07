@@ -237,11 +237,10 @@ body.has-nav {
 	        	display: flex !important;
 		    }
 		    > ul {
-		    	@include container();
 		        display: block;
 		        width: 100%;
 		        height: auto;
-		        padding-top: spacing(3);
+		        padding-top: spacing(4);
 		        padding-bottom: spacing(4);
 		    	@include for-size(tablet-landscape-up) {
 		    		display: table;
@@ -253,12 +252,20 @@ body.has-nav {
 	        	> li {
 	        		display: block;
 			        width: 100%;
-			        padding: 0;
+			        padding-left: var(--outer-margin);
+					padding-right: var(--outer-margin);
+		    		padding-top: spacing(2);
+		    		padding-bottom: spacing(2);
 	        		@include for-size(tablet-landscape-up) {
 	        			display: table-cell;
 	        			width: initial;
 	        			padding: 0 spacing(4);
 	        			vertical-align: middle;
+				    }
+				    a:not(.button) {
+				    	@include for-size(tablet-landscape-down) {
+				    		@include type-setting(0, 'normal');
+				    	}
 				    }
 	        	}
 	        }

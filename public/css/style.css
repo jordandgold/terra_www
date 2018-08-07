@@ -4603,12 +4603,10 @@ body.has-nav {
         left: unset;
         display: flex !important; } }
     .navbar__nav--collapse > ul {
-      padding-right: var(--outer-margin, 2rem);
-      padding-left: var(--outer-margin, 2rem);
       display: block;
       width: 100%;
       height: auto;
-      padding-top: 12px;
+      padding-top: 16px;
       padding-bottom: 16px; }
       @media (min-width: 900px) {
         .navbar__nav--collapse > ul {
@@ -4620,13 +4618,21 @@ body.has-nav {
       .navbar__nav--collapse > ul > li {
         display: block;
         width: 100%;
-        padding: 0; }
+        padding-left: var(--outer-margin);
+        padding-right: var(--outer-margin);
+        padding-top: 8px;
+        padding-bottom: 8px; }
         @media (min-width: 900px) {
           .navbar__nav--collapse > ul > li {
             display: table-cell;
             width: initial;
             padding: 0 16px;
             vertical-align: middle; } }
+        @media (max-width: 900px) {
+          .navbar__nav--collapse > ul > li a:not(.button) {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400; } }
   .navbar.is-hidden {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
