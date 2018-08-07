@@ -178,7 +178,7 @@ code {
 }
 
 .grid-box {
-    width: -webkit-fill-available;
+    width: stretch;
     height: height(4);
     position: relative;
     border: 1px solid darken(brand-color('brand-2'), 10%);

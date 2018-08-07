@@ -60,7 +60,7 @@ body.has-nav {
 	top: 0;
 	display: flex;
 	justify-content: space-between;
-	width: -webkit-fill-available;
+	width: stretch;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
 	padding-left: var(--outer-margin);
 	padding-right: var(--outer-margin);

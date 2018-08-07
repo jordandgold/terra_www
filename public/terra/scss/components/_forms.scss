@@ -317,11 +317,11 @@ fieldset {
 .select-options {
     @include dropdown-menu-base();
     display: block;
-    width: -webkit-fill-available;
+    width: stretch;
     .select-options-wrap {
         max-height: (height(3) * 5);
         overflow: scroll;
-        width: -webkit-fill-available;
+        width: stretch;
     }
     .search-filter {
         position: relative;

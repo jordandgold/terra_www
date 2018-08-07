@@ -4095,7 +4095,9 @@ fieldset {
   transition: transform 225ms, opacity 225ms, visibility 225ms;
   transition: transform 225ms, opacity 225ms, visibility 225ms, -webkit-transform 225ms;
   display: block;
-  width: -webkit-fill-available; }
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch; }
   .select-options li {
     padding: 0; }
     .select-options li a {
@@ -4145,7 +4147,9 @@ fieldset {
   .select-options .select-options-wrap {
     max-height: 240px;
     overflow: scroll;
-    width: -webkit-fill-available; }
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: stretch; }
   .select-options .search-filter {
     position: relative; }
     .select-options .search-filter input {
@@ -4415,6 +4419,8 @@ body.has-nav {
   display: flex;
   justify-content: space-between;
   width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
   border-bottom: 0px solid #e2e2e7;
   padding-left: var(--outer-margin);
   padding-right: var(--outer-margin); }
@@ -5335,6 +5341,8 @@ code {
 
 .grid-box {
   width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
   height: 64px;
   position: relative;
   border: 1px solid #9e4900;
