@@ -1,6 +1,6 @@
 :root {
-  --gutter-width: 16px;
-  --outer-margin: 32px;
+  --gutter-width: var(--spacing-6);
+  --outer-margin: var(--spacing-6);
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 30;
