@@ -350,9 +350,9 @@ body.has-nav {
         width: 100%;
         background: $navbar-bg;
         display: none;
-        .is-expanded & {
-        	display: block;
-        }
+        // .is-expanded & {
+        // 	display: block;
+        // }
 		@include for-size(tablet-landscape-up) {
 			@include box-shadow("none");
 			display: inline-block;

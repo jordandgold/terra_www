@@ -4320,8 +4320,6 @@ body.has-nav {
     width: 100%;
     background: #363545;
     display: none; }
-    .is-expanded .navbar__nav {
-      display: block; }
     @media (min-width: 900px) {
       .navbar__nav {
         box-shadow: none;
