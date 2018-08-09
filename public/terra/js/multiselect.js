@@ -17,11 +17,8 @@ jQuery(document).ready(function($){
 	    // add search functionality
     	if ($this.hasClass('search')) {
 
-    		// var searchFilterMarkup = '<div class="search-filter"><input type="text" id="searchFilter" placeholder="search" /></div>',
-    		// 	searchFilter = 'div.search-filter input';
-
 			var $searchFilter = $('<div />', {
-		        'class': 'search-filter'
+		        'class': 'select-options__search-filter'
 	    	}).appendTo($list);
 
 			var $searchFilterInput = $('<input />', {
@@ -30,16 +27,20 @@ jQuery(document).ready(function($){
 		        'placeholder': 'search'
 	    	}).appendTo($searchFilter);
 
-	    	$list.append('<div rel="hide" class="no-results">No results found</div>');
+	    	$list.append('<div rel="hide" class="select-options__no-results">No results found</div>');
 
 	    	// keyup search functionality
-	    	$searchFilterInput.on('keyup', function(){
-	    		var options = $list.find('.select-options-wrap').children('li:not([rel="hide"])'),
+	    	$searchFilterInput.on('keyup', function(e){
+
+	    		e.preventDefault();
+
+	    		var options = $list.find('.select-options__wrap').children('li:not([rel="hide"])'),
 	    			filter = $(this).val().toUpperCase();
+
 				for (i = 0; i < options.length; i++) {
 
 					// count results
-					var resultsCount = $list.find('.select-options-wrap').children('li:not([rel="hide"]):visible').length;
+					var resultsCount = $list.find('.select-options__wrap').children('li:not([rel="hide"]):visible').length;
 
 					// check if any matching results
 					if (options[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -50,33 +51,35 @@ jQuery(document).ready(function($){
 
 					// display no results
 					if (resultsCount == 0) {
-						$list.find('.no-results').show();
+						$list.find('.select-options__no-results').is-open();
 					} else {
-						$list.find('.no-results').hide();
+						$list.find('.select-options__no-results').hide();
 					}
 				}
+				
 			});
 	    }
 
 	    var $optionsWrap = $('<div />', {
-	        'class': 'select-options-wrap'
+	        'class': 'select-options__wrap'
 		}).appendTo($list);
 	  
 	    for (var i = 0; i < numberOfOptions; i++) {
 	        $('<li />', {
+	        	class: 'select-options__item',
 	            text: $this.children('option').eq(i).text(),
 	            rel: $this.children('option').eq(i).val()
 	        }).appendTo($optionsWrap);
 	    }
 	  
-	    var $listItems = $list.children('.select-options-wrap').children('li');
+	    var $listItems = $list.children('.select-options__wrap').children('li');
 	  
 	    $styledSelect.click(function(e) {
 	        e.stopPropagation();
 	        $('div.select-styled.active').not(this).each(function(){
-	            $(this).removeClass('active').next('ul.select-options').toggleClass('show');
+	            $(this).removeClass('active').next('ul.select-options').toggleClass('is-open');
 	        });
-	        $(this).toggleClass('active').next('ul.select-options').toggleClass('show');
+	        $(this).toggleClass('active').next('ul.select-options').toggleClass('is-open');
 	    });
 	  
 		//
@@ -85,14 +88,14 @@ jQuery(document).ready(function($){
 	        // replace text with selected option
 	        $styledSelect.text($(this).text()).removeClass('active');
 	        $this.val($(this).attr('rel'));
-	        $list.removeClass('show');
+	        $list.removeClass('is-open');
 	        console.log($this.val());
 	    });
 	  	
 		// hide dropdown when you click out
 	    $(document).click(function() {
 	        $styledSelect.removeClass('active');
-	        $list.removeClass('show');
+	        $list.removeClass('is-open');
 	    });
 
 		// don't close the select if a user focuses on the search
@@ -120,7 +123,7 @@ jQuery(document).ready(function($){
     	if ($this.hasClass('search')) {
 
 			var $searchFilter = $('<div />', {
-		        'class': 'search-filter'
+		        'class': 'select-options__search-filter'
 	    	}).appendTo($list);
 
 			var $searchFilterInput = $('<input />', {
@@ -130,16 +133,20 @@ jQuery(document).ready(function($){
 	    	}).appendTo($searchFilter);
 
 			// render no results
-	    	$list.append('<div rel="hide" class="no-results">No results found</div>');
+	    	$list.append('<div rel="hide" class="select-options__no-results">No results found</div>');
 
 	    	// keyup search functionality
-	    	$searchFilterInput.on('keyup', function(){
-	    		var options = $list.find('.select-options-wrap').children('li:not([rel="hide"])'),
+	    	$searchFilterInput.on('keyup', function(e){
+
+	    		e.preventDefault();
+
+	    		var options = $list.find('.select-options__wrap').children('li:not([rel="hide"])'),
 	    			filter = $(this).val().toUpperCase();
+
 				for (i = 0; i < options.length; i++) {
 
 					// count results
-					var resultsCount = $list.find('.select-options-wrap').children('li:not([rel="hide"]):visible').length;
+					var resultsCount = $list.find('.select-options__wrap').children('li:not([rel="hide"]):visible').length;
 
 					// check if any matching results
 					if (options[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -150,33 +157,35 @@ jQuery(document).ready(function($){
 
 					// display no results
 					if (resultsCount == 0) {
-						$list.find('.no-results').show();
+						$list.find('.select-options__no-results').is-open();
 					} else {
-						$list.find('.no-results').hide();
+						$list.find('.select-options__no-results').hide();
 					}
 				}
+
 			});
 	    }
 
 	    var $optionsWrap = $('<div />', {
-	        'class': 'select-options-wrap'
+	        'class': 'select-options__wrap'
 		}).appendTo($list);
 	  
 	    for (var i = 0; i < numberOfOptions; i++) {
 	        $('<li />', {
+	        	class: 'select-options__item',
 	            text: $this.children('option').eq(i).text(),
 	            rel: $this.children('option').eq(i).val()
 	        }).appendTo($optionsWrap);
 	    }
 	  
-	    var $listItems = $list.children('.select-options-wrap').children('li');
+	    var $listItems = $list.children('.select-options__wrap').children('li');
 	  
 	    $styledSelect.click(function(event) {
 	        event.stopPropagation();
 	        $('div.select-styled.active').not(this).each(function(){
-	            $(this).removeClass('active').next('ul.select-options').toggleClass('show');
+	            $(this).removeClass('active').next('ul.select-options').toggleClass('is-open');
 	        });
-	        $(this).toggleClass('active').next('ul.select-options').toggleClass('show');
+	        $(this).toggleClass('active').next('ul.select-options').toggleClass('is-open');
 	    });
 
 	    $listItems.click(function(event) {
@@ -204,18 +213,18 @@ jQuery(document).ready(function($){
 	    $styledSelect.on('click', '.option button', function(event){
 	    	event.stopPropagation();
 	    	var rel = $(this).parent().attr('data-rel');
-	    	$listItems.next('li[rel="' + rel + '"]').show();
+	    	$listItems.next('li[rel="' + rel + '"]').is-open();
 	    	$this.find('option[value="' + rel + '"]').attr('selected', false);
 			$(this).parent().remove();
 			if (!$styledSelect.find('.option').length) {
-	    		$styledSelect.find('.label').show();
+	    		$styledSelect.find('.label').is-open();
 	    	}
 		});
 	  	
 		// hide dropdown when you click out
 	    $(document).click(function() {
 	        $styledSelect.removeClass('active');
-	        $list.removeClass('show');
+	        $list.removeClass('is-open');
 	    });
 
 		// don't close the select if a user focuses on the search
