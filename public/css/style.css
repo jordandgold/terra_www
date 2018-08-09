@@ -2820,17 +2820,22 @@ small {
       color: #1f1f28;
       text-decoration: underline; }
 
-.accordion {
+.ter-accordion {
   border: 1px solid #aeaeb6;
   margin-bottom: 24px;
   border-radius: 0.125rem;
   transition: background 225ms ease-in-out; }
-  .accordion__heading {
+  .ter-accordion__heading {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
     padding: 16px 24px;
     position: relative;
     display: block;
-    text-decoration: none; }
-    .accordion__heading:after {
+    text-decoration: none;
+    width: 100%;
+    text-align: left; }
+    .ter-accordion__heading:after {
       -webkit-font-smoothing: antialiased;
       display: inline-block;
       font-style: normal;
@@ -2849,32 +2854,32 @@ small {
       transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
       content: "\f053";
       color: #aeaeb6; }
-    .accordion__heading:hover {
+    .ter-accordion__heading:hover {
       cursor: pointer;
       text-decoration: none; }
-  .accordion__content {
+  .ter-accordion__content {
     display: none;
     padding: 16px 24px; }
-  .accordion.expanded {
+  .ter-accordion.is-expanded {
     background: #f3f3f7; }
-    .accordion.expanded .accordion__heading {
+    .ter-accordion.is-expanded .ter-accordion__heading {
       text-decoration: none; }
-      .accordion.expanded .accordion__heading:after {
+      .ter-accordion.is-expanded .ter-accordion__heading:after {
         -webkit-transform: rotate(-90deg);
                 transform: rotate(-90deg); }
-  .accordion.show .accordion__content {
+  .ter-accordion.is-shown .ter-accordion__content {
     display: block; }
 
-.accordion-group {
+.ter-accordion-group {
   margin-bottom: 24px; }
-  .accordion-group .accordion {
+  .ter-accordion-group .ter-accordion {
     margin-bottom: 0;
     border-bottom: 0;
     border-radius: 0px; }
-    .accordion-group .accordion:first-child {
+    .ter-accordion-group .ter-accordion:first-child {
       border-top-left-radius: 0.125rem;
       border-top-right-radius: 0.125rem; }
-    .accordion-group .accordion:last-child {
+    .ter-accordion-group .ter-accordion:last-child {
       border-bottom: 1px solid #aeaeb6;
       border-bottom-left-radius: 0.125rem;
       border-bottom-right-radius: 0.125rem; }

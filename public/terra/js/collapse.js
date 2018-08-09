@@ -1,17 +1,17 @@
 jQuery(document).ready(function($){
 
-    $('.accordion.expanded').children('.accordion__content').show();
+    $('.ter-accordion.is-expanded').children('.ter-accordion__content').show();
 
-    $('.accordion__heading').click(function () {
+    $('[data-toggle="collapse"]').click(function () {
     	// Collapse the sibling accordions if this has a group
 		var maybeGroup = $(this).parent().parent();
-    	if(maybeGroup && maybeGroup.hasClass('accordion-group')) {
-    		$(this).parent().siblings('.accordion').removeClass('expanded');
-    		$(this).parent().siblings('.accordion').find('.accordion__content').slideUp(200);
+    	if(maybeGroup && maybeGroup.hasClass('ter-accordion-group')) {
+    		$(this).parent().siblings('.ter-accordion').removeClass('is-expanded');
+    		$(this).parent().siblings('.ter-accordion').find('.ter-accordion__content').slideUp(200);
     	}
     	// Adjust the one you clicked
-    	$(this).parent().toggleClass('expanded');
-    	$(this).next('.accordion__content').slideToggle(200);
+    	$(this).parent().toggleClass('is-expanded');
+    	$(this).next('.ter-accordion__content').slideToggle(200);
     });
 
 });

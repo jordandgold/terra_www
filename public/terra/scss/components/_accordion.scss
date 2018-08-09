@@ -1,14 +1,17 @@
 
-.accordion {
+.ter-accordion {
 	border: 1px solid $accordion-border-color;
 	margin-bottom: spacing(5);
 	border-radius: $accordion-border-radius;
 	transition: background 225ms ease-in-out;
 	&__heading {
+		@include button-reset();
 		padding: spacing(4) spacing(5);
 		position: relative;
 		display: block;
 		text-decoration: none;
+		width: 100%;
+		text-align: left;
 		&:after {
 			@include icon-base();
 			position: absolute;
@@ -28,25 +31,25 @@
 		display: none;
 		padding: spacing(4) spacing(5);
 	}
-	&.expanded {
+	&.is-expanded {
 		background: $accordion-expanded-bg;
-		.accordion__heading {
+		.ter-accordion__heading {
 			text-decoration: none;
 			&:after {
 				transform: rotate(-90deg);
 			}
 		}
 	}
-	&.show {
-		.accordion__content {
+	&.is-shown {
+		.ter-accordion__content {
 			display: block;
 		}
 	}
 }
 
-.accordion-group {
+.ter-accordion-group {
 	margin-bottom: spacing(5);
-	.accordion {
+	.ter-accordion {
 		margin-bottom: 0;
 		border-bottom: 0;
 		border-radius: 0px;
