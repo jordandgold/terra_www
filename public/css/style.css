@@ -3126,17 +3126,13 @@ small {
     text-decoration: none;
     color: #ffffff; }
 
-.breadcrumb {
+.breadcrumb__list {
   border-radius: 0.125rem;
   padding: 0px;
   margin-top: 0;
   margin-bottom: 16px;
   list-style: none; }
-  .breadcrumb li {
-    display: inline-block; }
-    .breadcrumb li a {
-      text-decoration: none; }
-  .breadcrumb > li + li::before {
+  .breadcrumb__list > li + li::before {
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
@@ -3149,6 +3145,11 @@ small {
     color: #cccccc;
     padding: 0px 8px;
     font-size: 75%; }
+
+.breadcrumb__list-item {
+  display: inline-block; }
+  .breadcrumb__list-item a {
+    text-decoration: none; }
 
 /* BUTTONS */
 .button,
