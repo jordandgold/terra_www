@@ -46,14 +46,14 @@
 @mixin alert-variant($color, $bg: transparent) {
     background-color: transparentize($color, .9);
     border: .05rem solid darken($color, 10%);
-    .alert__icon {
+    .ter-alert__icon {
         > i {
             &:before {
                 color: darken($color, 20%);
             }
         }
     }
-    .alert__close {
+    .ter-alert__close {
         i {
             color: darken($color, 15%);
         }
@@ -72,12 +72,12 @@
     }
 }
 
-.alert {
+.ter-alert {
     @include alert-base();
 }
 
 @each $color, $value in $emotive-colors {
-  .alert--#{$color} {
+  .ter-alert--#{$color} {
     @include alert-variant($value);
   }
 }
