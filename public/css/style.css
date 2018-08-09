@@ -3493,15 +3493,15 @@ a.ter-button--icon {
       padding: 0;
       font-size: 75%; }
 
-.card {
+.ter-card {
   box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
   z-index: 100;
   background: #ffffff;
   position: relative;
   border-radius: 0; }
-  .card__body {
+  .ter-card__body {
     padding: 24px; }
-  .card__title {
+  .ter-card__title {
     font-size: 20px;
     line-height: 25px;
     font-weight: 600;
@@ -3510,19 +3510,19 @@ a.ter-button--icon {
     padding-bottom: 16px;
     margin: 0;
     margin-bottom: 8px; }
-  .card__footer {
+  .ter-card__footer {
     padding: 0px 24px 16px 24px; }
-  .card__image {
+  .ter-card__image {
     overflow: hidden; }
-    .card__image--top {
+    .ter-card__image--top {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       max-width: 100%; }
-    .card__image--left {
+    .ter-card__image--left {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       max-width: 100%; }
-    .card__image > img {
+    .ter-card__image > img {
       width: 100%;
       height: auto; }
 
