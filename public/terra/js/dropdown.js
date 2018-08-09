@@ -1,4 +1,5 @@
 /**
+ * Terra Design System
  * dropdown.js
  */
 

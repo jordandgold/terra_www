@@ -1,4 +1,11 @@
-jQuery(document).ready(function($){
+/**
+ * Terra Design System
+ * select.js
+ */
+
+(function($, window, document){
+  
+  'use strict';
 
 	$('select:not([multiple])').each(function(){
 	    var $this = $(this), numberOfOptions = $(this).children('option').length;
@@ -56,7 +63,7 @@ jQuery(document).ready(function($){
 						$list.find('.select-options__no-results').hide();
 					}
 				}
-				
+
 			});
 	    }
 
@@ -234,4 +241,4 @@ jQuery(document).ready(function($){
 
 	});
 
-});
+})(jQuery, window, document);

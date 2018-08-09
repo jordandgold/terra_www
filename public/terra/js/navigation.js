@@ -95,7 +95,7 @@ jQuery(document).ready(function($){
 	/* This is for the Mobile Navbar Menu */
     $('.navbar__toggle').click(function () {
     	$(this).toggleClass("is-active");
-    	$(this).parent().children('.navbar__nav--collapse').slideToggle().toggleClass('expanded');
+    	$(this).parent().children('.navbar__nav').slideToggle().toggleClass('is-expanded');
     });
 
 	// $(".navbar__toggle").click(function(){
