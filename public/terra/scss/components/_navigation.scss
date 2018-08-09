@@ -131,7 +131,7 @@ body.has-nav {
 				display: table-cell;
 				vertical-align: middle;
 				height: 100%;
-				> a:not(.button) {
+				> a:not(.ter-button) {
 					@include type-setting(-1,'normal');
 					color: $navbar-link-color;
 					margin: 0;
@@ -190,7 +190,7 @@ body.has-nav {
 							background: transparent;
 							padding: 0 0 0 spacing(4);
 							li {
-								a:not(.button) {
+								a:not(.ter-button) {
 									color: $navbar-link-color;
 									margin: 0;
 									line-height: 2.25rem;
@@ -262,7 +262,7 @@ body.has-nav {
 	        			padding: 0 spacing(4);
 	        			vertical-align: middle;
 				    }
-				    a:not(.button) {
+				    a:not(.ter-button) {
 				    	@include for-size(tablet-landscape-down) {
 				    		@include type-setting(0, 'normal');
 				    	}

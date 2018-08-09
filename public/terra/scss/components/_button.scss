@@ -88,36 +88,32 @@
     }
 }
 
-.button,
-a.button {
+.ter-button,
+a.ter-button {
     @include button-base();
 }
 
 @each $color, $value in $emotive-colors {
-  .button--#{$color},
-  a.button--#{$color} {
+  .ter-button--#{$color},
+  a.ter-button--#{$color} {
     @include button-variant($value);
   }
 }
 
-.button--outline,
-a.button--outline {
+.ter-button--outline,
+a.ter-button--outline {
     @include button-variant(
         transparent,
         $button-outline-text-color,
         $button-outline-border-color,
     );
-}
-
-.inverse-color {
-    .button--outline,
-    a.button--outline {
+    .inverse-color & {
         color: type-color('inverse');
     }
 }
 
-.button--ghost,
-a.button--ghost {
+.ter-button--ghost,
+a.ter-button--ghost {
     @include button-variant(
         transparent,
         $link-color,
@@ -133,26 +129,26 @@ a.button--ghost {
     }
 }
 
-.button--large,
-a.button--large {
+.ter-button--large,
+a.ter-button--large {
     @include type-setting(0,0);
 }
 
-.button--small,
-a.button--small {
+.ter-button--small,
+a.ter-button--small {
     @include type-setting(-2,0);
     padding: spacing(1) spacing(4);
 }
 
-.button--block,
-a.button--block {
+.ter-button--block,
+a.ter-button--block {
     padding: spacing(3) 0;
     display: block;
     width: 100%;
 }
 
-.button--icon,
-a.button--icon {
+.ter-button--icon,
+a.ter-button--icon {
     @include button-variant(
         transparent,
         $button-icon-color
@@ -180,7 +176,7 @@ a.button--icon {
     }
 }
 
-.split-button {
+.ter-split-button {
     position: relative;
     button {
         display: inline-block;
