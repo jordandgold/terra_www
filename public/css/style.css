@@ -4837,13 +4837,13 @@ body.has-nav {
       height: 1px;
       background-color: #262533; }
 
-a[data-tooltip] {
+[data-tooltip] {
   position: relative; }
-  a[data-tooltip]:before, a[data-tooltip]:after {
+  [data-tooltip]:before, [data-tooltip]:after {
     position: absolute;
     visibility: hidden;
     opacity: 0; }
-  a[data-tooltip]:before {
+  [data-tooltip]:before {
     box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
     z-index: 100;
     font-size: 16px;
@@ -4854,19 +4854,19 @@ a[data-tooltip] {
     padding: 16px;
     white-space: nowrap;
     text-decoration: none; }
-  a[data-tooltip]:after {
+  [data-tooltip]:after {
     width: 0;
     height: 0;
     border: 10px solid transparent;
     content: ''; }
-  a[data-tooltip]:hover:before, a[data-tooltip]:hover:after {
+  [data-tooltip]:hover:before, [data-tooltip]:hover:after {
     visibility: visible;
     opacity: 1; }
-  a[data-tooltip][data-direction="left"]:before {
+  [data-tooltip][data-direction="left"]:before {
     top: -25%;
     right: 100%;
     margin-right: 10px; }
-  a[data-tooltip][data-direction="left"]:after {
+  [data-tooltip][data-direction="left"]:after {
     z-index: 10;
     border-left-color: #262533;
     border-right: none;
@@ -4874,11 +4874,11 @@ a[data-tooltip] {
     right: 100%;
     margin-top: -10px;
     margin-right: 2px; }
-  a[data-tooltip][data-direction="right"]:before {
+  [data-tooltip][data-direction="right"]:before {
     top: -25%;
     left: 100%;
     margin-left: 10px; }
-  a[data-tooltip][data-direction="right"]:after {
+  [data-tooltip][data-direction="right"]:after {
     z-index: 10;
     border-right-color: #262533;
     border-left: none;
@@ -4886,22 +4886,22 @@ a[data-tooltip] {
     left: 100%;
     margin-top: -10px;
     margin-left: 2px; }
-  a[data-tooltip][data-direction="top"]:before {
+  [data-tooltip][data-direction="top"]:before {
     bottom: 100%;
     left: 0;
     margin-bottom: 10px; }
-  a[data-tooltip][data-direction="top"]:after {
+  [data-tooltip][data-direction="top"]:after {
     z-index: 10;
     border-top-color: #262533;
     border-bottom: none;
     bottom: 100%;
     left: 10px;
     margin-bottom: 2px; }
-  a[data-tooltip][data-direction="bottom"]:before {
+  [data-tooltip][data-direction="bottom"]:before {
     top: 100%;
     left: 0;
     margin-top: 10px; }
-  a[data-tooltip][data-direction="bottom"]:after {
+  [data-tooltip][data-direction="bottom"]:after {
     z-index: 10;
     border-bottom-color: #262533;
     border-top: none;
