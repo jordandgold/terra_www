@@ -2,13 +2,18 @@
 // nav tabs
 
 .nav-tabs {
-	@include list-unstyled();
-	@include list-inline();
-	display: flex;
-	justify-content: space-between;
-  	flex-wrap: wrap;
-	margin-bottom: spacing(5);
-	li {
+	&__list {
+		@include list-unstyled();
+		@include list-inline();
+		display: flex;
+		justify-content: space-between;
+	  	flex-wrap: wrap;
+		margin-bottom: spacing(5);
+		> li {
+			margin-right: 0;
+		}
+	}
+	&__list-item {
 		flex-grow: 1;
 		padding: 0;
 		margin: 0;
@@ -26,7 +31,7 @@
 				color: $nav-tabs-link-hover;
 			}
 		}
-		&.active {
+		&.is-active {
 			border-left: 1px solid $nav-tabs-border-color;
 	    	border-top: 1px solid $nav-tabs-border-color;
 	    	border-right: 1px solid $nav-tabs-border-color;
@@ -35,7 +40,7 @@
 				color: $nav-tabs-link-hover;
 			}
 		}
-		&.active + li > a {
+		&.is-active + li > a {
 			border-left: 0px;
 		}
 		&:last-child {
@@ -50,10 +55,15 @@
 // compact tabs
 
 .compact-tabs {
-	@include list-unstyled();
-	@include list-inline();
-	margin-bottom: spacing(5);
-	li {
+	&__list {
+		@include list-unstyled();
+		@include list-inline();
+		margin-bottom: spacing(5);
+		> li {
+			margin-right: 0;
+		}
+	}
+	&__list-item {
 		flex-grow: 1;
 		padding: 0;
 		margin: 0;
@@ -68,7 +78,7 @@
 				color: $compact-tabs-link-hover;
 			}
 		}
-		&.active {
+		&.is-active {
 			a {
 				color: $compact-tabs-link-hover;
 				position: relative;
