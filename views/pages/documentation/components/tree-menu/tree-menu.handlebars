@@ -3,21 +3,19 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
     <div class="markup-panel">
         <div class="markup-panel__example">
-<nav role="navigation">
-    <ul class="tree-menu">
-        <li><a href="#">Expanded Parent</a></li>
-        <li class="expandable expanded">
+<nav class="tree-menu" role="navigation">
+    <ul class="tree-menu__list">
+        <li class="tree-menu__list-item"><a href="#">Expanded Parent</a></li>
+        <li class="tree-menu__list-item is-expandable is-expanded">
             <a data-href="#">Active Parent Item</a>
-            <i class="fas fa-chevron-right"></i>
-            <ul class="expandable-menu">
-                <li class="active"><a href="/documentation/style/accessibility">Active Item</a></li>
+            <ul class="tree-menu__sub-menu">
+                <li class="is-active"><a href="/documentation/style/accessibility">Active Item</a></li>
                 <li><a href="/documentation/style/color-palette">Child Item</a></li>
             </ul>
         </li>
-        <li class="expandable">
+        <li class="tree-menu__list-item is-expandable">
             <a data-href="#">Parent Item</a>
-            <i class="fas fa-chevron-right"></i>
-            <ul class="expandable-menu">
+            <ul class="tree-menu__sub-menu">
                 <li><a href="/documentation/style/accessibility">Child Item</a></li>
                 <li><a href="/documentation/style/color-palette">Child Item</a></li>
             </ul>

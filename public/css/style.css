@@ -4260,7 +4260,7 @@ body.has-nav {
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
-  position: fixed;
+  position: relative;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -4270,6 +4270,8 @@ body.has-nav {
   border-bottom: 0px solid #e2e2e7;
   padding-left: var(--outer-margin);
   padding-right: var(--outer-margin); }
+  .navbar.is-fixed {
+    position: fixed; }
   .navbar__toggle {
     height: 64px;
     float: right;
@@ -4297,17 +4299,21 @@ body.has-nav {
     .navbar__toggle:hover {
       cursor: pointer; }
   .navbar__brand {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
     height: 64px;
-    display: inline-block; }
-    .navbar__brand > a {
-      font-size: 20px;
-      line-height: 30px;
-      font-weight: 400;
-      text-decoration: none;
-      line-height: 64px; }
-      .navbar__brand > a > img {
-        height: 32px;
-        padding: 16px 0; }
+    display: inline-block;
+    line-height: 64px;
+    text-decoration: none; }
+    .navbar__brand[href] {
+      color: #aeaeb6; }
+      .navbar__brand[href]:hover {
+        color: #6a6976;
+        text-decoration: none; }
+    .navbar__brand > img {
+      height: 32px;
+      padding: 16px 0; }
   .navbar [class^='container']:after {
     content: '';
     display: block;
@@ -4333,8 +4339,7 @@ body.has-nav {
     display: block;
     width: 100%;
     height: auto;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 0;
     margin: 0; }
     @media (min-width: 900px) {
       .navbar__menu {
@@ -4962,7 +4967,10 @@ body.has-nav {
         -webkit-transform: translateY(-3px);
                 transform: translateY(-3px); }
 
-.navbar__brand {
+.navbar--terra {
+  z-index: 901; }
+
+.navbar__brand.terra {
   height: 48px;
   width: 43.2px;
   display: inline-block; }
@@ -5135,16 +5143,6 @@ code {
   .side-nav__section {
     padding-top: 32px;
     padding-bottom: 32px; }
-
-@media (min-width: 900px) {
-  .navbar__left {
-    width: 17.5rem; } }
-
-.navbar__left .navbar__branding {
-  padding-left: 32px; }
-  @media (min-width: 900px) {
-    .navbar__left .navbar__branding {
-      padding: 0 32px; } }
 
 @media (min-width: 900px) {
   .navbar__right {

@@ -1,8 +1,6 @@
 jQuery(document).ready(function($){
+
 	var mainHeader = $('nav.navbar:not(.stay-put)'),
-		secondaryNavigation = $('.cd-secondary-nav'),
-		//this applies only if secondary nav is below intro section
-		belowNavHeroContent = $('.sub-nav-hero'),
 		headerHeight = mainHeader.height();
 	
 	//set scrolling variables
@@ -12,9 +10,9 @@ jQuery(document).ready(function($){
 		scrollDelta = 10,
 		scrollOffset = 150;
 
-	mainHeader.on('click', '.nav-trigger', function(event){
+	mainHeader.on('click', '.nav-trigger', function(e){
 		// open primary navigation on mobile
-		event.preventDefault();
+		e.preventDefault();
 		mainHeader.toggleClass('nav-open');
 	});
 

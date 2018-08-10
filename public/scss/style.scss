@@ -24,7 +24,11 @@
     transform-origin: $transforms;
 }
 
-.navbar__brand {
+.navbar--terra {
+    z-index: 901;
+}
+
+.navbar__brand.terra {
     $size: height(1);
     height: $size * 2;
     width: $size * 1.8;
@@ -240,19 +244,6 @@ code {
     &__section {
         padding-top: spacing(6);
         padding-bottom: spacing(6);
-    }
-}
-
-.navbar__left {
-    @include for-size(tablet-landscape-up) {
-        width: 17.5rem;
-    }
-    .navbar__branding {
-        padding-left: spacing(6);
-
-        @include for-size(tablet-landscape-up) {
-            padding: 0 spacing(6);
-        }
     }
 }
 
