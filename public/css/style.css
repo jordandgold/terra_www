@@ -4600,7 +4600,7 @@ body.has-nav {
       color: #4d4b62;
       text-decoration: underline; }
 
-.pagination {
+.pagination__list {
   margin: 0;
   padding: 0;
   margin-top: 16px;
@@ -4608,50 +4608,53 @@ body.has-nav {
   display: flex;
   text-align: center;
   justify-content: center !important; }
-  .pagination:after {
+  .pagination__list:after {
     content: '';
     display: block;
     clear: both; }
-  .pagination > li {
+  .pagination__list > li {
     display: list-item;
     list-style: none;
     float: left;
     margin-left: 0;
     margin-right: 12px;
     padding: 0; }
-  .pagination li {
+  .pagination__list > li {
+    margin-right: 0; }
+
+.pagination__list-item {
+  margin: 0;
+  padding: 0; }
+  .pagination__list-item a,
+  .pagination__list-item > span {
+    padding: 8px 12px;
     margin: 0;
-    padding: 0; }
-    .pagination li a,
-    .pagination li > span {
-      padding: 8px 12px;
-      margin: 0;
-      text-decoration: none; }
-      .pagination li a i,
-      .pagination li > span i {
-        font-size: 75%; }
-      .pagination li a:hover,
-      .pagination li > span:hover {
-        border-bottom: 1px solid #b4b4c0; }
-    .pagination li:not(:first-child):not(:last-child) a,
-    .pagination li:not(:first-child):not(:last-child) > span {
-      border-radius: 0px;
-      border-right: 0px; }
-    .pagination li:first-child:not(:only-of-type) a,
-    .pagination li:first-child:not(:only-of-type) > span {
-      border-right: 0;
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px; }
-    .pagination li:last-child:not(:only-of-type) a,
-    .pagination li:last-child:not(:only-of-type) > span {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px; }
-    .pagination li.active a,
-    .pagination li.active span {
-      border-bottom: 1px solid #d0d0d7; }
-      .pagination li.active a:hover,
-      .pagination li.active span:hover {
-        border-bottom: 1px solid #b4b4c0; }
+    text-decoration: none; }
+    .pagination__list-item a i,
+    .pagination__list-item > span i {
+      font-size: 75%; }
+    .pagination__list-item a:hover,
+    .pagination__list-item > span:hover {
+      border-bottom: 1px solid #b4b4c0; }
+  .pagination__list-item:not(:first-child):not(:last-child) a,
+  .pagination__list-item:not(:first-child):not(:last-child) > span {
+    border-radius: 0px;
+    border-right: 0px; }
+  .pagination__list-item:first-child:not(:only-of-type) a,
+  .pagination__list-item:first-child:not(:only-of-type) > span {
+    border-right: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  .pagination__list-item:last-child:not(:only-of-type) a,
+  .pagination__list-item:last-child:not(:only-of-type) > span {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; }
+  .pagination__list-item.is-active a,
+  .pagination__list-item.is-active span {
+    border-bottom: 1px solid #d0d0d7; }
+    .pagination__list-item.is-active a:hover,
+    .pagination__list-item.is-active span:hover {
+      border-bottom: 1px solid #b4b4c0; }
 
 .panel {
   display: block;

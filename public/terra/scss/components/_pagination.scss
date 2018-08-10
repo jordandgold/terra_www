@@ -1,11 +1,16 @@
 .pagination {
-	@include list-inline();
-	margin-top: spacing(4);
-	margin-bottom: spacing(4);
-	display: flex;
-	text-align: center;
-    justify-content: center !important;
-	li {
+	&__list {
+		@include list-inline();
+		margin-top: spacing(4);
+		margin-bottom: spacing(4);
+		display: flex;
+		text-align: center;
+	    justify-content: center !important;
+	    > li {
+	    	margin-right: 0;
+	    }
+	}
+	&__list-item {
 		margin: 0;
 		padding: 0;
 		a,
@@ -47,7 +52,7 @@
 			> span {
 			}
 		}
-		&.active {
+		&.is-active {
 			a,
 			span {
 				border-bottom: 1px solid $pagination-border-color;
