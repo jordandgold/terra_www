@@ -395,18 +395,43 @@ body.has-nav {
 			padding: 0 spacing(4);
 			vertical-align: middle;
 	    }
-	    > a:not(.ter-button) {
+	    a:not(.ter-button) {
 			@include type-setting(-1,'normal');
 			color: $navbar-link-color;
 			margin: 0;
+			padding: spacing(1) 0;
 			text-decoration: none;
 			display: inline-block;
 			&:hover {
 				color: $navbar-link-hover;
 				text-decoration: none;
 			}
-			@include for-size(tablet-portrait-down) {
+			@include for-size(tablet-landscape-down) {
+				@include type-setting(0,'normal');
 				display: block;
+			}
+		}
+		&.ter-dropdown {
+			.ter-dropdown__menu {
+				@include for-size(tablet-landscape-down) {
+					position: unset;
+				    float: unset;
+				    display: none;
+				    visibility: visible;
+				    opacity: 1;
+				    border: 0px;
+				    background: transparent;
+				    border-radius: 0px;
+				    padding: 0;
+				    margin: 0;
+				}
+			}
+			&.is-open {
+				.ter-dropdown__menu {
+					@include for-size(tablet-landscape-down) {
+					    display: block;
+					}
+				}
 			}
 		}
 	}
