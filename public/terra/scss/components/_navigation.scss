@@ -416,18 +416,13 @@ body.has-nav {
 // tree menu
 
 .tree-menu {
-	margin: 0;
-	padding: 0 0 0 spacing(3);
-	list-style: none;
-	li {
+	&__list {
+		margin: 0;
+		padding: 0 0 0 spacing(3);
+		list-style: none;
+	}
+	&__list-item {
 		@include type-setting(-1,'normal');
-		i {
-			position: absolute;
-			top: .7em;
-			left: -.25em;
-			transition: transform 200ms ease-in-out;
-			font-size: 75%;
-		}
 		a,
 		a:visited,
 		a:active,
@@ -439,13 +434,13 @@ body.has-nav {
 				cursor: pointer;
 			}
 		}
-		&.active {
+		&.is-active {
 			> a {
 				color: $tree-menu-link-hover;
 			}
 		}
 	}
-	> li {
+	&__list-item {
 		position: relative;
 		padding: 0 0 0 $tree-menu-left-padding;
 		> a {
@@ -456,7 +451,7 @@ body.has-nav {
 		> span {
 			padding: spacing(1) 0;
 		}
-		&.expandable {
+		&.is-expandable {
 			&:before {
 				@include icon-base();
 				content: "\f054";
@@ -467,30 +462,45 @@ body.has-nav {
 				transition: transform 200ms ease-in-out;
 				font-size: 75%;
 			}
-			> .expandable-menu {
-				list-style: none;
-				margin-left: spacing(3);
-				padding: 0;
-				display: none;
-				> li {
-					padding: 0;
-					> a {
-						padding: spacing(1) 0;
-						display: block;
-					}
-				}
-			}
-			&.expanded {
+			&.is-expanded {
 				> a {
 					color: $tree-menu-link-hover;
 				}
 				&:before {
 					transform: rotate(90deg);
 				}
-				> .expandable-menu {
-					display: block;
+			}
+		}
+	}
+	&__sub-menu {
+		list-style: none;
+		margin-left: spacing(3);
+		padding: 0;
+		display: none;
+		> li {
+			@include type-setting(-1,'normal');
+			padding: 0;
+			a,
+			a:visited,
+			a:active,
+			a:focus {
+				color: $tree-menu-link-color;
+				text-decoration: none;
+				padding: spacing(1) 0;
+				display: block;
+				&:hover {
+					color: $tree-menu-link-hover;
+					cursor: pointer;
 				}
 			}
+			&.is-active {
+				> a {
+					color: $tree-menu-link-hover;
+				}
+			}
+		}
+		.is-expanded & {
+			display: block;
 		}
 	}
 }

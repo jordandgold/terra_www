@@ -1,8 +1,15 @@
-$(document).ready(function(){
+/**
+ * Terra Design System
+ * treeMenu.js
+ */
 
-    $('.tree-menu li.expandable > a').click(function () {
-    	// $(this).parent().parent().find('li.expanded > ul').slideToggle(200).parent().toggleClass('expanded');
-    	$(this).parent().children('ul').slideToggle(200).parent().toggleClass('expanded');
-    });
-          
-});
+(function($, window, document){
+  
+	'use strict';
+
+    $('.tree-menu__list li.is-expandable > a').click(function () {
+    	$(this).parent().siblings('.is-expanded').find('ul').slideToggle(200).parent().toggleClass('is-expanded');
+    	$(this).next('ul').slideToggle(200).parent().toggleClass('is-expanded');
+    });     
+
+})(jQuery, window, document);

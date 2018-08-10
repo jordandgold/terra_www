@@ -1,36 +1,36 @@
-<li {{#is page.name "Getting Started"}} class="active"{{else}}{{/is}}><a href="/documentation/getting-started">Getting Started</a></li>
-<li class="expandable {{#is page.parent "Style"}} expanded{{else}}{{/is}}">
+<li class="tree-menu__list-item{{#is page.name "Getting Started"}} is-active{{else}}{{/is}}"><a href="/documentation/getting-started">Getting Started</a></li>
+<li class="tree-menu__list-item is-expandable {{#is page.parent "Style"}} is-expanded{{else}}{{/is}}">
 	<a data-href="#">Style</a>
-	<ul class="expandable-menu">
-		<li {{#is page.name "Accessibility"}} class="active"{{else}}{{/is}}><a href="/documentation/style/accessibility">Accessibility</a></li>
-		<li {{#is page.name "Color Palette"}} class="active"{{else}}{{/is}}><a href="/documentation/style/color-palette">Color Palette</a></li>
-		<li {{#is page.name "Depth"}} class="active"{{else}}{{/is}}><a href="/documentation/style/depth">Depth</a></li>
-		<li {{#is page.name "Structure"}} class="active"{{else}}{{/is}}><a href="/documentation/style/structure">Structure</a></li>
-		<li {{#is page.name "Typography"}} class="active"{{else}}{{/is}}><a href="/documentation/style/typography">Typography</a></li>
+	<ul class="tree-menu__sub-menu">
+		<li {{#is page.name "Accessibility"}} class="is-active"{{else}}{{/is}}><a href="/documentation/style/accessibility">Accessibility</a></li>
+		<li {{#is page.name "Color Palette"}} class="is-active"{{else}}{{/is}}><a href="/documentation/style/color-palette">Color Palette</a></li>
+		<li {{#is page.name "Depth"}} class="is-active"{{else}}{{/is}}><a href="/documentation/style/depth">Depth</a></li>
+		<li {{#is page.name "Structure"}} class="is-active"{{else}}{{/is}}><a href="/documentation/style/structure">Structure</a></li>
+		<li {{#is page.name "Typography"}} class="is-active"{{else}}{{/is}}><a href="/documentation/style/typography">Typography</a></li>
 	</ul>
 </li>
-<li class="expandable {{#is page.parent "Utilities"}} expanded{{else}}{{/is}}">
+<li class="tree-menu__list-item is-expandable {{#is page.parent "Utilities"}} is-expanded{{else}}{{/is}}">
 	<a data-href="#">Structure</a>
-	<ul class="expandable-menu">
-		<li {{#is page.name "Flexbox"}} class="active"{{else}}{{/is}}><a href="/documentation/structure/flexbox">Flexbox</a></li>
-		<li {{#is page.name "Grid"}} class="active"{{else}}{{/is}}><a href="/documentation/structure/grid">Grid</a></li>
-		<li {{#is page.name "Spacing"}} class="active"{{else}}{{/is}}><a href="/documentation/structure/spacing">Spacing</a></li>
+	<ul class="tree-menu__sub-menu">
+		<li {{#is page.name "Flexbox"}} class="is-active"{{else}}{{/is}}><a href="/documentation/structure/flexbox">Flexbox</a></li>
+		<li {{#is page.name "Grid"}} class="is-active"{{else}}{{/is}}><a href="/documentation/structure/grid">Grid</a></li>
+		<li {{#is page.name "Spacing"}} class="is-active"{{else}}{{/is}}><a href="/documentation/structure/spacing">Spacing</a></li>
 	</ul>
 </li>
-<li class="expandable {{#is page.parent "Components"}} expanded{{else}}{{/is}}">
+<li class="tree-menu__list-item is-expandable {{#is page.parent "Components"}} is-expanded{{else}}{{/is}}">
 	<a data-href="#">Components</a>
-	<ul class="expandable-menu">
-		<li {{#is page.name "Accordion"}} class="active"{{else}}{{/is}}><a href="/documentation/components/accordion">Accordion</a></li>
-		<li {{#is page.name "Alert"}} class="active"{{else}}{{/is}}><a href="/documentation/components/alert">Alert</a></li>
-		<li {{#is page.name "Breadcrumb"}} class="active"{{else}}{{/is}}><a href="/documentation/components/breadcrumb">Breadcrumb</a></li>
-		<li {{#is page.name "Button"}} class="active"{{else}}{{/is}}><a href="/documentation/components/button">Button</a></li>
-		<li {{#is page.name "Card"}} class="active"{{else}}{{/is}}><a href="/documentation/components/card">Card</a></li>
-		<li {{#is page.name "Dropdown"}} class="active"{{else}}{{/is}}><a href="/documentation/components/dropdown">Dropdown</a></li>
-		<li {{#is page.name "Forms"}} class="active"{{else}}{{/is}}><a href="/documentation/components/forms">Forms</a></li>
-		<li {{#is page.name "Modal"}} class="active"{{else}}{{/is}}><a href="/documentation/components/modal">Modal</a></li>
-		<li {{#is page.name "Notification"}} class="active"{{else}}{{/is}}><a href="/documentation/components/notification">Notification</a></li>
-		<li {{#is page.name "Pagination"}} class="active"{{else}}{{/is}}><a href="/documentation/components/pagination">Pagination</a></li>
-		<li {{#is page.name "Tabs"}} class="active"{{else}}{{/is}}><a href="/documentation/components/tabs">Tabs</a></li>
-		<li {{#is page.name "Tooltips"}} class="active"{{else}}{{/is}}><a href="/documentation/components/tooltips">Tooltips</a></li>
+	<ul class="tree-menu__sub-menu">
+		<li {{#is page.name "Accordion"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/accordion">Accordion</a></li>
+		<li {{#is page.name "Alert"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/alert">Alert</a></li>
+		<li {{#is page.name "Breadcrumb"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/breadcrumb">Breadcrumb</a></li>
+		<li {{#is page.name "Button"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/button">Button</a></li>
+		<li {{#is page.name "Card"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/card">Card</a></li>
+		<li {{#is page.name "Dropdown"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/dropdown">Dropdown</a></li>
+		<li {{#is page.name "Forms"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/forms">Forms</a></li>
+		<li {{#is page.name "Modal"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/modal">Modal</a></li>
+		<li {{#is page.name "Notification"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/notification">Notification</a></li>
+		<li {{#is page.name "Pagination"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/pagination">Pagination</a></li>
+		<li {{#is page.name "Tabs"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/tabs">Tabs</a></li>
+		<li {{#is page.name "Tooltips"}} class="is-active"{{else}}{{/is}}><a href="/documentation/components/tooltips">Tooltips</a></li>
 	</ul>
 </li>
