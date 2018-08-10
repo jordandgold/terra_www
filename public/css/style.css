@@ -4459,8 +4459,6 @@ body.has-nav {
         cursor: pointer; }
     .tree-menu__sub-menu > li.is-active > a {
       color: #262533; }
-  .is-expanded .tree-menu__sub-menu {
-    display: block; }
 
 /*
 
