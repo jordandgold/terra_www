@@ -4462,7 +4462,7 @@ body.has-nav {
   Notifications
 
 */
-.notification {
+.ter-notification {
   font-size: 20px;
   line-height: 30px;
   box-shadow: 0px 16px 28px 0px rgba(54, 53, 69, 0.05), 0px 16px 40px 0px rgba(54, 53, 69, 0.1);
@@ -4472,15 +4472,7 @@ body.has-nav {
   margin-bottom: 24px;
   position: relative;
   height: 100%; }
-  .notification__icon {
-    margin-right: 16px; }
-    .notification__icon > i {
-      width: auto;
-      height: 100%;
-      display: inline-block; }
-      .notification__icon > i:before {
-        opacity: 0.6; }
-  .notification__close {
+  .ter-notification__close {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -4489,136 +4481,122 @@ body.has-nav {
     margin: 0;
     background: transparent;
     border: 0; }
-    .notification__close i {
+    .ter-notification__close i {
       padding: 0;
       margin: 0; }
-    .notification__close:hover {
+    .ter-notification__close:hover {
       opacity: 0.6;
       cursor: pointer; }
 
-.notification--primary {
+.ter-notification--primary {
   background-color: #2b6fdb;
   border: 0.05rem solid #1f58b4;
   color: #ffffff; }
-  .notification--primary .notification__icon > i:before {
-    color: #174389; }
-  .notification--primary .notification__close i {
+  .ter-notification--primary [class$="close"] i {
     color: neutral-color("white"); }
-  .notification--primary hr {
+  .ter-notification--primary hr {
     opacity: 0.4;
     background-color: #1f58b4; }
-  .notification--primary a {
+  .ter-notification--primary a {
     color: #82aaea;
     text-decoration: underline; }
-    .notification--primary a:hover {
+    .ter-notification--primary a:hover {
       color: #578de2;
       text-decoration: underline; }
 
-.notification--secondary {
+.ter-notification--secondary {
   background-color: #d16100;
   border: 0.05rem solid #9e4900;
   color: #ffffff; }
-  .notification--secondary .notification__icon > i:before {
-    color: #6b3200; }
-  .notification--secondary .notification__close i {
+  .ter-notification--secondary [class$="close"] i {
     color: neutral-color("white"); }
-  .notification--secondary hr {
+  .ter-notification--secondary hr {
     opacity: 0.4;
     background-color: #9e4900; }
-  .notification--secondary a {
+  .ter-notification--secondary a {
     color: #ff9438;
     text-decoration: underline; }
-    .notification--secondary a:hover {
+    .ter-notification--secondary a:hover {
       color: #ff7905;
       text-decoration: underline; }
 
-.notification--danger {
+.ter-notification--danger {
   background-color: #ce2740;
   border: 0.05rem solid #a31f33;
   color: #ffffff; }
-  .notification--danger .notification__icon > i:before {
-    color: #781725; }
-  .notification--danger .notification__close i {
+  .ter-notification--danger [class$="close"] i {
     color: neutral-color("white"); }
-  .notification--danger hr {
+  .ter-notification--danger hr {
     opacity: 0.4;
     background-color: #a31f33; }
-  .notification--danger a {
+  .ter-notification--danger a {
     color: #e57687;
     text-decoration: underline; }
-    .notification--danger a:hover {
+    .ter-notification--danger a:hover {
       color: #dd4b61;
       text-decoration: underline; }
 
-.notification--success {
+.ter-notification--success {
   background-color: #1cb260;
   border: 0.05rem solid #158648;
   color: #ffffff; }
-  .notification--success .notification__icon > i:before {
-    color: #0e5a30; }
-  .notification--success .notification__close i {
+  .ter-notification--success [class$="close"] i {
     color: neutral-color("white"); }
-  .notification--success hr {
+  .ter-notification--success hr {
     opacity: 0.4;
     background-color: #158648; }
-  .notification--success a {
+  .ter-notification--success a {
     color: #50e493;
     text-decoration: underline; }
-    .notification--success a:hover {
+    .ter-notification--success a:hover {
       color: #24dd78;
       text-decoration: underline; }
 
-.notification--warning {
+.ter-notification--warning {
   background-color: #FFBE00;
   border: 0.05rem solid #cc9800;
   color: #262533; }
-  .notification--warning .notification__icon > i:before {
-    color: #997200; }
-  .notification--warning .notification__close i {
+  .ter-notification--warning [class$="close"] i {
     color: neutral-color("white"); }
-  .notification--warning hr {
+  .ter-notification--warning hr {
     opacity: 0.4;
     background-color: #cc9800; }
-  .notification--warning a {
+  .ter-notification--warning a {
     color: #ffd866;
     text-decoration: underline; }
-    .notification--warning a:hover {
+    .ter-notification--warning a:hover {
       color: #ffcb33;
       text-decoration: underline; }
 
-.notification--light {
+.ter-notification--light {
   background-color: #f3f3f7;
   border: 0.05rem solid #d4d4e3;
   color: #262533; }
-  .notification--light .notification__icon > i:before {
-    color: #b6b6ce; }
-  .notification--light .notification__close i {
+  .ter-notification--light [class$="close"] i {
     color: neutral-color("white"); }
-  .notification--light hr {
+  .ter-notification--light hr {
     opacity: 0.4;
     background-color: #d4d4e3; }
-  .notification--light a {
+  .ter-notification--light a {
     color: white;
     text-decoration: underline; }
-    .notification--light a:hover {
+    .ter-notification--light a:hover {
       color: white;
       text-decoration: underline; }
 
-.notification--dark {
+.ter-notification--dark {
   background-color: #363545;
   border: 0.05rem solid #1f1f28;
   color: #ffffff; }
-  .notification--dark .notification__icon > i:before {
-    color: #09090b; }
-  .notification--dark .notification__close i {
+  .ter-notification--dark [class$="close"] i {
     color: neutral-color("white"); }
-  .notification--dark hr {
+  .ter-notification--dark hr {
     opacity: 0.4;
     background-color: #1f1f28; }
-  .notification--dark a {
+  .ter-notification--dark a {
     color: #63617f;
     text-decoration: underline; }
-    .notification--dark a:hover {
+    .ter-notification--dark a:hover {
       color: #4d4b62;
       text-decoration: underline; }
 

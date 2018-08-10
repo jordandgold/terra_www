@@ -12,17 +12,6 @@
     margin-bottom: spacing(5);
     position: relative;
     height: 100%;
-    &__icon {
-        margin-right: spacing(4);
-        > i {
-            width: auto;
-            height: 100%;
-            display: inline-block;
-            &:before {
-                opacity: 0.6;
-            }
-        }
-    }
     &__close {
         position: absolute;
         top: 1rem;
@@ -47,14 +36,7 @@
     background-color: $color;
     border: .05rem solid darken($color, 10%);
     color: yiq-contrast-color($color);
-    .notification__icon {
-        > i {
-            &:before {
-                color: darken($color, 20%);
-            }
-        }
-    }
-    .notification__close {
+    [class$="close"] {
         i {
             color: neutral-color('white');
         }
@@ -73,12 +55,12 @@
     }
 }
 
-.notification {
+.ter-notification {
     @include notification-base();
 }
 
 @each $color, $value in $emotive-colors {
-  .notification--#{$color} {
+  .ter-notification--#{$color} {
     @include notification-variant($value);
   }
 }
