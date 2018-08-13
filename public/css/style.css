@@ -4361,20 +4361,19 @@ body.has-nav {
         width: initial;
         padding: 0 16px;
         vertical-align: middle; } }
-    .navbar__menu-item a:not(.ter-button) {
+    .navbar__menu-item > a:not(.ter-button) {
       font-size: 16px;
       line-height: 24px;
       font-weight: 400;
       color: #aeaeb6;
       margin: 0;
       padding: 4px 0;
-      text-decoration: none;
-      display: inline-block; }
-      .navbar__menu-item a:not(.ter-button):hover {
+      text-decoration: none; }
+      .navbar__menu-item > a:not(.ter-button):hover {
         color: #6a6976;
         text-decoration: none; }
       @media (max-width: 900px) {
-        .navbar__menu-item a:not(.ter-button) {
+        .navbar__menu-item > a:not(.ter-button) {
           font-size: 20px;
           line-height: 30px;
           font-weight: 400;

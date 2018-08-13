@@ -395,13 +395,12 @@ body.has-nav {
 			padding: 0 spacing(4);
 			vertical-align: middle;
 	    }
-	    a:not(.ter-button) {
+	    > a:not(.ter-button) {
 			@include type-setting(-1,'normal');
 			color: $navbar-link-color;
 			margin: 0;
 			padding: spacing(1) 0;
 			text-decoration: none;
-			display: inline-block;
 			&:hover {
 				color: $navbar-link-hover;
 				text-decoration: none;
