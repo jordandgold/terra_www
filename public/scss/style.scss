@@ -276,3 +276,19 @@ code {
         }
     }
 }
+
+.hero {
+    padding-top: spacing(10);
+    padding-bottom: spacing(10);
+    &--intro {
+        padding-top: spacing(10);
+        padding-bottom: spacing(10);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    &--slim {
+        padding-top: spacing(8);
+        padding-bottom: spacing(8);
+    }
+}

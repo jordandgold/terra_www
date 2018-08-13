@@ -19,6 +19,11 @@
 		  	$(this).toggleClass('is-open');
 	  	}
 	});
+
+	$html.on('click', '.ter-dropdown__item a', function(e) {
+		e.preventDefault();
+		window.location = this.href;
+	});
   
 	$html.on('click', function(e) {
 		var $target = $(e.target);

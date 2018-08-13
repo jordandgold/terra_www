@@ -4311,7 +4311,7 @@ body.has-nav {
       .navbar__brand[href]:hover {
         color: #6a6976;
         text-decoration: none; }
-    .navbar__brand > img {
+    .navbar__brand img {
       height: 32px;
       padding: 16px 0; }
   .navbar [class^='container']:after {
