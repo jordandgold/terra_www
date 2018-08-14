@@ -6,35 +6,74 @@
 //
 // mega menu
 
-@mixin mega-menu {
-	.mega-menu-dropdown {
-		> ul.mega-menu {
-			@include list-unstyled;
-			@include box-shadow(2);
-			@include border-radius('all','small');
-			position: absolute;
-			top: 85px;
-			left: 50%;
-			transform: translate(-50%, -20px);
-	    	transition: all 200ms;
-			visibility: hidden;
-	  		opacity: 0;
-			width: 100%;
-			padding: spacing(5);
-			background: #ffffff;
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-			li {
-				> ul {
-					@include list-unstyled;
+$mega-menu-offset: calc(-1 * #{spacing(2)});
+
+.mega-menu {
+	@include type-setting(-1,'normal');
+	position: absolute;
+	top: $navbar-height;
+	left: 50%;
+	transform: translate(-50%, -20px);
+	transition: visibility 225ms ease-in-out, opacity 225ms ease-in-out, transform 225ms ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	width: 100%;
+	box-sizing: border-box;
+	&:hover {
+		visibility: visible;
+		opacity: 1;
+		transform: translate(-50%, $mega-menu-offset);
+	}
+	&__list {
+		@include list-unstyled;
+		@include depth(2);
+		@include border-radius('all','small');
+		padding: spacing(4);
+		margin-left: spacing(6);
+		margin-right: spacing(6);
+		background: #ffffff;
+		li {
+			> ul {
+				@include list-unstyled;
+				> li {
+					padding: 0;
+					> a:not(.ter-button) {
+						@include type-setting(-1,'normal');
+						color: $navbar-link-color;
+						margin: 0;
+						padding: spacing(1) 0;
+						text-decoration: none;
+						&:hover {
+							color: $navbar-link-hover;
+							text-decoration: none;
+						}
+						@include for-size(tablet-landscape-down) {
+							@include type-setting(0,'normal');
+							display: block;
+						}
+						.inverse & {
+							color: $navbar-inverse-link-color;
+							&:hover {
+								color: $navbar-inverse-link-hover-color;
+							}
+						}
+					}
 				}
 			}
 		}
+	}
+	&__trigger {
+		&:after {
+            @include icon-base;
+            content: "\f078";
+            font-size: 75%;
+            margin-left: spacing(3);
+        }
 		&:hover {
-			> ul.mega-menu {
+			~ .mega-menu {
 				visibility: visible;
 	  			opacity: 1;
-	  			transform: translate(-50%, -1px);
+	  			transform: translate(-50%, $mega-menu-offset);
 			}
 		}
 	}
@@ -182,8 +221,11 @@ body.has-nav {
 			@include type-setting(-1,'normal');
 			color: $navbar-link-color;
 			margin: 0;
-			padding: spacing(1) 0;
+			padding: 0;
 			text-decoration: none;
+			display: inline-block;
+			height: $navbar-height;
+			line-height: $navbar-height;
 			&:hover {
 				color: $navbar-link-hover;
 				text-decoration: none;
