@@ -4783,6 +4783,7 @@ body.has-nav {
     margin-right: 0;
     padding: 0; }
   .nav-tabs__list > li {
+    padding: 0;
     margin-right: 0; }
 
 .nav-tabs__list-item {
