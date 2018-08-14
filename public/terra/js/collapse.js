@@ -6,7 +6,7 @@
 (function($, window, document){
 
     'use strict';
-
+    
     $('.ter-accordion.is-expanded').children('.ter-accordion__content').show();
 
     $('[data-toggle="collapse"]').click(function () {
