@@ -2,5 +2,5 @@ layout: 'component-page'
 page:
   title: 'Flexbox | Terra Design System'
   name: 'Flexbox'
-  parent: 'Utilities'
+  parent: 'Structure'
   tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'

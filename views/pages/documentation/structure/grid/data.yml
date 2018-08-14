@@ -2,5 +2,5 @@ layout: 'component-page'
 page:
   title: 'Grid | Terra Design System'
   name: 'Grid'
-  parent: 'Style'
+  parent: 'Structure'
   tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
