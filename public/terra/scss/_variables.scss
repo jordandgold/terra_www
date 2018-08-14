@@ -165,15 +165,6 @@ $spacing-scale: (
     15: 200px,
 );
 
-// navigation bar
-$navbar-height: height(4);
-$navbar-bg: grayscale('dark-0');
-$navbar-link-color: grayscale('gray-4');
-$navbar-link-hover: grayscale('gray-8');
-$navbar-border-width: 0px;
-$navbar-border-color: grayscale('gray-1');
-$navbar-menu-icon-color: grayscale('gray-3');
-
 // navigation tabs
 $nav-tabs-link-color: grayscale('gray-7');
 $nav-tabs-link-hover: grayscale('dark-1');
@@ -183,11 +174,6 @@ $nav-tabs-border-color: grayscale('gray-2');
 $compact-tabs-link-color: grayscale('gray-7');
 $compact-tabs-link-hover: grayscale('dark-1');
 $compact-tabs-underline-color: grayscale('dark-1');
-
-// tree menu
-$tree-menu-link-color: grayscale('gray-6');
-$tree-menu-link-hover: grayscale('dark-1');
-$tree-menu-left-padding: spacing(3);
 
 // pagination
 $pagination-border-color: grayscale('gray-2');
@@ -204,14 +190,31 @@ $link-color: brand-color('brand-2');
 $link-hover-color: darken($link-color, 10%);
 $link-highlight: true;
 $link-highlight-color: lighten(brand-color('brand-1'), 30%);
+$link-inverse-color: grayscale('gray-4');
+$link-inverse-hover-color: darken($link-inverse-color, 10%);
+
+// navigation bar
+$navbar-height: height(4);
+$navbar-bg: grayscale('white');
+$navbar-link-color: $link-color;
+$navbar-link-hover: $link-hover-color;
+$navbar-border-width: 1px;
+$navbar-border-color: grayscale('gray-1');
+$navbar-menu-icon-color: grayscale('gray-3');
+$navbar-inverse-bg: grayscale('dark-0');
+$navbar-inverse-border-color: grayscale('dark-0');
+$navbar-inverse-link-color: $link-inverse-color;
+$navbar-inverse-link-hover-color: $link-inverse-hover-color;
 
 // buttons
 $button-border-radius: border-radius('small');
 $button-border-size: 1px;
 $button-icon-color: grayscale('gray-4');
 $button-icon-hover: grayscale('gray-6');
-$button-outline-text-color: brand-color(';');
+$button-outline-text-color: grayscale('gray-10');
 $button-outline-border-color: grayscale('gray-4');
+$button-outline-inverse-text-color: text-color('inverse');
+$button-outline-inverse-border-color: grayscale('white');
 
 // tooltips
 $tooltip-bg: grayscale('dark-1');
@@ -244,11 +247,16 @@ $accordion-border-radius: border-radius('small');
 
 // form input
 $input-bg: grayscale('white');
+$input-text-color: brand-color(text-2);
 $input-border-radius: border-radius('small');
 $input-border-color: grayscale('gray-4');
+$input-border-size: .05rem;
 $input-label-color: grayscale('dark-1');
 $input-placeholder-color: grayscale('gray-2');
 $input-focus-border-color: brand-color('brand-2');
+$input-inverse-bg: grayscale('gray-10');
+$input-inverse-text-color: grayscale('gray-4');
+$input-inverse-border-color: grayscale('dark-0');
 
 // checkboxes
 $checkbox-border-color: $input-border-color;
@@ -269,6 +277,11 @@ $modal-overlay-bg: grayscale('dark-1');
 
 // alerts
 $alert-border-radius: border-radius('small');
+
+// tree menu
+$tree-menu-link-color: grayscale('gray-4');
+$tree-menu-link-hover: grayscale('gray-10');
+
 
 // media query breakpoints
 $phone-upper-boundary: 600px;

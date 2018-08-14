@@ -107,7 +107,7 @@ a.ter-button--outline {
         $button-outline-text-color,
         $button-outline-border-color,
     );
-    .inverse-color & {
+    .inverse & {
         color: type-color('inverse');
     }
 }

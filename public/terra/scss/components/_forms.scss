@@ -6,7 +6,7 @@
 
 @mixin input-base() {
     @include type-setting(-1,0);
-    color: brand-color(text-2);
+    color: $input-text-color;
     box-sizing: border-box;
     padding: spacing(2) spacing(4);
     position: relative;
@@ -16,7 +16,12 @@
     border: .05rem solid $input-border-color;
     background-color: $input-bg;
     border-radius: $input-border-radius;
-    // box-sizing: content-box;
+    box-sizing: border-box;
+    .inverse & {
+        color: $input-inverse-text-color;
+        border: $input-border-size solid $input-inverse-border-color;
+        background-color: $input-inverse-bg;
+    }
 }
 
 .input-group {
