@@ -1,5 +1,11 @@
-jQuery(document).ready(function($){
-	// $(".input-group input").val("");
+/**
+ * Terra Design System
+ * input.js
+ */
+
+(function($, window, document){
+	
+	'use strict';
 	
 	$(".input-group input").focusout(function(){
 		if($(this).val() != ""){

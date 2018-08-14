@@ -1,4 +1,11 @@
-jQuery(document).ready(function($){
+/**
+ * Terra Design System
+ * collapse.js
+ */
+
+(function($, window, document){
+
+    'use strict';
 
     $('.ter-accordion.is-expanded').children('.ter-accordion__content').show();
 

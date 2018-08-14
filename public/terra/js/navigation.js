@@ -1,4 +1,11 @@
-jQuery(document).ready(function($){
+/**
+ * Terra Design System
+ * navigation.js
+ */
+
+(function($, window, document){
+  
+	'use strict';
 
 	var mainHeader = $('nav.navbar:not(.stay-put)'),
 		headerHeight = mainHeader.height();
@@ -100,4 +107,4 @@ jQuery(document).ready(function($){
 	// 	$(this).toggleClass("is-active");
 	// });
 
-});
+})(jQuery, window, document);

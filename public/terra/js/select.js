@@ -58,7 +58,7 @@
 
 					// display no results
 					if (resultsCount == 0) {
-						$list.find('.select-options__no-results').is-open();
+						$list.find('.select-options__no-results').show();
 					} else {
 						$list.find('.select-options__no-results').hide();
 					}
@@ -164,7 +164,7 @@
 
 					// display no results
 					if (resultsCount == 0) {
-						$list.find('.select-options__no-results').is-open();
+						$list.find('.select-options__no-results').show();
 					} else {
 						$list.find('.select-options__no-results').hide();
 					}
@@ -220,11 +220,11 @@
 	    $styledSelect.on('click', '.option button', function(event){
 	    	event.stopPropagation();
 	    	var rel = $(this).parent().attr('data-rel');
-	    	$listItems.next('li[rel="' + rel + '"]').is-open();
+	    	$listItems.next('li[rel="' + rel + '"]').show();
 	    	$this.find('option[value="' + rel + '"]').attr('selected', false);
 			$(this).parent().remove();
 			if (!$styledSelect.find('.option').length) {
-	    		$styledSelect.find('.label').is-open();
+	    		$styledSelect.find('.label').show();
 	    	}
 		});
 	  	
