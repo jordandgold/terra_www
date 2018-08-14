@@ -3650,34 +3650,34 @@ a.ter-button--icon {
   Forms
 
 */
-.input-group {
+.ter-input {
   padding: 12px 0; }
-  .input-group:first-child:not(:only-of-type) {
+  .ter-input:first-child:not(:only-of-type) {
     padding-top: 0; }
-  .input-group:last-child:not(:only-of-type) {
+  .ter-input:last-child:not(:only-of-type) {
     padding-bottom: 0; }
-  .input-group:only-of-type {
+  .ter-input:only-of-type {
     padding-top: 0;
     padding-bottom: 0; }
-  .input-group label {
+  .ter-input__label {
     font-size: 16px;
     line-height: 24px;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
-  .input-group .input-wrap {
+  .ter-input__wrap {
     position: relative; }
-    .input-group .input-wrap i {
+    .ter-input__wrap i {
       position: absolute;
       top: 50%;
       right: .75rem;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
-    .input-group .input-wrap input[type="text"],
-    .input-group .input-wrap input[type="email"],
-    .input-group .input-wrap input[type="file"],
-    .input-group .input-wrap input[type="password"],
-    .input-group .input-wrap textarea {
+    .ter-input__wrap input[type="text"],
+    .ter-input__wrap input[type="email"],
+    .ter-input__wrap input[type="file"],
+    .ter-input__wrap input[type="password"],
+    .ter-input__wrap textarea {
       font-size: 16px;
       line-height: 24px;
       box-sizing: border-box;
@@ -3693,121 +3693,130 @@ a.ter-button--icon {
       position: relative;
       z-index: 1;
       transition: box-shadow 200ms ease-in-out, border-color 200ms ease-in-out; }
-      .inverse .input-group .input-wrap input[type="text"], .inverse
-      .input-group .input-wrap input[type="email"], .inverse
-      .input-group .input-wrap input[type="file"], .inverse
-      .input-group .input-wrap input[type="password"], .inverse
-      .input-group .input-wrap textarea {
+      .inverse .ter-input__wrap input[type="text"], .inverse
+      .ter-input__wrap input[type="email"], .inverse
+      .ter-input__wrap input[type="file"], .inverse
+      .ter-input__wrap input[type="password"], .inverse
+      .ter-input__wrap textarea {
         color: #aeaeb6;
         border: 0.05rem solid #363545;
         background-color: #474655; }
-      .input-group .input-wrap input[type="text"]:focus,
-      .input-group .input-wrap input[type="email"]:focus,
-      .input-group .input-wrap input[type="file"]:focus,
-      .input-group .input-wrap input[type="password"]:focus,
-      .input-group .input-wrap textarea:focus {
+      .ter-input__wrap input[type="text"]:focus,
+      .ter-input__wrap input[type="email"]:focus,
+      .ter-input__wrap input[type="file"]:focus,
+      .ter-input__wrap input[type="password"]:focus,
+      .ter-input__wrap textarea:focus {
         box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15);
         border-color: #d16100; }
-      .input-group .input-wrap input[type="text"].input-lg,
-      .input-group .input-wrap input[type="email"].input-lg,
-      .input-group .input-wrap input[type="file"].input-lg,
-      .input-group .input-wrap input[type="password"].input-lg,
-      .input-group .input-wrap textarea.input-lg {
+      .ter-input__wrap input[type="text"].input-lg,
+      .ter-input__wrap input[type="email"].input-lg,
+      .ter-input__wrap input[type="file"].input-lg,
+      .ter-input__wrap input[type="password"].input-lg,
+      .ter-input__wrap textarea.input-lg {
         font-size: 28px;
         line-height: 42px;
         font-weight: 400; }
-      .input-group .input-wrap input[type="text"]::-webkit-input-placeholder,
-      .input-group .input-wrap input[type="email"]::-webkit-input-placeholder,
-      .input-group .input-wrap input[type="file"]::-webkit-input-placeholder,
-      .input-group .input-wrap input[type="password"]::-webkit-input-placeholder,
-      .input-group .input-wrap textarea::-webkit-input-placeholder {
+      .ter-input__wrap input[type="text"]::-webkit-input-placeholder,
+      .ter-input__wrap input[type="email"]::-webkit-input-placeholder,
+      .ter-input__wrap input[type="file"]::-webkit-input-placeholder,
+      .ter-input__wrap input[type="password"]::-webkit-input-placeholder,
+      .ter-input__wrap textarea::-webkit-input-placeholder {
         color: #d0d0d7; }
-      .input-group .input-wrap input[type="text"]:-ms-input-placeholder,
-      .input-group .input-wrap input[type="email"]:-ms-input-placeholder,
-      .input-group .input-wrap input[type="file"]:-ms-input-placeholder,
-      .input-group .input-wrap input[type="password"]:-ms-input-placeholder,
-      .input-group .input-wrap textarea:-ms-input-placeholder {
+      .ter-input__wrap input[type="text"]:-ms-input-placeholder,
+      .ter-input__wrap input[type="email"]:-ms-input-placeholder,
+      .ter-input__wrap input[type="file"]:-ms-input-placeholder,
+      .ter-input__wrap input[type="password"]:-ms-input-placeholder,
+      .ter-input__wrap textarea:-ms-input-placeholder {
         color: #d0d0d7; }
-      .input-group .input-wrap input[type="text"]::-ms-input-placeholder,
-      .input-group .input-wrap input[type="email"]::-ms-input-placeholder,
-      .input-group .input-wrap input[type="file"]::-ms-input-placeholder,
-      .input-group .input-wrap input[type="password"]::-ms-input-placeholder,
-      .input-group .input-wrap textarea::-ms-input-placeholder {
+      .ter-input__wrap input[type="text"]::-ms-input-placeholder,
+      .ter-input__wrap input[type="email"]::-ms-input-placeholder,
+      .ter-input__wrap input[type="file"]::-ms-input-placeholder,
+      .ter-input__wrap input[type="password"]::-ms-input-placeholder,
+      .ter-input__wrap textarea::-ms-input-placeholder {
         color: #d0d0d7; }
-      .input-group .input-wrap input[type="text"]::placeholder,
-      .input-group .input-wrap input[type="email"]::placeholder,
-      .input-group .input-wrap input[type="file"]::placeholder,
-      .input-group .input-wrap input[type="password"]::placeholder,
-      .input-group .input-wrap textarea::placeholder {
+      .ter-input__wrap input[type="text"]::placeholder,
+      .ter-input__wrap input[type="email"]::placeholder,
+      .ter-input__wrap input[type="file"]::placeholder,
+      .ter-input__wrap input[type="password"]::placeholder,
+      .ter-input__wrap textarea::placeholder {
         color: #d0d0d7; }
-      .input-group .input-wrap input[type="text"]:disabled,
-      .input-group .input-wrap input[type="email"]:disabled,
-      .input-group .input-wrap input[type="file"]:disabled,
-      .input-group .input-wrap input[type="password"]:disabled,
-      .input-group .input-wrap textarea:disabled {
+      .ter-input__wrap input[type="text"]:disabled,
+      .ter-input__wrap input[type="email"]:disabled,
+      .ter-input__wrap input[type="file"]:disabled,
+      .ter-input__wrap input[type="password"]:disabled,
+      .ter-input__wrap textarea:disabled {
         color: rgba(174, 174, 182, 0.3);
         border-color: rgba(174, 174, 182, 0.3);
         background: rgba(174, 174, 182, 0.05);
         cursor: not-allowed; }
-    .input-group .input-wrap textarea {
+      .has-error .ter-input__wrap input[type="text"], .has-error
+      .ter-input__wrap input[type="email"], .has-error
+      .ter-input__wrap input[type="file"], .has-error
+      .ter-input__wrap input[type="password"], .has-error
+      .ter-input__wrap textarea {
+        border-color: #ce2740; }
+      .has-success .ter-input__wrap input[type="text"], .has-success
+      .ter-input__wrap input[type="email"], .has-success
+      .ter-input__wrap input[type="file"], .has-success
+      .ter-input__wrap input[type="password"], .has-success
+      .ter-input__wrap textarea {
+        border-color: #1cb260; }
+    .ter-input__wrap textarea {
       font-size: 20px;
       line-height: 30px;
       display: block;
       width: 100%; }
-  .input-group .input-help,
-  .input-group .input-message {
+  .ter-input__message {
     font-size: 16px;
     line-height: 24px;
     display: block; }
-  .input-group.error .input-message {
-    color: #ce2740; }
-  .input-group.error .input-wrap input {
-    border-color: #ce2740; }
-  .input-group.success .input-message {
-    color: #1cb260; }
-  .input-group.success .input-wrap input {
-    border-color: #1cb260; }
+    .has-error .ter-input__message {
+      color: #ce2740; }
+    .has-success .ter-input__message {
+      color: #1cb260; }
 
-.input-checkbox,
-.input-radio {
+.ter-checkbox,
+.ter-radio {
   padding-top: 12px;
   padding-bottom: 12px;
   box-sizing: content-box; }
-  .input-checkbox label,
-  .input-radio label {
+  .ter-checkbox__label,
+  .ter-radio__label {
     font-size: 16px;
     line-height: 24px;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
 
-.input-radio input[type="radio"] {
+.ter-radio input[type="radio"] {
   opacity: 0;
   height: 0;
   width: 0; }
-  .input-radio input[type="radio"]:checked + label:after {
+  .ter-radio input[type="radio"]:checked + label:after {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1); }
-  .input-radio input[type="radio"]:focus + label:before {
+  .ter-radio input[type="radio"]:focus + label:before {
     outline: 0; }
 
-.input-radio label {
+.ter-radio__label {
+  font-size: 16px;
+  line-height: 24px;
   position: relative;
   display: inline-block;
   padding-left: 22px;
   cursor: pointer; }
-  .input-radio label:before, .input-radio label:after {
+  .ter-radio__label:before, .ter-radio__label:after {
     position: absolute;
     content: "";
     display: inline-block; }
-  .input-radio label:before {
+  .ter-radio__label:before {
     height: 12px;
     width: 12px;
     border: 1px solid #aeaeb6;
     left: 0px;
     top: 5px;
     border-radius: 50%; }
-  .input-radio label:after {
+  .ter-radio__label:after {
     height: 8px;
     width: 8px;
     left: 3px;
@@ -3820,32 +3829,34 @@ a.ter-button--icon {
     transition: transform 200ms ease-in-out;
     transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out; }
 
-.input-checkbox input[type="checkbox"] {
+.ter-checkbox input[type="checkbox"] {
   opacity: 0;
   height: 0;
   width: 0; }
-  .input-checkbox input[type="checkbox"]:checked + label:after {
+  .ter-checkbox input[type="checkbox"]:checked + label:after {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1); }
-  .input-checkbox input[type="checkbox"]:focus + label:before {
+  .ter-checkbox input[type="checkbox"]:focus + label:before {
     outline: 0; }
 
-.input-checkbox label {
+.ter-checkbox__label {
+  font-size: 16px;
+  line-height: 24px;
   position: relative;
   display: inline-block;
   padding-left: 22px;
   cursor: pointer; }
-  .input-checkbox label:before, .input-checkbox label:after {
+  .ter-checkbox__label:before, .ter-checkbox__label:after {
     position: absolute;
     content: "";
     display: inline-block; }
-  .input-checkbox label:before {
+  .ter-checkbox__label:before {
     height: 12px;
     width: 12px;
     border: 1px solid #aeaeb6;
     left: 0px;
     top: 5px; }
-  .input-checkbox label:after {
+  .ter-checkbox__label:after {
     height: 8px;
     width: 8px;
     left: 3px;
@@ -3857,12 +3868,14 @@ a.ter-button--icon {
     transition: transform 200ms ease-in-out;
     transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out; }
 
-.radio-group {
+.ter-radio-group {
   padding-top: 12px;
   padding-bottom: 12px; }
-  .radio-group > label {
+  .ter-radio-group__label {
+    font-size: 16px;
+    line-height: 24px;
     padding-bottom: 12px; }
-  .radio-group .input-radio {
+  .ter-radio-group .ter-radio {
     padding-top: 0px;
     padding-bottom: 0px; }
 
@@ -4100,53 +4113,25 @@ ul.list-inline {
     display: block;
     clear: both; }
   ul.list-inline > li {
-    display: list-item;
-    list-style: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 12px;
-    padding: 0; }
-
-ul.list-inline--left {
-  margin: 0;
-  padding: 0; }
-  ul.list-inline--left:after {
-    content: '';
-    display: block;
-    clear: both; }
+    display: inline-block;
+    list-style: none; }
   ul.list-inline--left > li {
-    display: list-item;
-    list-style: none;
     float: left;
     margin-left: 0;
     margin-right: 12px;
     padding: 0; }
-
-ul.list-inline--right {
-  margin: 0;
-  padding: 0; }
-  ul.list-inline--right:after {
-    content: '';
-    display: block;
-    clear: both; }
+  ul.list-inline--center {
+    text-align: center; }
+    ul.list-inline--center > li {
+      float: unset;
+      margin-left: 12px;
+      margin-right: 0;
+      padding: 0; }
   ul.list-inline--right > li {
-    display: list-item;
-    list-style: none;
     float: right;
     margin-left: 12px;
     margin-right: 0;
     padding: 0; }
-
-ul.list-inline--center {
-  margin: 0;
-  padding: 0; }
-  ul.list-inline--center:after {
-    content: '';
-    display: block;
-    clear: both; }
-  ul.list-inline--center > li {
-    display: list-item;
-    list-style: none; }
 
 .list-unstyled {
   margin: 0 0 28px 0;
@@ -4667,11 +4652,24 @@ body.has-nav {
     display: block;
     clear: both; }
   .pagination__list > li {
-    display: list-item;
-    list-style: none;
+    display: inline-block;
+    list-style: none; }
+  .pagination__list--left > li {
     float: left;
     margin-left: 0;
     margin-right: 12px;
+    padding: 0; }
+  .pagination__list--center {
+    text-align: center; }
+    .pagination__list--center > li {
+      float: unset;
+      margin-left: 12px;
+      margin-right: 0;
+      padding: 0; }
+  .pagination__list--right > li {
+    float: right;
+    margin-left: 12px;
+    margin-right: 0;
     padding: 0; }
   .pagination__list > li {
     margin-right: 0; }
@@ -4765,11 +4763,24 @@ body.has-nav {
     display: block;
     clear: both; }
   .nav-tabs__list > li {
-    display: list-item;
-    list-style: none;
+    display: inline-block;
+    list-style: none; }
+  .nav-tabs__list--left > li {
     float: left;
     margin-left: 0;
     margin-right: 12px;
+    padding: 0; }
+  .nav-tabs__list--center {
+    text-align: center; }
+    .nav-tabs__list--center > li {
+      float: unset;
+      margin-left: 12px;
+      margin-right: 0;
+      padding: 0; }
+  .nav-tabs__list--right > li {
+    float: right;
+    margin-left: 12px;
+    margin-right: 0;
     padding: 0; }
   .nav-tabs__list > li {
     margin-right: 0; }
@@ -4836,11 +4847,24 @@ body.has-nav {
     display: block;
     clear: both; }
   .compact-tabs__list > li {
-    display: list-item;
-    list-style: none;
+    display: inline-block;
+    list-style: none; }
+  .compact-tabs__list--left > li {
     float: left;
     margin-left: 0;
     margin-right: 12px;
+    padding: 0; }
+  .compact-tabs__list--center {
+    text-align: center; }
+    .compact-tabs__list--center > li {
+      float: unset;
+      margin-left: 12px;
+      margin-right: 0;
+      padding: 0; }
+  .compact-tabs__list--right > li {
+    float: right;
+    margin-left: 12px;
+    margin-right: 0;
     padding: 0; }
   .compact-tabs__list > li {
     margin-right: 0; }

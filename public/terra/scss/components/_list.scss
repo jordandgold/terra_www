@@ -1,4 +1,4 @@
-@mixin list-inline($alignment: left) {
+@mixin list-inline() {
 	margin: 0;
 	padding: 0;
 	&:after {
@@ -7,15 +7,28 @@
 		clear: both;
 	}
 	> li {
-	    display: list-item;
+	    display: inline-block;
 	    list-style: none;
-		@if $alignment == 'left' {
+	}
+	&--left {
+		> li {
 			float: left;
 			margin-left: 0;
 			margin-right: spacing(3);
 			padding: 0;
 		}
-		@elseif $alignment == 'right' {
+	}
+	&--center {
+		text-align: center;
+		> li {
+			float: unset;
+			margin-left: spacing(3);
+			margin-right: 0;
+			padding: 0;
+		}
+	}
+	&--right {
+		> li {
 			float: right;
 			margin-left: spacing(3);
 			margin-right: 0;
@@ -26,18 +39,6 @@
 
 ul.list-inline {
 	@include list-inline();
-}
-
-ul.list-inline--left {
-	@include list-inline(left);
-}
-
-ul.list-inline--right {
-	@include list-inline(right);
-}
-
-ul.list-inline--center {
-	@include list-inline(center);
 }
 
 @mixin list-base {
