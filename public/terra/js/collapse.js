@@ -21,4 +21,4 @@
     	$(this).next('.ter-accordion__content').slideToggle(200);
     });
 
-});
+})(jQuery, window, document);
