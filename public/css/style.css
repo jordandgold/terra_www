@@ -3542,7 +3542,8 @@ a.ter-button--icon {
  */
 .ter-dropdown {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: border-box; }
   .ter-dropdown__toggle {
     position: relative; }
     .ter-dropdown__toggle:after {
@@ -4415,6 +4416,9 @@ body.has-nav {
     width: 100%;
     background: #ffffff;
     display: none; }
+    @media (max-width: 900px) {
+      .navbar__nav {
+        padding-bottom: 16px; } }
     @media (min-width: 900px) {
       .navbar__nav {
         box-shadow: none;
@@ -4432,6 +4436,13 @@ body.has-nav {
     height: auto;
     padding: 16px 0;
     margin: 0; }
+    @media (max-width: 900px) {
+      .navbar__menu {
+        padding-bottom: 0; } }
+    .navbar__menu--right {
+      margin-left: auto; }
+    .navbar__menu--left {
+      margin-right: auto; }
     @media (min-width: 900px) {
       .navbar__menu {
         display: table;
@@ -4471,11 +4482,43 @@ body.has-nav {
           font-size: 20px;
           line-height: 30px;
           font-weight: 400;
-          display: block; } }
+          display: block;
+          line-height: initial;
+          height: auto; } }
       .inverse .navbar__menu-item > a:not(.ter-button) {
         color: #aeaeb6; }
         .inverse .navbar__menu-item > a:not(.ter-button):hover {
           color: #93939e; }
+    @media (max-width: 900px) {
+      .navbar__menu-item.ter-dropdown {
+        padding-left: var(--outer-margin);
+        padding-right: var(--outer-margin);
+        padding-top: 8px;
+        padding-bottom: 8px; } }
+    @media (max-width: 900px) {
+      .navbar__menu-item.ter-dropdown .ter-dropdown__menu {
+        box-shadow: unset;
+        background: transparent; } }
+    @media (max-width: 900px) {
+      .navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #262533;
+        display: block;
+        line-height: initial;
+        height: auto;
+        padding-left: 0;
+        padding-right: 0; } }
+  @media (max-width: 900px) and (max-width: 900px) {
+    .navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
+      color: #262533;
+      text-decoration: none; } }
+    @media (max-width: 900px) {
+      .inverse .navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
+        color: #aeaeb6; }
+        .inverse .navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
+          color: #93939e; } }
     @media (max-width: 900px) {
       .navbar__menu-item.ter-dropdown .ter-dropdown__menu {
         position: unset;
@@ -4489,8 +4532,15 @@ body.has-nav {
         padding: 0;
         margin: 0; } }
     @media (max-width: 900px) {
+      .navbar__menu-item.ter-dropdown .ter-dropdown__menu .ter-dropdown__item--no-link {
+        padding-left: 0;
+        padding-right: 0; } }
+    @media (max-width: 900px) {
       .navbar__menu-item.ter-dropdown.is-open .ter-dropdown__menu {
         display: block; } }
+  @media (max-width: 900px) {
+    .navbar__form {
+      padding: 8px 32px; } }
   .navbar.is-hidden {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
@@ -5297,9 +5347,44 @@ code {
   position: sticky;
   top: 64px;
   overflow: scroll; }
+  @media (max-width: 900px) {
+    .side-nav {
+      border-right: 0px;
+      position: unset;
+      top: unset;
+      height: initial; } }
   .side-nav__section {
     padding-top: 32px;
     padding-bottom: 32px; }
+  @media (max-width: 900px) {
+    .side-nav__header {
+      display: inline-block; } }
+  .side-nav__toggle {
+    height: auto;
+    float: right;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent; }
+    @media (min-width: 900px) {
+      .side-nav__toggle {
+        display: none; } }
+    .side-nav__toggle .line {
+      width: 25px;
+      height: 2px;
+      background-color: #bfbfc6;
+      display: block;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out; }
+    .side-nav__toggle.is-active .line:nth-child(1) {
+      -webkit-transform: translateY(7px);
+              transform: translateY(7px); }
+    .side-nav__toggle.is-active .line:nth-child(3) {
+      -webkit-transform: translateY(-7px);
+              transform: translateY(-7px); }
+    .side-nav__toggle:hover {
+      cursor: pointer; }
 
 @media (min-width: 900px) {
   .navbar__right {

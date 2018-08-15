@@ -177,6 +177,9 @@ body.has-nav {
         width: 100%;
         background: $navbar-bg;
         display: none;
+        @include for-size(tablet-landscape-down) {
+        	padding-bottom: spacing(4);
+        }
 		@include for-size(tablet-landscape-up) {
 			@include box-shadow("none");
 			display: inline-block;
@@ -196,6 +199,15 @@ body.has-nav {
         height: auto;
         padding: spacing(4) 0;
         margin: 0;
+        @include for-size(tablet-landscape-down) {
+        	padding-bottom: 0;
+        }
+        &--right {
+        	margin-left: auto;
+        }
+        &--left {
+        	margin-right: auto;
+        }
     	@include for-size(tablet-landscape-up) {
     		display: table;
     		width: initial;
@@ -233,6 +245,8 @@ body.has-nav {
 			@include for-size(tablet-landscape-down) {
 				@include type-setting(0,'normal');
 				display: block;
+				line-height: initial;
+				height: auto;
 			}
 			.inverse & {
 				color: $navbar-inverse-link-color;
@@ -242,7 +256,42 @@ body.has-nav {
 			}
 		}
 		&.ter-dropdown {
+			@include for-size(tablet-landscape-down) {
+				padding-left: var(--outer-margin);
+				padding-right: var(--outer-margin);
+				padding-top: spacing(2);
+				padding-bottom: spacing(2);
+			}
 			.ter-dropdown__menu {
+				@include for-size(tablet-landscape-down) {
+					box-shadow: unset;
+					background: transparent;
+				}
+				a {
+					@include for-size(tablet-landscape-down) {
+						@include type-setting(0,'normal');
+						color: $dropdown-link-color;
+						display: block;
+						line-height: initial;
+						height: auto;
+						padding-left: 0;
+						padding-right: 0;
+						&:hover {
+							@include for-size(tablet-landscape-down) {
+								color: $dropdown-link-color;
+								text-decoration: none;
+							}
+						}
+					}
+					.inverse & {
+						@include for-size(tablet-landscape-down) {
+							color: $navbar-inverse-link-color;
+							&:hover {
+								color: $navbar-inverse-link-hover-color;
+							}
+						}
+					}
+				}
 				@include for-size(tablet-landscape-down) {
 					position: unset;
 				    float: unset;
@@ -255,6 +304,12 @@ body.has-nav {
 				    padding: 0;
 				    margin: 0;
 				}
+				.ter-dropdown__item--no-link {
+					@include for-size(tablet-landscape-down) {
+						padding-left: 0;
+						padding-right: 0;
+					}
+				}
 			}
 			&.is-open {
 				.ter-dropdown__menu {
@@ -263,6 +318,11 @@ body.has-nav {
 					}
 				}
 			}
+		}
+	}
+	&__form {
+		@include for-size(tablet-landscape-down) {
+		    padding: spacing(2) spacing(6);
 		}
 	}
 	&.is-hidden {

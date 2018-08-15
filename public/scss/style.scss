@@ -241,9 +241,49 @@ code {
     position: sticky;
     top: $navbar-height;
     overflow: scroll;
+    @include for-size(tablet-landscape-down) {
+        border-right: 0px;
+        position: unset;
+        top: unset;
+        height: initial;
+    }
     &__section {
         padding-top: spacing(6);
         padding-bottom: spacing(6);
+    }
+    &__header {
+        @include for-size(tablet-landscape-down) {
+            display: inline-block;
+        }
+    }
+    &__toggle {
+        height: auto;
+        float: right;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: transparent;
+        @include for-size(tablet-landscape-up) {
+            display: none;
+        }
+        .line {
+            width: 25px;
+            height: 2px;
+            background-color: $navbar-menu-icon-color;
+            display: block;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+        }
+        &.is-active .line:nth-child(1){
+            transform: translateY(7px);
+        }
+        &.is-active .line:nth-child(3){
+            transform: translateY(-7px);
+        }
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 

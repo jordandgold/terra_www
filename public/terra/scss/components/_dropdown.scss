@@ -6,7 +6,7 @@
 .ter-dropdown {
     position: relative;
     display: inline-block;
-
+    box-sizing: border-box;
     &__toggle {
         position: relative;
 
