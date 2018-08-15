@@ -285,6 +285,11 @@ code {
             cursor: pointer;
         }
     }
+    &__menu {
+        @include for-size(tablet-landscape-down) {
+            display: none;
+        }
+    }
 }
 
 .navbar__right {
