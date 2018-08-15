@@ -17,7 +17,7 @@
 		$(this).parent().parent().parent().toggleClass('is-open');
 		$('body').toggleClass('has-modal-open');
 	});
-	$('.modal--full-page').click(function() {
+	$('.ter-modal--full-page').click(function() {
 		$(this).toggleClass('is-open');
 		$('body').toggleClass('has-modal-open');
 	}).children().click(function(e) {
