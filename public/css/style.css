@@ -3371,7 +3371,7 @@ a.ter-button--outline {
   .ter-button--outline i:before,
   a.ter-button--outline i:before {
     color: #474655; }
-  .inverse .ter-button--outline, .inverse
+  .inverse-color .ter-button--outline, .inverse-color
   a.ter-button--outline {
     color: #ffffff; }
 
