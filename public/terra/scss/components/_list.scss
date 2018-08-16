@@ -11,8 +11,8 @@
 	    list-style: none;
 	}
 	&--left {
+		text-align: left;
 		> li {
-			float: left;
 			margin-left: 0;
 			margin-right: spacing(3);
 			padding: 0;
@@ -21,15 +21,15 @@
 	&--center {
 		text-align: center;
 		> li {
-			float: unset;
 			margin-left: spacing(3);
 			margin-right: 0;
 			padding: 0;
 		}
 	}
 	&--right {
+		text-align: right;
 		> li {
-			float: right;
+			display: inline-block;
 			margin-left: spacing(3);
 			margin-right: 0;
 			padding: 0;

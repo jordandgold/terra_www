@@ -9,19 +9,15 @@
     box-sizing: border-box;
     &__toggle {
         position: relative;
-
         &:after {
             @include icon-base;
-
             content: "\f078";
             font-size: 75%;
             margin-left: spacing(3);
         }
     }
-
     &__menu {
         @include depth(1);
-
         border: $dropdown-border-size solid $dropdown-border-color;
         border-radius: $dropdown-border-radius;
         min-width: 12.5em;
@@ -32,48 +28,69 @@
         float: left;
         text-align: left;
         list-style: none;
-        transform: translateY(-10px);
+        transform: translate(0px,-10px);
         opacity: 0;
         visibility: hidden;
         background: $dropdown-bg;
         margin: 0;
         transition: transform 225ms, opacity 225ms, visibility 225ms;
-
         .is-open & {
             visibility: visible;
             opacity: 1;
-            transform: translateY(1px);
+            transform: translate(0px, 1px);
+        }
+        // drop right
+        [data-direction="right"] & {
+            top: 0px;
+            left: calc(100%);
+            transform: translate(-10px, 0px);
+        }
+        [data-direction="right"].is-open & {
+            transform: translate(1px, 0px);
+        }
+        // drop left
+        [data-direction="left"] & {
+            top: 0px;
+            left: unset;
+            right: calc(100%);
+            transform: translate(10px, 0px);
+        }
+        [data-direction="left"].is-open & {
+            transform: translate(-1px, 0px);
+        }
+        // drop up
+        [data-direction="up"] & {
+            top: unset;
+            bottom: calc(100%);
+            left: 0;
+            transform: translate(0px, 10px);
+        }
+        [data-direction="up"].is-open & {
+            transform: translate(0px, -1px);
         }
     }
-
     &__item {
         padding: 0;
-
         a {
             @include type-setting(-1, "normal");
-
             color: $dropdown-link-color;
             padding: spacing(2) spacing(4);
             display: block;
             text-decoration: none;
-
             &:hover {
                 color: darken($dropdown-link-color, 10%);
                 background: $dropdown-link-hover-bg;
                 text-decoration: none;
             }
         }
-
         &--separator {
             display: block;
             padding: spacing(3) 0 0 0;
             margin-bottom: spacing(3);
             border-bottom: 1px solid $dropdown-border-color;
         }
-
         &--no-link {
             @include type-setting(-2, "bold");
-
             padding: spacing(2) spacing(4);
             text-transform: uppercase;
             color: $dropdown-no-link-color;
