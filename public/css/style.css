@@ -3751,10 +3751,10 @@ a.ter-button--icon {
       position: relative;
       z-index: 1;
       transition: box-shadow 200ms ease-in-out, border-color 200ms ease-in-out; }
-      .inverse .ter-input__wrap input[type="text"], .inverse
-      .ter-input__wrap input[type="email"], .inverse
-      .ter-input__wrap input[type="file"], .inverse
-      .ter-input__wrap input[type="password"], .inverse
+      .inverse-color .ter-input__wrap input[type="text"], .inverse-color
+      .ter-input__wrap input[type="email"], .inverse-color
+      .ter-input__wrap input[type="file"], .inverse-color
+      .ter-input__wrap input[type="password"], .inverse-color
       .ter-input__wrap textarea {
         color: #aeaeb6;
         border: 0.05rem solid #363545;
@@ -3958,7 +3958,7 @@ select {
   box-sizing: border-box;
   -webkit-appearance: none;
   position: relative; }
-  .inverse select {
+  .inverse-color select {
     color: #aeaeb6;
     border: 0.05rem solid #363545;
     background-color: #474655; }
@@ -4013,7 +4013,7 @@ fieldset {
     box-sizing: border-box;
     width: initial;
     margin-left: 1px; }
-    .inverse .search-bar__submit {
+    .inverse-color .search-bar__submit {
       color: #aeaeb6;
       border: 0.05rem solid #363545;
       background-color: #474655; }
@@ -4044,7 +4044,7 @@ fieldset {
   box-sizing: border-box;
   display: block;
   width: initial; }
-  .inverse .select-styled {
+  .inverse-color .select-styled {
     color: #aeaeb6;
     border: 0.05rem solid #363545;
     background-color: #474655; }
@@ -4124,7 +4124,7 @@ fieldset {
       box-sizing: border-box;
       border: 0;
       background: transparent; }
-      .inverse .select-options__search-filter input {
+      .inverse-color .select-options__search-filter input {
         color: #aeaeb6;
         border: 0.05rem solid #363545;
         background-color: #474655; }
@@ -4375,9 +4375,9 @@ body.has-modal-open {
               line-height: 30px;
               font-weight: 400;
               display: block; } }
-          .inverse .mega-menu__list li > ul > li > a:not(.ter-button) {
+          .inverse-color .mega-menu__list li > ul > li > a:not(.ter-button) {
             color: #aeaeb6; }
-            .inverse .mega-menu__list li > ul > li > a:not(.ter-button):hover {
+            .inverse-color .mega-menu__list li > ul > li > a:not(.ter-button):hover {
               color: #93939e; }
   .mega-menu__trigger:after {
     -webkit-font-smoothing: antialiased;
@@ -4417,7 +4417,7 @@ body.has-nav {
   border-bottom: 1px solid #e2e2e7;
   padding-left: var(--outer-margin);
   padding-right: var(--outer-margin); }
-  .navbar.inverse {
+  .navbar.inverse-color {
     background: #363545;
     border-bottom: 1px solid #363545; }
   .navbar.is-fixed {
@@ -4461,9 +4461,9 @@ body.has-nav {
       .navbar__brand[href]:hover {
         color: #9e4900;
         text-decoration: none; }
-      .inverse .navbar__brand[href] {
+      .inverse-color .navbar__brand[href] {
         color: #aeaeb6; }
-        .inverse .navbar__brand[href]:hover {
+        .inverse-color .navbar__brand[href]:hover {
           color: #93939e;
           text-decoration: none; }
     .navbar__brand img {
@@ -4493,7 +4493,7 @@ body.has-nav {
         top: unset;
         left: unset;
         display: flex !important; } }
-    .inverse .navbar__nav {
+    .inverse-color .navbar__nav {
       background: #363545; }
   .navbar__menu {
     display: block;
@@ -4550,9 +4550,9 @@ body.has-nav {
           display: block;
           line-height: initial;
           height: auto; } }
-      .inverse .navbar__menu-item > a:not(.ter-button) {
+      .inverse-color .navbar__menu-item > a:not(.ter-button) {
         color: #aeaeb6; }
-        .inverse .navbar__menu-item > a:not(.ter-button):hover {
+        .inverse-color .navbar__menu-item > a:not(.ter-button):hover {
           color: #93939e; }
     @media (max-width: 900px) {
       .navbar__menu-item.ter-dropdown {
@@ -4580,9 +4580,9 @@ body.has-nav {
       color: #262533;
       text-decoration: none; } }
     @media (max-width: 900px) {
-      .inverse .navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
+      .inverse-color .navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
         color: #aeaeb6; }
-        .inverse .navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
+        .inverse-color .navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
           color: #93939e; } }
     @media (max-width: 900px) {
       .navbar__menu-item.ter-dropdown .ter-dropdown__menu {

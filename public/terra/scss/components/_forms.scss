@@ -17,7 +17,7 @@
     background-color: $input-bg;
     border-radius: $input-border-radius;
     box-sizing: border-box;
-    .inverse & {
+    .inverse-color & {
         color: $input-inverse-text-color;
         border: $input-border-size solid $input-inverse-border-color;
         background-color: $input-inverse-bg;

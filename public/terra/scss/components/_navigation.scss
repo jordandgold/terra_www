@@ -51,7 +51,7 @@ $mega-menu-offset: calc(-1 * #{spacing(2)});
 							@include type-setting(0,'normal');
 							display: block;
 						}
-						.inverse & {
+						.inverse-color & {
 							color: $navbar-inverse-link-color;
 							&:hover {
 								color: $navbar-inverse-link-hover-color;
@@ -101,7 +101,7 @@ body.has-nav {
 	border-bottom: $navbar-border-width solid $navbar-border-color;
 	padding-left: var(--outer-margin);
 	padding-right: var(--outer-margin);
-	&.inverse {
+	&.inverse-color {
 		background: $navbar-inverse-bg;
 		border-bottom: $navbar-border-width solid $navbar-inverse-border-color
 	}
@@ -149,7 +149,7 @@ body.has-nav {
 				color: $navbar-link-hover;
 				text-decoration: none;
 			}
-			.inverse & {
+			.inverse-color & {
 				color: $navbar-inverse-link-color;
 				&:hover {
 					color: $navbar-inverse-link-hover-color;
@@ -189,7 +189,7 @@ body.has-nav {
         	left: unset;
         	display: flex !important;
 	    }
-	    .inverse & {
+	    .inverse-color & {
 			background: $navbar-inverse-bg;
 		}
 	}
@@ -248,7 +248,7 @@ body.has-nav {
 				line-height: initial;
 				height: auto;
 			}
-			.inverse & {
+			.inverse-color & {
 				color: $navbar-inverse-link-color;
 				&:hover {
 					color: $navbar-inverse-link-hover-color;
@@ -283,7 +283,7 @@ body.has-nav {
 							}
 						}
 					}
-					.inverse & {
+					.inverse-color & {
 						@include for-size(tablet-landscape-down) {
 							color: $navbar-inverse-link-color;
 							&:hover {
