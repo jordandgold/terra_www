@@ -43,18 +43,21 @@
 	<div class="markup-panel">
 		<div class="markup-panel__example">
 <form>
-	<div class="ter-input">
-		<label class="ter-input__label">Name</label>
-		<div class="ter-input__wrap">
-	    	<input type="text" placeholder="">
-	    </div>
-	</div>
-	<div class="ter-input">
-		<label class="ter-input__label">Email</label>
-		<div class="ter-input__wrap">
-	    	<input type="email" placeholder="">
-	    </div>
-	</div>
+	<fieldset class="ter-fieldset">
+		<legend class="ter-fieldset__legend">Personal Information</legend>
+		<div class="ter-input">
+			<label class="ter-input__label">Name</label>
+			<div class="ter-input__wrap">
+		    	<input type="text" placeholder="">
+		    </div>
+		</div>
+		<div class="ter-input">
+			<label class="ter-input__label">Email</label>
+			<div class="ter-input__wrap">
+		    	<input type="email" placeholder="">
+		    </div>
+		</div>
+	</fieldset>
 	<div class="ter-radio-group">
 		<label class="ter-radio-group__label">This is a question</label>
 		<div class="ter-radio">
@@ -390,10 +393,8 @@
 	<div class="markup-panel">
 		<div class="markup-panel__example">
 <div class="search-bar ter-input">
-	<div class="search-bar__input">
-		<div class="ter-input__wrap">
-	    	<input type="text" placeholder="">
-	    </div>
+	<div class="search-bar__input ter-input__wrap">
+    	<input type="text" placeholder="">
     </div>
 	<button class="search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
 </div>

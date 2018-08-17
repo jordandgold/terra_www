@@ -75,6 +75,9 @@
                 background: transparentize($input-border-color, .95);
                 cursor: not-allowed;
             }
+            &:focus {
+                outline: none;
+            }
             .has-error & {
                 border-color: emotive-color('danger');
             }
@@ -212,16 +215,6 @@
         padding-top: spacing(0);
         padding-bottom: spacing(0);
     }
-}
-
-.inverse {
-    input[type="text"] {
-        color: #ffffff;
-    }
-}
-
-:focus {
-    outline: none;
 }
 
 select {
@@ -377,5 +370,11 @@ fieldset {
         cursor: default;
         color: neutral-color('gray-1');
         padding: spacing(2) spacing(4);
+    }
+}
+
+.ter-fieldset {
+    &__legend {
+        @include type-setting(-1,'bold');
     }
 }
