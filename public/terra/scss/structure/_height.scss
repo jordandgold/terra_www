@@ -20,9 +20,9 @@
     }
 }
 
-@each $level in $height-scale {
+@each $level, $value in $height-scale {
     .max-height-#{$level} {
-        @include max-height($level);
+        max-height: $value;
     }
 }
 

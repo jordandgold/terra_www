@@ -130,6 +130,36 @@
 .height-10 {
   height: 200px; }
 
+.max-height-1 {
+  max-height: 24px; }
+
+.max-height-2 {
+  max-height: 32px; }
+
+.max-height-3 {
+  max-height: 48px; }
+
+.max-height-4 {
+  max-height: 64px; }
+
+.max-height-5 {
+  max-height: 72px; }
+
+.max-height-6 {
+  max-height: 96px; }
+
+.max-height-7 {
+  max-height: 120px; }
+
+.max-height-8 {
+  max-height: 144px; }
+
+.max-height-9 {
+  max-height: 176px; }
+
+.max-height-10 {
+  max-height: 200px; }
+
 .height-25 {
   height: 25%; }
 
@@ -2129,6 +2159,12 @@ hr {
 
 pre {
   margin: 0; }
+
+::-moz-selection {
+  background: #2b6fdb; }
+
+::selection {
+  background: #2b6fdb; }
 
 /*
     Flaticon icon font: Flaticon
