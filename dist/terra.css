@@ -2617,7 +2617,7 @@ h1,
 .heading-1 {
   font-size: 52px;
   line-height: 65px;
-  font-weight: 600;
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 24px;
@@ -2627,7 +2627,7 @@ h2,
 .heading-2 {
   font-size: 44px;
   line-height: 55px;
-  font-weight: 600;
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 24px;
@@ -2637,7 +2637,7 @@ h3,
 .heading-3 {
   font-size: 36px;
   line-height: 45px;
-  font-weight: 600;
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 24px;
@@ -2647,7 +2647,7 @@ h4,
 .heading-4 {
   font-size: 28px;
   line-height: 35px;
-  font-weight: 600;
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 16px;
@@ -2657,7 +2657,7 @@ h5,
 .heading-5 {
   font-size: 20px;
   line-height: 25px;
-  font-weight: 600;
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 16px;
@@ -3550,7 +3550,7 @@ a.ter-button--icon {
   .ter-card__title {
     font-size: 20px;
     line-height: 25px;
-    font-weight: 600;
+    font-weight: 800;
     color: #262533;
     display: block;
     padding-bottom: 16px;

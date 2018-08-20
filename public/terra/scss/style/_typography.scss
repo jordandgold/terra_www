@@ -7,10 +7,10 @@
 //
 // mixins
 
-@mixin header-type-setting($level: 0, $weight: 'normal') {
+@mixin header-type-setting($level: 0, $weight: $header-font-weight) {
 	font-size: type-scale($level);
 	line-height: map-get($type-scale, $level) * 1.25;
-	font-weight: font-weight($weight);
+	font-weight: $weight;
 	color: $header-font-color;
 	display: block;
 }
@@ -48,7 +48,7 @@ p {
 // typography settings
 
 @mixin heading-1 {
-	@include header-type-setting(4,'bold');
+	@include header-type-setting(4);
 	padding-bottom: spacing(5);
 	margin: 0;
 }
@@ -59,7 +59,7 @@ h1,
 }
 
 @mixin heading-2 {
-	@include header-type-setting(3,'bold');
+	@include header-type-setting(3);
 	padding-bottom: spacing(5);
 	margin: 0;
 }
@@ -70,7 +70,7 @@ h2,
 }
 
 @mixin heading-3 {
-	@include header-type-setting(2,'bold');
+	@include header-type-setting(2);
 	padding-bottom: spacing(5);
 	margin: 0;
 }
@@ -81,7 +81,7 @@ h3,
 }
 
 @mixin heading-4 {
-	@include header-type-setting(1,'bold');
+	@include header-type-setting(1);
 	padding-bottom: spacing(4);
 	margin: 0;
 }
@@ -92,7 +92,7 @@ h4,
 }
 
 @mixin heading-5 {
-	@include header-type-setting(0,'bold');
+	@include header-type-setting(0);
 	padding-bottom: spacing(4);
 	margin: 0;
 }

@@ -48,3 +48,7 @@
   background-color: $background-color;
   color: yiq-contrast-color($background-color, $dark, $light, $threshold);
 }
+
+@function font-weight($weight) {
+  @return map-get($font-weight, $weight);
+}

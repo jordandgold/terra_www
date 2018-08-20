@@ -18,7 +18,7 @@ gulp.task('prod:sass', function () {
     .pipe(gulp.dest('./public/css'));
 });
  
-gulp.task('dev:watch', function () {
+gulp.task('dev', function () {
   gulp.watch('./public/**/scss/**/*.scss', ['prod:sass', ['sass:dist']]);
   gulp.watch('./public/**/js/**/*.js', ['scripts:dist']);
 });
