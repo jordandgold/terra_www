@@ -23,9 +23,13 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('sass:terra', function () {
+gulp.task('sass:dist', function () {
+  var processors = [
+      autoprefixer({browsers: ['last 1 version']}),
+  ];
   return gulp.src('./public/terra/scss/terra.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(processors))
     .pipe(gulp.dest('./public/css'));
 });
 
