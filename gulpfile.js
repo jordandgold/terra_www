@@ -17,10 +17,22 @@ gulp.task('prod:sass', function () {
     .pipe(postcss(processors))
     .pipe(gulp.dest('./public/css'));
 });
+
+gulp.task('sass:su', function () {
+  var processors = [
+      autoprefixer({browsers: ['last 1 version']}),
+  ];
+  return gulp.src('./public/terra/sketchup/terra-sketchup.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./public/css'));
+});
  
 gulp.task('dev', function () {
   gulp.watch('./public/**/scss/**/*.scss', ['prod:sass', ['sass:dist']]);
   gulp.watch('./public/**/js/**/*.js', ['scripts:dist']);
+  gulp.watch('./public/**/terra-sketchup.scss', ['sass:su']);
 });
 
 gulp.task('sass:dist', function () {

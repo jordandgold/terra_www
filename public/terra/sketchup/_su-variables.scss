@@ -1,0 +1,305 @@
+
+// colors
+@function grayscale($key: 'dark-0') {
+  @return map-get($grayscale, $key);
+}
+$grayscale: () !default;
+$grayscale: map-merge((
+    'white':   #ffffff,
+    'light-0': #f9f9fb,
+    'light-1': #f3f3f7,
+    'gray-0':  #eaeaef,
+    'gray-1':  #e2e2e7,
+    'gray-2':  #d0d0d7,
+    'gray-3':  #bfbfc6,
+    'gray-4':  #aeaeb6,
+    'gray-5':  #9d9da6,
+    'gray-6':  #8c8b96,
+    'gray-7':  #7b7a86,
+    'gray-8':  #6a6976,
+    'gray-9':  #595868,
+    'gray-10': #474655,
+    'dark-0':  #363545,
+    'dark-1':  #262533,
+    'dark-2':  #1b1a26,
+    'dark-3':  #0b0a12,
+    'black':   #000000,
+), $grayscale);
+
+@function brand-color($key: 'brand-1') {
+  @return map-get($brand-colors, $key);
+}
+$brand-colors: () !default;
+$brand-colors: map-merge((
+    'brand-1':  #009AD9,
+    'brand-2':  #d16100,
+), $brand-colors);
+
+@function emotive-color($key: 'info') {
+  @return map-get($emotive-colors, $key);
+}
+$emotive-colors: () !default;
+$emotive-colors: map-merge((
+    'primary':  brand-color('brand-1'),
+    'secondary':     brand-color('brand-2'),
+    'danger':   #ce2740,
+    'success':  #1cb260,
+    'warning':  #FFBE00,
+    'light':    grayscale('light-1'),
+    'dark':     grayscale('dark-0'),
+), $emotive-colors);
+
+@function map-collect($maps...) {
+  $collection: ();
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+  @return $collection;
+}
+$color-palette: map-collect($brand-colors, $emotive-colors, $grayscale);
+
+@function type-color($key: 'normal') {
+  @return map-get($type-colors, $key);
+}
+$type-colors: () !default;
+$type-colors: map-merge((
+    'normal':   grayscale('dark-1'),
+    'inverse':  grayscale('white'),
+), $type-colors);
+
+// font family
+$font-sans-serif:
+    'Open Sans',
+    -apple-system, BlinkMacSystemFont,
+    'avenir next', avenir,
+    'helvetica neue', helvetica,
+    ubuntu,
+    roboto, noto,
+    'segoe ui', arial,
+    sans-serif;
+
+// font weight
+$font-weight: (
+    'light': 300,
+    'normal': 400,
+    'bold': 600,
+    'black': 800,
+);
+
+// type scale
+$type-scale: (
+    -2: 12px,
+    -1: 16px,
+    0: 20px,
+    1: 28px,
+    2: 36px,
+    3: 44px,
+    4: 52px,
+    5: 72px
+);
+
+// type setting
+$base-font-size: 16px;
+$scale: 1.75;
+$base-line-height: $base-font-size * $scale;
+$line-height: (
+    -1: $base-line-height,
+    0: $base-line-height,
+    1: $base-line-height * 1,
+    2: $base-line-height * 1,
+    3: $base-line-height * 2,
+    4: $base-line-height * 2,
+    5: $base-line-height * 2,
+    6: $base-line-height * 2,
+);
+
+// border radius
+@function border-radius($key) {
+  @return map-get($border-radius-scale, $key);
+}
+$border-radius-scale: (
+    'none': 0,
+    'small': .125rem,
+    'medium': .25rem,
+    'large': .5rem,
+    'mega': 1rem,
+);
+
+// heights
+@function height($key) {
+  @return map-get($height-scale, $key);
+}
+$height-scale: (
+    1: 24px,
+    2: 32px,
+    3: 48px,
+    4: 64px,
+    5: 72px,
+    6: 96px,
+    7: 120px,
+    8: 144px,
+    9: 176px,
+    10: 200px
+);
+
+// spacing scale
+@function spacing($key) {
+  @return map-get($spacing-scale, $key);
+}
+$spacing-scale: (
+    0: 0px,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 24px,
+    6: 32px,
+    7: 48px,
+    8: 64px,
+    9: 72px,
+    10: 80px,
+    11: 96px,
+    12: 120px,
+    13: 144px,
+    14: 176px,
+    15: 200px,
+);
+
+// navigation tabs
+$nav-tabs-link-color: grayscale('gray-7');
+$nav-tabs-link-hover: grayscale('dark-1');
+$nav-tabs-border-color: grayscale('gray-2');
+
+// compact tabs
+$compact-tabs-link-color: grayscale('gray-7');
+$compact-tabs-link-hover: grayscale('dark-1');
+$compact-tabs-underline-color: grayscale('dark-1');
+
+// pagination
+$pagination-border-color: grayscale('gray-2');
+
+// body
+$body-bg-color: grayscale('white');
+$body-font-color: type-color('normal');
+
+// headers
+$header-font-color: grayscale('dark-1');
+$header-font-weight: font-weight('black');
+
+// links
+$link-color: brand-color('brand-2');
+$link-hover-color: darken($link-color, 10%);
+$link-highlight: true;
+$link-highlight-color: lighten(brand-color('brand-1'), 30%);
+$link-inverse-color: grayscale('gray-4');
+$link-inverse-hover-color: darken($link-inverse-color, 10%);
+
+// navigation bar
+$navbar-height: height(4);
+$navbar-bg: grayscale('white');
+$navbar-link-color: $link-color;
+$navbar-link-hover: $link-hover-color;
+$navbar-border-width: 1px;
+$navbar-border-color: grayscale('gray-1');
+$navbar-menu-icon-color: grayscale('gray-3');
+$navbar-inverse-bg: grayscale('dark-0');
+$navbar-inverse-border-color: grayscale('dark-0');
+$navbar-inverse-link-color: $link-inverse-color;
+$navbar-inverse-link-hover-color: $link-inverse-hover-color;
+
+// buttons
+$button-border-radius: border-radius('none');
+$button-border-size: 2px;
+$button-icon-color: grayscale('gray-4');
+$button-icon-hover: grayscale('gray-6');
+$button-outline-text-color: grayscale('gray-10');
+$button-outline-border-color: brand-color('brand-1');
+$button-outline-inverse-text-color: text-color('inverse');
+$button-outline-inverse-border-color: grayscale('white');
+
+// tooltips
+$tooltip-bg: grayscale('dark-1');
+$tooltip-text-color: grayscale('white');
+
+// cards
+$card-bg: grayscale('white');
+$card-border-radius: map-get($border-radius-scale, 'none');
+
+// dropdowns
+$dropdown-border-size: 1px;
+$dropdown-border-color: grayscale('gray-4');
+$dropdown-border-radius: border-radius('small');
+$dropdown-bg: grayscale('white');
+$dropdown-link-color: grayscale('dark-1');
+$dropdown-link-hover-bg: grayscale('light-1');
+$drodown-arrow-color: grayscale('gray-6');
+$dropdown-no-link-color: grayscale('gray-6');
+
+// panels
+$panel-bg: grayscale('white');
+$panel-border-color: grayscale('light-1');
+
+// accordion
+$accordion-bg: grayscale('white');
+$accordion-expanded-bg: grayscale('light-1');
+$accordion-border-color: grayscale('gray-4');
+$accordion-arrow-color: grayscale('gray-4');
+$accordion-border-radius: border-radius('small');
+
+// form input
+$input-bg: grayscale('white');
+$input-text-color: brand-color(text-2);
+$input-border-radius: border-radius('small');
+$input-border-color: grayscale('gray-4');
+$input-border-size: .05rem;
+$input-label-color: grayscale('dark-1');
+$input-placeholder-color: grayscale('gray-2');
+$input-focus-border-color: brand-color('brand-2');
+$input-inverse-bg: grayscale('gray-10');
+$input-inverse-text-color: grayscale('gray-4');
+$input-inverse-border-color: grayscale('dark-0');
+
+// checkboxes
+$checkbox-border-color: $input-border-color;
+$checkbox-fill-color: brand-color('brand-1');
+
+// radio buttons
+$radio-border-color: $input-border-color;
+$radio-fill-color: brand-color('brand-1');
+
+// tables
+$table-header-bg: brand-color('brand-2');
+$table-row-bg-even: transparent;
+$table-row-bg-odd: grayscale('light-1');
+
+// modals
+$modal-bg: grayscale('white');
+$modal-overlay-bg: grayscale('dark-1');
+
+// alerts
+$alert-border-radius: border-radius('small');
+
+// tree menu
+$tree-menu-link-color: grayscale('gray-4');
+$tree-menu-link-hover: grayscale('gray-10');
+
+
+// media query breakpoints
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1800px;
+
+// YIQ contrast colors
+/// The text color to be used when a background is determined to be 'light'
+/// @type Color
+$yiq-contrasted-dark-default: grayscale('dark-1') !default;
+/// The text color to be used when a background is determined to be 'dark'
+/// @type Color
+$yiq-contrasted-light-default: grayscale('white') !default;
+/// The YIQ lightness value that determines when the lightness of color changes from 'dark' to 'light'. Acceptable values are between 0 & 255.
+/// @type Number
+$yiq-contrasted-threshold: 128 !default;
+/// Toggle diagnostic messages.
+/// @type Boolean
+$yiq-debug: false !default;
