@@ -3,15 +3,10 @@
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
-
 var autoprefixer = require('autoprefixer');
 var nano = require('gulp-cssnano');
-
 var DEST = 'build/';
-
-gulp.task('default', function() {
-  
-});
+var concat = require('gulp-concat');
 
 gulp.task('sass', function () {
   var processors = [
@@ -41,10 +36,15 @@ gulp.task('css', ['sass'], function () {
         .pipe(postcss(processors))
         .pipe(gulp.dest('./public/css'));
 });
-
  
 gulp.task('sass:watch', function () {
   gulp.watch('./public/scss/**/*.scss', ['sass']);
 });
 
 gulp.task('build', ['sass', 'css']);
+
+gulp.task('scripts', function() {
+  return gulp.src('./public/terra/js/*.js')
+    .pipe(concat('terra.js'))
+    .pipe(gulp.dest('./dist/'));
+});
