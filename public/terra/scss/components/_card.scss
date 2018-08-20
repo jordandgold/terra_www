@@ -5,7 +5,7 @@
     margin-bottom: map-get($spacing-scale, medium);
     border-radius: $card-border-radius;
 	&__body {
-		padding: spacing(5);
+		padding: spacing(7);
 	}
 	&__title {
 		@include heading-5;
