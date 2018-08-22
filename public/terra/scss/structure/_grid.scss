@@ -6,19 +6,10 @@
   --xs-min: 600px;
   --sm-min: 900px;
   --md-min: 1200px;
-  --lg-min: 1800px;
-  // --screen-xs-min: var(--xs-min)em;
-  // --screen-sm-min: var(--sm-min)em;
-  // --screen-md-min: var(--md-min)em;
-  // --screen-lg-min: var(--lg-min)em;
   --container-sm: calc(var(--sm-min) + var(--gutter-width));
   --container-md: calc(var(--md-min) + var(--gutter-width));
   --container-lg: calc(var(--lg-min) + var(--gutter-width));
 }
-
-@custom-media --sm-viewport only screen and (min-width: 900px);
-@custom-media --md-viewport only screen and (min-width: 1200px);
-@custom-media --lg-viewport only screen and (min-width: 1800px);
 
 .container-fluid, .container {
   margin-right: auto;
@@ -264,7 +255,7 @@
   order: 1;
 }
 
-@media only screen and (min-width: $phone-upper-boundary) {
+@media only screen and (min-width: $breakpoint-xs) {
   .container {
     width: var(--container-sm);
   }
@@ -459,7 +450,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-portrait-upper-boundary) {
+@media only screen and (min-width: $breakpoint-sm) {
   .container {
     width: var(--container-md);
   }
@@ -654,7 +645,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-landscape-upper-boundary) {
+@media only screen and (min-width: $breakpoint-md) {
   .container {
     width: var(--container-lg);
   }

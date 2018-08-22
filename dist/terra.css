@@ -1,6 +1,9 @@
-/**
- * Terra Design System
- * v.1.0.0
+/*
+
+	Terra Design System
+	http://terradesignsystem.com
+	v.1.0.0
+
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800");
 .flexbox {
@@ -194,11 +197,18 @@
 .min-vh-100 {
   min-height: 100vh; }
 
-/*
+/**
 
-    MEDIA QUERIES
+    Media Queries
 
-*/
+    .my-box {
+        display: block;
+        @include for-size(desktop-up) {
+            padding: 20px;
+        }
+    }
+
+ */
 /*
 
 	Spacing scale
@@ -978,14 +988,10 @@
   --xs-min: 600px;
   --sm-min: 900px;
   --md-min: 1200px;
-  --lg-min: 1800px;
   --container-sm: calc(var(--sm-min) + var(--gutter-width));
   --container-md: calc(var(--md-min) + var(--gutter-width));
   --container-lg: calc(var(--lg-min) + var(--gutter-width)); }
 
-@custom-media --sm-viewport only screen and (min-width: 900px);
-@custom-media --md-viewport only screen and (min-width: 1200px);
-@custom-media --lg-viewport only screen and (min-width: 1800px);
 .container-fluid, .container {
   margin-right: auto;
   margin-left: auto; }
@@ -1550,6 +1556,26 @@
     order: -1; }
   .last-lg {
     order: 1; } }
+
+/**
+ * Hidden
+ * _hidden.scss
+ */
+@media (max-width: 600px) {
+  .hidden-xs {
+    display: none; } }
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .hidden-sm {
+    display: none; } }
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .hidden-md {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none; } }
 
 .width-25 {
   width: 25%; }
@@ -3554,10 +3580,9 @@ a.ter-button--icon {
     color: #262533;
     display: block;
     padding-bottom: 16px;
-    margin: 0;
-    margin-bottom: 8px; }
+    margin: 0; }
   .ter-card__footer {
-    padding: 0px 24px 16px 24px; }
+    padding: 0px 48px 16px 48px; }
   .ter-card__image {
     overflow: hidden; }
     .ter-card__image--top {

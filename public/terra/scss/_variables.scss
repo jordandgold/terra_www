@@ -284,11 +284,11 @@ $tree-menu-link-color: grayscale('gray-4');
 $tree-menu-link-hover: grayscale('gray-10');
 
 
-// media query breakpoints
-$phone-upper-boundary: 600px;
-$tablet-portrait-upper-boundary: 900px;
-$tablet-landscape-upper-boundary: 1200px;
-$desktop-upper-boundary: 1800px;
+// viewport breakpoints
+$breakpoint-xs: 600px;
+$breakpoint-sm: 900px;
+$breakpoint-md: 1200px;
+$breakpoint-lg: 1800px;
 
 // YIQ contrast colors
 /// The text color to be used when a background is determined to be 'light'

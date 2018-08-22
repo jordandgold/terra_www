@@ -1,37 +1,35 @@
-/*
+/**
 
-    MEDIA QUERIES
+    Media Queries
 
-*/
+    .my-box {
+        display: block;
+        @include for-size(desktop-up) {
+            padding: 20px;
+        }
+    }
+
+ */
 
 @mixin for-size($range) {
 
     @if $range == phone-only {
-        @media (max-width: #{$phone-upper-boundary - 1}) { @content; }
+        @media (max-width: #{$breakpoint-xs - 1}) { @content; }
     }
     @else if $range == tablet-portrait-up {
-        @media (min-width: $phone-upper-boundary) { @content; }
+        @media (min-width: $breakpoint-xs) { @content; }
     }
     @else if $range == tablet-landscape-down {
-        @media (max-width: $tablet-portrait-upper-boundary) { @content; }
+        @media (max-width: $breakpoint-sm) { @content; }
     }
     @else if $range == tablet-landscape-up {
-        @media (min-width: $tablet-portrait-upper-boundary) { @content; }
+        @media (min-width: $breakpoint-sm) { @content; }
     }
     @else if $range == desktop-up {
-        @media (min-width: $tablet-landscape-upper-boundary) { @content; }
+        @media (min-width: $breakpoint-md) { @content; }
     }
     @else if $range == big-desktop-up {
-        @media (min-width: $desktop-upper-boundary) { @content; }
+        @media (min-width: $breakpoint-lg) { @content; }
     }
 
 }
-
-// example
-
-// .my-box {
-//     padding: 10px;
-//     @include for-size(desktop-up) {
-//         padding: 20px;
-//     }
-// }
