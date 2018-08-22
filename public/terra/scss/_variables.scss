@@ -31,8 +31,7 @@ $grayscale: map-merge((
 }
 $brand-colors: () !default;
 $brand-colors: map-merge((
-    'brand-1':  #2b6fdb,
-    'brand-2':  #d16100,
+    'brand-1':  #009AD9,
 ), $brand-colors);
 
 @function emotive-color($key: 'info') {
@@ -41,7 +40,6 @@ $brand-colors: map-merge((
 $emotive-colors: () !default;
 $emotive-colors: map-merge((
     'primary':  brand-color('brand-1'),
-    'secondary':     brand-color('brand-2'),
     'danger':   #ce2740,
     'success':  #1cb260,
     'warning':  #FFBE00,
@@ -165,6 +163,9 @@ $spacing-scale: (
     15: 200px,
 );
 
+// globals
+$border-radius-base: border-radius('none');
+
 // navigation tabs
 $nav-tabs-link-color: grayscale('gray-7');
 $nav-tabs-link-hover: grayscale('dark-1');
@@ -187,7 +188,7 @@ $header-font-color: grayscale('dark-1');
 $header-font-weight: font-weight('black');
 
 // links
-$link-color: brand-color('brand-2');
+$link-color: brand-color('brand-1');
 $link-hover-color: darken($link-color, 10%);
 $link-highlight: true;
 $link-highlight-color: lighten(brand-color('brand-1'), 30%);
@@ -208,12 +209,12 @@ $navbar-inverse-link-color: $link-inverse-color;
 $navbar-inverse-link-hover-color: $link-inverse-hover-color;
 
 // buttons
-$button-border-radius: border-radius('small');
+$button-border-radius: $border-radius-base;
 $button-border-size: 1px;
 $button-icon-color: grayscale('gray-4');
 $button-icon-hover: grayscale('gray-6');
 $button-outline-text-color: grayscale('gray-10');
-$button-outline-border-color: grayscale('gray-4');
+$button-outline-border-color: brand-color('brand-1');
 $button-outline-inverse-text-color: text-color('inverse');
 $button-outline-inverse-border-color: grayscale('white');
 
@@ -223,12 +224,12 @@ $tooltip-text-color: grayscale('white');
 
 // cards
 $card-bg: grayscale('white');
-$card-border-radius: map-get($border-radius-scale, 'none');
+$card-border-radius: $border-radius-base;
 
 // dropdowns
 $dropdown-border-size: 1px;
 $dropdown-border-color: grayscale('gray-4');
-$dropdown-border-radius: border-radius('small');
+$dropdown-border-radius: $border-radius-base;
 $dropdown-bg: grayscale('white');
 $dropdown-link-color: grayscale('dark-1');
 $dropdown-link-hover-bg: grayscale('light-1');
@@ -244,17 +245,17 @@ $accordion-bg: grayscale('white');
 $accordion-expanded-bg: grayscale('light-1');
 $accordion-border-color: grayscale('gray-4');
 $accordion-arrow-color: grayscale('gray-4');
-$accordion-border-radius: border-radius('small');
+$accordion-border-radius: $border-radius-base;
 
 // form input
 $input-bg: grayscale('white');
 $input-text-color: brand-color(text-2);
-$input-border-radius: border-radius('small');
+$input-border-radius: $border-radius-base;
 $input-border-color: grayscale('gray-4');
 $input-border-size: .05rem;
 $input-label-color: grayscale('dark-1');
 $input-placeholder-color: grayscale('gray-2');
-$input-focus-border-color: brand-color('brand-2');
+$input-focus-border-color: brand-color('brand-1');
 $input-inverse-bg: grayscale('gray-10');
 $input-inverse-text-color: grayscale('gray-4');
 $input-inverse-border-color: grayscale('dark-0');
@@ -268,7 +269,7 @@ $radio-border-color: $input-border-color;
 $radio-fill-color: brand-color('brand-1');
 
 // tables
-$table-header-bg: brand-color('brand-2');
+$table-header-bg: brand-color('brand-1');
 $table-row-bg-even: transparent;
 $table-row-bg-odd: grayscale('light-1');
 
@@ -277,7 +278,7 @@ $modal-bg: grayscale('white');
 $modal-overlay-bg: grayscale('dark-1');
 
 // alerts
-$alert-border-radius: border-radius('small');
+$alert-border-radius: $border-radius-base;
 
 // tree menu
 $tree-menu-link-color: grayscale('gray-4');
