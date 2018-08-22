@@ -1621,8 +1621,17 @@
 .color-brand-1 {
   color: #009AD9; }
 
+.color-brand-2 {
+  color: #005F9E; }
+
+.color-accent-1 {
+  color: #FFBE00; }
+
 .color-primary {
   color: #009AD9; }
+
+.color-secondary {
+  color: #FFBE00; }
 
 .color-danger {
   color: #ce2740; }
@@ -1698,7 +1707,10 @@
 
 :root {
   --color-brand-1: #009AD9;
+  --color-brand-2: #005F9E;
+  --color-accent-1: #FFBE00;
   --color-primary: #009AD9;
+  --color-secondary: #FFBE00;
   --color-danger: #ce2740;
   --color-success: #1cb260;
   --color-warning: #FFBE00;
@@ -2032,8 +2044,17 @@ template {
 .bg-brand-1 {
   background-color: #009AD9; }
 
+.bg-brand-2 {
+  background-color: #005F9E; }
+
+.bg-accent-1 {
+  background-color: #FFBE00; }
+
 .bg-primary {
   background-color: #009AD9; }
+
+.bg-secondary {
+  background-color: #FFBE00; }
 
 .bg-danger {
   background-color: #ce2740; }
@@ -2766,6 +2787,23 @@ small {
       color: #0076a6;
       text-decoration: underline; }
 
+.ter-alert--secondary {
+  background-color: rgba(255, 190, 0, 0.1);
+  border: 0.05rem solid #cc9800; }
+  .ter-alert--secondary .ter-alert__icon > i:before {
+    color: #997200; }
+  .ter-alert--secondary .ter-alert__close i {
+    color: #b38500; }
+  .ter-alert--secondary hr {
+    opacity: 0.4;
+    background-color: #cc9800; }
+  .ter-alert--secondary a {
+    color: #997200;
+    text-decoration: underline; }
+    .ter-alert--secondary a:hover {
+      color: #cc9800;
+      text-decoration: underline; }
+
 .ter-alert--danger {
   background-color: rgba(206, 39, 64, 0.1);
   border: 0.05rem solid #a31f33; }
@@ -2962,6 +3000,21 @@ small {
     text-decoration: none;
     color: #ffffff; }
 
+.badge--secondary {
+  color: #262533;
+  border: 0.05rem solid #FFBE00;
+  background-color: #FFBE00; }
+  .badge--secondary[href]:hover, .badge--secondary[href]:active {
+    background-color: #cc9800;
+    border-color: #cc9800;
+    text-decoration: none;
+    color: #262533; }
+  .badge--secondary[href]:focus {
+    background-color: #a87d00;
+    border-color: #a87d00;
+    text-decoration: none;
+    color: #262533; }
+
 .badge--danger {
   color: #ffffff;
   border: 0.05rem solid #ce2740;
@@ -3047,6 +3100,21 @@ small {
     text-decoration: none;
     color: #ffffff; }
   .badge--outline--primary[href]:focus {
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: none;
+    color: #ffffff; }
+
+.badge--outline--secondary {
+  color: #FFBE00;
+  border: 0.05rem solid #FFBE00;
+  background-color: transparent; }
+  .badge--outline--secondary[href]:hover, .badge--outline--secondary[href]:active {
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: none;
+    color: #ffffff; }
+  .badge--outline--secondary[href]:focus {
     background-color: transparent;
     border-color: transparent;
     text-decoration: none;
@@ -3208,6 +3276,30 @@ a.ter-button--primary {
   .ter-button--primary i:before,
   a.ter-button--primary i:before {
     color: #ffffff; }
+
+.ter-button--secondary,
+a.ter-button--secondary {
+  background-color: #FFBE00;
+  border: 1px solid #FFBE00;
+  color: #262533; }
+  .ter-button--secondary:visited, .ter-button--secondary:active, .ter-button--secondary:focus,
+  a.ter-button--secondary:visited,
+  a.ter-button--secondary:active,
+  a.ter-button--secondary:focus {
+    color: #262533; }
+  .ter-button--secondary:hover,
+  a.ter-button--secondary:hover {
+    color: #262533;
+    text-decoration: none;
+    background-color: #dba300;
+    border-color: #c29000;
+    cursor: pointer; }
+  .ter-button--secondary:active,
+  a.ter-button--secondary:active {
+    background-color: #c29000; }
+  .ter-button--secondary i:before,
+  a.ter-button--secondary i:before {
+    color: #262533; }
 
 .ter-button--danger,
 a.ter-button--danger {
@@ -4683,6 +4775,22 @@ body.has-nav {
     text-decoration: underline; }
     .ter-notification--primary a:hover {
       color: #0db9ff;
+      text-decoration: underline; }
+
+.ter-notification--secondary {
+  background-color: #FFBE00;
+  border: 0.05rem solid #cc9800;
+  color: #262533; }
+  .ter-notification--secondary [class$="close"] i {
+    color: neutral-color("white"); }
+  .ter-notification--secondary hr {
+    opacity: 0.4;
+    background-color: #cc9800; }
+  .ter-notification--secondary a {
+    color: #ffd866;
+    text-decoration: underline; }
+    .ter-notification--secondary a:hover {
+      color: #ffcb33;
       text-decoration: underline; }
 
 .ter-notification--danger {

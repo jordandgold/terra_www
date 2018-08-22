@@ -32,6 +32,8 @@ $grayscale: map-merge((
 $brand-colors: () !default;
 $brand-colors: map-merge((
     'brand-1':  #009AD9,
+    'brand-2':  #005F9E,
+    'accent-1': #FFBE00,
 ), $brand-colors);
 
 @function emotive-color($key: 'info') {
@@ -40,6 +42,7 @@ $brand-colors: map-merge((
 $emotive-colors: () !default;
 $emotive-colors: map-merge((
     'primary':  brand-color('brand-1'),
+    'secondary':  brand-color('accent-1'),
     'danger':   #ce2740,
     'success':  #1cb260,
     'warning':  #FFBE00,
