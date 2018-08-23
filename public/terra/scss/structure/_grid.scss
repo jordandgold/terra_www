@@ -16,7 +16,7 @@
   margin-left: auto;
 }
 
-.margin-fix {
+.flush {
   margin-left: calc(-1 * var(--outer-margin, 2rem));
   margin-right: calc(-1 * var(--outer-margin, 2rem));
 }
