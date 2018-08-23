@@ -7,28 +7,9 @@
 //
 // mixins
 
-@mixin header-type-setting($level: 0, $weight: $header-font-weight) {
-	font-size: type-scale($level);
-	line-height: map-get($type-scale, $level) * 1.25;
-	font-weight: $weight;
-	color: $header-font-color;
-	display: block;
-}
-
-@mixin type-setting($level: 0, $weight: 'normal') {
-	font-size: type-scale($level);
-	line-height: map-get($type-scale, $level) * 1.5;
-	font-weight: font-weight($weight);
-}
-
-@mixin font-size-paragraph {
-	@include type-setting(0);
-	margin: 0 0 $base-line-height 0;
-}
-
-@mixin font-size($size) {
-	@include type-setting($size);
-}
+// @function type-scale($level) {
+//   @return map-get($type-scale, $level);
+// }
 
 
 //

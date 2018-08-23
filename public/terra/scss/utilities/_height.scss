@@ -1,18 +1,7 @@
-/*
-
-    Heights
-
-*/
-
-// Height helper classes - Based off of $height-scale
-
-@mixin height($level) {
-    height: map-get($height-scale, $level);
-}
-
-@mixin max-height($level) {
-    max-height: map-get($height-scale, $level);
-}
+//
+// Height
+// helper classes - Based off of $height-scale
+//
 
 @each $level, $value in $height-scale {
     .height-#{$level} {

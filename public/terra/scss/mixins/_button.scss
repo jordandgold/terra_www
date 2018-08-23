@@ -1,0 +1,88 @@
+@mixin button-base() {
+    @include type-setting(-1,0);
+    padding: spacing(2) spacing(4);
+    border-radius: $button-border-radius;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+    display: inline-block;
+    text-align: center;
+    &[href] {
+        &:hover,
+        &:visited,
+        &:active,
+        &:focus,
+        a:active {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        &:active {
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+        }
+    }
+    i {
+        margin-left: spacing(3);
+        &:before {
+            font-size: 75%;
+            transition: color 200ms ease-in-out;
+        }
+    }
+}
+
+@mixin button-variant($bg, $color: $bg, $borderColor: $bg, $bgHover: $bg) {
+    background-color: $bg;
+    border: $button-border-size solid $borderColor;
+    @if $bg == $color {
+        color: yiq-contrast-color($bg);
+    }
+    @else {
+        color: $color;
+    }
+    &:visited,
+    &:active,
+    &:focus {
+        @if $bg == $color {
+            color: yiq-contrast-color($bg);
+        }
+        @else {
+            color: $color;
+        }
+    }
+    &:hover {
+        @if $bg == $color {
+            color: yiq-contrast-color($bg);
+        }
+        @else {
+            color: $color;
+        }
+        text-decoration: none;
+        @if $bg == $bgHover {
+            background-color: darken($bg, 7%);
+        }
+        @else {
+            background-color: $bgHover;
+        }
+        border-color: darken($borderColor, 12%);
+        cursor: pointer;
+    }
+    &:active {
+        background-color: darken($bg, 12%);
+    }
+    i {
+        &:before {
+            @if $bg == $color {
+                color: yiq-contrast-color($bg);
+            }
+            @else {
+                color: $color;
+            }
+        }
+    }
+}
+
+@mixin button-reset() {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+}

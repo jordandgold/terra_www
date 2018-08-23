@@ -11,10 +11,6 @@ $depth-scale: (
 	4,
 );
 
-@mixin z-index($level) {
-	z-index: $level * 100;
-}
-
 @mixin depth($level) {
 	@include box-shadow($level);
 	z-index: $level * 100;

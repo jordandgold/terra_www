@@ -10,31 +10,19 @@
 @import 'functions';
 @import 'mixins';
 @import 'variables';
+@import 'utilities';
 
-// structure
-@import 'structure/flex';
-@import 'structure/height';
-@import 'structure/media-queries';
-@import 'structure/spacing';
-@import 'structure/text-align';
-@import 'structure/grid';
-@import 'structure/hidden';
-@import 'structure/width';
+// layout
+@import 'layout/media-queries';
+@import 'layout/normalize';
+@import 'layout/flex';
+@import 'layout/grid';
+@import 'layout/hidden';
 
-// style
-@import 'style/colors';
-@import 'style/normalize';
-@import 'style/backgrounds';
-@import 'style/box-shadow';
-@import 'style/border-radius';
-@import 'style/depth';
-@import 'style/font-family';
-@import 'style/font-weight';
-@import 'style/global';
-@import 'style/icons';
-@import 'style/line-height';
-@import 'style/type-scale';
-@import 'style/typography';
+// content
+@import 'content/global';
+@import 'content/icons';
+@import 'content/typography';
 
 // components
 @import 'components/alert';

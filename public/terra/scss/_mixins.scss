@@ -1,9 +1,9 @@
-@mixin button-reset() {
-	border: 0;
-	background: transparent;
-	box-sizing: border-box;
-}
 
-@mixin font-weight($weight) {
-  font-weight: map-get($font-weight, $weight);
-}
+// mixins
+@import 'mixins/backgrounds';
+@import 'mixins/button';
+@import 'mixins/clearfix';
+@import 'mixins/height';
+@import 'mixins/font-weight';
+@import 'mixins/typography';
+@import 'mixins/z-index';

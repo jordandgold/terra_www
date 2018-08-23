@@ -3,6 +3,7 @@
         background-color: $hex;
     }
 }
-@mixin background-color($color) {
-  background-color: map-get($color-palette, $color);
+
+.bg-transparent {
+	background-color: transparent;
 }
