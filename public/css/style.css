@@ -153,7 +153,7 @@
   --spacing-lg: 48px;
   --spacing-xl: 64px;
   --spacing-xxl: 72px;
-  --spacing-xxxxl: 96px;
+  --spacing-xxxl: 96px;
   --spacing-super: 144px;
   --spacing-mega: 200px; }
 
@@ -617,50 +617,50 @@
 .margin-left-xxl {
   margin-left: 72px !important; }
 
-.pad-all-xxxxl {
+.pad-all-xxxl {
   padding: 96px !important; }
 
-.pad-h-xxxxl {
+.pad-h-xxxl {
   padding-left: 96px !important;
   padding-right: 96px !important; }
 
-.pad-v-xxxxl {
+.pad-v-xxxl {
   padding-top: 96px !important;
   padding-bottom: 96px !important; }
 
-.pad-top-xxxxl {
+.pad-top-xxxl {
   padding-top: 96px !important; }
 
-.pad-right-xxxxl {
+.pad-right-xxxl {
   padding-right: 96px !important; }
 
-.pad-bottom-xxxxl {
+.pad-bottom-xxxl {
   padding-bottom: 96px !important; }
 
-.pad-left-xxxxl {
+.pad-left-xxxl {
   padding-left: 96px !important; }
 
-.margin-all-xxxxl {
+.margin-all-xxxl {
   margin: 96px !important; }
 
-.margin-h-xxxxl {
+.margin-h-xxxl {
   margin-left: 96px !important;
   margin-right: 96px !important; }
 
-.margin-v-xxxxl {
+.margin-v-xxxl {
   margin-top: 96px !important;
   margin-bottom: 96px !important; }
 
-.margin-top-xxxxl {
+.margin-top-xxxl {
   margin-top: 96px !important; }
 
-.margin-right-xxxxl {
+.margin-right-xxxl {
   margin-right: 96px !important; }
 
-.margin-bottom-xxxxl {
+.margin-bottom-xxxl {
   margin-bottom: 96px !important; }
 
-.margin-left-xxxxl {
+.margin-left-xxxl {
   margin-left: 96px !important; }
 
 .pad-all-super {
@@ -4835,14 +4835,15 @@ body.has-nav {
   border: 3px solid #f3f3f7;
   margin: 24px 0; }
 
-.page-section__sub-section {
-  padding-bottom: 48px; }
-
-.page-section__sub-section:first-child {
-  padding-top: calc(48px * 2); }
-
-.page-section__sub-section:last-child {
-  padding-bottom: calc(48px * 2); }
+.page-section {
+  padding-top: 96px;
+  padding-bottom: 96px; }
+  .page-section__sub-section {
+    padding-bottom: 48px; }
+  .page-section__sub-section:first-child {
+    padding-top: calc(48px * 2); }
+  .page-section__sub-section:last-child {
+    padding-bottom: calc(48px * 2); }
 
 .table {
   width: 100%;
@@ -5400,11 +5401,15 @@ code {
   .navbar__nav--collapse > ul li:last-child {
     padding-right: 0; } }
 
-.hero--intro {
-  background-size: cover;
-  background-position: center center;
-  position: relative; }
-
-.hero--slim {
-  padding-top: 64px;
-  padding-bottom: 64px; }
+.hero {
+  padding-top: 96px;
+  padding-bottom: 96px; }
+  .hero--intro {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-size: cover;
+    background-position: center center;
+    position: relative; }
+  .hero--slim {
+    padding-top: 64px;
+    padding-bottom: 64px; }
