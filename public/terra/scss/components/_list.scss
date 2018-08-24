@@ -14,14 +14,14 @@
 		text-align: left;
 		> li {
 			margin-left: 0;
-			margin-right: spacing(3);
+			margin-right: spacing('xxs');
 			padding: 0;
 		}
 	}
 	&--center {
 		text-align: center;
 		> li {
-			margin-left: spacing(3);
+			margin-left: spacing('xxs');
 			margin-right: 0;
 			padding: 0;
 		}
@@ -30,7 +30,7 @@
 		text-align: right;
 		> li {
 			display: inline-block;
-			margin-left: spacing(3);
+			margin-left: spacing('xxs');
 			margin-right: 0;
 			padding: 0;
 		}
@@ -44,7 +44,7 @@ ul.list-inline {
 @mixin list-base {
 	margin: 0 0 $base-line-height 0;
 	> li {
-		padding: spacing(3) 0;
+		padding: spacing('xxs') 0;
 	}
 }
 
@@ -68,7 +68,7 @@ ul,
 ol {
 	@include type-setting(0,'normal');
 	li {
-		padding: spacing(3) 0;
+		padding: spacing('xxs') 0;
 	}
 }
 
@@ -84,7 +84,7 @@ ol {
 	&--flush {
 		> li {
 			border-top: 1px solid brand-color(ui-3);
-			padding: spacing(3) spacing(5);
+			padding: spacing('xxs') spacing('sm');
 			&:first-child {
 				border-top: 0px;
 			}

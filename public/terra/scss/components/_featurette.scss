@@ -1,6 +1,6 @@
 .featurette {
-	padding-top: spacing(9);
-	padding-bottom: spacing(9);
+	padding-top: spacing('xxl');
+	padding-bottom: spacing('xxl');
 	position: relative;
 	&__showcase-image--left {
 		position: absolute;
@@ -27,13 +27,13 @@
 		}
 	}
 	&__content--left {
-		padding-top: spacing(7);
-		padding-bottom: spacing(7);
+		padding-top: spacing('lg');
+		padding-bottom: spacing('lg');
 		@extend .col-sm-6;
 	}
 	&__content--right {
-		padding-top: spacing(7);
-		padding-bottom: spacing(7);
+		padding-top: spacing('lg');
+		padding-bottom: spacing('lg');
 		@extend .col-sm-6, .col-sm-offset-6;
 	}
 }

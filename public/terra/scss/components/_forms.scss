@@ -8,7 +8,7 @@
     @include type-setting(-1,0);
     color: $input-text-color;
     box-sizing: border-box;
-    padding: spacing(2) spacing(4);
+    padding: spacing('xxxs') spacing('xs');
     position: relative;
     z-index: 1;
     display: block;
@@ -25,7 +25,7 @@
 }
 
 .ter-input {
-    padding: spacing(3) 0;
+    padding: spacing('xxs') 0;
     &:first-child:not(:only-of-type) {
         padding-top: 0;
     }
@@ -39,7 +39,7 @@
     &__label {
         @include type-setting(-1,0);
         display: block;
-        padding-bottom: spacing(2);
+        padding-bottom: spacing('xxxs');
         color: $input-label-color;
     }
     &__wrap {
@@ -105,13 +105,13 @@
 
 .ter-checkbox,
 .ter-radio {
-    padding-top: spacing(3);
-    padding-bottom: spacing(3);
+    padding-top: spacing('xxs');
+    padding-bottom: spacing('xxs');
     box-sizing: content-box;
     &__label {
         @include type-setting(-1,0);
         display: block;
-        padding-bottom: spacing(2);
+        padding-bottom: spacing('xxxs');
         color: $input-label-color;
     }
 }
@@ -205,15 +205,15 @@
 }
 
 .ter-radio-group {
-    padding-top: spacing(3);
-    padding-bottom: spacing(3);
+    padding-top: spacing('xxs');
+    padding-bottom: spacing('xxs');
     &__label {
         @include type-setting(-1,0);
-        padding-bottom: spacing(3);
+        padding-bottom: spacing('xxs');
     }
     .ter-radio {
-        padding-top: spacing(0);
-        padding-bottom: spacing(0);
+        padding-top: spacing('none');
+        padding-bottom: spacing('none');
     }
 }
 
@@ -238,7 +238,7 @@ select {
         font-weight: 900;
         font-size: 0.75rem;
         position: absolute;
-        right: spacing(3);
+        right: spacing('xxs');
         top: 50%;
         transform: translateY(-50%);
         z-index: 1;
@@ -251,10 +251,10 @@ select {
 fieldset {
     min-width: 0;
     padding: 0;
-    margin: 0 0 spacing(5) 0;
+    margin: 0 0 spacing('sm') 0;
     border: 0;
     legend {
-        margin-bottom: spacing(4);
+        margin-bottom: spacing('xs');
     }
 }
 
@@ -289,7 +289,7 @@ fieldset {
         @include icon-base();
         content: "\f078";
         font-size: 75%;
-        margin-left: spacing(4);
+        margin-left: spacing('xs');
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -311,7 +311,7 @@ fieldset {
     min-width: 12.5em;
     position: absolute;
     top: calc(100%);
-    padding: spacing(3) 0;
+    padding: spacing('xxs') 0;
     left: 0;
     float: left;
     text-align: left;
@@ -347,14 +347,14 @@ fieldset {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: spacing(4);
+            right: spacing('xs');
             color: neutral-color('gray-1');
         }
     }
     &__item {
         @include type-setting(-1,'normal');
         color: $dropdown-link-color;
-        padding: spacing(2) spacing(4);
+        padding: spacing('xxxs') spacing('xs');
         display: block;
         text-decoration: none;
         &:hover {
@@ -369,7 +369,7 @@ fieldset {
     &__no-results {
         cursor: default;
         color: neutral-color('gray-1');
-        padding: spacing(2) spacing(4);
+        padding: spacing('xxxs') spacing('xs');
     }
 }
 

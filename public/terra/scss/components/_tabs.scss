@@ -8,7 +8,7 @@
 		display: flex;
 		justify-content: space-between;
 	  	flex-wrap: wrap;
-		margin-bottom: spacing(5);
+		margin-bottom: spacing('sm');
 		> li {
 			padding: 0;
 			margin-right: 0;
@@ -27,7 +27,7 @@
 			@include border-radius('all', 'none');
 			color: $nav-tabs-link-color;
 			display: block;
-			padding: spacing(3) spacing(4);
+			padding: spacing('xxs') spacing('xs');
 			&:hover {
 				color: $nav-tabs-link-hover;
 			}
@@ -59,7 +59,7 @@
 	&__list {
 		@include list-unstyled();
 		@include list-inline();
-		margin-bottom: spacing(5);
+		margin-bottom: spacing('sm');
 		> li {
 			margin-right: 0;
 		}
@@ -73,8 +73,8 @@
 			@include border-radius('all', 'none');
 			color: $compact-tabs-link-color;
 			display: block;
-			margin: spacing(2) spacing(3);
-			padding: spacing(2) 0;
+			margin: spacing('xxxs') spacing('xxs');
+			padding: spacing('xxxs') 0;
 			&:hover {
 				color: $compact-tabs-link-hover;
 			}

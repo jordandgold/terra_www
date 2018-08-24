@@ -2,10 +2,10 @@
 @mixin badge-base() {
 	@include border-radius(all, small);
 	@include type-setting(-2, 'bold');
-	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) spacing(3);
+	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) spacing('xxs');
 	line-height: 100%;
-	padding: spacing(1) spacing(2);
-	margin: 0 spacing(2) 0 0;
+	padding: spacing('xxxxs') spacing('xxxs');
+	margin: 0 spacing('xxxs') 0 0;
 	transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
 	&:last-child {
 		margin-right: 0;
@@ -13,7 +13,7 @@
 	&__close {
         opacity: 0.4;
         padding: 0;
-        margin: 0 0 0 spacing(1);
+        margin: 0 0 0 spacing('xxxxs');
         background: transparent;
         border: 0;
         &:after {

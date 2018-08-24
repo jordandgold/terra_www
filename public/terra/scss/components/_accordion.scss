@@ -1,12 +1,12 @@
 
 .ter-accordion {
 	border: 1px solid $accordion-border-color;
-	margin-bottom: spacing(5);
+	margin-bottom: spacing('sm');
 	border-radius: $accordion-border-radius;
 	transition: background 225ms ease-in-out;
 	&__heading {
 		@include button-reset();
-		padding: spacing(4) spacing(5);
+		padding: spacing('xs') spacing('sm');
 		position: relative;
 		display: block;
 		text-decoration: none;
@@ -16,7 +16,7 @@
 			@include icon-base();
 			position: absolute;
 			top: 1em;
-			right: spacing(5);
+			right: spacing('sm');
 			transform: rotate(0deg);
 			transition: transform 200ms ease-in-out;
 			content: "\f053";
@@ -29,7 +29,7 @@
 	}
 	&__content {
 		display: none;
-		padding: spacing(4) spacing(5);
+		padding: spacing('xs') spacing('sm');
 	}
 	&.is-expanded {
 		background: $accordion-expanded-bg;
@@ -48,7 +48,7 @@
 }
 
 .ter-accordion-group {
-	margin-bottom: spacing(5);
+	margin-bottom: spacing('sm');
 	.ter-accordion {
 		margin-bottom: 0;
 		border-bottom: 0;

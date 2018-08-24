@@ -58,13 +58,13 @@ a.ter-button--large {
 .ter-button--small,
 a.ter-button--small {
     @include type-setting(-2,0);
-    padding: spacing(1) spacing(4);
+    padding: spacing('xxxxs') spacing('xs');
 }
 
 // button widths
 .ter-button--block,
 a.ter-button--block {
-    padding: spacing(3) 0;
+    padding: spacing('xxs') 0;
     display: block;
     width: 100%;
 }
@@ -80,8 +80,8 @@ a.ter-button--icon {
         transparent,
         $button-icon-color
     );
-    padding: spacing(1) spacing(2);
-    margin: spacing(0);
+    padding: spacing('xxxxs') spacing('xxxs');
+    margin: spacing('none');
     outline: none;
     border: 0;
     i {

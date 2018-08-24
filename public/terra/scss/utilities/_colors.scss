@@ -1,8 +1,6 @@
-/*
-
-  Colors
-
-*/
+//
+// Colors
+//
 
 @each $name, $hex in $color-palette {
     .color-#{$name} {

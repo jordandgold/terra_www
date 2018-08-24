@@ -6,14 +6,14 @@
 
 @mixin alert-base() {
     @include type-setting(0,0);
-    padding: spacing(5);
+    padding: spacing('sm');
     display: block;
-    margin-bottom: spacing(5);
+    margin-bottom: spacing('sm');
     position: relative;
     height: 100%;
     border-radius: $alert-border-radius;
     &__icon {
-        margin-right: spacing(4);
+        margin-right: spacing('xs');
         > i {
             width: auto;
             height: 100%;

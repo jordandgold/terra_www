@@ -15,7 +15,7 @@
         content: attr(data-tooltip);
         background: $tooltip-bg;
         color: $tooltip-text-color;
-        padding: spacing(4);
+        padding: spacing('xs');
         white-space: nowrap;
         text-decoration: none;
     }

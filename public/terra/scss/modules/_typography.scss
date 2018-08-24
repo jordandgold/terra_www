@@ -29,30 +29,30 @@
 
 @mixin heading-1 {
 	@include header-type-setting(4);
-	padding-bottom: spacing(5);
+	padding-bottom: spacing('sm');
 	margin: 0;
 }
 
 @mixin heading-2 {
 	@include header-type-setting(3);
-	padding-bottom: spacing(5);
+	padding-bottom: spacing('sm');
 	margin: 0;
 }
 
 @mixin heading-3 {
 	@include header-type-setting(2);
-	padding-bottom: spacing(5);
+	padding-bottom: spacing('sm');
 	margin: 0;
 }
 
 @mixin heading-4 {
 	@include header-type-setting(1);
-	padding-bottom: spacing(4);
+	padding-bottom: spacing('xs');
 	margin: 0;
 }
 
 @mixin heading-5 {
 	@include header-type-setting(0);
-	padding-bottom: spacing(4);
+	padding-bottom: spacing('xs');
 	margin: 0;
 }

@@ -80,12 +80,13 @@ $font-sans-serif:
     sans-serif;
 
 // font weight
-$font-weight: (
+$font-weight: () !default;
+$font-weight: map-merge((
     'light': 300,
     'normal': 400,
     'bold': 600,
     'black': 800,
-);
+), $font-weight);
 
 // type scale
 $type-scale: (
@@ -147,23 +148,71 @@ $height-scale: (
 @function spacing($key) {
   @return map-get($spacing-scale, $key);
 }
+// $spacing-scale: (
+//     0: 0px,
+//     1: 4px,
+//     2: 8px,
+//     3: 12px,
+//     4: 16px,
+//     5: 24px,
+//     6: 32px,
+//     7: 48px,
+//     8: 64px,
+//     9: 72px,
+//     10: 80px,
+//     11: 96px,
+//     12: 120px,
+//     13: 144px,
+//     14: 176px,
+//     15: 200px,
+// );
+
 $spacing-scale: (
-    0: 0px,
-    1: 4px,
-    2: 8px,
-    3: 12px,
-    4: 16px,
-    5: 24px,
-    6: 32px,
-    7: 48px,
-    8: 64px,
-    9: 72px,
-    10: 80px,
-    11: 96px,
-    12: 120px,
-    13: 144px,
-    14: 176px,
-    15: 200px,
+    'none': 0px,
+    'xxxxs': 4px,
+    'xxxs': 8px,
+    'xxs': 12px,
+    'xs': 16px,
+    'sm': 24px,
+    'md': 32px,
+    'lg': 48px,
+    'xl': 64px,
+    'xxl': 72px,
+    'xxxxl': 96px,
+    'super': 144px,
+    'mega': 200px,
+);
+
+// xxx-sm
+// xx-sm
+// x-sm
+// sm
+// md
+// lg
+// x-lg
+// xx-lg
+// xxx-lg
+
+// box shadow
+$box-shadows: (
+    "none": none,
+    0: none,
+    1: (
+        0px 4px 8px 0px rgba(54,53,69,.10),
+        0px 4px 8px 0px rgba(54,53,69,.10)
+    ),
+    2:  ( 
+        0px 4px 12px 0px rgba(54,53,69,.10),
+        0px 12px 16px 4px rgba(54,53,69,.05)
+    ),
+    3: (
+        0px 8px 24px 0px rgba(54,53,69,.10),
+        0px 16px 20px 0px rgba(54,53,69,.05)
+    ),
+    4: (
+        0px 16px 28px 0px rgba(54,53,69,.05),
+        0px 16px 40px 0px rgba(54,53,69,.10)
+    )
 );
 
 // globals
@@ -295,15 +344,8 @@ $breakpoint-md: 1200px;
 $breakpoint-lg: 1800px;
 
 // YIQ contrast colors
-/// The text color to be used when a background is determined to be 'light'
-/// @type Color
 $yiq-contrasted-dark-default: grayscale('dark-1') !default;
-/// The text color to be used when a background is determined to be 'dark'
-/// @type Color
 $yiq-contrasted-light-default: grayscale('white') !default;
-/// The YIQ lightness value that determines when the lightness of color changes from 'dark' to 'light'. Acceptable values are between 0 & 255.
-/// @type Number
 $yiq-contrasted-threshold: 128 !default;
-/// Toggle diagnostic messages.
-/// @type Boolean
 $yiq-debug: false !default;
+

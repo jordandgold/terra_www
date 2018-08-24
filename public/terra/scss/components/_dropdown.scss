@@ -13,7 +13,7 @@
             @include icon-base;
             content: "\f078";
             font-size: 75%;
-            margin-left: spacing(3);
+            margin-left: spacing('xxs');
         }
     }
     &__menu {
@@ -23,7 +23,7 @@
         min-width: 12.5em;
         position: absolute;
         top: calc(100%);
-        padding: spacing(3) 0;
+        padding: spacing('xxs') 0;
         left: 0;
         float: left;
         text-align: left;
@@ -74,7 +74,7 @@
         a {
             @include type-setting(-1, "normal");
             color: $dropdown-link-color;
-            padding: spacing(2) spacing(4);
+            padding: spacing('xxxs') spacing('xs');
             display: block;
             text-decoration: none;
             &:hover {
@@ -85,13 +85,13 @@
         }
         &--separator {
             display: block;
-            padding: spacing(3) 0 0 0;
-            margin-bottom: spacing(3);
+            padding: spacing('xxs') 0 0 0;
+            margin-bottom: spacing('xxs');
             border-bottom: 1px solid $dropdown-border-color;
         }
         &--no-link {
             @include type-setting(-2, "bold");
-            padding: spacing(2) spacing(4);
+            padding: spacing('xxxs') spacing('xs');
             text-transform: uppercase;
             color: $dropdown-no-link-color;
         }

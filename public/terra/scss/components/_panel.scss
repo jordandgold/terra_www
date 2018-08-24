@@ -1,7 +1,7 @@
 .panel {
 	display: block;
-	padding: spacing(5);
+	padding: spacing('sm');
 	background: $panel-bg;
 	border: 3px solid $panel-border-color;
-	margin: spacing(5) 0;
+	margin: spacing('sm') 0;
 }

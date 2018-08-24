@@ -18,12 +18,12 @@
 	tr {
 		th {
 			@include font-weight("normal");
-			padding: spacing(3);
+			padding: spacing('xxs');
 			background-color: $table-header-bg;
 			color: yiq-contrast-color($table-header-bg);
 		}
 		td {
-			padding: spacing(3);
+			padding: spacing('xxs');
 		}
 		&:nth-child(even) {
 			td {

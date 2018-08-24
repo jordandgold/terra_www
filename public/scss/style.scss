@@ -39,11 +39,11 @@
     div.flexbox,
     div.flexbox-inline {
         border: 1px solid grayscale('gray-1');
-        padding: spacing(3);
-        margin-bottom: spacing(3);
+        padding: spacing('xxs');
+        margin-bottom: spacing('xxs');
         > div {
             border: 1px solid darken(brand-color('brand-1'), 10%);
-            padding: spacing(3);
+            padding: spacing('xxs');
             color: type-color('inverse');
             background-color: brand-color('brand-1');
         }
@@ -116,12 +116,12 @@
 .color-swatch {
     @include box-shadow(1);
     width: 100%;
-    margin-bottom: spacing(4);
+    margin-bottom: spacing('xs');
     &__color {
         width: 100%;
         height: 0;
         padding-bottom: 40%;
-        margin-bottom: spacing(2);
+        margin-bottom: spacing('xxxs');
     }
     &__label {
         @include type-setting(-1, "bold");
@@ -130,7 +130,7 @@
     }
     &__hex {
         text-align: center;
-        padding-bottom: spacing(2);
+        padding-bottom: spacing('xxxs');
     }
 }
 
@@ -151,11 +151,11 @@
 
 .structure-block {
     position: relative;
-    margin-bottom: spacing(3);
+    margin-bottom: spacing('xxs');
     label {
         @include type-setting(-1, 'normal');
         display: inline-block;
-        margin-right: spacing(3);
+        margin-right: spacing('xxs');
         position: absolute;
         top: 0;
     }
@@ -187,7 +187,7 @@ code {
     position: relative;
     border: 1px solid darken(brand-color('brand-1'), 10%);
     background: brand-color('brand-1');
-    margin-bottom: spacing(5);
+    margin-bottom: spacing('sm');
     span {
         display: block;
         width: 100%;
@@ -207,9 +207,9 @@ code {
 }
 
 .markup-panel {
-    margin-bottom: spacing(7);
+    margin-bottom: spacing('lg');
     &__example {
-        margin-bottom: spacing(7);
+        margin-bottom: spacing('lg');
     }
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
@@ -228,7 +228,7 @@ code {
 
 .main-footer {
     @include type-setting(-1,'normal');
-    padding: spacing(5) 0;
+    padding: spacing('sm') 0;
     border-top: 1px solid grayscale('gray-1');
     height: auto;
 }
@@ -248,8 +248,8 @@ code {
         height: initial;
     }
     &__section {
-        padding-top: spacing(6);
-        padding-bottom: spacing(6);
+        padding-top: spacing('md');
+        padding-bottom: spacing('md');
     }
     &__header {
         @include for-size(tablet-landscape-down) {
@@ -323,17 +323,17 @@ code {
 }
 
 .hero {
-    padding-top: spacing(10);
-    padding-bottom: spacing(10);
+    padding-top: spacing('xxxl');
+    padding-bottom: spacing('xxxl');
     &--intro {
-        padding-top: spacing(10);
-        padding-bottom: spacing(10);
+        padding-top: spacing('xxxl');
+        padding-bottom: spacing('xxxl');
         background-size: cover;
         background-position: center center;
         position: relative;
     }
     &--slim {
-        padding-top: spacing(8);
-        padding-bottom: spacing(8);
+        padding-top: spacing('xl');
+        padding-bottom: spacing('xl');
     }
 }

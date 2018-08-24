@@ -1,16 +1,16 @@
 .ter-modal {
 	@include depth(2);
     width: 100%;
-    margin: spacing(4);
+    margin: spacing('xs');
 	position: relative;
     transition: transform 225ms ease-in-out;
     width: auto;
 	&__title {
 		@include type-setting(1,0);
-		padding-bottom: spacing(5);
+		padding-bottom: spacing('sm');
 	}
     &__content {
-        padding: spacing(7);
+        padding: spacing('lg');
     }
     &__wrap {
         background: $modal-bg;
@@ -19,8 +19,8 @@
     }
 	&__close {
         position: absolute;
-        top: spacing(5);
-        right: spacing(5);
+        top: spacing('sm');
+        right: spacing('sm');
         opacity: 0.4;
         padding: 0;
         margin: 0;
