@@ -1182,6 +1182,42 @@
   FONT FAMILY
 
 */
+.font-size-micro {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400; }
+
+.font-size-small,
+small {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400; }
+
+.font-size-1 {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 400; }
+
+.font-size-2 {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 400; }
+
+.font-size-3 {
+  font-size: 44px;
+  line-height: 66px;
+  font-weight: 400; }
+
+.font-size-4 {
+  font-size: 52px;
+  line-height: 78px;
+  font-weight: 400; }
+
+.font-size-5 {
+  font-size: 72px;
+  line-height: 108px;
+  font-weight: 400; }
+
 /*
 
   Font Weight
@@ -2656,11 +2692,6 @@ pre {
 .flaticon-yen:before {
   content: "\f181"; }
 
-/*
-
-  Typography
-
-*/
 body,
 html {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
@@ -2723,42 +2754,6 @@ h5,
   display: block;
   padding-bottom: 16px;
   margin: 0; }
-
-.font-size-micro {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400; }
-
-.font-size-mini,
-small {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400; }
-
-.font-size-1 {
-  font-size: 28px;
-  line-height: 42px;
-  font-weight: 400; }
-
-.font-size-2 {
-  font-size: 36px;
-  line-height: 54px;
-  font-weight: 400; }
-
-.font-size-3 {
-  font-size: 44px;
-  line-height: 66px;
-  font-weight: 400; }
-
-.font-size-4 {
-  font-size: 52px;
-  line-height: 78px;
-  font-weight: 400; }
-
-.font-size-5 {
-  font-size: 72px;
-  line-height: 108px;
-  font-weight: 400; }
 
 /*
 

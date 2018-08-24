@@ -1,0 +1,28 @@
+.font-size-micro {
+	@include font-size(-2);
+}
+
+.font-size-small,
+small {
+	@include font-size(-1);
+}
+
+.font-size-1 {
+	@include font-size(1);
+}
+
+.font-size-2 {
+	@include font-size(2);
+}
+
+.font-size-3 {
+	@include font-size(3);
+}
+
+.font-size-4 {
+	@include font-size(4);
+}
+
+.font-size-5 {
+	@include font-size(5);
+}

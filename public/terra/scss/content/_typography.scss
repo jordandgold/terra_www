@@ -1,18 +1,7 @@
-/*
-
-  Typography
-
-*/
-
 //
-// mixins
-
-// @function type-scale($level) {
-//   @return map-get($type-scale, $level);
-// }
-
-
+// Typography
 //
+
 // global typography settings
 
 body, html {
@@ -24,25 +13,11 @@ p {
 	@include font-size-paragraph;
 }
 
-
-//
-// typography settings
-
-@mixin heading-1 {
-	@include header-type-setting(4);
-	padding-bottom: spacing(5);
-	margin: 0;
-}
+// headings settings
 
 h1,
 .heading-1 {
 	@include heading-1;
-}
-
-@mixin heading-2 {
-	@include header-type-setting(3);
-	padding-bottom: spacing(5);
-	margin: 0;
 }
 
 h2,
@@ -50,21 +25,9 @@ h2,
 	@include heading-2;
 }
 
-@mixin heading-3 {
-	@include header-type-setting(2);
-	padding-bottom: spacing(5);
-	margin: 0;
-}
-
 h3,
 .heading-3 {
 	@include heading-3;
-}
-
-@mixin heading-4 {
-	@include header-type-setting(1);
-	padding-bottom: spacing(4);
-	margin: 0;
 }
 
 h4,
@@ -72,46 +35,7 @@ h4,
 	@include heading-4;
 }
 
-@mixin heading-5 {
-	@include header-type-setting(0);
-	padding-bottom: spacing(4);
-	margin: 0;
-}
-
 h5,
 .heading-5 {
 	@include heading-5;
-}
-
-
-//
-// type scale utility classes
-
-.font-size-micro {
-	@include font-size(-2);
-}
-
-.font-size-mini,
-small {
-	@include font-size(-1);
-}
-
-.font-size-1 {
-	@include font-size(1);
-}
-
-.font-size-2 {
-	@include font-size(2);
-}
-
-.font-size-3 {
-	@include font-size(3);
-}
-
-.font-size-4 {
-	@include font-size(4);
-}
-
-.font-size-5 {
-	@include font-size(5);
 }
