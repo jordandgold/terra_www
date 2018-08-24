@@ -1,15 +1,19 @@
-
-/* BUTTONS */
-
 //
-// mixins
+// Buttons
 //
 
+// reset all buttons
+button {
+    @include button-reset();
+}
+
+// button base styles
 .ter-button,
 a.ter-button {
     @include button-base();
 }
 
+// emotive color palette buttons
 @each $color, $value in $emotive-colors {
   .ter-button--#{$color},
   a.ter-button--#{$color} {
@@ -17,6 +21,7 @@ a.ter-button {
   }
 }
 
+// other buttons
 .ter-button--outline,
 a.ter-button--outline {
     @include button-variant(
@@ -28,7 +33,6 @@ a.ter-button--outline {
         color: type-color('inverse');
     }
 }
-
 .ter-button--ghost,
 a.ter-button--ghost {
     @include button-variant(
@@ -46,24 +50,30 @@ a.ter-button--ghost {
     }
 }
 
+// button sizing
 .ter-button--large,
 a.ter-button--large {
     @include type-setting(0,0);
 }
-
 .ter-button--small,
 a.ter-button--small {
     @include type-setting(-2,0);
     padding: spacing(1) spacing(4);
 }
 
+// button widths
 .ter-button--block,
 a.ter-button--block {
     padding: spacing(3) 0;
     display: block;
     width: 100%;
 }
+.ter-button--fixed-width,
+a.ter-button--fixed-width {
+    width: 100%;
+}
 
+// button w/ icon
 .ter-button--icon,
 a.ter-button--icon {
     @include button-variant(
@@ -93,6 +103,7 @@ a.ter-button--icon {
     }
 }
 
+// split button
 .ter-split-button {
     position: relative;
     button {

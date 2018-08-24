@@ -1,3 +1,13 @@
+@mixin button-reset() {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    &:active,
+    &:focus {
+    	outline: none;
+    }
+}
+
 @mixin button-base() {
     @include type-setting(-1,0);
     padding: spacing(2) spacing(4);
@@ -79,10 +89,4 @@
             }
         }
     }
-}
-
-@mixin button-reset() {
-    border: 0;
-    background: transparent;
-    box-sizing: border-box;
 }

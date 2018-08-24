@@ -1,8 +1,6 @@
-/*
-
-  depth
-
-*/
+//
+// Depth
+//
 
 $depth-scale: (
 	1,
@@ -10,11 +8,6 @@ $depth-scale: (
 	3,
 	4,
 );
-
-@mixin depth($level) {
-	@include box-shadow($level);
-	z-index: $level * 100;
-}
 
 @each $level in $depth-scale {
     .depth-#{$level} {
