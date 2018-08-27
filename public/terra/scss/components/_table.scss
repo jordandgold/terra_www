@@ -15,15 +15,17 @@
 .table {
 	@include table-base();
 	border-spacing: 1px;
+	font-weight: font-weight('light');
 	tr {
 		th {
-			@include font-weight("normal");
 			padding: spacing('xxs');
 			background-color: $table-header-bg;
 			color: yiq-contrast-color($table-header-bg);
+			font-weight: font-weight('light');
 		}
 		td {
 			padding: spacing('xxs');
+			font-weight: font-weight('light');
 		}
 		&:nth-child(even) {
 			td {

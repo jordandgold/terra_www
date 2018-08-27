@@ -158,7 +158,7 @@ body.has-nav {
 			}
 	    }
 		img {
-			@include height(2);
+			@include height('xs');
 			padding: spacing('xs') 0;
 		}
 	}

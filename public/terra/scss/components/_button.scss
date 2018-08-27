@@ -54,7 +54,7 @@ a.ter-button--ghost {
 .ter-button--large,
 a.ter-button--large {
     @include type-setting(0,0);
-    padding: spacing('xxs') spacing('xs');
+    padding: spacing('xxs') spacing('sm');
 }
 .ter-button--small,
 a.ter-button--small {

@@ -2,11 +2,11 @@
 // Font size
 //
 
-.font-size-micro {
+.font-size-mini {
 	@include font-size(-2);
 }
 
-.font-size-small,
+.font-size-sm,
 small {
 	@include font-size(-1);
 }
