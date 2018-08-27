@@ -3298,13 +3298,14 @@ a.ter-button--ghost {
 .ter-button--large,
 a.ter-button--large {
   font-size: 20px;
-  line-height: 30px; }
+  line-height: 30px;
+  padding: 12px 16px; }
 
 .ter-button--small,
 a.ter-button--small {
   font-size: 12px;
   line-height: 18px;
-  padding: 16px; }
+  padding: 4px 8px; }
 
 .ter-button--block,
 a.ter-button--block {
@@ -3321,7 +3322,7 @@ a.ter-button--icon {
   background-color: transparent;
   border: 1px solid transparent;
   color: #aeaeb6;
-  padding: 8px;
+  padding: 4px 8px;
   margin: 0px;
   outline: none;
   border: 0; }

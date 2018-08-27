@@ -54,11 +54,12 @@ a.ter-button--ghost {
 .ter-button--large,
 a.ter-button--large {
     @include type-setting(0,0);
+    padding: spacing('xxs') spacing('xs');
 }
 .ter-button--small,
 a.ter-button--small {
     @include type-setting(-2,0);
-    padding: spacing('xxxxs') spacing('xs');
+    padding: spacing('micro') spacing('mini');
 }
 
 // button widths
@@ -80,7 +81,7 @@ a.ter-button--icon {
         transparent,
         $button-icon-color
     );
-    padding: spacing('xxxxs') spacing('mini');
+    padding: spacing('micro') spacing('mini');
     margin: spacing('none');
     outline: none;
     border: 0;
