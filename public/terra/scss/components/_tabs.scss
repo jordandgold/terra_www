@@ -73,8 +73,8 @@
 			@include border-radius('all', 'none');
 			color: $compact-tabs-link-color;
 			display: block;
-			margin: spacing('xxxs') spacing('xxs');
-			padding: spacing('xxxs') 0;
+			margin: spacing('mini') spacing('xxs');
+			padding: spacing('mini') 0;
 			&:hover {
 				color: $compact-tabs-link-hover;
 			}

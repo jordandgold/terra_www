@@ -74,7 +74,7 @@
         a {
             @include type-setting(-1, "normal");
             color: $dropdown-link-color;
-            padding: spacing('xxxs') spacing('xs');
+            padding: spacing('mini') spacing('xs');
             display: block;
             text-decoration: none;
             &:hover {
@@ -91,9 +91,12 @@
         }
         &--no-link {
             @include type-setting(-2, "bold");
-            padding: spacing('xxxs') spacing('xs');
+            padding: spacing('mini') spacing('xs');
             text-transform: uppercase;
             color: $dropdown-no-link-color;
+            .inverse-color & {
+                color: $dropdown-no-link-color;
+            }
         }
     }
 }

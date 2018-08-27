@@ -1,5 +1,5 @@
 
-// colors
+// grayscale
 @function grayscale($key: 'dark-0') {
   @return map-get($grayscale, $key);
 }
@@ -26,6 +26,7 @@ $grayscale: map-merge((
     'black':   #000000,
 ), $grayscale);
 
+// brand colors
 @function brand-color($key: 'brand-1') {
   @return map-get($brand-colors, $key);
 }
@@ -36,6 +37,7 @@ $brand-colors: map-merge((
     'accent-1': #FFBE00,
 ), $brand-colors);
 
+// emotive colors
 @function emotive-color($key: 'info') {
   @return map-get($emotive-colors, $key);
 }
@@ -50,15 +52,14 @@ $emotive-colors: map-merge((
     'dark':     grayscale('dark-0'),
 ), $emotive-colors);
 
-@function map-collect($maps...) {
-  $collection: ();
-  @each $map in $maps {
-    $collection: map-merge($collection, $map);
-  }
-  @return $collection;
-}
-$color-palette: map-collect($brand-colors, $emotive-colors, $grayscale);
+// create color palette map
+$color-palette: map-collect(
+    $brand-colors,
+    $emotive-colors,
+    $grayscale
+);
 
+// type colors
 @function type-color($key: 'normal') {
   @return map-get($type-colors, $key);
 }
@@ -119,58 +120,39 @@ $line-height: (
 @function border-radius($key) {
   @return map-get($border-radius-scale, $key);
 }
-$border-radius-scale: (
+$border-radius-scale: () !default;
+$border-radius-scale: map-merge((
     'none': 0,
     'small': .125rem,
     'medium': .25rem,
     'large': .5rem,
     'mega': 1rem,
-);
+), $border-radius-scale);
 
 // heights
 @function height($key) {
   @return map-get($height-scale, $key);
 }
-$height-scale: (
-    1: 24px,
-    2: 32px,
-    3: 48px,
-    4: 64px,
-    5: 72px,
-    6: 96px,
-    7: 120px,
-    8: 144px,
-    9: 176px,
-    10: 200px
-);
+$height-scale: () !default;
+$height-scale: map-merge((
+    'xxs': 24px,
+    'xs': 32px,
+    'sm': 48px,
+    'md': 64px,
+    'lg': 72px,
+    'xl': 96px,
+    'xxl': 120px,
+), $height-scale);
 
 // spacing scale
 @function spacing($key) {
   @return map-get($spacing-scale, $key);
 }
-// $spacing-scale: (
-//     0: 0px,
-//     1: 4px,
-//     2: 8px,
-//     3: 12px,
-//     4: 16px,
-//     5: 24px,
-//     6: 32px,
-//     7: 48px,
-//     8: 64px,
-//     9: 72px,
-//     10: 80px,
-//     11: 96px,
-//     12: 120px,
-//     13: 144px,
-//     14: 176px,
-//     15: 200px,
-// );
-
-$spacing-scale: (
+$spacing-scale: () !default;
+$spacing-scale: map-merge((
     'none': 0px,
-    'xxxxs': 4px,
-    'xxxs': 8px,
+    'micro': 4px,
+    'mini': 8px,
     'xxs': 12px,
     'xs': 16px,
     'sm': 24px,
@@ -178,20 +160,9 @@ $spacing-scale: (
     'lg': 48px,
     'xl': 64px,
     'xxl': 72px,
-    'xxxl': 96px,
-    'super': 144px,
-    'mega': 200px,
-);
-
-// xxx-sm
-// xx-sm
-// x-sm
-// sm
-// md
-// lg
-// x-lg
-// xx-lg
-// xxx-lg
+    'super': 96px,
+    'mega': 144px,
+), $spacing-scale);
 
 // box shadow
 $box-shadows: (
@@ -248,7 +219,7 @@ $link-inverse-color: grayscale('gray-4');
 $link-inverse-hover-color: darken($link-inverse-color, 10%);
 
 // navigation bar
-$navbar-height: height(4);
+$navbar-height: height('md');
 $navbar-bg: grayscale('white');
 $navbar-link-color: $link-color;
 $navbar-link-hover: $link-hover-color;
@@ -335,7 +306,6 @@ $alert-border-radius: $border-radius-base;
 // tree menu
 $tree-menu-link-color: grayscale('gray-4');
 $tree-menu-link-hover: grayscale('gray-10');
-
 
 // viewport breakpoints
 $breakpoint-xs: 600px;

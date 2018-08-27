@@ -8,7 +8,7 @@
     @include type-setting(-1,0);
     color: $input-text-color;
     box-sizing: border-box;
-    padding: spacing('xxxs') spacing('xs');
+    padding: spacing('mini') spacing('xs');
     position: relative;
     z-index: 1;
     display: block;
@@ -39,7 +39,7 @@
     &__label {
         @include type-setting(-1,0);
         display: block;
-        padding-bottom: spacing('xxxs');
+        padding-bottom: spacing('mini');
         color: $input-label-color;
     }
     &__wrap {
@@ -111,7 +111,7 @@
     &__label {
         @include type-setting(-1,0);
         display: block;
-        padding-bottom: spacing('xxxs');
+        padding-bottom: spacing('mini');
         color: $input-label-color;
     }
 }
@@ -330,7 +330,7 @@ fieldset {
       transform: translateY(1px);
     }
     &__wrap {
-        max-height: (height(3) * 5);
+        max-height: (height('sm') * 5);
         overflow: scroll;
         width: stretch;
     }
@@ -354,7 +354,7 @@ fieldset {
     &__item {
         @include type-setting(-1,'normal');
         color: $dropdown-link-color;
-        padding: spacing('xxxs') spacing('xs');
+        padding: spacing('mini') spacing('xs');
         display: block;
         text-decoration: none;
         &:hover {
@@ -369,7 +369,7 @@ fieldset {
     &__no-results {
         cursor: default;
         color: neutral-color('gray-1');
-        padding: spacing('xxxs') spacing('xs');
+        padding: spacing('mini') spacing('xs');
     }
 }
 

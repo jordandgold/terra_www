@@ -4,8 +4,8 @@
 	@include type-setting(-2, 'bold');
 	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) spacing('xxs');
 	line-height: 100%;
-	padding: spacing('xxxxs') spacing('xxxs');
-	margin: 0 spacing('xxxs') 0 0;
+	padding: spacing('xxxxs') spacing('mini');
+	margin: 0 spacing('mini') 0 0;
 	transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
 	&:last-child {
 		margin-right: 0;

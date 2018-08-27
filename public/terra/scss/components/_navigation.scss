@@ -6,7 +6,7 @@
 //
 // mega menu
 
-$mega-menu-offset: calc(-1 * #{spacing('xxxs')});
+$mega-menu-offset: calc(-1 * #{spacing('mini')});
 
 .mega-menu {
 	@include type-setting(-1,'normal');
@@ -221,8 +221,8 @@ body.has-nav {
         width: 100%;
         padding-left: var(--outer-margin);
 		padding-right: var(--outer-margin);
-		padding-top: spacing('xxxs');
-		padding-bottom: spacing('xxxs');
+		padding-top: spacing('mini');
+		padding-bottom: spacing('mini');
 		@include for-size(tablet-landscape-up) {
 			display: table-cell;
 			width: initial;
@@ -259,8 +259,8 @@ body.has-nav {
 			@include for-size(tablet-landscape-down) {
 				padding-left: var(--outer-margin);
 				padding-right: var(--outer-margin);
-				padding-top: spacing('xxxs');
-				padding-bottom: spacing('xxxs');
+				padding-top: spacing('mini');
+				padding-bottom: spacing('mini');
 			}
 			.ter-dropdown__menu {
 				@include for-size(tablet-landscape-down) {
@@ -322,7 +322,7 @@ body.has-nav {
 	}
 	&__form {
 		@include for-size(tablet-landscape-down) {
-		    padding: spacing('xxxs') spacing('md');
+		    padding: spacing('mini') spacing('md');
 		}
 	}
 	&.is-hidden {
@@ -364,11 +364,11 @@ body.has-nav {
 		padding: 0 0 0 spacing('xxs');
 		> a {
 			@include border-radius('all','small');
-			padding: spacing('xxxxs') 0;
+			padding: spacing('micro') 0;
 			display: block;
 		}
 		> span {
-			padding: spacing('xxxxs') 0;
+			padding: spacing('micro') 0;
 		}
 		&.is-expandable {
 			&:before {
@@ -405,7 +405,7 @@ body.has-nav {
 			a:focus {
 				color: $tree-menu-link-color;
 				text-decoration: none;
-				padding: spacing('xxxxs') 0;
+				padding: spacing('micro') 0;
 				display: block;
 				&:hover {
 					color: $tree-menu-link-hover;

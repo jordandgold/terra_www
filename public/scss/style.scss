@@ -29,7 +29,7 @@
 }
 
 .navbar__brand.terra {
-    $size: height(1);
+    $size: height('xxs');
     height: $size * 2;
     width: $size * 1.8;
     display: inline-block;
@@ -51,7 +51,7 @@
 }
 
 .logo {
-    $size: height(1);
+    $size: height('xxs');
     $color: grayscale('gray-3');
     position: absolute;
     top: 50%;
@@ -323,11 +323,11 @@ code {
 }
 
 .hero {
-    padding-top: spacing('xxxl');
-    padding-bottom: spacing('xxxl');
+    padding-top: spacing('super');
+    padding-bottom: spacing('super');
     &--intro {
-        padding-top: spacing('xxxl');
-        padding-bottom: spacing('xxxl');
+        padding-top: spacing('super');
+        padding-bottom: spacing('super');
         background-size: cover;
         background-position: center center;
         position: relative;
