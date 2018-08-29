@@ -52,7 +52,7 @@
 
 .logo {
     $size: height('xxs');
-    $color: grayscale('gray-3');
+    $color: grayscale('dark-1');
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -92,7 +92,7 @@
     }
     // wireframe
     &.wireframe {
-        $border-color: grayscale('gray-4');
+        $border-color: grayscale('dark-1');
         $border-width: $size * .05;
         opacity: 1;
         transition: opacity 225ms ease-in-out;
@@ -101,7 +101,7 @@
         }
         .cube {
             span {
-                background: grayscale('dark-0');
+                background: grayscale('white');
                 box-shadow: inset (-$border-width/4) (-$border-width/4) 0 $border-width $border-color;
             }
             &:nth-child(2) {

@@ -141,7 +141,6 @@
 		headerHeight = mainHeader.height(),
 		navToggle = $('.navbar__toggle');
 	
-	//set scrolling variables
 	var scrolling = false,
 		previousTop = 0,
 		currentTop = 0,
