@@ -138,7 +138,8 @@
 	'use strict';
 
 	var mainHeader = $('nav.navbar:not(.stay-put)'),
-		headerHeight = mainHeader.height();
+		headerHeight = mainHeader.height(),
+		navToggle = $('.navbar__toggle');
 	
 	//set scrolling variables
 	var scrolling = false,
@@ -148,7 +149,6 @@
 		scrollOffset = 150;
 
 	mainHeader.on('click', '.nav-trigger', function(e){
-		// open primary navigation on mobile
 		e.preventDefault();
 		mainHeader.toggleClass('nav-open');
 	});
@@ -165,6 +165,11 @@
 	$(window).on('resize', function(){
 		headerHeight = mainHeader.height();
 	});
+
+	navToggle.click(function () {
+    	$(this).toggleClass('is-active');
+    	$(this).parent().children('.navbar__nav').slideToggle().toggleClass('is-expanded');
+    });
 
 	function autoHideHeader() {
 		var currentTop = $(window).scrollTop();
@@ -226,16 +231,6 @@
 
 	    }
 	}
-
-	/* This is for the Mobile Navbar Menu */
-    $('.navbar__toggle').click(function () {
-    	$(this).toggleClass("is-active");
-    	$(this).parent().children('.navbar__nav').slideToggle().toggleClass('is-expanded');
-    });
-
-	// $(".navbar__toggle").click(function(){
-	// 	$(this).toggleClass("is-active");
-	// });
 
 })(jQuery, window, document);
 /**
