@@ -227,7 +227,7 @@ code {
 }
 
 .main-footer {
-    @include type-setting(-1,'normal');
+    @include type-setting('sm','normal');
     padding: spacing('sm') 0;
     border-top: 1px solid grayscale('gray-1');
     height: auto;
