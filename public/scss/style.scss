@@ -214,15 +214,12 @@ code {
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
         margin-top: 0;
-        // background: grayscale("dark-0");
-        // border: 1px solid grayscale("dark-0");
     }
 }
 
 .main-content {
     height: auto;
     @include for-size("tablet-portrait-up") {
-        // margin-left: 17.5rem;
     }
 }
 
