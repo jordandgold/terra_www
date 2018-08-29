@@ -93,9 +93,9 @@
             @include type-setting(-2, "bold");
             padding: spacing('mini') spacing('xs');
             text-transform: uppercase;
-            color: $dropdown-no-link-color;
+            color: $dropdown-no-link-color !important;
             .inverse-color & {
-                color: $dropdown-no-link-color;
+                color: $dropdown-no-link-color !important;
             }
         }
     }
