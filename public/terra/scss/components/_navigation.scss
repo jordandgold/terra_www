@@ -8,7 +8,7 @@
 
 $mega-menu-offset: calc(-1 * #{spacing('mini')});
 
-.mega-menu {
+.ter-mega-menu {
 	@include type-setting('sm','normal');
 	position: absolute;
 	top: $navbar-height;
@@ -331,7 +331,7 @@ body.has-nav {
 //
 // tree menu
 
-.tree-menu {
+.ter-tree-menu {
 	&__list {
 		margin: 0;
 		padding: 0 0 0 spacing('xxs');

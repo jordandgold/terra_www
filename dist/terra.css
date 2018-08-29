@@ -4159,7 +4159,7 @@ body.has-modal-open {
  * Terra Design System
  * _navigation.scss
  */
-.mega-menu {
+.ter-mega-menu {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
@@ -4175,12 +4175,12 @@ body.has-modal-open {
   opacity: 0;
   width: 100%;
   box-sizing: border-box; }
-  .mega-menu:hover {
+  .ter-mega-menu:hover {
     visibility: visible;
     opacity: 1;
     -webkit-transform: translate(-50%, calc(-1 * 8px));
             transform: translate(-50%, calc(-1 * 8px)); }
-  .mega-menu__list {
+  .ter-mega-menu__list {
     margin: 0 0 28px 0;
     padding: 0;
     list-style: none;
@@ -4190,17 +4190,17 @@ body.has-modal-open {
     margin-left: 32px;
     margin-right: 32px;
     background: #ffffff; }
-    .mega-menu__list > li {
+    .ter-mega-menu__list > li {
       padding: 12px 0; }
-    .mega-menu__list li > ul {
+    .ter-mega-menu__list li > ul {
       margin: 0 0 28px 0;
       padding: 0;
       list-style: none; }
-      .mega-menu__list li > ul > li {
+      .ter-mega-menu__list li > ul > li {
         padding: 12px 0; }
-      .mega-menu__list li > ul > li {
+      .ter-mega-menu__list li > ul > li {
         padding: 0; }
-        .mega-menu__list li > ul > li > a:not(.ter-button) {
+        .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
           font-size: 16px;
           line-height: 1.5;
           font-weight: 400;
@@ -4208,19 +4208,19 @@ body.has-modal-open {
           margin: 0;
           padding: 0;
           text-decoration: none; }
-          .mega-menu__list li > ul > li > a:not(.ter-button):hover {
+          .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
             color: #0076a6;
             text-decoration: none; }
           @media (max-width: 900px) {
-            .mega-menu__list li > ul > li > a:not(.ter-button) {
+            .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
               line-height: 1.5;
               font-weight: 400;
               display: block; } }
-          .inverse-color .mega-menu__list li > ul > li > a:not(.ter-button) {
+          .inverse-color .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
             color: #aeaeb6; }
-            .inverse-color .mega-menu__list li > ul > li > a:not(.ter-button):hover {
+            .inverse-color .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
               color: #93939e; }
-  .mega-menu__trigger:after {
+  .ter-mega-menu__trigger:after {
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
@@ -4232,7 +4232,7 @@ body.has-modal-open {
     content: "\f078";
     font-size: 75%;
     margin-left: 12px; }
-  .mega-menu__trigger:hover ~ .mega-menu {
+  .ter-mega-menu__trigger:hover ~ .mega-menu {
     visibility: visible;
     opacity: 1;
     -webkit-transform: translate(-50%, calc(-1 * 8px));
@@ -4449,39 +4449,39 @@ body.has-nav {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
 
-.tree-menu__list {
+.ter-tree-menu__list {
   margin: 0;
   padding: 0 0 0 12px;
   list-style: none; }
 
-.tree-menu__list-item {
+.ter-tree-menu__list-item {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400; }
-  .tree-menu__list-item a,
-  .tree-menu__list-item a:visited,
-  .tree-menu__list-item a:active,
-  .tree-menu__list-item a:focus {
+  .ter-tree-menu__list-item a,
+  .ter-tree-menu__list-item a:visited,
+  .ter-tree-menu__list-item a:active,
+  .ter-tree-menu__list-item a:focus {
     color: #aeaeb6;
     text-decoration: none; }
-    .tree-menu__list-item a:hover,
-    .tree-menu__list-item a:visited:hover,
-    .tree-menu__list-item a:active:hover,
-    .tree-menu__list-item a:focus:hover {
+    .ter-tree-menu__list-item a:hover,
+    .ter-tree-menu__list-item a:visited:hover,
+    .ter-tree-menu__list-item a:active:hover,
+    .ter-tree-menu__list-item a:focus:hover {
       color: #474655;
       cursor: pointer; }
-  .tree-menu__list-item.is-active > a {
+  .ter-tree-menu__list-item.is-active > a {
     color: #474655; }
 
-.tree-menu__list-item {
+.ter-tree-menu__list-item {
   position: relative;
   padding: 0 0 0 12px; }
-  .tree-menu__list-item > a {
+  .ter-tree-menu__list-item > a {
     padding: 4px 0;
     display: block; }
-  .tree-menu__list-item > span {
+  .ter-tree-menu__list-item > span {
     padding: 4px 0; }
-  .tree-menu__list-item.is-expandable:before {
+  .ter-tree-menu__list-item.is-expandable:before {
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
@@ -4499,37 +4499,37 @@ body.has-nav {
     transition: transform 200ms ease-in-out;
     transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
     font-size: 75%; }
-  .tree-menu__list-item.is-expandable.is-expanded > a {
+  .ter-tree-menu__list-item.is-expandable.is-expanded > a {
     color: #474655; }
-  .tree-menu__list-item.is-expandable.is-expanded:before {
+  .ter-tree-menu__list-item.is-expandable.is-expanded:before {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); }
 
-.tree-menu__sub-menu {
+.ter-tree-menu__sub-menu {
   list-style: none;
   margin-left: 12px;
   padding: 0;
   display: none; }
-  .tree-menu__sub-menu > li {
+  .ter-tree-menu__sub-menu > li {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
     padding: 0; }
-    .tree-menu__sub-menu > li a,
-    .tree-menu__sub-menu > li a:visited,
-    .tree-menu__sub-menu > li a:active,
-    .tree-menu__sub-menu > li a:focus {
+    .ter-tree-menu__sub-menu > li a,
+    .ter-tree-menu__sub-menu > li a:visited,
+    .ter-tree-menu__sub-menu > li a:active,
+    .ter-tree-menu__sub-menu > li a:focus {
       color: #aeaeb6;
       text-decoration: none;
       padding: 4px 0;
       display: block; }
-      .tree-menu__sub-menu > li a:hover,
-      .tree-menu__sub-menu > li a:visited:hover,
-      .tree-menu__sub-menu > li a:active:hover,
-      .tree-menu__sub-menu > li a:focus:hover {
+      .ter-tree-menu__sub-menu > li a:hover,
+      .ter-tree-menu__sub-menu > li a:visited:hover,
+      .ter-tree-menu__sub-menu > li a:active:hover,
+      .ter-tree-menu__sub-menu > li a:focus:hover {
         color: #474655;
         cursor: pointer; }
-    .tree-menu__sub-menu > li.is-active > a {
+    .ter-tree-menu__sub-menu > li.is-active > a {
       color: #474655; }
 
 /*
