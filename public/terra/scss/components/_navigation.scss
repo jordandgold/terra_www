@@ -93,7 +93,7 @@ body.has-nav {
 	height: $navbar-height;
 	background: $navbar-bg;
 	transition: transform .5s ease;
-	position: relative;
+	position: fixed;
 	top: 0;
 	display: flex;
 	justify-content: space-between;
@@ -103,8 +103,11 @@ body.has-nav {
 		background: $navbar-inverse-bg;
 		border-bottom: $navbar-border-width solid $navbar-inverse-border-color
 	}
-	&.is-fixed {
-		position: fixed;
+	// &.is-fixed {
+	// 	position: fixed;
+	// }
+	&.is-hidden {
+		transform: translateY(calc(#{$navbar-height * -1}))
 	}
 	&__toggle {
 		height: $navbar-height;

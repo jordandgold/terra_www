@@ -4248,7 +4248,7 @@ body.has-nav {
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
-  position: relative;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -4259,8 +4259,9 @@ body.has-nav {
   .navbar.inverse-color {
     background: #363545;
     border-bottom: 1px solid #363545; }
-  .navbar.is-fixed {
-    position: fixed; }
+  .navbar.is-hidden {
+    -webkit-transform: translateY(calc(-72px));
+            transform: translateY(calc(-72px)); }
   .navbar__toggle {
     height: 72px;
     float: right;
