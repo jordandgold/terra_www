@@ -137,7 +137,7 @@
   
 	'use strict';
 
-	var navBar = $('nav.navbar.js-auto-hide'),
+	var navBar = $('nav.ter-navbar.js-auto-hide'),
 		navBarHeight = navBar.height();
 
 	var scrolling = false,
@@ -146,11 +146,11 @@
 		scrollDelta = 10,
 		scrollOffset = 150;
 
-	navBar.on('click', '.navbar__toggle', function(e){
+	navBar.on('click', '.ter-navbar__toggle', function(e){
 		e.preventDefault();
 		navBar.toggleClass('is-open');
 		$(this).toggleClass('is-active');
-    	$(this).parent().children('.navbar__nav').slideToggle().toggleClass('is-expanded');
+    	$(this).parent().children('.ter-navbar__nav').slideToggle().toggleClass('is-expanded');
 	});
 
 	$(window).on('scroll', function(){
@@ -181,6 +181,9 @@
 	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
 	    	//if scrolling down
 	    	navBar.addClass('is-hidden');
+	    	navBar.find('.ter-navbar__nav').find('.ter-dropdown.is-open').each(function(){
+	    		$(this).removeClass('is-open');
+	    	});
 	    }
 
 	   	previousTop = currentTop;

@@ -88,13 +88,12 @@ body.has-nav {
 	padding-top: $navbar-height;
 }
 
-.navbar {
+.ter-navbar {
 	@include z-index(9);
 	height: $navbar-height;
 	background: $navbar-bg;
 	transition: transform .5s ease;
-	position: fixed;
-	top: 0;
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	width: stretch;
@@ -103,9 +102,10 @@ body.has-nav {
 		background: $navbar-inverse-bg;
 		border-bottom: $navbar-border-width solid $navbar-inverse-border-color
 	}
-	// &.is-fixed {
-	// 	position: fixed;
-	// }
+	&.is-fixed {
+		position: fixed;
+		top: 0;
+	}
 	&.is-hidden {
 		transform: translateY(calc(#{$navbar-height * -1}))
 	}

@@ -1,5 +1,5 @@
-<nav class="navbar container-fluid {{#if auto-hide}}js-auto-hide{{else}}{{/if}} navbar--terra">
-	<a href="/" class="navbar__brand terra">
+<nav class="ter-navbar container-fluid {{#if auto-hide}}js-auto-hide{{else}}{{/if}} is-fixed ter-navbar--terra">
+	<a href="/" class="ter-navbar__brand terra">
 		<div class="logo wireframe">
 			<div class="cube">
 				<span></span>
@@ -13,30 +13,30 @@
 			</div>
 		</div>
 	</a>
-	<button class="navbar__toggle" type="button" data-toggle="collapse" data-target=".collapse">
+	<button class="ter-navbar__toggle" type="button" data-toggle="collapse" data-target=".collapse">
 		<span class="line"></span>
 		<span class="line"></span>
 		<span class="line"></span>
 	</button>
-	<div class="navbar__nav flex">
-		<form class="navbar__form search-bar ter-input form-inline flexbox flex-row flex-wrap align-items-center flex pad-left-md pad-right-md">
+	<div class="ter-navbar__nav flex">
+		<form class="ter-navbar__form search-bar ter-input form-inline flexbox flex-row flex-wrap align-items-center flex pad-left-md pad-right-md">
 			<div class="search-bar__input ter-input__wrap">
 		    	<input type="text" placeholder="search">
 		    </div>
 			<button class="search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
 		</form>
-		<ul class="navbar__menu">
-			<li class="navbar__menu-item ter-dropdown">
+		<ul class="ter-navbar__menu">
+			<li class="ter-navbar__menu-item ter-dropdown">
 				<a href="/" class="ter-dropdown__toggle">Dropdown</a>
 				<ul class="ter-dropdown__menu">
 					<li class="ter-dropdown__item"><a href="#">Link</a></li>
 				</ul>
 			</li>
-			<li class="navbar__menu-item"><a href="/documentation/getting-started">Documentation</a></li>
-			<li class="navbar__menu-item"><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="ter-button ter-button--primary">Download</a></li>
+			<li class="ter-navbar__menu-item"><a href="/documentation/getting-started">Documentation</a></li>
+			<li class="ter-navbar__menu-item"><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="ter-button ter-button--primary">Download</a></li>
 		</ul>
-		{{!-- <ul class="navbar__menu navbar__menu--right">
-			<li class="navbar__menu-item">
+		{{!-- <ul class="ter-navbar__menu ter-navbar__menu--right">
+			<li class="ter-navbar__menu-item">
 				<a href="#" class="mega-menu__trigger">Solutions</a>
 				<div class="mega-menu">
 					<ul class="mega-menu__list">
@@ -87,8 +87,8 @@
 					</ul>
 				</div>
 			</li>
-			<li class="navbar__menu-item"><a href="#">About</a></li>
-			<li class="navbar__menu-item"><a href="#">Contact</a></li>
+			<li class="ter-navbar__menu-item"><a href="#">About</a></li>
+			<li class="ter-navbar__menu-item"><a href="#">Contact</a></li>
 		</ul> --}}
 	</div>
 </nav>

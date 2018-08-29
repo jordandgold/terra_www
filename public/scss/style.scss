@@ -24,11 +24,11 @@
     transform-origin: $transforms;
 }
 
-.navbar--terra {
+.ter-navbar--terra {
     z-index: 901;
 }
 
-.navbar__brand.terra {
+.ter-navbar__brand.terra {
     $size: height('xxs');
     height: $size * 2;
     width: $size * 1.8;

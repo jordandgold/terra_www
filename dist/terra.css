@@ -4241,28 +4241,30 @@ body.has-modal-open {
 body.has-nav {
   padding-top: 72px; }
 
-.navbar {
+.ter-navbar {
   z-index: 900;
   height: 72px;
   background: #ffffff;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
-  position: fixed;
-  top: 0;
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
   border-bottom: 1px solid #e2e2e7; }
-  .navbar.inverse-color {
+  .ter-navbar.inverse-color {
     background: #363545;
     border-bottom: 1px solid #363545; }
-  .navbar.is-hidden {
+  .ter-navbar.is-fixed {
+    position: fixed;
+    top: 0; }
+  .ter-navbar.is-hidden {
     -webkit-transform: translateY(calc(-72px));
             transform: translateY(calc(-72px)); }
-  .navbar__toggle {
+  .ter-navbar__toggle {
     height: 72px;
     float: right;
     display: inline-block;
@@ -4271,48 +4273,48 @@ body.has-nav {
     border: 0;
     background: transparent; }
     @media (min-width: 900px) {
-      .navbar__toggle {
+      .ter-navbar__toggle {
         display: none; } }
-    .navbar__toggle .line {
+    .ter-navbar__toggle .line {
       width: 25px;
       height: 2px;
       background-color: #bfbfc6;
       display: block;
       margin: 5px auto;
       transition: all 0.3s ease-in-out; }
-    .navbar__toggle.is-active .line:nth-child(1) {
+    .ter-navbar__toggle.is-active .line:nth-child(1) {
       -webkit-transform: translateY(7px);
               transform: translateY(7px); }
-    .navbar__toggle.is-active .line:nth-child(3) {
+    .ter-navbar__toggle.is-active .line:nth-child(3) {
       -webkit-transform: translateY(-7px);
               transform: translateY(-7px); }
-    .navbar__toggle:hover {
+    .ter-navbar__toggle:hover {
       cursor: pointer; }
-  .navbar__brand {
+  .ter-navbar__brand {
     line-height: 1.5;
     font-weight: 400;
     height: 72px;
     display: inline-block;
     line-height: 72px;
     text-decoration: none; }
-    .navbar__brand[href] {
+    .ter-navbar__brand[href] {
       color: #009AD9; }
-      .navbar__brand[href]:hover {
+      .ter-navbar__brand[href]:hover {
         color: #0076a6;
         text-decoration: none; }
-      .inverse-color .navbar__brand[href] {
+      .inverse-color .ter-navbar__brand[href] {
         color: #aeaeb6; }
-        .inverse-color .navbar__brand[href]:hover {
+        .inverse-color .ter-navbar__brand[href]:hover {
           color: #93939e;
           text-decoration: none; }
-    .navbar__brand img {
+    .ter-navbar__brand img {
       height: 32px;
       padding: 16px 0; }
-  .navbar [class^='container']:after {
+  .ter-navbar [class^='container']:after {
     content: "";
     display: block;
     clear: both; }
-  .navbar__nav {
+  .ter-navbar__nav {
     box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
     position: absolute;
     top: 72px;
@@ -4321,10 +4323,10 @@ body.has-nav {
     background: #ffffff;
     display: none; }
     @media (max-width: 900px) {
-      .navbar__nav {
+      .ter-navbar__nav {
         padding-bottom: 16px; } }
     @media (min-width: 900px) {
-      .navbar__nav {
+      .ter-navbar__nav {
         box-shadow: none;
         display: inline-block;
         width: initial;
@@ -4332,29 +4334,29 @@ body.has-nav {
         top: unset;
         left: unset;
         display: flex !important; } }
-    .inverse-color .navbar__nav {
+    .inverse-color .ter-navbar__nav {
       background: #363545; }
-  .navbar__menu {
+  .ter-navbar__menu {
     display: block;
     width: 100%;
     height: auto;
     padding: 16px 0;
     margin: 0; }
     @media (max-width: 900px) {
-      .navbar__menu {
+      .ter-navbar__menu {
         padding-bottom: 0; } }
-    .navbar__menu--right {
+    .ter-navbar__menu--right {
       margin-left: auto; }
-    .navbar__menu--left {
+    .ter-navbar__menu--left {
       margin-right: auto; }
     @media (min-width: 900px) {
-      .navbar__menu {
+      .ter-navbar__menu {
         display: table;
         width: initial;
         padding-top: 0;
         padding-bottom: 0;
         height: 72px; } }
-  .navbar__menu-item {
+  .ter-navbar__menu-item {
     display: block;
     width: 100%;
     padding-left: var(--outer-margin);
@@ -4362,12 +4364,12 @@ body.has-nav {
     padding-top: 8px;
     padding-bottom: 8px; }
     @media (min-width: 900px) {
-      .navbar__menu-item {
+      .ter-navbar__menu-item {
         display: table-cell;
         width: initial;
         padding: 0 16px;
         vertical-align: middle; } }
-    .navbar__menu-item > a:not(.ter-button) {
+    .ter-navbar__menu-item > a:not(.ter-button) {
       font-size: 16px;
       line-height: 1.5;
       font-weight: 400;
@@ -4378,32 +4380,32 @@ body.has-nav {
       display: inline-block;
       height: 72px;
       line-height: 72px; }
-      .navbar__menu-item > a:not(.ter-button):hover {
+      .ter-navbar__menu-item > a:not(.ter-button):hover {
         color: #0076a6;
         text-decoration: none; }
       @media (max-width: 900px) {
-        .navbar__menu-item > a:not(.ter-button) {
+        .ter-navbar__menu-item > a:not(.ter-button) {
           line-height: 1.5;
           font-weight: 400;
           display: block;
           line-height: initial;
           height: auto; } }
-      .inverse-color .navbar__menu-item > a:not(.ter-button) {
+      .inverse-color .ter-navbar__menu-item > a:not(.ter-button) {
         color: #aeaeb6; }
-        .inverse-color .navbar__menu-item > a:not(.ter-button):hover {
+        .inverse-color .ter-navbar__menu-item > a:not(.ter-button):hover {
           color: #93939e; }
     @media (max-width: 900px) {
-      .navbar__menu-item.ter-dropdown {
+      .ter-navbar__menu-item.ter-dropdown {
         padding-left: var(--outer-margin);
         padding-right: var(--outer-margin);
         padding-top: 8px;
         padding-bottom: 8px; } }
     @media (max-width: 900px) {
-      .navbar__menu-item.ter-dropdown .ter-dropdown__menu {
+      .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu {
         box-shadow: unset;
         background: transparent; } }
     @media (max-width: 900px) {
-      .navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
+      .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
         line-height: 1.5;
         font-weight: 400;
         color: #262533;
@@ -4413,16 +4415,16 @@ body.has-nav {
         padding-left: 0;
         padding-right: 0; } }
   @media (max-width: 900px) and (max-width: 900px) {
-    .navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
+    .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
       color: #262533;
       text-decoration: none; } }
     @media (max-width: 900px) {
-      .inverse-color .navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
+      .inverse-color .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
         color: #aeaeb6; }
-        .inverse-color .navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
+        .inverse-color .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu a:hover {
           color: #93939e; } }
     @media (max-width: 900px) {
-      .navbar__menu-item.ter-dropdown .ter-dropdown__menu {
+      .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu {
         position: unset;
         float: unset;
         display: none;
@@ -4434,16 +4436,16 @@ body.has-nav {
         padding: 0;
         margin: 0; } }
     @media (max-width: 900px) {
-      .navbar__menu-item.ter-dropdown .ter-dropdown__menu .ter-dropdown__item--no-link {
+      .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu .ter-dropdown__item--no-link {
         padding-left: 0;
         padding-right: 0; } }
     @media (max-width: 900px) {
-      .navbar__menu-item.ter-dropdown.is-open .ter-dropdown__menu {
+      .ter-navbar__menu-item.ter-dropdown.is-open .ter-dropdown__menu {
         display: block; } }
   @media (max-width: 900px) {
-    .navbar__form {
+    .ter-navbar__form {
       padding: 8px 32px; } }
-  .navbar.is-hidden {
+  .ter-navbar.is-hidden {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
 
