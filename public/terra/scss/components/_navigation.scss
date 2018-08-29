@@ -99,8 +99,6 @@ body.has-nav {
 	justify-content: space-between;
 	width: stretch;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
-	padding-left: var(--outer-margin);
-	padding-right: var(--outer-margin);
 	&.inverse-color {
 		background: $navbar-inverse-bg;
 		border-bottom: $navbar-border-width solid $navbar-inverse-border-color
@@ -163,11 +161,7 @@ body.has-nav {
 		}
 	}
 	[class^='container'] {
-		&:after {
-			content: '';
-			display: block;
-			clear: both;
-		}
+		@include clearfix();
 	}
 	&__nav {
 		@include box-shadow(2);
