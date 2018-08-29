@@ -90,16 +90,27 @@ $font-weight: map-merge((
 ), $font-weight);
 
 // type scale
-$type-scale: (
-    -2: 12px,
-    -1: 16px,
-    0: 20px,
-    1: 28px,
-    2: 36px,
-    3: 44px,
-    4: 52px,
-    5: 72px
-);
+// $type-scale: (
+//     -2: 12px,
+//     -1: 16px,
+//     0: 20px,
+//     1: 28px,
+//     2: 36px,
+//     3: 44px,
+//     4: 52px,
+//     5: 72px
+// );
+$type-scale: () !default;
+$type-scale: map-merge((
+    'micro': 12px,
+    'sm': 16px,
+    'base': 20px,
+    'md': 28px,
+    'lg': 36px,
+    'xl': 44px,
+    'super': 52px,
+    'mega': 72px
+), $type-scale);
 
 // type setting
 $base-font-size: 16px;
@@ -123,10 +134,10 @@ $line-height: (
 $border-radius-scale: () !default;
 $border-radius-scale: map-merge((
     'none': 0,
-    'small': .125rem,
-    'medium': .25rem,
-    'large': .5rem,
-    'mega': 1rem,
+    'sm': .125rem,
+    'md': .25rem,
+    'lg': .5rem,
+    'xl': 1rem,
 ), $border-radius-scale);
 
 // heights

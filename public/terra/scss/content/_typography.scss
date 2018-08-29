@@ -6,7 +6,7 @@
 
 body, html {
 	@include font-sans-serif;
-	@include type-setting(0);
+	@include type-setting('base');
 }
 
 p {

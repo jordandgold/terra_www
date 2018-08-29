@@ -53,12 +53,12 @@ a.ter-button--ghost {
 // button sizing
 .ter-button--large,
 a.ter-button--large {
-    @include type-setting(0,0);
+    @include type-setting('base','normal');
     padding: spacing('xxs') spacing('sm');
 }
 .ter-button--small,
 a.ter-button--small {
-    @include type-setting(-2,0);
+    @include type-setting('micro','normal');
     padding: spacing('micro') spacing('mini');
 }
 

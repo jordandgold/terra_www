@@ -2,22 +2,22 @@
 	font-size: map-get($type-scale, $level);
 }
 
-@mixin header-type-setting($level: 0, $weight: $header-font-weight) {
+@mixin header-type-setting($level: 'base', $weight: $header-font-weight) {
 	font-size: map-get($type-scale, $level);
-	line-height: map-get($type-scale, $level) * 1.25;
+	line-height: 1.25;
 	font-weight: $weight;
 	color: $header-font-color;
 	display: block;
 }
 
-@mixin type-setting($level: 0, $weight: 'normal') {
+@mixin type-setting($level: 'base', $weight: 'normal') {
 	font-size: map-get($type-scale, $level);
-	line-height: map-get($type-scale, $level) * 1.5;
+	line-height: 1.5;
 	font-weight: font-weight($weight);
 }
 
 @mixin font-size-paragraph {
-	@include type-setting(0);
+	@include type-setting('base');
 	margin: 0 0 $base-line-height 0;
 }
 
@@ -28,31 +28,31 @@
 // headings
 
 @mixin heading-1 {
-	@include header-type-setting(4);
+	@include header-type-setting('super');
 	padding-bottom: spacing('sm');
 	margin: 0;
 }
 
 @mixin heading-2 {
-	@include header-type-setting(3);
+	@include header-type-setting('xl');
 	padding-bottom: spacing('sm');
 	margin: 0;
 }
 
 @mixin heading-3 {
-	@include header-type-setting(2);
+	@include header-type-setting('lg');
 	padding-bottom: spacing('sm');
 	margin: 0;
 }
 
 @mixin heading-4 {
-	@include header-type-setting(1);
+	@include header-type-setting('md');
 	padding-bottom: spacing('xs');
 	margin: 0;
 }
 
 @mixin heading-5 {
-	@include header-type-setting(0);
+	@include header-type-setting('base');
 	padding-bottom: spacing('xs');
 	margin: 0;
 }

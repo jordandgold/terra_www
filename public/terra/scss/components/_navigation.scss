@@ -9,7 +9,7 @@
 $mega-menu-offset: calc(-1 * #{spacing('mini')});
 
 .mega-menu {
-	@include type-setting(-1,'normal');
+	@include type-setting('sm','normal');
 	position: absolute;
 	top: $navbar-height;
 	left: 50%;
@@ -38,7 +38,7 @@ $mega-menu-offset: calc(-1 * #{spacing('mini')});
 				> li {
 					padding: 0;
 					> a:not(.ter-button) {
-						@include type-setting(-1,'normal');
+						@include type-setting('sm','normal');
 						color: $navbar-link-color;
 						margin: 0;
 						padding: spacing('xxxxs') 0;
@@ -230,7 +230,7 @@ body.has-nav {
 			vertical-align: middle;
 	    }
 	    > a:not(.ter-button) {
-			@include type-setting(-1,'normal');
+			@include type-setting('sm','normal');
 			color: $navbar-link-color;
 			margin: 0;
 			padding: 0;
@@ -341,7 +341,7 @@ body.has-nav {
 		list-style: none;
 	}
 	&__list-item {
-		@include type-setting(-1,'normal');
+		@include type-setting('sm','normal');
 		a,
 		a:visited,
 		a:active,
@@ -397,7 +397,7 @@ body.has-nav {
 		padding: 0;
 		display: none;
 		> li {
-			@include type-setting(-1,'normal');
+			@include type-setting('sm','normal');
 			padding: 0;
 			a,
 			a:visited,

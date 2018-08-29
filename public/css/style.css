@@ -962,39 +962,32 @@
   z-index: 400; }
 
 .font-size-mini {
-  font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
   font-weight: 400; }
 
 .font-size-sm,
 small {
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400; }
 
 .font-size-1 {
-  font-size: 28px;
-  line-height: 42px;
+  line-height: 1.5;
   font-weight: 400; }
 
 .font-size-2 {
-  font-size: 36px;
-  line-height: 54px;
+  line-height: 1.5;
   font-weight: 400; }
 
 .font-size-3 {
-  font-size: 44px;
-  line-height: 66px;
+  line-height: 1.5;
   font-weight: 400; }
 
 .font-size-4 {
-  font-size: 52px;
-  line-height: 78px;
+  line-height: 1.5;
   font-weight: 400; }
 
 .font-size-5 {
-  font-size: 72px;
-  line-height: 108px;
+  line-height: 1.5;
   font-weight: 400; }
 
 .font-weight-light {
@@ -2482,19 +2475,19 @@ body,
 html {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   font-weight: 400; }
 
 p {
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   font-weight: 400;
   margin: 0 0 28px 0; }
 
 h1,
 .heading-1 {
   font-size: 52px;
-  line-height: 65px;
+  line-height: 1.25;
   font-weight: 800;
   color: #262533;
   display: block;
@@ -2504,7 +2497,7 @@ h1,
 h2,
 .heading-2 {
   font-size: 44px;
-  line-height: 55px;
+  line-height: 1.25;
   font-weight: 800;
   color: #262533;
   display: block;
@@ -2514,7 +2507,7 @@ h2,
 h3,
 .heading-3 {
   font-size: 36px;
-  line-height: 45px;
+  line-height: 1.25;
   font-weight: 800;
   color: #262533;
   display: block;
@@ -2524,7 +2517,7 @@ h3,
 h4,
 .heading-4 {
   font-size: 28px;
-  line-height: 35px;
+  line-height: 1.25;
   font-weight: 800;
   color: #262533;
   display: block;
@@ -2534,7 +2527,7 @@ h4,
 h5,
 .heading-5 {
   font-size: 20px;
-  line-height: 25px;
+  line-height: 1.25;
   font-weight: 800;
   color: #262533;
   display: block;
@@ -2547,8 +2540,7 @@ h5,
 
 */
 .ter-alert {
-  font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   padding: 24px;
   display: block;
   margin-bottom: 24px;
@@ -2764,9 +2756,7 @@ h5,
       border-bottom-right-radius: 0; }
 
 .badge {
-  border-radius: 0.125rem;
-  font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
   font-weight: 600;
   padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) 12px;
   line-height: 100%;
@@ -3006,7 +2996,6 @@ h5,
     color: #ffffff; }
 
 .breadcrumb__list {
-  border-radius: 0.125rem;
   padding: 0px;
   margin-top: 0;
   margin-bottom: 16px;
@@ -3039,7 +3028,8 @@ button {
 .ter-button,
 a.ter-button {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
+  font-weight: 400;
   padding: 8px 16px;
   border-radius: 0;
   text-decoration: none;
@@ -3298,13 +3288,15 @@ a.ter-button--ghost {
 .ter-button--large,
 a.ter-button--large {
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
+  font-weight: 400;
   padding: 12px 24px; }
 
 .ter-button--small,
 a.ter-button--small {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
+  font-weight: 400;
   padding: 4px 8px; }
 
 .ter-button--block,
@@ -3402,7 +3394,7 @@ a.ter-button--icon {
     padding: 48px; }
   .ter-card__title {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 1.25;
     font-weight: 800;
     color: #262533;
     display: block;
@@ -3503,7 +3495,7 @@ a.ter-button--icon {
     padding: 0; }
     .ter-dropdown__item a {
       font-size: 16px;
-      line-height: 24px;
+      line-height: 1.5;
       font-weight: 400;
       color: #262533;
       padding: 8px 16px;
@@ -3520,7 +3512,7 @@ a.ter-button--icon {
       border-bottom: 1px solid #aeaeb6; }
     .ter-dropdown__item--no-link {
       font-size: 12px;
-      line-height: 18px;
+      line-height: 1.5;
       font-weight: 600;
       padding: 8px 16px;
       text-transform: uppercase;
@@ -3576,8 +3568,7 @@ a.ter-button--icon {
     padding-top: 0;
     padding-bottom: 0; }
   .ter-input__label {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3595,7 +3586,8 @@ a.ter-button--icon {
     .ter-input__wrap input[type="password"],
     .ter-input__wrap textarea {
       font-size: 16px;
-      line-height: 24px;
+      line-height: 1.5;
+      font-weight: 400;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -3629,8 +3621,7 @@ a.ter-button--icon {
       .ter-input__wrap input[type="file"].input-lg,
       .ter-input__wrap input[type="password"].input-lg,
       .ter-input__wrap textarea.input-lg {
-        font-size: 28px;
-        line-height: 42px;
+        line-height: 1.5;
         font-weight: 400; }
       .ter-input__wrap input[type="text"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="email"]::-webkit-input-placeholder,
@@ -3684,13 +3675,11 @@ a.ter-button--icon {
       .ter-input__wrap textarea {
         border-color: #1cb260; }
     .ter-input__wrap textarea {
-      font-size: 20px;
-      line-height: 30px;
+      line-height: 1.5;
       display: block;
       width: 100%; }
   .ter-input__message {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     display: block; }
     .has-error .ter-input__message {
       color: #ce2740; }
@@ -3704,8 +3693,7 @@ a.ter-button--icon {
   box-sizing: content-box; }
   .ter-checkbox__label,
   .ter-radio__label {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3721,8 +3709,7 @@ a.ter-button--icon {
     outline: 0; }
 
 .ter-radio__label {
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -3762,8 +3749,7 @@ a.ter-button--icon {
     outline: 0; }
 
 .ter-checkbox__label {
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -3794,8 +3780,7 @@ a.ter-button--icon {
   padding-top: 12px;
   padding-bottom: 12px; }
   .ter-radio-group__label {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     padding-bottom: 12px; }
   .ter-radio-group .ter-radio {
     padding-top: 0px;
@@ -3803,7 +3788,8 @@ a.ter-button--icon {
 
 select {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
+  font-weight: 400;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -3858,7 +3844,8 @@ fieldset {
     flex: 1; }
   .search-bar__submit {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
+    font-weight: 400;
     box-sizing: border-box;
     padding: 8px 16px;
     position: relative;
@@ -3889,7 +3876,8 @@ fieldset {
 
 .select-styled {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
+  font-weight: 400;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -3969,7 +3957,8 @@ fieldset {
     position: relative; }
     .select-options__search-filter input {
       font-size: 16px;
-      line-height: 24px;
+      line-height: 1.5;
+      font-weight: 400;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -4003,8 +3992,7 @@ fieldset {
       right: 16px;
       color: neutral-color("gray-1"); }
   .select-options__item {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     font-weight: 400;
     color: #262533;
     padding: 8px 16px;
@@ -4022,8 +4010,7 @@ fieldset {
     padding: 8px 16px; }
 
 .ter-fieldset__legend {
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 600; }
 
 ul.list-inline {
@@ -4068,8 +4055,7 @@ ul.list-inline {
 
 ul,
 ol {
-  font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   font-weight: 400; }
   ul li,
   ol li {
@@ -4107,8 +4093,7 @@ ol {
   transition: transform 225ms ease-in-out, -webkit-transform 225ms ease-in-out;
   width: auto; }
   .ter-modal__title {
-    font-size: 28px;
-    line-height: 42px;
+    line-height: 1.5;
     padding-bottom: 24px; }
   .ter-modal__content {
     padding: 48px; }
@@ -4176,7 +4161,7 @@ body.has-modal-open {
  */
 .mega-menu {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400;
   position: absolute;
   top: 64px;
@@ -4201,7 +4186,6 @@ body.has-modal-open {
     list-style: none;
     box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
     z-index: 200;
-    border-radius: 0.125rem;
     padding: 16px;
     margin-left: 32px;
     margin-right: 32px;
@@ -4218,7 +4202,7 @@ body.has-modal-open {
         padding: 0; }
         .mega-menu__list li > ul > li > a:not(.ter-button) {
           font-size: 16px;
-          line-height: 24px;
+          line-height: 1.5;
           font-weight: 400;
           color: #009AD9;
           margin: 0;
@@ -4229,8 +4213,7 @@ body.has-modal-open {
             text-decoration: none; }
           @media (max-width: 900px) {
             .mega-menu__list li > ul > li > a:not(.ter-button) {
-              font-size: 20px;
-              line-height: 30px;
+              line-height: 1.5;
               font-weight: 400;
               display: block; } }
           .inverse-color .mega-menu__list li > ul > li > a:not(.ter-button) {
@@ -4307,8 +4290,7 @@ body.has-nav {
     .navbar__toggle:hover {
       cursor: pointer; }
   .navbar__brand {
-    font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
     font-weight: 400;
     height: 64px;
     display: inline-block;
@@ -4388,7 +4370,7 @@ body.has-nav {
         vertical-align: middle; } }
     .navbar__menu-item > a:not(.ter-button) {
       font-size: 16px;
-      line-height: 24px;
+      line-height: 1.5;
       font-weight: 400;
       color: #009AD9;
       margin: 0;
@@ -4402,8 +4384,7 @@ body.has-nav {
         text-decoration: none; }
       @media (max-width: 900px) {
         .navbar__menu-item > a:not(.ter-button) {
-          font-size: 20px;
-          line-height: 30px;
+          line-height: 1.5;
           font-weight: 400;
           display: block;
           line-height: initial;
@@ -4424,8 +4405,7 @@ body.has-nav {
         background: transparent; } }
     @media (max-width: 900px) {
       .navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
-        font-size: 20px;
-        line-height: 30px;
+        line-height: 1.5;
         font-weight: 400;
         color: #262533;
         display: block;
@@ -4475,7 +4455,7 @@ body.has-nav {
 
 .tree-menu__list-item {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400; }
   .tree-menu__list-item a,
   .tree-menu__list-item a:visited,
@@ -4496,7 +4476,6 @@ body.has-nav {
   position: relative;
   padding: 0 0 0 12px; }
   .tree-menu__list-item > a {
-    border-radius: 0.125rem;
     padding: 4px 0;
     display: block; }
   .tree-menu__list-item > span {
@@ -4532,7 +4511,7 @@ body.has-nav {
   display: none; }
   .tree-menu__sub-menu > li {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     font-weight: 400;
     padding: 0; }
     .tree-menu__sub-menu > li a,
@@ -4558,8 +4537,7 @@ body.has-nav {
 
 */
 .ter-notification {
-  font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   box-shadow: 0px 16px 28px 0px rgba(54, 53, 69, 0.05), 0px 16px 40px 0px rgba(54, 53, 69, 0.1);
   z-index: 400;
   padding: 24px;
@@ -4858,7 +4836,8 @@ body.has-nav {
   border-bottom: 1px solid #d0d0d7; }
   .nav-tabs__list-item a {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
+    font-weight: 400;
     padding: 8px 16px;
     border-radius: 0;
     text-decoration: none;
@@ -4940,7 +4919,8 @@ body.has-nav {
   margin: 0; }
   .compact-tabs__list-item a {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
+    font-weight: 400;
     padding: 8px 16px;
     border-radius: 0;
     text-decoration: none;
@@ -4989,8 +4969,7 @@ body.has-nav {
   [data-tooltip]:before {
     box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
     z-index: 100;
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     content: attr(data-tooltip);
     background: #262533;
     color: #ffffff;
@@ -5061,7 +5040,6 @@ body.has-nav {
     position: relative; }
     .pricing-table__column .product {
       box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
-      border-radius: 0.25rem;
       background: gray("white");
       height: 100%;
       width: auto;
@@ -5072,7 +5050,7 @@ body.has-nav {
       .pricing-table__column .product__content { }
         .pricing-table__column .product__content__name {
           font-size: 28px;
-          line-height: 35px;
+          line-height: 1.25;
           font-weight: 800;
           color: #262533;
           display: block;
@@ -5082,7 +5060,7 @@ body.has-nav {
           text-align: center; }
         .pricing-table__column .product__content__price {
           font-size: 36px;
-          line-height: 45px;
+          line-height: 1.25;
           font-weight: 800;
           color: #262533;
           display: block;
@@ -5177,8 +5155,7 @@ body.has-nav {
     height: 0;
     padding-bottom: 40%; }
   .color-swatch__label {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     font-weight: 600;
     text-align: center; }
   .color-swatch__hex {
@@ -5202,8 +5179,7 @@ body.has-nav {
   position: relative;
   margin-bottom: 12px; }
   .structure-block label {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     font-weight: 400;
     display: inline-block;
     margin-right: 12px;
@@ -5257,8 +5233,7 @@ code {
   height: auto; }
 
 .main-footer {
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400;
   padding: 24px 0;
   border-top: 1px solid #e2e2e7;
