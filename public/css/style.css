@@ -119,11 +119,6 @@
 .width-90 {
   width: 90%; }
 
-/*
-
-	Spacing scale
-
-*/
 :root {
   --spacing-none: 0px;
   --spacing-micro: 4px;

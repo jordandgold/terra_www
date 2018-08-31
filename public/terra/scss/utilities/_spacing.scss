@@ -1,8 +1,6 @@
-/*
-
-	Spacing scale
-
-*/
+//
+// Spacing
+//
 
 :root {
     @each $size, $value in $spacing-scale {
@@ -10,7 +8,6 @@
     }
 }
 
-// padding all
 @each $size, $value in $spacing-scale {
 
 	// padding
@@ -38,7 +35,7 @@
         padding-left: $value !important;
     }
 
-    //margin
+    // margin
     .margin-all-#{$size} {
         margin: $value !important;
     }
