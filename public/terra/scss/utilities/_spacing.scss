@@ -11,7 +11,7 @@
 @each $size, $value in $spacing-scale {
 
 	// padding
-    .pad-all-#{$size} {
+    .pad-#{$size} {
         padding: $value !important;
     }
     .pad-h-#{$size} {
@@ -36,7 +36,7 @@
     }
 
     // margin
-    .margin-all-#{$size} {
+    .margin-#{$size} {
         margin: $value !important;
     }
     .margin-h-#{$size} {

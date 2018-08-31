@@ -36,8 +36,8 @@
 }
 
 .markup-panel {
-    div.flexbox,
-    div.flexbox-inline {
+    div.d-flex,
+    div.d-inline-flex {
         border: 1px solid grayscale('gray-1');
         padding: spacing('xxs');
         margin-bottom: spacing('xxs');

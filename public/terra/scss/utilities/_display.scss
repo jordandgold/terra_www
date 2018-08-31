@@ -2,6 +2,38 @@
 // Display
 //
 
+.d-inline {
+	display: inline;
+}
+
+.d-inline-block {
+	display: inline-block;
+}
+
 .d-block {
 	display: block;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.d-inline-flex {
+	display: inline-flex;
+}
+
+.d-table {
+	display: table;
+}
+
+.d-table-cell {
+	display: table-cell;
+}
+
+.d-table-row {
+	display: table-row;
+}
+
+.d-none {
+	display: none;
 }
