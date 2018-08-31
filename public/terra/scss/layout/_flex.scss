@@ -1,16 +1,4 @@
-//
-// display
 
-.flexbox {
-    display: flex;
-}
-
-.flexbox-inline {
-    display: inline-flex;
-}
-
-
-//
 // flex-direction
 
 .flex-row {
@@ -30,7 +18,6 @@
 }
 
 
-//
 // flex-wrap
 
 .flex-wrap {
@@ -46,10 +33,9 @@
 }
 
 
-//
 // flexing
 
-.flex {
+.flex-1 {
 	flex: 1;
 }
 
@@ -58,8 +44,6 @@
 }
 
 
-
-//
 // justify-content
 
 .justify-content-start {
@@ -83,7 +67,6 @@
 }
 
 
-//
 // align-items
 
 .align-items-start {
@@ -107,7 +90,6 @@
 }
 
 
-//
 // align-self
 
 .align-self-start {
@@ -131,7 +113,6 @@
 }
 
 
-//
 // align-content
 
 .align-content-start {
