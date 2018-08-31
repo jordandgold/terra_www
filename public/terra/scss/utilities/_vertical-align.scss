@@ -2,22 +2,32 @@
 // Vertical align
 //
 
-.v-align-top {
-	vertical-align: middle;
+.v-align-top { vertical-align: middle; }
+.v-align-middle { vertical-align: middle; }
+.v-align-bottom { vertical-align: middle; }
+.v-align-text-top { vertical-align: text-top; }
+.v-align-text-bottom { vertical-align: text-bottom; }
+
+@media only screen and (min-width: $breakpoint-xs) {
+	.v-align-top-sm { vertical-align: middle; }
+	.v-align-middle-sm { vertical-align: middle; }
+	.v-align-bottom-sm { vertical-align: middle; }
+	.v-align-text-top-sm { vertical-align: text-top; }
+	.v-align-text-bottom-sm { vertical-align: text-bottom; }
 }
 
-.v-align-middle {
-	vertical-align: middle;
+@media only screen and (min-width: $breakpoint-sm) {
+	.v-align-top-md { vertical-align: middle; }
+	.v-align-middle-md { vertical-align: middle; }
+	.v-align-bottom-md { vertical-align: middle; }
+	.v-align-text-top-md { vertical-align: text-top; }
+	.v-align-text-bottom-md { vertical-align: text-bottom; }
 }
 
-.v-align-bottom {
-	vertical-align: middle;
-}
-
-.v-align-text-top {
-	vertical-align: text-top;
-}
-
-.v-align-text-bottom {
-	vertical-align: text-bottom;
+@media only screen and (min-width: $breakpoint-md) {
+	.v-align-top-lg { vertical-align: middle; }
+	.v-align-middle-lg { vertical-align: middle; }
+	.v-align-bottom-lg { vertical-align: middle; }
+	.v-align-text-top-lg { vertical-align: text-top; }
+	.v-align-text-bottom-lg { vertical-align: text-bottom; }
 }
