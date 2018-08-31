@@ -1,10 +1,24 @@
 'use strict';
 
+var auth = require('http-auth');
+
+
+var basic = auth.basic(
+    {
+      file: __dirname + "/users.htpasswd"
+    }
+);
+
+
+
 var express = require('express'),
     exphbs  = require('express-handlebars'),
 	yaml = require('js-yaml'),
     fileSync = require('fs'),
 	app = express();
+
+app.use(auth.connect(basic));
+
 
 // Create `ExpressHandlebars` instance with a default layout.
 var hbs = exphbs.create({
@@ -14,6 +28,7 @@ var hbs = exphbs.create({
     ],
 });
 
+
 var helpers = require('handlebars-helpers')();
 
 var path = require('path');
@@ -22,6 +37,8 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, '/public')));
+
+
 
 function createPages() {
 
@@ -61,6 +78,6 @@ app.get('*', function(req, res){
   res.render('pages/404/404', {layout: 'full-width', title: '404 | Terra Design System'});
 });
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(process.env.PORT || 3002, function () {
     console.log('server listening on: 3000');
 });
