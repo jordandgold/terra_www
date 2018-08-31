@@ -961,32 +961,39 @@
   box-shadow: 0px 16px 28px 0px rgba(54, 53, 69, 0.05), 0px 16px 40px 0px rgba(54, 53, 69, 0.1);
   z-index: 400; }
 
-.font-size-mini {
+.font-size-micro {
+  font-size: 12px;
   line-height: 1.5;
   font-weight: 400; }
 
 .font-size-sm,
 small {
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400; }
 
-.font-size-1 {
+.font-size-md {
+  font-size: 28px;
   line-height: 1.5;
   font-weight: 400; }
 
-.font-size-2 {
+.font-size-lg {
+  font-size: 36px;
   line-height: 1.5;
   font-weight: 400; }
 
-.font-size-3 {
+.font-size-xl {
+  font-size: 44px;
   line-height: 1.5;
   font-weight: 400; }
 
-.font-size-4 {
+.font-size-super {
+  font-size: 52px;
   line-height: 1.5;
   font-weight: 400; }
 
-.font-size-5 {
+.font-size-mega {
+  font-size: 72px;
   line-height: 1.5;
   font-weight: 400; }
 
