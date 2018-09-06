@@ -1394,6 +1394,17 @@ template {
 [hidden] {
   display: none; }
 
+/**
+ * Reset
+ */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
 .flex-row {
   flex-direction: row; }
 
