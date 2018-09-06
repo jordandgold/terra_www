@@ -10,11 +10,12 @@
 
     &:before {
         @include depth(1);
-        @include type-setting(-1, 0);
+        @include type-setting('sm', 'normal');
 
         content: attr(data-tooltip);
         background: $tooltip-bg;
         color: $tooltip-text-color;
+        border-radius: $tooltip-border-radius;
         padding: spacing('xs');
         white-space: nowrap;
         text-decoration: none;
@@ -100,6 +101,95 @@
             top: 100%;
             left: 10px;
             margin-top: 2px;
+        }
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% { 
+        opacity:0; 
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+.ter-tooltip {
+    display: inline-block;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+    &__content {
+        @include depth(1);
+        @include type-setting('sm', 'normal');
+        display: none;
+        background-color: $tooltip-bg;
+        padding: spacing('xs');
+        min-width: 300px;
+        position: absolute;
+        border-radius: $tooltip-border-radius;
+        color: $tooltip-text-color;
+        [data-direction="top"] & {
+            bottom: calc(100% + #{spacing('mini')});
+            left: 0;
+        }
+        [data-direction="left"] & {
+            top: -25%;
+            right: 100%;
+        }
+        [data-direction="bottom"] & {
+            top: calc(100% + #{spacing('mini')});
+            left: 0;
+        }
+        [data-direction="right"] & {
+            top: -25%;
+            left: 100%;
+        }
+        .ter-tooltip:hover & {
+            display: block;
+            transform-origin: 100% 0%;
+            // animation: fadeIn 0.3s ease-in-out;
+        }
+        &:before {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            content: '';
+            z-index: 10;
+            [data-direction="top"] & {
+                border-top-color: $tooltip-bg;
+                border-bottom: none;
+                left: spacing('sm');
+                bottom: calc(-1 * #{spacing('mini')});
+            }
+            [data-direction="left"] & {
+                border-left-color: $tooltip-bg;
+                border-right: none;
+                top: spacing('sm');
+                right: calc(-1 * #{spacing('mini')});
+            }
+            [data-direction="bottom"] & {
+                border-bottom-color: $tooltip-bg;
+                border-top: none;
+                left: spacing('sm');
+                top: calc(-1 * #{spacing('mini')});
+            }
+            [data-direction="right"] & {
+                border-right-color: $tooltip-bg;
+                border-left: none;
+                top: spacing('sm');
+                left: calc(-1 * #{spacing('mini')});
+            }
         }
     }
 }

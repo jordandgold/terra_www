@@ -1,12 +1,45 @@
 <div class="page-section__sub-section">
-	<h4>Basic Example</h4>
+	<h4>Basic Tooltips</h4>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<button role="button" class="ter-button ter-button--ghost" data-tooltip="This is a tooltip" data-direction="left">left tooltip</button>
 <button role="button" class="ter-button ter-button--ghost" data-tooltip="This is a tooltip" data-direction="top">top tooltip</button>
+<button role="button" class="ter-button ter-button--ghost" data-tooltip="This is a tooltip" data-direction="left">left tooltip</button>
 <button role="button" class="ter-button ter-button--ghost" data-tooltip="This is a tooltip" data-direction="bottom">bottom tooltip</button>
 <button role="button" class="ter-button ter-button--ghost" data-tooltip="This is a tooltip" data-direction="right">right tooltip</button>
+		</div>
+		<pre><code class="language-markup"></code></pre>
+	</div>
+</div>
+<div class="page-section__sub-section">
+	<h4>Advanced Tooltips</h4>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+	<div class="markup-panel">
+		<div class="markup-panel__example">
+<div class="ter-tooltip" data-direction="top">
+	<button role="button" class="ter-button ter-button--ghost">top tooltip</button>
+	<div class="ter-tooltip__content">
+		This is the same tooltip, but with <b>HTML tags</b> and <a href="#">links</a>
+	</div>
+</div>
+<div class="ter-tooltip" data-direction="left">
+	<button role="button" class="ter-button ter-button--ghost">left tooltip</button>
+	<div class="ter-tooltip__content">
+		This is the same tooltip, but with <b>HTML tags</b> and <a href="#">links</a>
+	</div>
+</div>
+<div class="ter-tooltip" data-direction="bottom">
+	<button role="button" class="ter-button ter-button--ghost">bottom tooltip</button>
+	<div class="ter-tooltip__content">
+		This is the same tooltip, but with <b>HTML tags</b> and <a href="#">links</a>
+	</div>
+</div>
+<div class="ter-tooltip" data-direction="right">
+	<button role="button" class="ter-button ter-button--ghost">right tooltip</button>
+	<div class="ter-tooltip__content">
+		This is the same tooltip, but with <b>HTML tags</b> and <a href="#">links</a>
+	</div>
+</div>
 		</div>
 		<pre><code class="language-markup"></code></pre>
 	</div>
