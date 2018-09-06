@@ -176,10 +176,10 @@
 		var currentTop = $(window).scrollTop();
 
 		if (previousTop - currentTop > scrollDelta) {
-	    	//if scrolling up
+	    	// scrolling up
 	    	navBar.removeClass('is-hidden');
 	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
-	    	//if scrolling down
+	    	// scrolling down
 	    	navBar.addClass('is-hidden');
 	    	navBar.find('.ter-navbar__nav').find('.ter-dropdown.is-open').each(function(){
 	    		$(this).removeClass('is-open');
