@@ -5,6 +5,9 @@
 	v.1.0.0
 
  */
+/**
+ * Variables
+ */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800");
 .clearfix:after {
   content: "";
@@ -5046,6 +5049,9 @@ body.has-nav {
       height: 1px;
       background-color: #262533; }
 
+/**
+ * Tooltip
+ */
 [data-tooltip] {
   position: relative; }
   [data-tooltip]:before, [data-tooltip]:after {
@@ -5074,7 +5080,9 @@ body.has-nav {
     visibility: visible;
     opacity: 1; }
   [data-tooltip][data-direction="left"]:before {
-    top: -25%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     right: 100%;
     margin-right: 10px; }
   [data-tooltip][data-direction="left"]:after {
@@ -5086,7 +5094,9 @@ body.has-nav {
     margin-top: -10px;
     margin-right: 2px; }
   [data-tooltip][data-direction="right"]:before {
-    top: -25%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 100%;
     margin-left: 10px; }
   [data-tooltip][data-direction="right"]:after {
@@ -5099,42 +5109,34 @@ body.has-nav {
     margin-left: 2px; }
   [data-tooltip][data-direction="top"]:before {
     bottom: 100%;
-    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin-bottom: 10px; }
   [data-tooltip][data-direction="top"]:after {
     z-index: 10;
     border-top-color: #262533;
     border-bottom: none;
     bottom: 100%;
-    left: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin-bottom: 2px; }
   [data-tooltip][data-direction="bottom"]:before {
     top: 100%;
-    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin-top: 10px; }
   [data-tooltip][data-direction="bottom"]:after {
     z-index: 10;
     border-bottom-color: #262533;
     border-top: none;
     top: 100%;
-    left: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin-top: 2px; }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6); }
-  100% {
-    opacity: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 100%; } }
 
 .ter-tooltip {
   display: inline-block;
@@ -5156,15 +5158,23 @@ body.has-nav {
     color: #ffffff; }
     [data-direction="top"] .ter-tooltip__content {
       bottom: calc(100% + 8px);
-      left: 0; }
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
     [data-direction="left"] .ter-tooltip__content {
-      top: -25%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       right: 100%; }
     [data-direction="bottom"] .ter-tooltip__content {
       top: calc(100% + 8px);
-      left: 0; }
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
     [data-direction="right"] .ter-tooltip__content {
-      top: -25%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       left: 100%; }
     .ter-tooltip:hover .ter-tooltip__content {
       display: block;
@@ -5180,22 +5190,30 @@ body.has-nav {
       [data-direction="top"] .ter-tooltip__content:before {
         border-top-color: #262533;
         border-bottom: none;
-        left: 24px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
         bottom: calc(-1 * 8px); }
       [data-direction="left"] .ter-tooltip__content:before {
         border-left-color: #262533;
         border-right: none;
-        top: 24px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         right: calc(-1 * 8px); }
       [data-direction="bottom"] .ter-tooltip__content:before {
         border-bottom-color: #262533;
         border-top: none;
-        left: 24px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
         top: calc(-1 * 8px); }
       [data-direction="right"] .ter-tooltip__content:before {
         border-right-color: #262533;
         border-left: none;
-        top: 24px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         left: calc(-1 * 8px); }
 
 .pricing-table {
