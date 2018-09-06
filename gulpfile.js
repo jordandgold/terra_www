@@ -48,7 +48,8 @@ gulp.task('sass:dist', function () {
 gulp.task('scripts:dist', function() {
   return gulp.src('./public/terra/js/*.js')
     .pipe(concat('terra.js'))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./public/js/'));
 });
 
 gulp.task('terra:build', ['sass:dist', 'scripts:dist']);
