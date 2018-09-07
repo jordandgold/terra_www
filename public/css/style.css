@@ -4873,7 +4873,7 @@ body.has-nav {
   .table tr:nth-child(odd) td {
     background-color: #f3f3f7; }
 
-.nav-tabs__list {
+.ter-nav-tabs__list {
   margin: 0 0 28px 0;
   padding: 0;
   list-style: none;
@@ -4883,39 +4883,39 @@ body.has-nav {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 24px; }
-  .nav-tabs__list > li {
+  .ter-nav-tabs__list > li {
     padding: 12px 0; }
-  .nav-tabs__list:after {
+  .ter-nav-tabs__list:after {
     content: '';
     display: block;
     clear: both; }
-  .nav-tabs__list > li {
+  .ter-nav-tabs__list > li {
     display: inline-block;
     list-style: none; }
-  .nav-tabs__list--left {
+  .ter-nav-tabs__list--left {
     text-align: left; }
-    .nav-tabs__list--left > li {
+    .ter-nav-tabs__list--left > li {
       margin-left: 0;
       margin-right: 12px;
       padding: 0; }
-  .nav-tabs__list--center {
+  .ter-nav-tabs__list--center {
     text-align: center; }
-    .nav-tabs__list--center > li {
+    .ter-nav-tabs__list--center > li {
       margin-left: 12px;
       margin-right: 0;
       padding: 0; }
-  .nav-tabs__list--right {
+  .ter-nav-tabs__list--right {
     text-align: right; }
-    .nav-tabs__list--right > li {
+    .ter-nav-tabs__list--right > li {
       display: inline-block;
       margin-left: 12px;
       margin-right: 0;
       padding: 0; }
-  .nav-tabs__list > li {
+  .ter-nav-tabs__list > li {
     padding: 0;
     margin-right: 0; }
 
-.nav-tabs__list-item {
+.ter-nav-tabs__list-item {
   flex-grow: 1;
   padding: 0;
   margin: 0;
@@ -4923,7 +4923,7 @@ body.has-nav {
   border-top: 1px solid rgba(208, 208, 215, 0.25);
   border-right: 0px;
   border-bottom: 1px solid #d0d0d7; }
-  .nav-tabs__list-item a {
+  .ter-nav-tabs__list-item a {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -4939,74 +4939,74 @@ body.has-nav {
     color: #7b7a86;
     display: block;
     padding: 12px 16px; }
-    .nav-tabs__list-item a[href]:hover, .nav-tabs__list-item a[href]:visited, .nav-tabs__list-item a[href]:active, .nav-tabs__list-item a[href]:focus,
-    .nav-tabs__list-item a[href] a:active {
+    .ter-nav-tabs__list-item a[href]:hover, .ter-nav-tabs__list-item a[href]:visited, .ter-nav-tabs__list-item a[href]:active, .ter-nav-tabs__list-item a[href]:focus,
+    .ter-nav-tabs__list-item a[href] a:active {
       cursor: pointer;
       text-decoration: none; }
-    .nav-tabs__list-item a[href]:active {
+    .ter-nav-tabs__list-item a[href]:active {
       box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); }
-    .nav-tabs__list-item a i {
+    .ter-nav-tabs__list-item a i {
       margin-left: 12px; }
-      .nav-tabs__list-item a i:before {
+      .ter-nav-tabs__list-item a i:before {
         font-size: 75%;
         transition: color 200ms ease-in-out; }
-    .nav-tabs__list-item a:hover {
+    .ter-nav-tabs__list-item a:hover {
       color: #262533; }
-  .nav-tabs__list-item.is-active {
+  .ter-nav-tabs__list-item.is-active {
     border-left: 1px solid #d0d0d7;
     border-top: 1px solid #d0d0d7;
     border-right: 1px solid #d0d0d7;
     border-bottom: 0px; }
-    .nav-tabs__list-item.is-active a {
+    .ter-nav-tabs__list-item.is-active a {
       color: #262533; }
-  .nav-tabs__list-item.is-active + li > a {
+  .ter-nav-tabs__list-item.is-active + li > a {
     border-left: 0px; }
-  .nav-tabs__list-item:last-child a {
+  .ter-nav-tabs__list-item:last-child a {
     border-right: 1px solid rgba(208, 208, 215, 0.25); }
 
-.compact-tabs__list {
+.ter-compact-tabs__list {
   margin: 0 0 28px 0;
   padding: 0;
   list-style: none;
   margin: 0;
   padding: 0;
   margin-bottom: 24px; }
-  .compact-tabs__list > li {
+  .ter-compact-tabs__list > li {
     padding: 12px 0; }
-  .compact-tabs__list:after {
+  .ter-compact-tabs__list:after {
     content: '';
     display: block;
     clear: both; }
-  .compact-tabs__list > li {
+  .ter-compact-tabs__list > li {
     display: inline-block;
     list-style: none; }
-  .compact-tabs__list--left {
+  .ter-compact-tabs__list--left {
     text-align: left; }
-    .compact-tabs__list--left > li {
+    .ter-compact-tabs__list--left > li {
       margin-left: 0;
       margin-right: 12px;
       padding: 0; }
-  .compact-tabs__list--center {
+  .ter-compact-tabs__list--center {
     text-align: center; }
-    .compact-tabs__list--center > li {
+    .ter-compact-tabs__list--center > li {
       margin-left: 12px;
       margin-right: 0;
       padding: 0; }
-  .compact-tabs__list--right {
+  .ter-compact-tabs__list--right {
     text-align: right; }
-    .compact-tabs__list--right > li {
+    .ter-compact-tabs__list--right > li {
       display: inline-block;
       margin-left: 12px;
       margin-right: 0;
       padding: 0; }
-  .compact-tabs__list > li {
+  .ter-compact-tabs__list > li {
     margin-right: 0; }
 
-.compact-tabs__list-item {
+.ter-compact-tabs__list-item {
   flex-grow: 1;
   padding: 0;
   margin: 0; }
-  .compact-tabs__list-item a {
+  .ter-compact-tabs__list-item a {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -5023,23 +5023,23 @@ body.has-nav {
     display: block;
     margin: 8px 12px;
     padding: 8px 0; }
-    .compact-tabs__list-item a[href]:hover, .compact-tabs__list-item a[href]:visited, .compact-tabs__list-item a[href]:active, .compact-tabs__list-item a[href]:focus,
-    .compact-tabs__list-item a[href] a:active {
+    .ter-compact-tabs__list-item a[href]:hover, .ter-compact-tabs__list-item a[href]:visited, .ter-compact-tabs__list-item a[href]:active, .ter-compact-tabs__list-item a[href]:focus,
+    .ter-compact-tabs__list-item a[href] a:active {
       cursor: pointer;
       text-decoration: none; }
-    .compact-tabs__list-item a[href]:active {
+    .ter-compact-tabs__list-item a[href]:active {
       box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); }
-    .compact-tabs__list-item a i {
+    .ter-compact-tabs__list-item a i {
       margin-left: 12px; }
-      .compact-tabs__list-item a i:before {
+      .ter-compact-tabs__list-item a i:before {
         font-size: 75%;
         transition: color 200ms ease-in-out; }
-    .compact-tabs__list-item a:hover {
+    .ter-compact-tabs__list-item a:hover {
       color: #262533; }
-  .compact-tabs__list-item.is-active a {
+  .ter-compact-tabs__list-item.is-active a {
     color: #262533;
     position: relative; }
-    .compact-tabs__list-item.is-active a:after {
+    .ter-compact-tabs__list-item.is-active a:after {
       content: '';
       display: block;
       position: absolute;

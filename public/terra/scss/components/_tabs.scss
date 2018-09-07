@@ -1,7 +1,8 @@
 //
 // nav tabs
+//
 
-.nav-tabs {
+.ter-nav-tabs {
 	&__list {
 		@include list-unstyled();
 		@include list-inline();
@@ -54,8 +55,9 @@
 
 //
 // compact tabs
+//
 
-.compact-tabs {
+.ter-compact-tabs {
 	&__list {
 		@include list-unstyled();
 		@include list-inline();
