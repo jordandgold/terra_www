@@ -51,6 +51,7 @@ ul.list-inline {
 @mixin list-unstyled {
 	@include list-base();
 	padding: 0;
+	margin: 0;
 	list-style: none;
 }
 

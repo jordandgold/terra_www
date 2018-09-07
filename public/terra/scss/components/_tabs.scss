@@ -99,3 +99,19 @@
 		}
 	}
 }
+
+//
+// tab content
+//
+
+.ter-tabs {
+	&__content {
+		@include list-unstyled();
+		> * {
+			display: none;
+			&.is-active {
+				display: block;
+			}
+		}
+	}
+}
