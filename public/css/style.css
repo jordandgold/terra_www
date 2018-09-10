@@ -4325,7 +4325,7 @@ body.has-modal-open {
     content: "\f078";
     font-size: 75%;
     margin-left: 12px; }
-  .ter-mega-menu__trigger:hover ~ .mega-menu {
+  .ter-mega-menu__trigger:hover ~ .ter-mega-menu {
     visibility: visible;
     opacity: 1;
     -webkit-transform: translate(-50%, calc(-1 * 8px));
@@ -4541,6 +4541,22 @@ body.has-nav {
   .ter-navbar.is-hidden {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
+
+.ter-secondary-navbar {
+  z-index: 900;
+  height: 72px;
+  background: #ffffff;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  border-bottom: 1px solid #e2e2e7; }
 
 .ter-tree-menu__list {
   margin: 0;

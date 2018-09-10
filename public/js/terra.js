@@ -138,7 +138,8 @@
 	'use strict';
 
 	var navBar = $('nav.ter-navbar.js-auto-hide'),
-		navBarHeight = navBar.height();
+		navBarHeight = navBar.height(),
+		secondaryNav = $('nav.ter-secondary-nav');
 
 	var scrolling = false,
 		previousTop = 0,

@@ -70,7 +70,7 @@ $mega-menu-offset: calc(-1 * #{spacing('mini')});
             margin-left: spacing('xxs');
         }
 		&:hover {
-			~ .mega-menu {
+			~ .ter-mega-menu {
 				visibility: visible;
 	  			opacity: 1;
 	  			transform: translate(-50%, $mega-menu-offset);
@@ -325,6 +325,19 @@ body.has-nav {
 	&.is-hidden {
 		transform: translateY(-100%);
 	}
+}
+
+.ter-secondary-navbar {
+	@include z-index(9);
+	height: $navbar-height;
+	background: $navbar-bg;
+	transition: transform .5s ease;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	width: stretch;
+	border-bottom: $navbar-border-width solid $navbar-border-color;
 }
 
 
