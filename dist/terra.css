@@ -4254,6 +4254,8 @@ body.has-modal-open {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
+  box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
+  z-index: 200;
   position: absolute;
   top: 72px;
   left: 50%;
@@ -4265,6 +4267,7 @@ body.has-modal-open {
   visibility: hidden;
   opacity: 0;
   width: 100%;
+  background-color: #ffffff;
   box-sizing: border-box; }
   .ter-mega-menu:hover {
     visibility: visible;
@@ -4276,12 +4279,9 @@ body.has-modal-open {
     padding: 0;
     margin: 0;
     list-style: none;
-    box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
-    z-index: 200;
     padding: 16px;
     margin-left: 32px;
-    margin-right: 32px;
-    background: #ffffff; }
+    margin-right: 32px; }
     .ter-mega-menu__list > li {
       padding: 12px 0; }
     .ter-mega-menu__list li > ul {
@@ -4297,7 +4297,7 @@ body.has-modal-open {
           font-size: 16px;
           line-height: 1.5;
           font-weight: 400;
-          color: #009AD9;
+          color: #0076a6;
           margin: 0;
           padding: 0;
           text-decoration: none; }
@@ -4310,9 +4310,11 @@ body.has-modal-open {
               font-weight: 400;
               display: block; } }
           .inverse-color .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
-            color: #aeaeb6; }
+            color: #009AD9; }
             .inverse-color .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
-              color: #93939e; }
+              color: #0076a6; }
+        .inverse-color .ter-mega-menu__list li > ul > li {
+          color: #262533 !important; }
   .ter-mega-menu__trigger:after {
     -webkit-font-smoothing: antialiased;
     display: inline-block;

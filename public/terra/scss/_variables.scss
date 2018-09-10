@@ -245,6 +245,13 @@ $navbar-inverse-border-color: grayscale('dark-0');
 $navbar-inverse-link-color: $link-inverse-color;
 $navbar-inverse-link-hover-color: $link-inverse-hover-color;
 
+// mega menu
+$mega-menu-bg: grayscale('white');
+$mega-menu-offset: calc(-1 * #{spacing('mini')});
+$mega-menu-type-color: type-color('normal');
+$mega-menu-link-color: brand-color('brand-1');
+$mega-menu-link-hover: darken($link-color, 10%);
+
 // buttons
 $button-border-radius: $border-radius-base;
 $button-border-size: 1px;
