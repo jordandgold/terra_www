@@ -137,7 +137,8 @@
   
 	'use strict';
 
-	var navBar = $('nav.ter-navbar.js-auto-hide'),
+	var navBar = $('nav.ter-navbar'),
+		navBarAutoHide = $('nav.ter-navbar.js-auto-hide'),
 		navBarHeight = navBar.height(),
 		secondaryNav = $('nav.ter-secondary-nav');
 
@@ -178,11 +179,11 @@
 
 		if (previousTop - currentTop > scrollDelta) {
 	    	// scrolling up
-	    	navBar.removeClass('is-hidden');
+	    	navBarAutoHide.removeClass('is-hidden');
 	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
 	    	// scrolling down
-	    	navBar.addClass('is-hidden');
-	    	navBar.find('.ter-navbar__nav').find('.ter-dropdown.is-open').each(function(){
+	    	navBarAutoHide.addClass('is-hidden');
+	    	navBarAutoHide.find('.ter-navbar__nav').find('.ter-dropdown.is-open').each(function(){
 	    		$(this).removeClass('is-open');
 	    	});
 	    }
