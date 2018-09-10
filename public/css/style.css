@@ -4362,8 +4362,8 @@ body.has-nav {
     position: fixed;
     top: 0; }
   .ter-navbar.is-hidden {
-    -webkit-transform: translateY(calc(-72px));
-            transform: translateY(calc(-72px)); }
+    -webkit-transform: translateY(calc(-73px));
+            transform: translateY(calc(-73px)); }
   .ter-navbar__toggle {
     height: 72px;
     float: right;
@@ -4563,7 +4563,12 @@ body.has-nav {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  border-bottom: 1px solid #e2e2e7; }
+  border-bottom: 1px solid #e2e2e7;
+  -webkit-transform: translateY(calc(-73px));
+          transform: translateY(calc(-73px)); }
+  .ter-secondary-navbar.is-shown {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
 
 .ter-tree-menu__list {
   margin: 0;

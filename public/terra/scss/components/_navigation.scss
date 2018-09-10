@@ -106,14 +106,14 @@ body.has-nav {
 	border-bottom: $navbar-border-width solid $navbar-border-color;
 	&.inverse-color {
 		background: $navbar-inverse-bg;
-		border-bottom: $navbar-border-width solid $navbar-inverse-border-color
+		border-bottom: $navbar-border-width solid $navbar-inverse-border-color;
 	}
 	&.is-fixed {
 		position: fixed;
 		top: 0;
 	}
 	&.is-hidden {
-		transform: translateY(calc(#{$navbar-height * -1}))
+		transform: translateY(calc(#{($navbar-height + $navbar-border-width) * -1}));
 	}
 	&__toggle {
 		height: $navbar-height;
@@ -344,6 +344,10 @@ body.has-nav {
 	justify-content: space-between;
 	width: stretch;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
+	transform: translateY(calc(#{($navbar-height + $navbar-border-width) * -1}));
+	&.is-shown {
+		transform: translateY(0);
+	}
 }
 
 
