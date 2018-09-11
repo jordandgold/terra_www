@@ -15,8 +15,8 @@
 	var scrolling = false,
 		previousTop = 0,
 		currentTop = 0,
-		scrollDelta = 10,
-		scrollOffset = 150;
+		scrollDelta = 20,
+		scrollOffset = 200;
 
 	navBar.on('click', '.ter-navbar__toggle', function(e){
 		e.preventDefault();
@@ -37,7 +37,7 @@
 
 		}
 
-		if(secondaryNav.length > 0) {
+		if(secondaryNav.length) {
 			showSecondaryNavBar();
 		}
 
@@ -51,7 +51,10 @@
 
 		var currentTop = $(window).scrollTop();
 
-		if (previousTop - currentTop > scrollDelta) {
+		if (previousTop - currentTop > scrollDelta && !secondaryNav.length) {
+	    	// scrolling up
+	    	navBarAutoHide.removeClass('is-hidden');
+	    } else if (currentTop < scrollOffset && secondaryNav.length) {
 	    	// scrolling up
 	    	navBarAutoHide.removeClass('is-hidden');
 	    } else if ( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
