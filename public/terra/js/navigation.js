@@ -10,7 +10,7 @@
 	var navBar = $('nav.ter-navbar'),
 		navBarAutoHide = $('nav.ter-navbar.js-auto-hide'),
 		navBarHeight = navBar.height(),
-		secondaryNav = $('nav.ter-secondary-nav');
+		secondaryNav = $('nav.ter-secondary-navbar');
 
 	var scrolling = false,
 		previousTop = 0,
@@ -37,6 +37,10 @@
 
 		}
 
+		if(secondaryNav.length > 0) {
+			showSecondaryNavBar();
+		}
+
 	});
 
 	$(window).on('resize', function(){
@@ -50,7 +54,7 @@
 		if (previousTop - currentTop > scrollDelta) {
 	    	// scrolling up
 	    	navBarAutoHide.removeClass('is-hidden');
-	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
+	    } else if ( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
 	    	// scrolling down
 	    	navBarAutoHide.addClass('is-hidden');
 	    	navBarAutoHide.find('.ter-navbar__nav').find('.ter-dropdown.is-open').each(function(){
@@ -60,6 +64,22 @@
 
 	   	previousTop = currentTop;
 		scrolling = false;
+	}
+
+	function showSecondaryNavBar() {
+
+		var currentTop = $(window).scrollTop(),
+			trigger = secondaryNav.data('trigger'),
+			triggerTop = $(trigger).offset().top;
+
+		if (currentTop > triggerTop) {
+			secondaryNav.addClass('is-shown');
+		} else {
+			secondaryNav.removeClass('is-shown');
+		}
+
+		// console.log(currentTop, triggerTop);
+
 	}
 
 })(jQuery, window, document);
