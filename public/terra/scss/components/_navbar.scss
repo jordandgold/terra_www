@@ -1,93 +1,7 @@
 /**
  * Terra Design System
- * _navigation.scss
+ * _navbar.scss
  */
-
-//
-// mega menu
-//
-
-.ter-mega-menu {
-	@include for-size(tablet-landscape-up) {
-		@include type-setting('sm','normal');
-		@include depth(2);
-		position: absolute;
-		top: $navbar-height;
-		left: 50%;
-		transform: translate(-50%, -20px);
-		transition: visibility 225ms ease-in-out, opacity 225ms ease-in-out, transform 225ms ease-in-out;
-		visibility: hidden;
-		opacity: 0;
-		width: 100%;
-		background-color: $mega-menu-bg;
-		box-sizing: border-box;
-		&:hover {
-			visibility: visible;
-			opacity: 1;
-			transform: translate(-50%, $mega-menu-offset);
-		}
-		&__list {
-			@include list-unstyled;
-			@include border-radius('all','small');
-			padding: spacing('xs');
-			margin-left: spacing('md');
-			margin-right: spacing('md');
-			li {
-				> ul {
-					@include list-unstyled;
-					> li {
-						padding: 0;
-						> a:not(.ter-button) {
-							@include type-setting('sm','normal');
-							color: $mega-menu-link-hover;
-							margin: 0;
-							padding: spacing('xxxxs') 0;
-							text-decoration: none;
-							&:hover {
-								color: $mega-menu-link-hover;
-								text-decoration: none;
-							}
-							@include for-size(tablet-landscape-down) {
-								@include type-setting(0,'normal');
-								display: block;
-							}
-							.inverse-color & {
-								color: $mega-menu-link-color;
-								&:hover {
-									color: $mega-menu-link-hover;
-								}
-							}
-						}
-						.inverse-color & {
-							color: $mega-menu-type-color !important;
-						}
-					}
-				}
-			}
-		}
-	}
-	&__trigger {
-		@include for-size(desktop-up) {
-			&:after {
-	            @include icon-base;
-	            content: "\f078";
-	            font-size: 75%;
-	            margin-left: spacing('xxs');
-	        }
-			&:hover {
-				~ .ter-mega-menu {
-					visibility: visible;
-		  			opacity: 1;
-		  			transform: translate(-50%, $mega-menu-offset);
-				}
-			}
-		}
-	}
-}
-
-
-//
-// navigation bar
 
 // fix for body top-margin
 body.has-nav {
@@ -169,7 +83,8 @@ body.has-nav {
 			padding: spacing('xs') 0;
 		}
 	}
-	[class^='container'] {
+	.container,
+	.container-fluid {
 		@include clearfix();
 	}
 	&__nav {
@@ -333,6 +248,7 @@ body.has-nav {
 	}
 }
 
+// secondary navbar
 .ter-secondary-navbar {
 	@include z-index(9);
 	height: $navbar-height;
@@ -347,96 +263,5 @@ body.has-nav {
 	transform: translateY(calc(#{($navbar-height + $navbar-border-width) * -1}));
 	&.is-shown {
 		transform: translateY(0);
-	}
-}
-
-
-//
-// tree menu
-
-.ter-tree-menu {
-	&__list {
-		margin: 0;
-		padding: 0 0 0 spacing('xxs');
-		list-style: none;
-	}
-	&__list-item {
-		@include type-setting('sm','normal');
-		a,
-		a:visited,
-		a:active,
-		a:focus {
-			color: $tree-menu-link-color;
-			text-decoration: none;
-			&:hover {
-				color: $tree-menu-link-hover;
-				cursor: pointer;
-			}
-		}
-		&.is-active {
-			> a {
-				color: $tree-menu-link-hover;
-			}
-		}
-	}
-	&__list-item {
-		position: relative;
-		padding: 0 0 0 spacing('xxs');
-		> a {
-			@include border-radius('all','small');
-			padding: spacing('micro') 0;
-			display: block;
-		}
-		> span {
-			padding: spacing('micro') 0;
-		}
-		&.is-expandable {
-			&:before {
-				@include icon-base();
-				content: "\f054";
-				color: lighten($tree-menu-link-color, 10%);
-				position: absolute;
-				top: 1em;
-				left: calc(-1 * #{spacing('xxs')});
-				transition: transform 200ms ease-in-out;
-				font-size: 75%;
-			}
-			&.is-expanded {
-				> a {
-					color: $tree-menu-link-hover;
-				}
-				&:before {
-					transform: rotate(90deg);
-				}
-			}
-		}
-	}
-	&__sub-menu {
-		list-style: none;
-		margin-left: spacing('xxs');
-		padding: 0;
-		display: none;
-		> li {
-			@include type-setting('sm','normal');
-			padding: 0;
-			a,
-			a:visited,
-			a:active,
-			a:focus {
-				color: $tree-menu-link-color;
-				text-decoration: none;
-				padding: spacing('micro') 0;
-				display: block;
-				&:hover {
-					color: $tree-menu-link-hover;
-					cursor: pointer;
-				}
-			}
-			&.is-active {
-				> a {
-					color: $tree-menu-link-hover;
-				}
-			}
-		}
 	}
 }

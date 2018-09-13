@@ -1,0 +1,91 @@
+/**
+ * Terra Design System
+ * _tree-menu.scss
+ */
+
+.ter-tree-menu {
+	&__list {
+		margin: 0;
+		padding: 0 0 0 spacing('xxs');
+		list-style: none;
+	}
+	&__list-item {
+		@include type-setting('sm','normal');
+		a,
+		a:visited,
+		a:active,
+		a:focus {
+			color: $tree-menu-link-color;
+			text-decoration: none;
+			&:hover {
+				color: $tree-menu-link-hover;
+				cursor: pointer;
+			}
+		}
+		&.is-active {
+			> a {
+				color: $tree-menu-link-hover;
+			}
+		}
+	}
+	&__list-item {
+		position: relative;
+		padding: 0 0 0 spacing('xxs');
+		> a {
+			@include border-radius('all','small');
+			padding: spacing('micro') 0;
+			display: block;
+		}
+		> span {
+			padding: spacing('micro') 0;
+		}
+		&.is-expandable {
+			&:before {
+				@include icon-base();
+				content: "\f054";
+				color: lighten($tree-menu-link-color, 10%);
+				position: absolute;
+				top: 1em;
+				left: calc(-1 * #{spacing('xxs')});
+				transition: transform 200ms ease-in-out;
+				font-size: 75%;
+			}
+			&.is-expanded {
+				> a {
+					color: $tree-menu-link-hover;
+				}
+				&:before {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+	&__sub-menu {
+		list-style: none;
+		margin-left: spacing('xxs');
+		padding: 0;
+		display: none;
+		> li {
+			@include type-setting('sm','normal');
+			padding: 0;
+			a,
+			a:visited,
+			a:active,
+			a:focus {
+				color: $tree-menu-link-color;
+				text-decoration: none;
+				padding: spacing('micro') 0;
+				display: block;
+				&:hover {
+					color: $tree-menu-link-hover;
+					cursor: pointer;
+				}
+			}
+			&.is-active {
+				> a {
+					color: $tree-menu-link-hover;
+				}
+			}
+		}
+	}
+}
