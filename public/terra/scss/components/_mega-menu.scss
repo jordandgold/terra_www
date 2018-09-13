@@ -61,6 +61,15 @@
 				}
 			}
 		}
+		&__list-head {
+			@include type-setting('micro', 'bold');
+            padding: spacing('mini') spacing('xs');
+            text-transform: uppercase;
+            color: $mega-menu-type-color !important;
+            .inverse-color & {
+                color: $mega-menu-type-color !important;
+            }
+		}
 	}
 	// disable on mobile
 	@include for-size(tablet-landscape-down) {

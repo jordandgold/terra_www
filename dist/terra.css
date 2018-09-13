@@ -4244,7 +4244,16 @@ ol {
               .inverse-color .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
                 color: #0076a6; }
           .inverse-color .ter-mega-menu__list li > ul > li {
-            color: #262533 !important; } }
+            color: #262533 !important; }
+    .ter-mega-menu__list-head {
+      font-size: 12px;
+      line-height: 1.5;
+      font-weight: 600;
+      padding: 8px 16px;
+      text-transform: uppercase;
+      color: #262533 !important; }
+      .inverse-color .ter-mega-menu__list-head {
+        color: #262533 !important; } }
 
 @media (max-width: 899px) {
   .ter-mega-menu__list {
