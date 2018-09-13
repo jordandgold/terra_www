@@ -32,12 +32,12 @@
 				> ul {
 					@include list-unstyled;
 					> li {
-						padding: 0;
+						padding: spacing('micro') 0;
+						display: block;
 						> a:not(.ter-button) {
 							@include type-setting('sm','normal');
 							color: $mega-menu-link-hover;
 							margin: 0;
-							padding: spacing('xxxxs') 0;
 							text-decoration: none;
 							&:hover {
 								color: $mega-menu-link-hover;

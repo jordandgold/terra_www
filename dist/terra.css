@@ -4220,14 +4220,14 @@ ol {
         .ter-mega-menu__list li > ul > li {
           padding: 12px 0; }
         .ter-mega-menu__list li > ul > li {
-          padding: 0; }
+          padding: 4px 0;
+          display: block; }
           .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
             font-size: 16px;
             line-height: 1.5;
             font-weight: 400;
             color: #0076a6;
             margin: 0;
-            padding: 0;
             text-decoration: none; }
             .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
               color: #0076a6;
