@@ -27,7 +27,8 @@ body.has-nav {
 	&.is-hidden {
 		transform: translateY(calc(#{($navbar-height + $navbar-border-width) * -1}));
 	}
-	.container-fluid {
+	> .container-fluid {
+		@include clearfix();
     	display: flex;
     	justify-content: space-between;
 		width: stretch;
@@ -85,10 +86,6 @@ body.has-nav {
 			@include height('xs');
 			padding: spacing('xs') 0;
 		}
-	}
-	.container,
-	.container-fluid {
-		@include clearfix();
 	}
 	&__nav {
 		@include box-shadow(2);

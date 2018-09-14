@@ -4399,12 +4399,16 @@ body.has-nav {
   .ter-navbar.is-hidden {
     -webkit-transform: translateY(calc(-73px));
             transform: translateY(calc(-73px)); }
-  .ter-navbar .container-fluid {
+  .ter-navbar > .container-fluid {
     display: flex;
     justify-content: space-between;
     width: -webkit-fill-available;
     width: -moz-available;
     width: stretch; }
+    .ter-navbar > .container-fluid:after {
+      content: "";
+      display: block;
+      clear: both; }
   .ter-navbar__toggle {
     height: 72px;
     float: right;
@@ -4451,11 +4455,6 @@ body.has-nav {
     .ter-navbar__brand img {
       height: 32px;
       padding: 16px 0; }
-  .ter-navbar .container:after,
-  .ter-navbar .container-fluid:after {
-    content: "";
-    display: block;
-    clear: both; }
   .ter-navbar__nav {
     box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
     position: absolute;
