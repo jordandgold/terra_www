@@ -14,9 +14,7 @@ body.has-nav {
 	background: $navbar-bg;
 	transition: transform .5s ease;
 	position: relative;
-	display: flex;
-	justify-content: space-between;
-	width: stretch;
+	width: 100%;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
 	&.inverse-color {
 		background: $navbar-inverse-bg;
@@ -28,6 +26,11 @@ body.has-nav {
 	}
 	&.is-hidden {
 		transform: translateY(calc(#{($navbar-height + $navbar-border-width) * -1}));
+	}
+	.container-fluid {
+    	display: flex;
+    	justify-content: space-between;
+		width: stretch;
 	}
 	&__toggle {
 		height: $navbar-height;
@@ -95,6 +98,8 @@ body.has-nav {
         width: 100%;
         background: $navbar-bg;
         display: none;
+        flex: 1;
+        justify-content: flex-end;
         @include for-size(tablet-landscape-down) {
         	padding-bottom: spacing('xs');
         }
@@ -103,9 +108,10 @@ body.has-nav {
 			display: inline-block;
 			width: initial;
 			position: static;
+			height: calc(#{$navbar-height} - #{$navbar-border-width});
         	top: unset;
         	left: unset;
-        	display: flex !important;
+        	display: flex;
 	    }
 	    .inverse-color & {
 			background: $navbar-inverse-bg;
@@ -117,6 +123,7 @@ body.has-nav {
         height: auto;
         padding: spacing('xs') 0;
         margin: 0;
+        float: right;
         @include for-size(tablet-landscape-down) {
         	padding-bottom: 0;
         }

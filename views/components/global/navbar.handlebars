@@ -1,94 +1,96 @@
-<nav class="ter-navbar container-fluid {{#if auto-hide}}js-auto-hide{{else}}{{/if}} is-fixed ter-navbar--terra">
-	<a href="/" class="ter-navbar__brand terra">
-		<div class="logo wireframe">
-			<div class="cube">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<div class="cube">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</a>
-	<button class="ter-navbar__toggle" type="button" data-toggle="collapse" data-target=".collapse">
-		<span class="line"></span>
-		<span class="line"></span>
-		<span class="line"></span>
-	</button>
-	<div class="ter-navbar__nav flex-1">
-		<form class="ter-navbar__form search-bar ter-input form-inline d-flex flex-row flex-wrap align-items-center flex-1 pad-left-md pad-right-md">
-			<div class="search-bar__input ter-input__wrap">
-		    	<input type="text" placeholder="search">
-		    </div>
-			<button class="search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
-		</form>
-		<ul class="ter-navbar__menu">
-			<li class="ter-navbar__menu-item ter-dropdown">
-				<a href="/" class="ter-dropdown__toggle">Dropdown</a>
-				<ul class="ter-dropdown__menu">
-					<li class="ter-dropdown__item"><a href="#">Link</a></li>
-				</ul>
-			</li>
-			<li class="ter-navbar__menu-item"><a href="/documentation/getting-started">Documentation</a></li>
-			<li class="ter-navbar__menu-item"><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="ter-button ter-button--primary">Download</a></li>
-		</ul>
-		{{!-- <ul class="ter-navbar__menu ter-navbar__menu--right">
-			<li class="ter-navbar__menu-item">
-				<a href="#" class="mega-menu__trigger">Solutions</a>
-				<div class="mega-menu">
-					<ul class="mega-menu__list">
-						<div class="container-fluid wrap">
-							<div class="row">
-								<li class="col-sm">
-									<ul>
-										<li>List Head</li>
-										<li><a href="#">Products</a></li>
-										<li><a href="#">References</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">About</a></li>
-										<li><a href="#">Contact</a></li>
-									</ul>
-								</li>
-								<li class="col-sm">
-									<ul>
-										<li>List Head</li>
-										<li><a href="#">Products</a></li>
-										<li><a href="#">References</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">About</a></li>
-										<li><a href="#">Contact</a></li>
-									</ul>
-								</li>
-								<li class="col-sm">
-									<ul>
-										<li>List Head</li>
-										<li><a href="#">Products</a></li>
-										<li><a href="#">References</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">About</a></li>
-										<li><a href="#">Contact</a></li>
-									</ul>
-								</li>
-								<li class="col-sm">
-									<ul>
-										<li>List Head</li>
-										<li><a href="#">Products</a></li>
-										<li><a href="#">References</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">About</a></li>
-										<li><a href="#">Contact</a></li>
-									</ul>
-								</li>
-							</div>
-						</div>
-					</ul>
+<nav class="ter-navbar {{#if auto-hide}}js-auto-hide{{else}}{{/if}} is-fixed ter-navbar--terra">
+	<div class="container-fluid">
+		<a href="/" class="ter-navbar__brand terra">
+			<div class="logo wireframe">
+				<div class="cube">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
-			</li>
-			<li class="ter-navbar__menu-item"><a href="#">About</a></li>
-			<li class="ter-navbar__menu-item"><a href="#">Contact</a></li>
-		</ul> --}}
+				<div class="cube">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</a>
+		<button class="ter-navbar__toggle" type="button" data-toggle="collapse" data-target=".collapse">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</button>
+		<div class="ter-navbar__nav">
+			<form class="ter-navbar__form search-bar ter-input form-inline d-flex flex-row flex-wrap align-items-center flex-1 pad-left-md pad-right-md">
+				<div class="search-bar__input ter-input__wrap">
+			    	<input type="text" placeholder="search">
+			    </div>
+				<button class="search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
+			</form>
+			<ul class="ter-navbar__menu">
+				<li class="ter-navbar__menu-item ter-dropdown">
+					<a href="/" class="ter-dropdown__toggle">Dropdown</a>
+					<ul class="ter-dropdown__menu">
+						<li class="ter-dropdown__item"><a href="#">Link</a></li>
+					</ul>
+				</li>
+				<li class="ter-navbar__menu-item"><a href="/documentation/getting-started">Documentation</a></li>
+				<li class="ter-navbar__menu-item"><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="ter-button ter-button--primary">Download</a></li>
+			</ul>
+			{{!-- <ul class="ter-navbar__menu ter-navbar__menu--right">
+				<li class="ter-navbar__menu-item">
+					<a href="#" class="mega-menu__trigger">Solutions</a>
+					<div class="mega-menu">
+						<ul class="mega-menu__list">
+							<div class="container-fluid wrap">
+								<div class="row">
+									<li class="col-sm">
+										<ul>
+											<li>List Head</li>
+											<li><a href="#">Products</a></li>
+											<li><a href="#">References</a></li>
+											<li><a href="#">Services</a></li>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+										</ul>
+									</li>
+									<li class="col-sm">
+										<ul>
+											<li>List Head</li>
+											<li><a href="#">Products</a></li>
+											<li><a href="#">References</a></li>
+											<li><a href="#">Services</a></li>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+										</ul>
+									</li>
+									<li class="col-sm">
+										<ul>
+											<li>List Head</li>
+											<li><a href="#">Products</a></li>
+											<li><a href="#">References</a></li>
+											<li><a href="#">Services</a></li>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+										</ul>
+									</li>
+									<li class="col-sm">
+										<ul>
+											<li>List Head</li>
+											<li><a href="#">Products</a></li>
+											<li><a href="#">References</a></li>
+											<li><a href="#">Services</a></li>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+										</ul>
+									</li>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</li>
+				<li class="ter-navbar__menu-item"><a href="#">About</a></li>
+				<li class="ter-navbar__menu-item"><a href="#">Contact</a></li>
+			</ul> --}}
+		</div>
 	</div>
 </nav>
