@@ -2844,11 +2844,12 @@ h5,
       border-bottom-right-radius: 0; }
 
 .badge {
+  font-size: 12px;
   line-height: 1.5;
   font-weight: 600;
   padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) 12px;
   line-height: 100%;
-  padding: 8px;
+  padding: 4px 8px;
   margin: 0 8px 0 0;
   transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out; }
   .badge:last-child {
@@ -2856,7 +2857,7 @@ h5,
   .badge__close {
     opacity: 0.4;
     padding: 0;
-    margin: 0 0 0;
+    margin: 0 0 0 4px;
     background: transparent;
     border: 0; }
     .badge__close:after {
@@ -3656,7 +3657,9 @@ a.ter-button--icon {
     padding-top: 0;
     padding-bottom: 0; }
   .ter-input__label {
+    font-size: 16px;
     line-height: 1.5;
+    font-weight: 400;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3709,6 +3712,7 @@ a.ter-button--icon {
       .ter-input__wrap input[type="file"].input-lg,
       .ter-input__wrap input[type="password"].input-lg,
       .ter-input__wrap textarea.input-lg {
+        font-size: 20px;
         line-height: 1.5;
         font-weight: 400; }
       .ter-input__wrap input[type="text"]::-webkit-input-placeholder,
@@ -3763,11 +3767,15 @@ a.ter-button--icon {
       .ter-input__wrap textarea {
         border-color: #1cb260; }
     .ter-input__wrap textarea {
+      font-size: 20px;
       line-height: 1.5;
+      font-weight: 400;
       display: block;
       width: 100%; }
   .ter-input__message {
+    font-size: 16px;
     line-height: 1.5;
+    font-weight: 400;
     display: block; }
     .has-error .ter-input__message {
       color: #ce2740; }
@@ -3781,7 +3789,9 @@ a.ter-button--icon {
   box-sizing: content-box; }
   .ter-checkbox__label,
   .ter-radio__label {
+    font-size: 16px;
     line-height: 1.5;
+    font-weight: 400;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3797,7 +3807,9 @@ a.ter-button--icon {
     outline: 0; }
 
 .ter-radio__label {
+  font-size: 16px;
   line-height: 1.5;
+  font-weight: 400;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -3868,7 +3880,9 @@ a.ter-button--icon {
   padding-top: 12px;
   padding-bottom: 12px; }
   .ter-radio-group__label {
+    font-size: 16px;
     line-height: 1.5;
+    font-weight: 400;
     padding-bottom: 12px; }
   .ter-radio-group .ter-radio {
     padding-top: 0px;
@@ -4080,6 +4094,7 @@ fieldset {
       right: 16px;
       color: neutral-color("gray-1"); }
   .select-options__item {
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
     color: #262533;
@@ -4098,6 +4113,7 @@ fieldset {
     padding: 8px 16px; }
 
 .ter-fieldset__legend {
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 600; }
 

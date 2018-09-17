@@ -37,7 +37,7 @@
         padding-bottom: 0;
     }
     &__label {
-        @include type-setting(-1,0);
+        @include type-setting('sm','normal');
         display: block;
         padding-bottom: spacing('mini');
         color: $input-label-color;
@@ -64,7 +64,7 @@
                 border-color: $input-focus-border-color;
             }
             &.input-lg {
-                @include font-size(1);
+                @include font-size('base');
             }
             &::placeholder {
                 color: $input-placeholder-color;
@@ -86,13 +86,13 @@
             }
         }
         textarea {
-            @include type-setting(0,0);
+            @include type-setting('base','normal');
             display: block;
             width: 100%;
         }
     }
     &__message {
-        @include type-setting(-1,0);
+        @include type-setting('sm','normal');
         display: block;
         .has-error & {
             color: emotive-color('danger');
@@ -109,7 +109,7 @@
     padding-bottom: spacing('xxs');
     box-sizing: content-box;
     &__label {
-        @include type-setting(-1,0);
+        @include type-setting('sm','normal');
         display: block;
         padding-bottom: spacing('mini');
         color: $input-label-color;
@@ -129,7 +129,7 @@
         }
     }
     &__label {
-        @include type-setting(-1,0);
+        @include type-setting('sm','normal');
         position: relative;
         display: inline-block;
         padding-left: 22px;
@@ -208,7 +208,7 @@
     padding-top: spacing('xxs');
     padding-bottom: spacing('xxs');
     &__label {
-        @include type-setting(-1,0);
+        @include type-setting('sm','normal');
         padding-bottom: spacing('xxs');
     }
     .ter-radio {
@@ -233,7 +233,7 @@ select {
     position: relative;
     &:after {
         content: "\f078";
-        color: brand-color(ui-4);
+        color: grayscale('light-2');
         font-family: Font Awesome\ 5 Free;
         font-weight: 900;
         font-size: 0.75rem;
@@ -352,7 +352,7 @@ fieldset {
         }
     }
     &__item {
-        @include type-setting(-1,'normal');
+        @include type-setting('sm','normal');
         color: $dropdown-link-color;
         padding: spacing('mini') spacing('xs');
         display: block;
@@ -375,6 +375,6 @@ fieldset {
 
 .ter-fieldset {
     &__legend {
-        @include type-setting(-1,'bold');
+        @include type-setting('sm','bold');
     }
 }
