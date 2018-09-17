@@ -94,7 +94,7 @@
             padding: spacing('mini') spacing('xs');
             text-transform: uppercase;
             color: $dropdown-no-link-color !important;
-            .inverse-color & {
+            .is-inverse & {
                 color: $dropdown-no-link-color !important;
             }
         }

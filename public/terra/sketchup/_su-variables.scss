@@ -191,8 +191,8 @@ $link-color: brand-color('brand-2');
 $link-hover-color: darken($link-color, 10%);
 $link-highlight: true;
 $link-highlight-color: lighten(brand-color('brand-1'), 30%);
-$link-inverse-color: grayscale('gray-4');
-$link-inverse-hover-color: darken($link-inverse-color, 10%);
+$link-is-inverse: grayscale('gray-4');
+$link-inverse-hover-color: darken($link-is-inverse, 10%);
 
 // navigation bar
 $navbar-height: height(4);
@@ -204,7 +204,7 @@ $navbar-border-color: grayscale('gray-1');
 $navbar-menu-icon-color: grayscale('gray-3');
 $navbar-inverse-bg: grayscale('dark-0');
 $navbar-inverse-border-color: grayscale('dark-0');
-$navbar-inverse-link-color: $link-inverse-color;
+$navbar-inverse-link-color: $link-is-inverse;
 $navbar-inverse-link-hover-color: $link-inverse-hover-color;
 
 // buttons

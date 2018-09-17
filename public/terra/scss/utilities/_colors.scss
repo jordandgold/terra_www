@@ -14,7 +14,7 @@
     }
 }
 
-.inverse-color {
+.is-inverse {
 	color: type-color('inverse') !important;
 	*:not(a) {
 		color: type-color('inverse') !important;

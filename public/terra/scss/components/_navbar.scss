@@ -16,7 +16,7 @@ body.has-nav {
 	position: relative;
 	width: 100%;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
-	&.inverse-color {
+	&.is-inverse {
 		background: $navbar-inverse-bg;
 		border-bottom: $navbar-border-width solid $navbar-inverse-border-color;
 	}
@@ -74,7 +74,7 @@ body.has-nav {
 				color: $navbar-link-hover;
 				text-decoration: none;
 			}
-			.inverse-color & {
+			.is-inverse & {
 				color: $navbar-inverse-link-color;
 				&:hover {
 					color: $navbar-inverse-link-hover-color;
@@ -110,7 +110,7 @@ body.has-nav {
         	left: unset;
         	display: flex;
 	    }
-	    .inverse-color & {
+	    .is-inverse & {
 			background: $navbar-inverse-bg;
 		}
 	}
@@ -170,7 +170,7 @@ body.has-nav {
 				line-height: initial;
 				height: auto;
 			}
-			.inverse-color & {
+			.is-inverse & {
 				color: $navbar-inverse-link-color;
 				&:hover {
 					color: $navbar-inverse-link-hover-color;
@@ -205,7 +205,7 @@ body.has-nav {
 							}
 						}
 					}
-					.inverse-color & {
+					.is-inverse & {
 						@include for-size(tablet-landscape-down) {
 							color: $navbar-inverse-link-color;
 							&:hover {

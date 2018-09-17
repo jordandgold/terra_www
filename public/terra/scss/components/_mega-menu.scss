@@ -47,14 +47,14 @@
 								@include type-setting(0,'normal');
 								display: block;
 							}
-							.inverse-color & {
+							.is-inverse & {
 								color: $mega-menu-link-color;
 								&:hover {
 									color: $mega-menu-link-hover;
 								}
 							}
 						}
-						.inverse-color & {
+						.is-inverse & {
 							color: $mega-menu-type-color !important;
 						}
 					}
@@ -66,7 +66,7 @@
             padding: spacing('mini') 0;
             text-transform: uppercase;
             color: $mega-menu-type-color !important;
-            .inverse-color & {
+            .is-inverse & {
                 color: $mega-menu-type-color !important;
             }
 		}
