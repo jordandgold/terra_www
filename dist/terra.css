@@ -4861,27 +4861,27 @@ body.has-nav {
   .page-section__sub-section:last-child {
     padding-bottom: 0; }
 
-.table {
+.ter-table {
   width: 100%;
   border-spacing: 1px;
   font-weight: 300; }
-  .table tr th {
+  .ter-table tr th {
     margin: 0;
     text-align: left;
     border: 0; }
-  .table tr td {
+  .ter-table tr td {
     border: 0; }
-  .table tr th {
+  .ter-table tr th {
     padding: 12px;
     background-color: #009AD9;
     color: #ffffff;
     font-weight: 300; }
-  .table tr td {
+  .ter-table tr td {
     padding: 12px;
     font-weight: 300; }
-  .table tr:nth-child(even) td {
+  .ter-table tr:nth-child(even) td {
     background-color: transparent; }
-  .table tr:nth-child(odd) td {
+  .ter-table tr:nth-child(odd) td {
     background-color: #f3f3f7; }
 
 .ter-nav-tabs__list {
