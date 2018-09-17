@@ -3,4 +3,4 @@ page:
   title: 'Flexbox | Terra Design System'
   name: 'Flexbox'
   parent: 'Structure'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: 'Helper classes that utilize the CSS flexbox properties'

@@ -183,7 +183,7 @@ code {
 
 .grid-box {
     width: stretch;
-    height: height(4);
+    height: height('md');
     position: relative;
     border: 1px solid darken(brand-color('brand-1'), 10%);
     background: brand-color('brand-1');
