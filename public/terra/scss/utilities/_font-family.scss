@@ -1,8 +1,6 @@
-//
-// Font family
-//
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+/**
+ * Font Family
+ */
 
 @mixin font-sans-serif {
 	font-family: $font-sans-serif;
@@ -22,4 +20,16 @@
 		'Andale Mono',
 		'Ubuntu Mono',
 		monospace;
+}
+
+.font-sans-serif {
+	@include font-sans-serif();
+}
+
+.font-serif {
+	@include font-serif();
+}
+
+.font-code {
+	@include font-code();
 }

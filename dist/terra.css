@@ -9,11 +9,20 @@
  * Variables
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800");
+/**
+ * Utilities
+ */
+/**
+ * Clearfix
+ */
 .clearfix:after {
   content: "";
   display: block;
   clear: both; }
 
+/**
+ * Display
+ */
 .d-inline {
   display: inline; }
 
@@ -41,6 +50,9 @@
 .d-none {
   display: none; }
 
+/**
+ * Height
+ */
 .height-xxs {
   height: 24px; }
 
@@ -113,6 +125,9 @@
 .min-vh-100 {
   min-height: 100vh; }
 
+/**
+ * Width
+ */
 .width-25 {
   width: 25%; }
 
@@ -149,6 +164,9 @@
 .width-90 {
   width: 90%; }
 
+/**
+ * Spacing
+ */
 :root {
   --spacing-none: 0px;
   --spacing-micro: 4px;
@@ -715,6 +733,9 @@
 .margin-left-mega {
   margin-left: 144px !important; }
 
+/**
+ * Text Align
+ */
 .text-left {
   text-align: left; }
 
@@ -722,15 +743,6 @@
   text-align: right; }
 
 .text-center {
-  text-align: center; }
-
-.text-left-xs {
-  text-align: left; }
-
-.text-right-xs {
-  text-align: right; }
-
-.text-center-xs {
   text-align: center; }
 
 @media only screen and (min-width: 600px) {
@@ -757,6 +769,9 @@
   .text-center-lg {
     text-align: center; } }
 
+/**
+ * Color
+ */
 .color-brand-1 {
   color: #009AD9; }
 
@@ -880,6 +895,9 @@
   .is-inverse *:not(a) {
     color: #ffffff !important; }
 
+/**
+ * Background
+ */
 .bg-brand-1 {
   background-color: #009AD9; }
 
@@ -970,6 +988,15 @@
 .bg-transparent {
   background-color: transparent; }
 
+/**
+ * Box Shadow
+ */
+/**
+ * Border Radius
+ */
+/**
+ * Depth
+ */
 .depth-1 {
   box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
   z-index: 100; }
@@ -986,6 +1013,21 @@
   box-shadow: 0px 16px 28px 0px rgba(54, 53, 69, 0.05), 0px 16px 40px 0px rgba(54, 53, 69, 0.1);
   z-index: 400; }
 
+/**
+ * Font Family
+ */
+.font-sans-serif {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+
+.font-serif {
+  font-family: georgia, times, serif; }
+
+.font-code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+
+/**
+ * Font Size
+ */
 .font-size-micro {
   font-size: 12px;
   line-height: 1.5;
@@ -1022,6 +1064,9 @@ small {
   line-height: 1.5;
   font-weight: 400; }
 
+/**
+ * Font Weight
+ */
 .font-weight-light {
   font-weight: 300; }
 
@@ -1034,6 +1079,12 @@ small {
 .font-weight-black {
   font-weight: 800; }
 
+/**
+ * Line Height
+ */
+/**
+ * Vertical Align
+ */
 .v-align-top {
   vertical-align: middle; }
 

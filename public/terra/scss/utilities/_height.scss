@@ -1,7 +1,6 @@
-//
-// Height
-// helper classes - Based off of $height-scale
-//
+/**
+ * Height
+ */
 
 @each $level, $value in $height-scale {
     .height-#{$level} {

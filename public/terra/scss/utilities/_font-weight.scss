@@ -1,6 +1,6 @@
-//
-// Font weight
-//
+/**
+ * Font Weight
+ */
 
 @each $weight, $value in $font-weight {
     .font-weight-#{$weight} {

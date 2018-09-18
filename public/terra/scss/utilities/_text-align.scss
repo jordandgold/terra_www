@@ -1,14 +1,10 @@
-//
-// Text Align
-//
+/**
+ * Text Align
+ */
 
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
-
-.text-left-xs { text-align: left; }
-.text-right-xs { text-align: right; }
-.text-center-xs { text-align: center; }
 
 @media only screen and (min-width: $breakpoint-xs) {
 	.text-left-sm { text-align: left; }

@@ -1,6 +1,6 @@
-//
-// Spacing
-//
+/**
+ * Spacing
+ */
 
 :root {
     @each $size, $value in $spacing-scale {

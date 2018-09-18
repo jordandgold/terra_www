@@ -1,3 +1,7 @@
+/**
+ * Border Radius
+ */
+
 @mixin border-radius($direction, $size) {
 	@if $direction == 'all' {
 		border-radius: map-get($border-radius-scale, $size);
