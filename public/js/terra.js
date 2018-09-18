@@ -99,7 +99,8 @@
 		}else{
 			$(this).removeClass("has-content");
 		}
-	})
+	});
+	
 });
 /**
  * Terra Design System
@@ -510,6 +511,16 @@
 	});
 
 })(jQuery, window, document);
+/**
+ * Terra Design System
+ * input.js
+ */
+
+ (function($, window, document){
+	
+	'use strict';
+	
+});
 /**
  * Terra Design System
  * treeMenu.js
