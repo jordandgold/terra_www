@@ -13,5 +13,6 @@
 		}else{
 			$(this).removeClass("has-content");
 		}
-	})
+	});
+	
 });
