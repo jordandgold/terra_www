@@ -2,19 +2,18 @@
 // Typography
 //
 
-// global typography settings
-
+// body type settings
 body, html {
 	@include font-sans-serif;
 	@include type-setting('base');
 }
 
+// paragraph type setting
 p {
 	@include font-size-paragraph;
 }
 
-// headings settings
-
+// heading type setting
 h1,
 .heading-1 {
 	@include heading-1;

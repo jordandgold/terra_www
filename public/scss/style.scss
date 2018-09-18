@@ -181,6 +181,20 @@ code {
     background: transparentize(#ff00ff, 0.9)
 }
 
+.page-section {
+    padding-top: spacing('xl');
+    padding-bottom: spacing('xl');
+    &__sub-section {
+        padding-bottom: spacing('lg');
+    }
+    &__sub-section:first-child {
+        padding-top: 0;
+    }
+    &__sub-section:last-child {
+        padding-bottom: 0;
+    }
+}
+
 .grid-box {
     width: stretch;
     height: height('md');
