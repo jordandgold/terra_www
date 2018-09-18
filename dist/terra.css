@@ -4865,16 +4865,6 @@ body.has-nav {
   border: 3px solid #f3f3f7;
   margin: 24px 0; }
 
-.page-section {
-  padding-top: 64px;
-  padding-bottom: 64px; }
-  .page-section__sub-section {
-    padding-bottom: 48px; }
-  .page-section__sub-section:first-child {
-    padding-top: 0; }
-  .page-section__sub-section:last-child {
-    padding-bottom: 0; }
-
 .ter-table {
   width: 100%;
   border-spacing: 1px;
@@ -5100,14 +5090,13 @@ body.has-nav {
   [data-tooltip]:before {
     box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
     z-index: 100;
-    font-size: 16px;
     line-height: 1.5;
     font-weight: font-weight("normal");
     content: attr(data-tooltip);
     background: #262533;
     color: #ffffff;
     border-radius: 0;
-    padding: 16px;
+    padding: 4px 8px;
     white-space: nowrap;
     text-decoration: none; }
   [data-tooltip]:after {

@@ -14,13 +14,13 @@
 
     &:before {
         @include depth(1);
-        @include type-setting("sm", "normal");
+        @include type-setting("xs", "normal");
 
         content: attr(data-tooltip);
         background: $tooltip-bg;
         color: $tooltip-text-color;
         border-radius: $tooltip-border-radius;
-        padding: spacing("xs");
+        padding: spacing("micro") spacing("mini");
         white-space: nowrap;
         text-decoration: none;
     }
