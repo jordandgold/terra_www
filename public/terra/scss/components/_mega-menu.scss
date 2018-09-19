@@ -25,7 +25,7 @@
 		&__list {
 			@include list-unstyled;
 			@include border-radius('all','small');
-			padding: spacing('xs') 0;
+			padding: spacing('md') 0;
 			margin-left: spacing('md');
 			margin-right: spacing('md');
 			li {

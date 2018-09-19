@@ -87,6 +87,9 @@ $font-sans-serif:
     sans-serif;
 
 // font weight
+@function font-weight($key: 'normal') {
+  @return map-get($font-weight, $key);
+}
 $font-weight: () !default;
 $font-weight: map-merge((
     'light': 300,
@@ -250,7 +253,8 @@ $navbar-inverse-link-hover-color: $link-inverse-hover-color;
 
 // mega menu
 $mega-menu-bg: grayscale('white');
-$mega-menu-offset: calc(-1 * #{spacing('mini')});
+// $mega-menu-offset: calc(-1 * #{spacing('mini')});
+$mega-menu-offset: 0px;
 $mega-menu-type-color: type-color('normal');
 $mega-menu-link-color: brand-color('brand-1');
 $mega-menu-link-hover: darken($link-color, 10%);

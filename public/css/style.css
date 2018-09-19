@@ -1031,38 +1031,38 @@
 .font-size-micro {
   font-size: 12px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 .font-size-sm,
 small {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 .font-size-md {
   font-size: 28px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 .font-size-lg {
   font-size: 36px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 .font-size-xl {
   font-size: 44px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 .font-size-super {
   font-size: 52px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 .font-size-mega {
   font-size: 72px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 /**
  * Font Weight
@@ -2154,7 +2154,6 @@ a,
 a:visited,
 a:active,
 a:focus {
-  font-weight: font-weight(0);
   color: #009AD9;
   transition: color 200ms ease;
   text-decoration: none; }
@@ -2610,19 +2609,19 @@ body, html {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   font-size: 20px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
 
 p {
   font-size: 20px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   margin: 0 0 28px 0; }
 
 h1,
 .heading-1 {
   font-size: 52px;
   line-height: 1.25;
-  font-weight: font-weight("black");
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 24px;
@@ -2632,7 +2631,7 @@ h2,
 .heading-2 {
   font-size: 44px;
   line-height: 1.25;
-  font-weight: font-weight("black");
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 24px;
@@ -2642,7 +2641,7 @@ h3,
 .heading-3 {
   font-size: 36px;
   line-height: 1.25;
-  font-weight: font-weight("black");
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 24px;
@@ -2652,7 +2651,7 @@ h4,
 .heading-4 {
   font-size: 28px;
   line-height: 1.25;
-  font-weight: font-weight("black");
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 16px;
@@ -2662,7 +2661,7 @@ h5,
 .heading-5 {
   font-size: 20px;
   line-height: 1.25;
-  font-weight: font-weight("black");
+  font-weight: 800;
   color: #262533;
   display: block;
   padding-bottom: 16px;
@@ -2675,7 +2674,6 @@ h5,
 */
 .ter-alert {
   line-height: 1.5;
-  font-weight: font-weight(0);
   padding: 24px;
   display: block;
   margin-bottom: 24px;
@@ -2893,7 +2891,7 @@ h5,
 .badge {
   font-size: 12px;
   line-height: 1.5;
-  font-weight: font-weight("bold");
+  font-weight: 600;
   padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) 12px;
   line-height: 100%;
   padding: 4px 8px;
@@ -3165,7 +3163,7 @@ button {
 a.ter-button {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   padding: 8px 16px;
   border-radius: 0;
   text-decoration: none;
@@ -3425,14 +3423,14 @@ a.ter-button--ghost {
 a.ter-button--large {
   font-size: 20px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   padding: 12px 24px; }
 
 .ter-button--small,
 a.ter-button--small {
   font-size: 12px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   padding: 4px 8px; }
 
 .ter-button--block,
@@ -3531,7 +3529,7 @@ a.ter-button--icon {
   .ter-card__title {
     font-size: 20px;
     line-height: 1.25;
-    font-weight: font-weight("black");
+    font-weight: 800;
     color: #262533;
     display: block;
     padding-bottom: 16px;
@@ -3632,7 +3630,7 @@ a.ter-button--icon {
     .ter-dropdown__item a {
       font-size: 16px;
       line-height: 1.5;
-      font-weight: font-weight("normal");
+      font-weight: 400;
       color: #262533;
       padding: 8px 16px;
       display: block;
@@ -3649,7 +3647,7 @@ a.ter-button--icon {
     .ter-dropdown__item--no-link {
       font-size: 12px;
       line-height: 1.5;
-      font-weight: font-weight("bold");
+      font-weight: 600;
       padding: 8px 16px;
       text-transform: uppercase;
       color: #8c8b96 !important; }
@@ -3673,7 +3671,7 @@ a.ter-button--icon {
   .ter-input__label {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3692,7 +3690,7 @@ a.ter-button--icon {
     .ter-input__wrap textarea {
       font-size: 16px;
       line-height: 1.5;
-      font-weight: font-weight("normal");
+      font-weight: 400;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -3728,7 +3726,7 @@ a.ter-button--icon {
       .ter-input__wrap textarea.input-lg {
         font-size: 20px;
         line-height: 1.5;
-        font-weight: font-weight("normal"); }
+        font-weight: 400; }
       .ter-input__wrap input[type="text"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="email"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="file"]::-webkit-input-placeholder,
@@ -3783,13 +3781,13 @@ a.ter-button--icon {
     .ter-input__wrap textarea {
       font-size: 20px;
       line-height: 1.5;
-      font-weight: font-weight("normal");
+      font-weight: 400;
       display: block;
       width: 100%; }
   .ter-input__message {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     display: block; }
     .has-error .ter-input__message {
       color: #ce2740; }
@@ -3805,7 +3803,7 @@ a.ter-button--icon {
   .ter-radio__label {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3823,7 +3821,7 @@ a.ter-button--icon {
 .ter-radio__label {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -3864,7 +3862,6 @@ a.ter-button--icon {
 
 .ter-checkbox__label {
   line-height: 1.5;
-  font-weight: font-weight(0);
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -3897,7 +3894,7 @@ a.ter-button--icon {
   .ter-radio-group__label {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     padding-bottom: 12px; }
   .ter-radio-group .ter-radio {
     padding-top: 0px;
@@ -3906,7 +3903,7 @@ a.ter-button--icon {
 select {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -3962,7 +3959,7 @@ fieldset {
   .search-bar__submit {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     box-sizing: border-box;
     padding: 8px 16px;
     position: relative;
@@ -3994,7 +3991,7 @@ fieldset {
 .select-styled {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -4075,7 +4072,7 @@ fieldset {
     .select-options__search-filter input {
       font-size: 16px;
       line-height: 1.5;
-      font-weight: font-weight("normal");
+      font-weight: 400;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -4111,7 +4108,7 @@ fieldset {
   .select-options__item {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     color: #262533;
     padding: 8px 16px;
     display: block;
@@ -4130,7 +4127,7 @@ fieldset {
 .ter-fieldset__legend {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("bold"); }
+  font-weight: 600; }
 
 ul.list-inline {
   margin: 0;
@@ -4176,7 +4173,7 @@ ul.list-inline {
 ul,
 ol {
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
   ul li,
   ol li {
     padding: 12px 0; }
@@ -4212,7 +4209,7 @@ ol {
   .ter-mega-menu {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
     z-index: 200;
     position: absolute;
@@ -4231,14 +4228,14 @@ ol {
     .ter-mega-menu:hover {
       visibility: visible;
       opacity: 1;
-      -webkit-transform: translate(-50%, calc(-1 * 8px));
-              transform: translate(-50%, calc(-1 * 8px)); }
+      -webkit-transform: translate(-50%, 0px);
+              transform: translate(-50%, 0px); }
     .ter-mega-menu__list {
       margin: 0 0 28px 0;
       padding: 0;
       margin: 0;
       list-style: none;
-      padding: 16px 0;
+      padding: 32px 0;
       margin-left: 32px;
       margin-right: 32px; }
       .ter-mega-menu__list > li {
@@ -4256,7 +4253,7 @@ ol {
           .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
             font-size: 16px;
             line-height: 1.5;
-            font-weight: font-weight("normal");
+            font-weight: 400;
             color: #0076a6;
             margin: 0;
             text-decoration: none; }
@@ -4266,7 +4263,7 @@ ol {
           @media (min-width: 900px) and (max-width: 899px) {
             .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
               line-height: 1.5;
-              font-weight: font-weight("normal");
+              font-weight: 400;
               display: block; } }
 
 @media (min-width: 900px) {
@@ -4279,7 +4276,7 @@ ol {
     .ter-mega-menu__list-head {
       font-size: 12px;
       line-height: 1.5;
-      font-weight: font-weight("bold");
+      font-weight: 600;
       padding: 8px 0;
       text-transform: uppercase;
       color: #262533 !important; }
@@ -4328,8 +4325,8 @@ ol {
   .ter-mega-menu__trigger:hover ~ .ter-mega-menu {
     visibility: visible;
     opacity: 1;
-    -webkit-transform: translate(-50%, calc(-1 * 8px));
-            transform: translate(-50%, calc(-1 * 8px)); } }
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px); } }
 
 .ter-modal {
   box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
@@ -4343,7 +4340,6 @@ ol {
   width: auto; }
   .ter-modal__title {
     line-height: 1.5;
-    font-weight: font-weight(0);
     padding-bottom: 24px; }
   .ter-modal__content {
     padding: 48px; }
@@ -4470,7 +4466,7 @@ body.has-nav {
       cursor: pointer; }
   .ter-navbar__brand {
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     height: 72px;
     display: inline-block;
     line-height: 72px;
@@ -4550,7 +4546,7 @@ body.has-nav {
     .ter-navbar__menu-item > a:not(.ter-button) {
       font-size: 16px;
       line-height: 1.5;
-      font-weight: font-weight("normal");
+      font-weight: 400;
       color: #009AD9;
       margin: 0;
       padding: 0;
@@ -4564,7 +4560,7 @@ body.has-nav {
       @media (max-width: 899px) {
         .ter-navbar__menu-item > a:not(.ter-button) {
           line-height: 1.5;
-          font-weight: font-weight("normal");
+          font-weight: 400;
           display: block;
           line-height: initial;
           height: auto; } }
@@ -4585,7 +4581,7 @@ body.has-nav {
     @media (max-width: 899px) {
       .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
         line-height: 1.5;
-        font-weight: font-weight("normal");
+        font-weight: 400;
         color: #262533;
         display: block;
         line-height: initial;
@@ -4655,7 +4651,6 @@ body.has-nav {
 */
 .ter-notification {
   line-height: 1.5;
-  font-weight: font-weight(0);
   box-shadow: 0px 16px 28px 0px rgba(54, 53, 69, 0.05), 0px 16px 40px 0px rgba(54, 53, 69, 0.1);
   z-index: 400;
   padding: 24px;
@@ -4872,7 +4867,7 @@ body.has-nav {
 .ter-table {
   width: 100%;
   border-spacing: 1px;
-  font-weight: font-weight("light"); }
+  font-weight: 300; }
   .ter-table tr th {
     margin: 0;
     text-align: left;
@@ -4883,10 +4878,10 @@ body.has-nav {
     padding: 12px;
     background-color: #009AD9;
     color: #ffffff;
-    font-weight: font-weight("light"); }
+    font-weight: 300; }
   .ter-table tr td {
     padding: 12px;
-    font-weight: font-weight("light"); }
+    font-weight: 300; }
   .ter-table tr:nth-child(even) td {
     background-color: transparent; }
   .ter-table tr:nth-child(odd) td {
@@ -4946,7 +4941,7 @@ body.has-nav {
   .ter-nav-tabs__list-item a {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     padding: 8px 16px;
     border-radius: 0;
     text-decoration: none;
@@ -5030,7 +5025,7 @@ body.has-nav {
   .ter-compact-tabs__list-item a {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     padding: 8px 16px;
     border-radius: 0;
     text-decoration: none;
@@ -5095,7 +5090,7 @@ body.has-nav {
     box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
     z-index: 100;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     content: attr(data-tooltip);
     background: #262533;
     color: #ffffff;
@@ -5180,7 +5175,7 @@ body.has-nav {
     z-index: 100;
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     display: none;
     background-color: #262533;
     padding: 16px;
@@ -5260,7 +5255,7 @@ body.has-nav {
 .ter-tree-menu__list-item {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("normal"); }
+  font-weight: 400; }
   .ter-tree-menu__list-item a,
   .ter-tree-menu__list-item a:visited,
   .ter-tree-menu__list-item a:active,
@@ -5316,7 +5311,7 @@ body.has-nav {
   .ter-tree-menu__sub-menu > li {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     padding: 0; }
     .ter-tree-menu__sub-menu > li a,
     .ter-tree-menu__sub-menu > li a:visited,
@@ -5355,7 +5350,7 @@ body.has-nav {
         .pricing-table__column .product__content__name {
           font-size: 28px;
           line-height: 1.25;
-          font-weight: font-weight("black");
+          font-weight: 800;
           color: #262533;
           display: block;
           padding-bottom: 16px;
@@ -5365,7 +5360,7 @@ body.has-nav {
         .pricing-table__column .product__content__price {
           font-size: 36px;
           line-height: 1.25;
-          font-weight: font-weight("black");
+          font-weight: 800;
           color: #262533;
           display: block;
           padding-bottom: 24px;
@@ -5461,7 +5456,7 @@ body.has-nav {
     padding-bottom: 40%; }
   .color-swatch__label {
     line-height: 1.5;
-    font-weight: font-weight("bold");
+    font-weight: 600;
     text-align: center; }
   .color-swatch__hex {
     text-align: center; }
@@ -5485,7 +5480,7 @@ body.has-nav {
   margin-bottom: 12px; }
   .structure-block label {
     line-height: 1.5;
-    font-weight: font-weight("normal");
+    font-weight: 400;
     display: inline-block;
     margin-right: 12px;
     position: absolute;
@@ -5551,7 +5546,7 @@ code {
 .main-footer {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: font-weight("normal");
+  font-weight: 400;
   padding: 24px 0;
   border-top: 1px solid #e2e2e7;
   height: auto; }

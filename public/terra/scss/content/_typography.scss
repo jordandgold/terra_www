@@ -10,7 +10,7 @@ body, html {
 
 // paragraph type setting
 p {
-	@include font-size-paragraph;
+	@include paragraph-type-setting;
 }
 
 // heading type setting
