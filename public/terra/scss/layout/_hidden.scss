@@ -3,26 +3,30 @@
  * _hidden.scss
  */
 
+ .hidden {
+ 	display: none !important;
+ }
+
 @media (max-width: $breakpoint-xs) {
 	.hidden-xs {
-		display: none;
+		display: none !important;
 	}
 }
 
 @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
 	.hidden-sm {
-		display: none;
+		display: none !important;
 	}
 }
 
 @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
 	.hidden-md {
-		display: none;
+		display: none !important;
 	}
 }
 
 @media (min-width: $breakpoint-md) {
 	.hidden-lg {
-		display: none;
+		display: none !important;
 	}
 }
