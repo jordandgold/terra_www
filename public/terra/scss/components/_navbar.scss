@@ -29,9 +29,11 @@ body.has-nav {
 	}
 	> .container-fluid {
 		@include clearfix();
-    	display: flex;
-    	justify-content: space-between;
-		width: stretch;
+		@include for-size(tablet-landscape-up) {
+	    	display: flex;
+	    	justify-content: space-between;
+			width: stretch;
+		}
 	}
 	&__toggle {
 		height: $navbar-height;

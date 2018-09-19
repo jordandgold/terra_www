@@ -2122,21 +2122,24 @@ html {
  * Hidden
  * _hidden.scss
  */
+.hidden {
+  display: none !important; }
+
 @media (max-width: 600px) {
   .hidden-xs {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 600px) and (max-width: 900px) {
   .hidden-sm {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 900px) and (max-width: 1200px) {
   .hidden-md {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 1200px) {
   .hidden-lg {
-    display: none; } }
+    display: none !important; } }
 
 body,
 html {
@@ -4428,16 +4431,17 @@ body.has-nav {
   .ter-navbar.is-hidden {
     -webkit-transform: translateY(calc(-73px));
             transform: translateY(calc(-73px)); }
-  .ter-navbar > .container-fluid {
-    display: flex;
-    justify-content: space-between;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: stretch; }
-    .ter-navbar > .container-fluid:after {
-      content: "";
-      display: block;
-      clear: both; }
+  .ter-navbar > .container-fluid:after {
+    content: "";
+    display: block;
+    clear: both; }
+  @media (min-width: 900px) {
+    .ter-navbar > .container-fluid {
+      display: flex;
+      justify-content: space-between;
+      width: -webkit-fill-available;
+      width: -moz-available;
+      width: stretch; } }
   .ter-navbar__toggle {
     height: 72px;
     float: right;
