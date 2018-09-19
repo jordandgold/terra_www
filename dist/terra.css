@@ -4229,59 +4229,53 @@ ol {
       visibility: visible;
       opacity: 1;
       -webkit-transform: translate(-50%, 0px);
-              transform: translate(-50%, 0px); }
-    .ter-mega-menu__list {
+              transform: translate(-50%, 0px); } }
+
+@media (min-width: 900px) {
+  .ter-mega-menu__list {
+    margin: 0 0 28px 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding: 32px 0;
+    margin-left: 32px;
+    margin-right: 32px; }
+    .ter-mega-menu__list > li {
+      padding: 12px 0; }
+    .ter-mega-menu__list li > ul {
       margin: 0 0 28px 0;
       padding: 0;
       margin: 0;
-      list-style: none;
-      padding: 32px 0;
-      margin-left: 32px;
-      margin-right: 32px; }
-      .ter-mega-menu__list > li {
+      list-style: none; }
+      .ter-mega-menu__list li > ul > li {
         padding: 12px 0; }
-      .ter-mega-menu__list li > ul {
-        margin: 0 0 28px 0;
-        padding: 0;
-        margin: 0;
-        list-style: none; }
-        .ter-mega-menu__list li > ul > li {
-          padding: 12px 0; }
-        .ter-mega-menu__list li > ul > li {
-          padding: 4px 0;
-          display: block; }
+      .ter-mega-menu__list li > ul > li {
+        padding: 4px 0;
+        display: block; }
+        .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: 400;
+          color: #0076a6;
+          margin: 0;
+          text-decoration: none; }
+          .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
+            color: #0076a6;
+            text-decoration: none; } }
+        @media (min-width: 900px) and (max-width: 899px) {
           .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
-            font-size: 16px;
+            font-size: 20px;
             line-height: 1.5;
             font-weight: 400;
-            color: #0076a6;
-            margin: 0;
-            text-decoration: none; }
-            .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
-              color: #0076a6;
-              text-decoration: none; } }
-          @media (min-width: 900px) and (max-width: 899px) {
-            .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
-              line-height: 1.5;
-              font-weight: 400;
-              display: block; } }
+            display: block; } }
 
 @media (min-width: 900px) {
-            .is-inverse .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
-              color: #009AD9; }
-              .is-inverse .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
-                color: #0076a6; }
-          .is-inverse .ter-mega-menu__list li > ul > li {
-            color: #262533 !important; }
-    .ter-mega-menu__list-head {
-      font-size: 12px;
-      line-height: 1.5;
-      font-weight: 600;
-      padding: 8px 0;
-      text-transform: uppercase;
-      color: #262533 !important; }
-      .is-inverse .ter-mega-menu__list-head {
-        color: #262533 !important; } }
+          .is-inverse .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
+            color: #009AD9; }
+            .is-inverse .ter-mega-menu__list li > ul > li > a:not(.ter-button):hover {
+              color: #0076a6; }
+        .is-inverse .ter-mega-menu__list li > ul > li {
+          color: #262533 !important; } }
 
 @media (max-width: 899px) {
   .ter-mega-menu__list {
@@ -4305,9 +4299,20 @@ ol {
       margin: 0 0 28px 0;
       padding: 0;
       margin: 0;
-      list-style: none; }
+      list-style: none;
+      margin-left: 24px; }
       .ter-mega-menu__list ul > li {
         padding: 12px 0; } }
+
+.ter-mega-menu__list-head {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  padding: 8px 0;
+  text-transform: uppercase;
+  color: #262533 !important; }
+  .is-inverse .ter-mega-menu__list-head {
+    color: #262533 !important; }
 
 @media (min-width: 900px) {
   .ter-mega-menu__trigger:after {
@@ -4465,6 +4470,7 @@ body.has-nav {
     .ter-navbar__toggle:hover {
       cursor: pointer; }
   .ter-navbar__brand {
+    font-size: 20px;
     line-height: 1.5;
     font-weight: 400;
     height: 72px;
@@ -4559,6 +4565,7 @@ body.has-nav {
         text-decoration: none; }
       @media (max-width: 899px) {
         .ter-navbar__menu-item > a:not(.ter-button) {
+          font-size: 20px;
           line-height: 1.5;
           font-weight: 400;
           display: block;

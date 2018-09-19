@@ -65,7 +65,7 @@ body.has-nav {
 		}
 	}
 	&__brand {
-		@include type-setting(0,'normal');
+		@include type-setting('base','normal');
 		height: $navbar-height;
 	    display: inline-block;
 	    line-height: $navbar-height;
@@ -167,7 +167,7 @@ body.has-nav {
 				text-decoration: none;
 			}
 			@include for-size(tablet-landscape-down) {
-				@include type-setting(0,'normal');
+				@include type-setting('base','normal');
 				display: block;
 				line-height: initial;
 				height: auto;
