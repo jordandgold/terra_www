@@ -8,6 +8,12 @@ body.has-nav {
 	padding-top: $navbar-height;
 }
 
+// prevent body scrolling when mobile nav is open
+body.has-open-nav {
+	overflow: hidden;
+    position: fixed;
+}
+
 .ter-navbar {
 	@include z-index(9);
 	height: $navbar-height;
@@ -99,9 +105,9 @@ body.has-nav {
         display: none;
         flex: 1;
         justify-content: flex-end;
-        @include for-size(tablet-landscape-down) {
-        	padding-bottom: spacing('xs');
-        }
+        // @include for-size(tablet-landscape-down) {
+        // 	padding-bottom: spacing('xs');
+        // }
 		@include for-size(tablet-landscape-up) {
 			@include box-shadow("none");
 			display: inline-block;
@@ -124,7 +130,9 @@ body.has-nav {
         margin: 0;
         float: right;
         @include for-size(tablet-landscape-down) {
-        	padding-bottom: 0;
+        	padding-bottom: spacing('xs');
+        	overflow: scroll;
+        	max-height: 75vh;
         }
         &--right {
         	margin-left: auto;

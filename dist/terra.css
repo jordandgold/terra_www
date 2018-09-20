@@ -4413,6 +4413,10 @@ body.has-modal-open {
 body.has-nav {
   padding-top: 72px; }
 
+body.has-open-nav {
+  overflow: hidden;
+  position: fixed; }
+
 .ter-navbar {
   z-index: 900;
   height: 72px;
@@ -4500,9 +4504,6 @@ body.has-nav {
     display: none;
     flex: 1;
     justify-content: flex-end; }
-    @media (max-width: 899px) {
-      .ter-navbar__nav {
-        padding-bottom: 16px; } }
     @media (min-width: 900px) {
       .ter-navbar__nav {
         box-shadow: none;
@@ -4524,7 +4525,9 @@ body.has-nav {
     float: right; }
     @media (max-width: 899px) {
       .ter-navbar__menu {
-        padding-bottom: 0; } }
+        padding-bottom: 16px;
+        overflow: scroll;
+        max-height: 75vh; } }
     .ter-navbar__menu--right {
       margin-left: auto; }
     .ter-navbar__menu--left {

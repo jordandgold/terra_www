@@ -21,6 +21,7 @@
 	navBar.on('click', '.ter-navbar__toggle', function(e){
 		e.preventDefault();
 		navBar.toggleClass('is-open');
+		$('body').toggleClass('has-open-nav');
 		$(this).toggleClass('is-active');
     	$(this).parent().children('.ter-navbar__nav').slideToggle().toggleClass('is-expanded');
 	});
