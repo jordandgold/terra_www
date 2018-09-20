@@ -20,7 +20,7 @@
 
 	navBar.on('click', '.ter-navbar__toggle', function(e){
 		e.preventDefault();
-		navBar.toggleClass('is-open');
+		// navBar.toggleClass('is-open');
 		$('body').toggleClass('has-open-nav');
 		$(this).toggleClass('is-active');
     	$(this).parent().children('.ter-navbar__nav').slideToggle().toggleClass('is-expanded');
@@ -46,6 +46,18 @@
 
 	$(window).on('resize', function(){
 		navBarHeight = navBar.height();
+	});
+
+	// mobile solution for mega menu
+	var $html = $('html');
+  
+  	$html.on('click', '.ter-mega-menu__trigger', function(e) {
+		e.preventDefault();
+		if($(this).next('.ter-mega-menu').hasClass('is-open')) {
+		  	$(this).next('.ter-mega-menu').removeClass('is-open');
+	  	} else {
+		  	$(this).next('.ter-mega-menu').toggleClass('is-open');
+	  	}
 	});
 
 	function hideNavBar() {

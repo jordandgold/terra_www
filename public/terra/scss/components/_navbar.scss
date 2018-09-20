@@ -127,7 +127,7 @@ body.has-open-nav {
         margin: 0;
         float: right;
         @include for-size(tablet-landscape-down) {
-        	padding-bottom: spacing('xs');
+        	padding: 0;
         	overflow: scroll;
         	max-height: 75vh;
         }
@@ -150,13 +150,18 @@ body.has-open-nav {
         width: 100%;
         padding-left: var(--outer-margin);
 		padding-right: var(--outer-margin);
-		padding-top: spacing('mini');
-		padding-bottom: spacing('mini');
+		padding-top: spacing('xs');
+		padding-bottom: spacing('xs');
+		border-bottom: 1px solid $navbar-border-color;
+		&:last-child {
+			border-bottom: 0px;
+		}
 		@include for-size(tablet-landscape-up) {
 			display: table-cell;
 			width: initial;
 			padding: 0 spacing('xs');
 			vertical-align: middle;
+			border: 0px;
 	    }
 	    > a:not(.ter-button) {
 			@include type-setting('sm','normal');
@@ -188,8 +193,16 @@ body.has-open-nav {
 			@include for-size(tablet-landscape-down) {
 				padding-left: var(--outer-margin);
 				padding-right: var(--outer-margin);
-				padding-top: spacing('mini');
-				padding-bottom: spacing('mini');
+			}
+			.ter-dropdown__toggle {
+				@include for-size(tablet-landscape-down) {
+					&:after {
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
 			}
 			.ter-dropdown__menu {
 				@include for-size(tablet-landscape-down) {

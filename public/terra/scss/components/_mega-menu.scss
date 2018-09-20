@@ -79,7 +79,6 @@
 			}
 			ul {
 				@include list-unstyled();
-				margin-left: spacing('sm');
 			}
 		}
 	}
@@ -115,10 +114,16 @@
 	            @include icon-base;
 	            content: "\f078";
 	            font-size: 75%;
-	            margin-left: spacing('xxs');
+	            position: absolute;
+	            right: 0;
+	            top: 50%;
+	            transform: translateY(-50%);
 	        }
 	        ~ .ter-mega-menu {
 	        	display: none;
+	        	&.is-open {
+	        		display: block;
+	        	}
 	        }
 		}
 	}
