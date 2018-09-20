@@ -4333,6 +4333,24 @@ ol {
     -webkit-transform: translate(-50%, 0px);
             transform: translate(-50%, 0px); } }
 
+@media (max-width: 899px) {
+  .ter-mega-menu__trigger {
+    position: relative; }
+    .ter-mega-menu__trigger:after {
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-weight: 900;
+      font-family: Font Awesome\ 5 Free;
+      content: "\f078";
+      font-size: 75%;
+      margin-left: 12px; }
+    .ter-mega-menu__trigger ~ .ter-mega-menu {
+      display: none; } }
+
 .ter-modal {
   box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
   z-index: 200;

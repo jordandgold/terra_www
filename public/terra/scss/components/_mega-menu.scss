@@ -110,6 +110,16 @@
 		}
 		// disable on mobile
 		@include for-size(tablet-landscape-down) {
+			position: relative;
+	        &:after {
+	            @include icon-base;
+	            content: "\f078";
+	            font-size: 75%;
+	            margin-left: spacing('xxs');
+	        }
+	        ~ .ter-mega-menu {
+	        	display: none;
+	        }
 		}
 	}
 }

@@ -82,8 +82,6 @@
 			secondaryNav.removeClass('is-shown');
 		}
 
-		// console.log(currentTop, triggerTop);
-
 	}
 
 })(jQuery, window, document);

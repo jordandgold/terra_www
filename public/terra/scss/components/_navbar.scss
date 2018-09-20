@@ -105,9 +105,6 @@ body.has-open-nav {
         display: none;
         flex: 1;
         justify-content: flex-end;
-        // @include for-size(tablet-landscape-down) {
-        // 	padding-bottom: spacing('xs');
-        // }
 		@include for-size(tablet-landscape-up) {
 			@include box-shadow("none");
 			display: inline-block;
