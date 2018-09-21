@@ -4437,8 +4437,7 @@ body.has-nav {
   padding-top: 72px; }
 
 body.has-open-nav {
-  overflow: hidden;
-  position: fixed; }
+  overflow: hidden; }
 
 .ter-navbar {
   z-index: 900;
