@@ -3129,12 +3129,12 @@ h5,
     text-decoration: none;
     color: #ffffff; }
 
-.breadcrumb__list {
+.ter-breadcrumb__list {
   padding: 0px;
   margin-top: 0;
   margin-bottom: 16px;
   list-style: none; }
-  .breadcrumb__list > li + li::before {
+  .ter-breadcrumb__list > li + li::before {
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
@@ -3148,9 +3148,9 @@ h5,
     padding: 0px 8px;
     font-size: 75%; }
 
-.breadcrumb__list-item {
+.ter-breadcrumb__list-item {
   display: inline-block; }
-  .breadcrumb__list-item a {
+  .ter-breadcrumb__list-item a {
     text-decoration: none; }
 
 button {

@@ -3,7 +3,7 @@ page:
   title: 'Breadcrumb | Terra Design System'
   name: 'Breadcrumb'
   parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: "Indicate the user's current location in relation to the current page hierarchy."
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
