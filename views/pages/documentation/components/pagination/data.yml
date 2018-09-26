@@ -3,7 +3,7 @@ page:
   title: 'Pagination | Terra Design System'
   name: 'Pagination'
   parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: 'Navigation used to connect related content across multiple pages.'
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
