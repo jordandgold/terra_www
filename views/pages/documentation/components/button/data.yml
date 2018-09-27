@@ -3,7 +3,7 @@ page:
   title: 'Button | Terra Design System'
   name: 'Button'
   parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: 'Terra has a set of button styles that can be used for a variety of different use cases.'
 modifiers:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   modifiers:
