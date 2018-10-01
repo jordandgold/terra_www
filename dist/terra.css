@@ -3523,9 +3523,10 @@ a.ter-button--icon {
   z-index: 100;
   background: #ffffff;
   position: relative;
+  border: 1px solid #d0d0d7;
   border-radius: 0; }
   .ter-card__body {
-    padding: 48px; }
+    padding: 32px; }
   .ter-card__title {
     font-size: 20px;
     line-height: 1.25;
@@ -3534,8 +3535,6 @@ a.ter-button--icon {
     display: block;
     padding-bottom: 16px;
     margin: 0; }
-  .ter-card__footer {
-    padding: 0px 48px 16px 48px; }
   .ter-card__image {
     overflow: hidden; }
     .ter-card__image--top {

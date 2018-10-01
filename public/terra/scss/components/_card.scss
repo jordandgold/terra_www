@@ -3,15 +3,13 @@
     background: $card-bg;
     position: relative;
     margin-bottom: map-get($spacing-scale, medium);
+    border: $card-border-size solid $card-border-color;
     border-radius: $card-border-radius;
 	&__body {
-		padding: spacing('lg');
+		padding: spacing('md');
 	}
 	&__title {
-		@include heading-5;
-	}
-	&__footer {
-		padding: spacing('none') spacing('lg') spacing('xs') spacing('lg');
+		@include heading-5();
 	}
 	&__image {
 		overflow: hidden;

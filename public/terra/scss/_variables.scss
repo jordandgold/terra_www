@@ -99,16 +99,6 @@ $font-weight: map-merge((
 ), $font-weight);
 
 // type scale
-// $type-scale: (
-//     -2: 12px,
-//     -1: 16px,
-//     0: 20px,
-//     1: 28px,
-//     2: 36px,
-//     3: 44px,
-//     4: 52px,
-//     5: 72px
-// );
 $type-scale: () !default;
 $type-scale: map-merge((
     'micro': 12px,
@@ -277,6 +267,8 @@ $tooltip-border-radius: $border-radius-base;
 // cards
 $card-bg: grayscale('white');
 $card-border-radius: $border-radius-base;
+$card-border-size: 1px;
+$card-border-color: grayscale('gray-2');
 
 // dropdowns
 $dropdown-border-size: 1px;
