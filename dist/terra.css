@@ -5410,6 +5410,7 @@ body.has-open-nav {
 .ter-tree-menu__sub-menu {
   list-style: none;
   margin-left: 12px;
+  margin-bottom: 0;
   padding: 0;
   display: none; }
   .ter-tree-menu__sub-menu > li {

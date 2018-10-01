@@ -3,7 +3,7 @@ page:
   title: 'Tree Menu | Terra Design System'
   name: 'Tree Menu'
   parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: 'Navigation elements used to traverse a hierarchical page tree.'
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
