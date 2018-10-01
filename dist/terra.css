@@ -3735,6 +3735,14 @@ a.ter-button--icon {
         font-size: 20px;
         line-height: 1.5;
         font-weight: 400; }
+      .ter-input__wrap input[type="text"].input-sm,
+      .ter-input__wrap input[type="email"].input-sm,
+      .ter-input__wrap input[type="file"].input-sm,
+      .ter-input__wrap input[type="password"].input-sm,
+      .ter-input__wrap textarea.input-sm {
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 400; }
       .ter-input__wrap input[type="text"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="email"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="file"]::-webkit-input-placeholder,
@@ -3960,11 +3968,11 @@ fieldset {
   fieldset legend {
     margin-bottom: 16px; }
 
-.search-bar {
+.ter-search-bar {
   display: flex; }
-  .search-bar__input {
+  .ter-search-bar__input {
     flex: 1; }
-  .search-bar__submit {
+  .ter-search-bar__submit {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -3980,7 +3988,7 @@ fieldset {
     box-sizing: border-box;
     width: initial;
     margin-left: 1px; }
-    .is-inverse .search-bar__submit {
+    .is-inverse .ter-search-bar__submit {
       color: #aeaeb6;
       border: 0.05rem solid #363545;
       background-color: #474655; }

@@ -1,6 +1,7 @@
+
 jQuery(document).ready(function($){
 
-	$('.markup-panel').each(function(){
+	$('.markup-panel:not(.ignore)').each(function(){
 		var markup = $(this).find('.markup-panel__example').html();
 		var escapedMarkup = escapeHtml(markup);
 		var trimMarkup = $.trim(markup);

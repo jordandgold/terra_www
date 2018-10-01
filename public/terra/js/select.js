@@ -22,7 +22,7 @@
     	}).insertAfter($styledSelect);
 
 	    // add search functionality
-    	if ($this.hasClass('search')) {
+    	if ($this.hasClass('has-search')) {
 
 			var $searchFilter = $('<div />', {
 		        'class': 'select-options__search-filter'
@@ -127,7 +127,7 @@
     	}).insertAfter($styledSelect);
 
 	    // add search functionality
-    	if ($this.hasClass('search')) {
+    	if ($this.hasClass('has-search')) {
 
 			var $searchFilter = $('<div />', {
 		        'class': 'select-options__search-filter'

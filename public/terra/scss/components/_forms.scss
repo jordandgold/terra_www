@@ -66,6 +66,9 @@
             &.input-lg {
                 @include font-size('base');
             }
+            &.input-sm {
+                @include font-size('micro');
+            }
             &::placeholder {
                 color: $input-placeholder-color;
             }
@@ -258,7 +261,7 @@ fieldset {
     }
 }
 
-.search-bar {
+.ter-search-bar {
     display: flex;
     &__input {
         flex: 1;
