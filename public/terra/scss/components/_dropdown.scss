@@ -15,6 +15,24 @@
             font-size: 75%;
             margin-left: spacing('xxs');
         }
+        // drop right
+        [data-direction="right"] & {
+            &:after {
+                transform: rotate(-90deg);
+            }
+        }
+        // drop left
+        [data-direction="left"] & {
+            &:after {
+                transform: rotate(90deg);
+            }
+        }
+        // drop up
+        [data-direction="up"] & {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
     }
     &__menu {
         @include depth(1);
