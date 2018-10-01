@@ -7,7 +7,7 @@
   
   'use strict';
 
-	$('select:not([multiple])').each(function(){
+	$('select.ter-select:not([multiple])').each(function(){
 	    var $this = $(this), numberOfOptions = $(this).children('option').length;
 	  
 	    $this.addClass('select-hidden'); 
@@ -112,7 +112,7 @@
 
 	});
 
-	$('select[multiple]').each(function(){
+	$('select.ter-select[multiple]').each(function(){
 	    var $this = $(this), numberOfOptions = $(this).children('option').length;
 	  
 	    $this.addClass('select-hidden'); 
