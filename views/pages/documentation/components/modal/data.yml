@@ -3,7 +3,7 @@ page:
   title: 'Modal | Terra Design System'
   name: 'Modal'
   parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: "Dialogue that sits on top of an application's main window, used to inform users of critical information &amp; actions."
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
