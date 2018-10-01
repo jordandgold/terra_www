@@ -3,7 +3,7 @@ page:
   title: 'Tabs | Terra Design System'
   name: 'Tabs'
   parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: 'Navigation elements used to switch through grouped content.'
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
