@@ -3,7 +3,7 @@ page:
   title: 'Navbar | Terra Design System'
   name: 'Navbar'
   parent: 'Components'
-  tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.'
+  tagline: 'The navigation bar is a responsive, flexible and dynamic element that can be used for ease of navigating your web app.'
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:

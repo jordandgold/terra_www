@@ -1,6 +1,19 @@
 <div class="page-section__sub-section">
     <h4>Basic Example</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+    <p>The <code>.ter-navbar</code> component by itself is fairly bare bones.</p>
+    <h5>Important Settings</h5>
+    <ul>
+        <li>To fix the navbar to the top of the page, use <code>.is-fixed</code></li>
+        <li>To contain the max-width of the navbar, use the <code>.wrap</code> class on the <code>.container-fluid</code> element</li>
+    </ul>
+    <h5>Nested Elements</h5>
+    <ul>
+        <li><code>.ter-navbar__brand</code> will encase your app's branding as an image logo or text logo</li>
+        <li><code>.ter-navbar__toggle</code> is the mobile button that triggers the hidden <code>.ter-navbar__nav</code></li>
+        <li><code>.ter-navbar__nav</code> will contain the actual navigation links, buttons, etc.</li>
+        <li><code>.ter-navbar__form</code> will properly position inline forms in the navbar</li>
+    </ul>
+    <p>Below is a basic example that uses all of these nested elements:</p>
     <div class="markup-panel">
         <div class="markup-panel__example">
 <nav class="ter-navbar" role="navigation">
@@ -28,13 +41,13 @@
                 <li class="ter-navbar__menu-item"><a href="/documentation/getting-started">Documentation</a></li>
                 <li class="ter-navbar__menu-item"><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="ter-button ter-button--outline">Action</a></li>
             </ul>
-            <form class="ter-navbar__form search-bar flexbox flex-row flex-wrap align-items-center flex pad-left-3">
-                <div class="search-bar__input ter-input">
+            <form class="ter-navbar__form ter-search-bar flexbox flex-row flex-wrap align-items-center flex pad-left-3">
+                <div class="ter-search-bar__input ter-input">
                     <div class="ter-input__wrap">
                         <input type="text" placeholder="search">
                     </div>
                 </div>
-                <button class="search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
+                <button class="ter-search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
             </form>
         </div>
     </div>
@@ -45,7 +58,7 @@
 </div>
 <div class="page-section__sub-section">
     <h4>Inverse Colors</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+    <p>To inverse the color scheme of the navbar, you can add the <code>.is-inverse</code> class to the top-level <code>.ter-navbar</code> component.</p>
     <div class="markup-panel">
         <div class="markup-panel__example">
 <nav class="ter-navbar is-inverse" role="navigation">
@@ -73,13 +86,13 @@
                 <li class="ter-navbar__menu-item"><a href="/documentation/getting-started">Documentation</a></li>
                 <li class="ter-navbar__menu-item"><a href="https://bitbucket.org/creativestrategy/terra_design_system/src/master/" class="ter-button ter-button--outline">Action</a></li>
             </ul>
-            <form class="ter-navbar__form search-bar flexbox flex-row flex-wrap align-items-center flex">
-                <div class="search-bar__input ter-input">
+            <form class="ter-navbar__form ter-search-bar flexbox flex-row flex-wrap align-items-center flex">
+                <div class="ter-search-bar__input ter-input">
                     <div class="ter-input__wrap">
                         <input type="text" placeholder="search">
                     </div>
                 </div>
-                <button class="search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
+                <button class="ter-search-bar__submit"><i class="fi flaticon-magnifying-glass"></i></button>
             </form>
         </div>
     </div>
@@ -90,7 +103,7 @@
 </div>
 <div class="page-section__sub-section">
     <h4>Mega Menu</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+    <p>Mega menus are flexible, full-width navigation elements that display a wide variety of navigation items at once to a user. These are useful elements for sites with more complex site maps. Mega menus are used as children to menu items, essentially replacing dropdown menus.</p>
     <div class="markup-panel">
         <div class="markup-panel__example">
 <nav class="ter-navbar is-inverse" role="navigation">
