@@ -68,8 +68,9 @@ ul.list-inline {
 ul,
 ol {
 	@include type-setting(0,'normal');
+	margin: 0 0 $base-line-height 0;
 	li {
-		padding: spacing('xxs') 0;
+		padding: spacing('micro') 0;
 	}
 }
 

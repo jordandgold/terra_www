@@ -4189,10 +4189,11 @@ ul.list-inline {
 ul,
 ol {
   line-height: 1.5;
-  font-weight: 400; }
+  font-weight: 400;
+  margin: 0 0 28px 0; }
   ul li,
   ol li {
-    padding: 12px 0; }
+    padding: 4px 0; }
 
 .item-list {
   margin: 0 0 28px 0;
