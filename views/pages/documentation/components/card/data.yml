@@ -3,7 +3,7 @@ page:
   title: 'Card | Terra Design System'
   name: 'Card'
   parent: 'Components'
-  tagline: 'Display compartmentalized items of content using cards.'
+  tagline: 'Cards are designed to present key information to users. Cards can be standalone or exist in groups.'
 mixins:
   content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
