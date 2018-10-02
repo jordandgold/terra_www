@@ -2,5 +2,5 @@ layout: 'component-page'
 page:
   title: 'Flexbox | Terra Design System'
   name: 'Flexbox'
-  parent: 'Structure'
+  parent: 'Layout'
   tagline: 'Helper classes that utilize the CSS flexbox properties'

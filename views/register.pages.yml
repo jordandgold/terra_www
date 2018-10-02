@@ -11,8 +11,8 @@
 - name: depth
   url: documentation/style/depth
 - name: grid
-  url: documentation/structure/grid
+  url: documentation/layout/grid
 - name: flexbox
-  url: documentation/structure/flexbox
+  url: documentation/layout/flexbox
 - name: spacing
-  url: documentation/structure/spacing
+  url: documentation/layout/spacing
