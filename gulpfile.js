@@ -18,21 +18,30 @@ gulp.task('prod:sass', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('sass:su', function () {
+gulp.task('dist:themes', function () {
   var processors = [
       autoprefixer({browsers: ['last 1 version']}),
   ];
-  return gulp.src('./public/terra/sketchup/terra-sketchup.scss')
+  return gulp.src('./public/terra/scss/themes/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./dist/'))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./dist/themes/'));
+});
+
+gulp.task('sass:themes', function () {
+  var processors = [
+      autoprefixer({browsers: ['last 1 version']}),
+  ];
+  return gulp.src('./public/scss/themes/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./public/css/'));
 });
  
 gulp.task('dev', function () {
-  gulp.watch('./public/**/scss/**/*.scss', ['prod:sass', ['sass:dist']]);
+  gulp.watch('./public/**/scss/**/*.scss', ['prod:sass', 'sass:dist']);
   gulp.watch('./public/**/js/**/*.js', ['scripts:dist']);
-  gulp.watch('./public/**/terra-sketchup.scss', ['sass:su']);
+  gulp.watch('./public/**/scss/themes/*.scss', ['sass:themes', 'dist:themes']);
 });
 
 gulp.task('sass:dist', function () {

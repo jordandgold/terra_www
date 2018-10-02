@@ -18,4 +18,11 @@ jQuery(document).ready(function($){
 	         .replace(/'/g, "&#039;");
 	}
 
+	$('#theme-switcher').on('has-changed', function(){
+
+		var stylesheet = $(this).val();
+		$('link').attr('href','/css/' + stylesheet + '.css');
+
+	});
+
 });

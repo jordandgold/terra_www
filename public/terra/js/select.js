@@ -92,11 +92,13 @@
 		//
 	    $listItems.click(function(e) {
 	        e.stopPropagation();
+	        var rel = $(this).attr('rel');
 	        // replace text with selected option
 	        $styledSelect.text($(this).text()).removeClass('active');
-	        $this.val($(this).attr('rel'));
+	        $this.val(rel).trigger('has-changed');
 	        $list.removeClass('is-open');
 	        console.log($this.val());
+	        // select corresponding value
 	    });
 	  	
 		// hide dropdown when you click out
