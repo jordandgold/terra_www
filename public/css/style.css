@@ -5355,11 +5355,15 @@ body.has-open-nav {
   margin: 0;
   padding: 0 0 0 12px;
   list-style: none; }
+  .ter-tree-menu__list ul {
+    padding: 0; }
 
 .ter-tree-menu__list-item {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400; }
+  font-weight: 400;
+  position: relative;
+  padding: 0 0 0 12px; }
   .ter-tree-menu__list-item a,
   .ter-tree-menu__list-item a:visited,
   .ter-tree-menu__list-item a:active,
@@ -5374,10 +5378,6 @@ body.has-open-nav {
       cursor: pointer; }
   .ter-tree-menu__list-item.is-active > a {
     color: #474655; }
-
-.ter-tree-menu__list-item {
-  position: relative;
-  padding: 0 0 0 12px; }
   .ter-tree-menu__list-item > a {
     padding: 4px 0;
     display: block; }
@@ -5401,39 +5401,15 @@ body.has-open-nav {
     transition: transform 200ms ease-in-out;
     transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
     font-size: 75%; }
+  .ter-tree-menu__list-item.is-expandable > ul {
+    display: none; }
   .ter-tree-menu__list-item.is-expandable.is-expanded > a {
     color: #474655; }
   .ter-tree-menu__list-item.is-expandable.is-expanded:before {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); }
-
-.ter-tree-menu__sub-menu {
-  list-style: none;
-  margin-left: 12px;
-  margin-bottom: 0;
-  padding: 0;
-  display: none; }
-  .ter-tree-menu__sub-menu > li {
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400;
-    padding: 0; }
-    .ter-tree-menu__sub-menu > li a,
-    .ter-tree-menu__sub-menu > li a:visited,
-    .ter-tree-menu__sub-menu > li a:active,
-    .ter-tree-menu__sub-menu > li a:focus {
-      color: #aeaeb6;
-      text-decoration: none;
-      padding: 4px 0;
-      display: block; }
-      .ter-tree-menu__sub-menu > li a:hover,
-      .ter-tree-menu__sub-menu > li a:visited:hover,
-      .ter-tree-menu__sub-menu > li a:active:hover,
-      .ter-tree-menu__sub-menu > li a:focus:hover {
-        color: #474655;
-        cursor: pointer; }
-    .ter-tree-menu__sub-menu > li.is-active > a {
-      color: #474655; }
+  .ter-tree-menu__list-item.is-expandable.is-expanded > ul {
+    display: block; }
 
 .pricing-table {
   position: relative;

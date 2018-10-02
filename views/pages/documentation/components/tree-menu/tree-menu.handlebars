@@ -5,6 +5,7 @@
     <ul>
         <li>Tree menu list items with children are identified with the <code>.is-expandable</code> class</li>
         <li>To have a menu open by default, use the <code>.is-expanded</code> class on the menu list item</li>
+        <li>Display active list items with the <code>.is-active</code> class</li>
     </ul>
     <div class="markup-panel">
         <div class="markup-panel__example">
@@ -15,13 +16,13 @@
             <a data-href="#">Active Parent Item</a>
             <ul class="ter-tree-menu__list">
                 <li class="ter-tree-menu__list-item is-expandable">
-                    <a href="#">Active Item</a>
-                    <ul class="ter-tree-menu__sub-menu">
-                        <li><a href="#">Child Item</a></li>
-                        <li><a href="#">Child Item</a></li>
+                    <a data-href="#">Active Item</a>
+                    <ul class="ter-tree-menu__list">
+                        <li class="ter-tree-menu__list-item"><a href="#">Child Item</a></li>
+                        <li class="ter-tree-menu__list-item"><a href="#">Child Item</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Child Item</a></li>
+                <li class="ter-tree-menu__list-item"><a href="#">Child Item</a></li>
             </ul>
         </li>
         <li class="ter-tree-menu__list-item is-expandable">

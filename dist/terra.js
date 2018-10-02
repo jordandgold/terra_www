@@ -573,7 +573,7 @@
   
 	'use strict';
 
-	$('.ter-tree-menu__list li.is-expanded').find('ul').show();
+	$('.ter-tree-menu__list li.is-expanded').next('ul').show();
 
     $('.ter-tree-menu__list li.is-expandable > a').click(function () {
     	if ($(this).parent().hasClass('is-expanded')) {
