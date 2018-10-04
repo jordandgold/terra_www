@@ -4713,8 +4713,7 @@ body.has-open-nav {
   padding: 24px;
   display: block;
   margin-bottom: 24px;
-  position: relative;
-  height: 100%; }
+  position: relative; }
   .ter-notification__close {
     position: absolute;
     top: 1rem;
