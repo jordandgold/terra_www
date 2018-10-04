@@ -1,3 +1,5 @@
+- name: themes
+  url: themes
 - name: getting-started
   url: documentation/getting-started
 - name: accessibility
