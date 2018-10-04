@@ -1,19 +1,8 @@
 <nav class="side-nav">
-{{!-- 	<div class="side-nav__section">
-		<div class="input-group">
-			<label>Select a Theme</label>
-			<div class="select-wrap">
-				<select>
-					<option>Alpha</option>
-					<option>Beta</option>
-					<option>Delta</option>
-				</select>
-			</div>
-        </div>
-	</div> --}}
+	{{#is page.name "Themes"}}
 	<div class="side-nav__section">
 		<div class="ter-input">
-			<label class="ter-input__label">Select a theme</label>
+			<h5 class="side-nav__header margin-bottom-xs pad-bottom-none">Terra Themes</h5>
 			<div class="ter-input__wrap">
 		    	<select id="theme-switcher" class="ter-select">
 					<option value="style">Default</option>
@@ -22,8 +11,9 @@
 		    </div>
 		</div>
 	</div>
+	{{else}}{{/is}}
 	<div class="side-nav__section side-nav__section--fill-height">
-		<h5 class="side-nav__header margin-bottom-xs">Documentation</h5>
+		<h5 class="side-nav__header margin-bottom-xs pad-bottom-none">Documentation</h5>
 		<button class="side-nav__toggle" type="button" data-toggle="collapse" data-target=".side-nav__menu">
 	        <span class="line"></span>
 	        <span class="line"></span>
