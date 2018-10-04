@@ -252,9 +252,11 @@ code {
         height: initial;
     }
     &__section {
-        padding: spacing('md') spacing('md') 0 spacing('md');
+        padding: spacing('md');
+        border-bottom: 1px solid grayscale('gray-1');
         &:last-child {
             padding-bottom: spacing('md');
+            border-bottom: 0px;
         }
     }
     &__header {
