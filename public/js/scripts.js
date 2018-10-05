@@ -21,8 +21,12 @@ jQuery(document).ready(function($){
 	$('#theme-switcher').on('has-changed', function(){
 
 		var stylesheet = $(this).val();
-		$('link[rel="stylesheet"]').attr('href','/css/' + stylesheet + '.css');
+		swapStyleSheet(stylesheet);
 
 	});
+
+	function swapStyleSheet(stylesheet) {
+	    document.getElementById("theme-switch").setAttribute("href", '/css/' + stylesheet + '.css');  
+	}
 
 });
