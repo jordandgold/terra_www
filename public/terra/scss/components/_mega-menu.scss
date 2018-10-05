@@ -5,7 +5,7 @@
 
  .ter-mega-menu {
 	@include for-size(tablet-landscape-up) {
-		@include type-setting('sm','normal');
+		@include type-setting();
 		@include depth(2);
 		position: absolute;
 		top: $navbar-height;
@@ -37,7 +37,7 @@
 						padding: spacing('micro') 0;
 						display: block;
 						> a:not(.ter-button) {
-							@include type-setting('sm','normal');
+							@include type-setting();
 							color: $mega-menu-link-hover;
 							margin: 0;
 							text-decoration: none;
@@ -46,7 +46,7 @@
 								text-decoration: none;
 							}
 							@include for-size(tablet-landscape-down) {
-								@include type-setting('base','normal');
+								@include type-setting();
 								display: block;
 							}
 							.is-inverse & {
@@ -83,7 +83,7 @@
 		}
 	}
 	&__list-head {
-		@include type-setting('micro', 'bold');
+		@include type-setting('mini');
         padding: spacing('mini') 0;
         text-transform: uppercase;
         color: $mega-menu-type-color !important;

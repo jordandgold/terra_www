@@ -10,10 +10,9 @@
 
 // general type setting
 
-@mixin type-setting($level: 'base', $weight: 'normal') {
+@mixin type-setting($level: 'base') {
 	font-size: map-get($type-scale, $level);
 	line-height: 1.5;
-	font-weight: font-weight($weight);
 }
 
 // paragraph type setting

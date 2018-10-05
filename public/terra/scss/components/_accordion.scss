@@ -1,7 +1,9 @@
 
 .ter-accordion {
-	border: 1px solid $accordion-border-color;
 	margin-bottom: spacing('sm');
+	border-color: $accordion-border-color;
+	border-width: $accordion-border-width;
+	border-style: solid;
 	border-radius: $accordion-border-radius;
 	transition: background 225ms ease-in-out;
 	&__heading {

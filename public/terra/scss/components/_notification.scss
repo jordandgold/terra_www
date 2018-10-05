@@ -5,7 +5,7 @@
 */
 
 @mixin notification-base() {
-    @include type-setting(0,0);
+    @include type-setting();
     @include depth(4);
     padding: spacing('sm');
     display: block;

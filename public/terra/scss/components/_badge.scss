@@ -1,7 +1,7 @@
 
 @mixin badge-base() {
 	@include border-radius(all, small);
-	@include type-setting('micro', 'bold');
+	@include type-setting('mini');
 	padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) spacing('xxs');
 	line-height: 100%;
 	padding: spacing('micro') spacing('mini');

@@ -13,7 +13,8 @@
 		}
 	}
 	&__list-item {
-		@include type-setting('sm','normal');
+		@include type-setting();
+		font-size: $tree-menu-font-size;
 		position: relative;
 		padding: 0 0 0 spacing('xxs');
 		a,
@@ -69,33 +70,4 @@
 			}
 		}
 	}
-	// &__sub-menu {
-	// 	list-style: none;
-	// 	margin-left: spacing('xxs');
-	// 	margin-bottom: 0;
-	// 	padding: 0;
-	// 	display: none;
-	// 	> li {
-	// 		@include type-setting('sm','normal');
-	// 		padding: 0;
-	// 		a,
-	// 		a:visited,
-	// 		a:active,
-	// 		a:focus {
-	// 			color: $tree-menu-link-color;
-	// 			text-decoration: none;
-	// 			padding: spacing('micro') 0;
-	// 			display: block;
-	// 			&:hover {
-	// 				color: $tree-menu-link-hover;
-	// 				cursor: pointer;
-	// 			}
-	// 		}
-	// 		&.is-active {
-	// 			> a {
-	// 				color: $tree-menu-link-hover;
-	// 			}
-	// 		}
-	// 	}
-	// }
 }

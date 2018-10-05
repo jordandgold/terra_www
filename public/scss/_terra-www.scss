@@ -116,7 +116,7 @@
         margin-bottom: spacing('xxxs');
     }
     &__label {
-        @include type-setting(-1, "bold");
+        @include type-setting('sm');
 
         text-align: center;
     }
@@ -145,7 +145,7 @@
     position: relative;
     margin-bottom: spacing('xxs');
     label {
-        @include type-setting(-1, 'normal');
+        @include type-setting('sm');
         display: inline-block;
         margin-right: spacing('xxs');
         position: absolute;
@@ -230,7 +230,7 @@ code {
 }
 
 .main-footer {
-    @include type-setting('sm','normal');
+    @include type-setting('sm');
     padding: spacing('sm') 0;
     border-top: 1px solid grayscale('gray-1');
     height: auto;

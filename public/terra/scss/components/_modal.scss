@@ -6,7 +6,7 @@
     transition: transform 225ms ease-in-out;
     width: auto;
 	&__title {
-		@include type-setting(1,0);
+		@include type-setting();
 		padding-bottom: spacing('sm');
 	}
     &__content {

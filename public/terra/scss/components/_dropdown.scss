@@ -90,7 +90,8 @@
     &__item {
         padding: 0;
         a {
-            @include type-setting('sm','normal');
+            @include type-setting();
+            font-size: $dropdown-item-font-size;
             color: $dropdown-link-color;
             padding: spacing('mini') spacing('xs');
             display: block;
@@ -108,7 +109,8 @@
             border-bottom: 1px solid $dropdown-border-color;
         }
         &--no-link {
-            @include type-setting('micro', 'bold');
+            @include type-setting('micro');
+            font-weight: font-weight('bold');
             padding: spacing('mini') spacing('xs');
             text-transform: uppercase;
             color: $dropdown-no-link-color !important;

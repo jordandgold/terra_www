@@ -8,7 +8,8 @@
 }
 
 @mixin button-base() {
-    @include type-setting('sm','normal');
+    @include type-setting();
+    font-size: $button-font-size;
     padding: spacing('mini') spacing('xs');
     border-radius: $button-border-radius;
     text-decoration: none;
