@@ -2851,7 +2851,7 @@ h5,
     display: none;
     padding: 16px 24px; }
   .ter-accordion.is-expanded {
-    background: #d0d0d7; }
+    background: transparent; }
     .ter-accordion.is-expanded .ter-accordion__heading {
       text-decoration: none; }
       .ter-accordion.is-expanded .ter-accordion__heading:after {
