@@ -296,7 +296,7 @@ $panel-border-color: color('light-1');
 
 // accordion
 $accordion-bg: color('white');
-$accordion-expanded-bg: color('light-1');
+$accordion-expanded-bg: color('gray-2');
 $accordion-border-width: .15rem 0 0 0;
 $accordion-border-color: color('gray-0');
 $accordion-arrow-color: color('gray-4');
@@ -309,15 +309,23 @@ $input-font-size: type-scale('sm');
 $input-border-radius: border-radius('none');
 $input-border-color: $input-bg;
 $input-border-width: 0 0 .15rem 0;
+
 $input-label-font-size: type-scale('sm');
 $input-label-color: color('dark-1');
+
 $input-placeholder-color: color('gray-2');
 $input-focus-border-color: color('brand-1');
+
 $input-inverse-bg: color('gray-10');
 $input-inverse-text-color: color('gray-4');
 $input-inverse-border-color: color('dark-0');
+
 $fieldset-legend-font-size: type-scale('sm');
 $fieldset-legend-font-weight: font-weight('bold');
+
+$input-disabled-color: color('gray-2');
+$input-disabled-border-color: color('gray-1');
+$input-disabled-bg: color('light-0');
 
 // checkboxes
 $checkbox-border-color: color('gray-5');

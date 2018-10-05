@@ -310,15 +310,23 @@ $input-font-size: type-scale('sm');
 $input-border-radius: $border-radius-base;
 $input-border-color: color('gray-4');
 $input-border-width: .05rem;
+
 $input-label-font-size: type-scale('sm');
 $input-label-color: color('dark-1');
+
 $input-placeholder-color: color('gray-2');
 $input-focus-border-color: color('brand-1');
+
 $input-inverse-bg: color('gray-10');
 $input-inverse-text-color: color('gray-4');
 $input-inverse-border-color: color('dark-0');
+
 $fieldset-legend-font-size: type-scale('sm');
 $fieldset-legend-font-weight: font-weight('bold');
+
+$input-disabled-color: transparentize($input-border-color, .7);
+$input-disabled-border-color: transparentize($input-border-color, .7);
+$input-disabled-bg: transparentize($input-border-color, .95);
 
 // checkboxes
 $checkbox-border-color: $input-border-color;

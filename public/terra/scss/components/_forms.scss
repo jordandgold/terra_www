@@ -79,9 +79,9 @@
                 color: $input-placeholder-color;
             }
             &:disabled {
-                color: transparentize($input-border-color, .7);
-                border-color: transparentize($input-border-color, .7);
-                background: transparentize($input-border-color, .95);
+                color: $input-disabled-color;
+                border-color: $input-disabled-border-color;
+                background: $input-disabled-bg;
                 cursor: not-allowed;
             }
             &:focus {
