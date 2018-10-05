@@ -1023,39 +1023,32 @@
  */
 .font-size-micro {
   font-size: 12px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 .font-size-sm,
 small {
   font-size: 14px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 .font-size-md {
   font-size: 24px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 .font-size-lg {
   font-size: 36px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 .font-size-xl {
   font-size: 44px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 .font-size-super {
   font-size: 52px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 .font-size-mega {
   font-size: 72px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 /**
  * Font Weight
@@ -2137,7 +2130,7 @@ html {
 body,
 html {
   color: #262533;
-  background: #ffffff;
+  background: #f3f3f7;
   height: 100%; }
 
 body.no-nav {
@@ -2601,13 +2594,11 @@ pre {
 body, html {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400; }
+  line-height: 1.5; }
 
 p {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
   margin: 0 0 28px 0; }
 
 h1,
@@ -2666,6 +2657,7 @@ h5,
 
 */
 .ter-alert {
+  font-size: 16px;
   line-height: 1.5;
   padding: 24px;
   display: block;
@@ -2816,9 +2808,11 @@ h5,
       text-decoration: underline; }
 
 .ter-accordion {
-  border: 1px solid #aeaeb6;
   margin-bottom: 24px;
-  border-radius: 0.125rem;
+  border-color: #eaeaef;
+  border-width: 0.15rem 0 0 0;
+  border-style: solid;
+  border-radius: 0;
   transition: background 225ms ease-in-out; }
   .ter-accordion__heading {
     border: 0;
@@ -2869,21 +2863,17 @@ h5,
 .ter-accordion-group {
   margin-bottom: 24px; }
   .ter-accordion-group .ter-accordion {
-    margin-bottom: 0;
-    border-bottom: 0;
-    border-radius: 0px; }
+    margin-bottom: 0; }
     .ter-accordion-group .ter-accordion:first-child {
-      border-top-left-radius: 0.125rem;
-      border-top-right-radius: 0.125rem; }
+      border-top-left-radius: 0;
+      border-top-right-radius: 0; }
     .ter-accordion-group .ter-accordion:last-child {
-      border-bottom: 1px solid #aeaeb6;
-      border-bottom-left-radius: 0.125rem;
-      border-bottom-right-radius: 0.125rem; }
+      border-width: 0.15rem 0 0 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
 
 .badge {
-  font-size: 12px;
   line-height: 1.5;
-  font-weight: 600;
   padding: calc(var(--spacing-extra-extra-extra-small) - .05rem) 12px;
   line-height: 100%;
   padding: 4px 8px;
@@ -3153,9 +3143,9 @@ button {
 
 .ter-button,
 a.ter-button {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  font-size: 14px;
   padding: 8px 16px;
   border-radius: 0.125rem;
   text-decoration: none;
@@ -3415,14 +3405,12 @@ a.ter-button--ghost {
 a.ter-button--large {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
   padding: 12px 24px; }
 
 .ter-button--small,
 a.ter-button--small {
   font-size: 12px;
   line-height: 1.5;
-  font-weight: 400;
   padding: 4px 8px; }
 
 .ter-button--block,
@@ -3511,11 +3499,12 @@ a.ter-button--icon {
       font-size: 75%; }
 
 .ter-card {
-  box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
-  z-index: 100;
   background: #ffffff;
   position: relative;
-  border: 1px solid #d0d0d7;
+  margin-bottom: 32px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #d0d0d7;
   border-radius: 0.125rem; }
   .ter-card__body {
     padding: 32px; }
@@ -3628,9 +3617,9 @@ a.ter-button--icon {
   .ter-dropdown__item {
     padding: 0; }
     .ter-dropdown__item a {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
-      font-weight: 400;
+      font-size: 14px;
       color: #262533;
       padding: 8px 16px;
       display: block;
@@ -3669,9 +3658,9 @@ a.ter-button--icon {
     padding-top: 0;
     padding-bottom: 0; }
   .ter-input__label {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
+    font-size: 14px;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3688,18 +3677,20 @@ a.ter-button--icon {
     .ter-input__wrap input[type="file"],
     .ter-input__wrap input[type="password"],
     .ter-input__wrap textarea {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
-      font-weight: 400;
+      font-size: 14px;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
       z-index: 1;
       display: block;
       width: 100%;
-      border: 0.05rem solid #aeaeb6;
+      border-width: 0 0 0.15rem 0;
+      border-style: solid;
+      border-color: #ffffff;
       background-color: #ffffff;
-      border-radius: 0.125rem;
+      border-radius: 0;
       box-sizing: border-box;
       position: relative;
       z-index: 1;
@@ -3710,8 +3701,10 @@ a.ter-button--icon {
       .ter-input__wrap input[type="password"], .is-inverse
       .ter-input__wrap textarea {
         color: #aeaeb6;
-        border: 0.05rem solid #363545;
-        background-color: #595868; }
+        border-width: 0 0 0.15rem 0;
+        border-style: solid;
+        border-color: #363545;
+        background-color: #474655; }
       .ter-input__wrap input[type="text"]:focus,
       .ter-input__wrap input[type="email"]:focus,
       .ter-input__wrap input[type="file"]:focus,
@@ -3725,16 +3718,14 @@ a.ter-button--icon {
       .ter-input__wrap input[type="password"].input-lg,
       .ter-input__wrap textarea.input-lg {
         font-size: 16px;
-        line-height: 1.5;
-        font-weight: 400; }
+        line-height: 1.5; }
       .ter-input__wrap input[type="text"].input-sm,
       .ter-input__wrap input[type="email"].input-sm,
       .ter-input__wrap input[type="file"].input-sm,
       .ter-input__wrap input[type="password"].input-sm,
       .ter-input__wrap textarea.input-sm {
         font-size: 12px;
-        line-height: 1.5;
-        font-weight: 400; }
+        line-height: 1.5; }
       .ter-input__wrap input[type="text"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="email"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="file"]::-webkit-input-placeholder,
@@ -3764,9 +3755,9 @@ a.ter-button--icon {
       .ter-input__wrap input[type="file"]:disabled,
       .ter-input__wrap input[type="password"]:disabled,
       .ter-input__wrap textarea:disabled {
-        color: rgba(174, 174, 182, 0.3);
-        border-color: rgba(174, 174, 182, 0.3);
-        background: rgba(174, 174, 182, 0.05);
+        color: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.05);
         cursor: not-allowed; }
       .ter-input__wrap input[type="text"]:focus,
       .ter-input__wrap input[type="email"]:focus,
@@ -3789,13 +3780,11 @@ a.ter-button--icon {
     .ter-input__wrap textarea {
       font-size: 16px;
       line-height: 1.5;
-      font-weight: 400;
       display: block;
       width: 100%; }
   .ter-input__message {
     font-size: 14px;
     line-height: 1.5;
-    font-weight: 400;
     display: block; }
     .has-error .ter-input__message {
       color: #C81922; }
@@ -3809,9 +3798,9 @@ a.ter-button--icon {
   box-sizing: content-box; }
   .ter-checkbox__label,
   .ter-radio__label {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
+    font-size: 14px;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -3827,9 +3816,9 @@ a.ter-button--icon {
     outline: 0; }
 
 .ter-radio__label {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  font-size: 14px;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -3841,7 +3830,7 @@ a.ter-button--icon {
   .ter-radio__label:before {
     height: 12px;
     width: 12px;
-    border: 1px solid #aeaeb6;
+    border: 1px solid #9d9da6;
     left: 0px;
     top: 5px;
     border-radius: 50%; }
@@ -3869,7 +3858,9 @@ a.ter-button--icon {
     outline: 0; }
 
 .ter-checkbox__label {
+  font-size: 16px;
   line-height: 1.5;
+  font-size: 14px;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -3881,7 +3872,7 @@ a.ter-button--icon {
   .ter-checkbox__label:before {
     height: 12px;
     width: 12px;
-    border: 1px solid #aeaeb6;
+    border: 1px solid #9d9da6;
     left: 0px;
     top: 5px; }
   .ter-checkbox__label:after {
@@ -3900,34 +3891,38 @@ a.ter-button--icon {
   padding-top: 12px;
   padding-bottom: 12px; }
   .ter-radio-group__label {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
+    font-size: 14px;
     padding-bottom: 12px; }
   .ter-radio-group .ter-radio {
     padding-top: 0px;
     padding-bottom: 0px; }
 
 select {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  font-size: 14px;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
   z-index: 1;
   display: block;
   width: 100%;
-  border: 0.05rem solid #aeaeb6;
+  border-width: 0 0 0.15rem 0;
+  border-style: solid;
+  border-color: #ffffff;
   background-color: #ffffff;
-  border-radius: 0.125rem;
+  border-radius: 0;
   box-sizing: border-box;
   -webkit-appearance: none;
   position: relative; }
   .is-inverse select {
     color: #aeaeb6;
-    border: 0.05rem solid #363545;
-    background-color: #595868; }
+    border-width: 0 0 0.15rem 0;
+    border-style: solid;
+    border-color: #363545;
+    background-color: #474655; }
   select i {
     position: absolute;
     top: 50%;
@@ -3965,25 +3960,29 @@ fieldset {
   .ter-search-bar__input {
     flex: 1; }
   .ter-search-bar__submit {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
+    font-size: 14px;
     box-sizing: border-box;
     padding: 8px 16px;
     position: relative;
     z-index: 1;
     display: block;
     width: 100%;
-    border: 0.05rem solid #aeaeb6;
+    border-width: 0 0 0.15rem 0;
+    border-style: solid;
+    border-color: #ffffff;
     background-color: #ffffff;
-    border-radius: 0.125rem;
+    border-radius: 0;
     box-sizing: border-box;
     width: initial;
     margin-left: 1px; }
     .is-inverse .ter-search-bar__submit {
       color: #aeaeb6;
-      border: 0.05rem solid #363545;
-      background-color: #595868; }
+      border-width: 0 0 0.15rem 0;
+      border-style: solid;
+      border-color: #363545;
+      background-color: #474655; }
 
 .select-hidden {
   display: none;
@@ -3997,25 +3996,29 @@ fieldset {
   width: 100%; }
 
 .select-styled {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  font-size: 14px;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
   z-index: 1;
   display: block;
   width: 100%;
-  border: 0.05rem solid #aeaeb6;
+  border-width: 0 0 0.15rem 0;
+  border-style: solid;
+  border-color: #ffffff;
   background-color: #ffffff;
-  border-radius: 0.125rem;
+  border-radius: 0;
   box-sizing: border-box;
   display: block;
   width: initial; }
   .is-inverse .select-styled {
     color: #aeaeb6;
-    border: 0.05rem solid #363545;
-    background-color: #595868; }
+    border-width: 0 0 0.15rem 0;
+    border-style: solid;
+    border-color: #363545;
+    background-color: #474655; }
   .select-styled:after {
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -4078,25 +4081,29 @@ fieldset {
   .select-options__search-filter {
     position: relative; }
     .select-options__search-filter input {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
-      font-weight: 400;
+      font-size: 14px;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
       z-index: 1;
       display: block;
       width: 100%;
-      border: 0.05rem solid #aeaeb6;
+      border-width: 0 0 0.15rem 0;
+      border-style: solid;
+      border-color: #ffffff;
       background-color: #ffffff;
-      border-radius: 0.125rem;
+      border-radius: 0;
       box-sizing: border-box;
       border: 0;
       background: transparent; }
       .is-inverse .select-options__search-filter input {
         color: #aeaeb6;
-        border: 0.05rem solid #363545;
-        background-color: #595868; }
+        border-width: 0 0 0.15rem 0;
+        border-style: solid;
+        border-color: #363545;
+        background-color: #474655; }
     .select-options__search-filter:after {
       -webkit-font-smoothing: antialiased;
       display: inline-block;
@@ -4114,9 +4121,9 @@ fieldset {
       right: 16px;
       color: neutral-color("gray-1"); }
   .select-options__item {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
+    font-size: 14px;
     color: #262533;
     padding: 8px 16px;
     display: block;
@@ -4133,8 +4140,9 @@ fieldset {
     padding: 8px 16px; }
 
 .ter-fieldset__legend {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
+  font-size: 14px;
   font-weight: 600; }
 
 ul.list-inline {
@@ -4180,8 +4188,8 @@ ul.list-inline {
 
 ul,
 ol {
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
   margin: 0 0 28px 0; }
   ul li,
   ol li {
@@ -4195,7 +4203,7 @@ ol {
   .item-list > li {
     padding: 12px 0; }
   .item-list li {
-    margin: 0; }
+    margin: 32px 0; }
 
 .list-group {
   margin: 0 0 28px 0;
@@ -4216,9 +4224,8 @@ ol {
  */
 @media (min-width: 900px) {
   .ter-mega-menu {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
     box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
     z-index: 200;
     position: absolute;
@@ -4262,9 +4269,8 @@ ol {
         padding: 4px 0;
         display: block; }
         .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
-          font-size: 14px;
+          font-size: 16px;
           line-height: 1.5;
-          font-weight: 400;
           color: #0076a6;
           margin: 0;
           text-decoration: none; }
@@ -4275,7 +4281,6 @@ ol {
           .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
             font-size: 16px;
             line-height: 1.5;
-            font-weight: 400;
             display: block; } }
 
 @media (min-width: 900px) {
@@ -4313,9 +4318,7 @@ ol {
         padding: 12px 0; } }
 
 .ter-mega-menu__list-head {
-  font-size: 12px;
   line-height: 1.5;
-  font-weight: 600;
   padding: 8px 0;
   text-transform: uppercase;
   color: #262533 !important; }
@@ -4376,6 +4379,7 @@ ol {
   transition: transform 225ms ease-in-out, -webkit-transform 225ms ease-in-out;
   width: auto; }
   .ter-modal__title {
+    font-size: 16px;
     line-height: 1.5;
     padding-bottom: 24px; }
   .ter-modal__content {
@@ -4507,7 +4511,6 @@ body.has-open-nav {
   .ter-navbar__brand {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
     height: 64px;
     display: inline-block;
     line-height: 64px;
@@ -4588,9 +4591,9 @@ body.has-open-nav {
         vertical-align: middle;
         border: 0px; } }
     .ter-navbar__menu-item > a:not(.ter-button) {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
-      font-weight: 400;
+      font-size: 14px;
       color: #009AD9;
       margin: 0;
       padding: 0;
@@ -4605,7 +4608,6 @@ body.has-open-nav {
         .ter-navbar__menu-item > a:not(.ter-button) {
           font-size: 16px;
           line-height: 1.5;
-          font-weight: 400;
           display: block;
           line-height: initial;
           height: auto; } }
@@ -4630,8 +4632,8 @@ body.has-open-nav {
         background: transparent; } }
     @media (max-width: 899px) {
       .ter-navbar__menu-item.ter-dropdown .ter-dropdown__menu a {
+        font-size: 16px;
         line-height: 1.5;
-        font-weight: 400;
         color: #262533;
         display: block;
         line-height: initial;
@@ -4700,6 +4702,7 @@ body.has-open-nav {
 
 */
 .ter-notification {
+  font-size: 16px;
   line-height: 1.5;
   box-shadow: 0px 16px 28px 0px rgba(54, 53, 69, 0.05), 0px 16px 40px 0px rgba(54, 53, 69, 0.1);
   z-index: 400;
@@ -4925,16 +4928,19 @@ body.has-open-nav {
     border: 0; }
   .ter-table tr th {
     padding: 12px;
-    background-color: #009AD9;
-    color: #ffffff;
-    font-weight: 300; }
+    background-color: transparent;
+    color: inherit;
+    font-weight: 300;
+    border-width: 0 0 0.15rem 0;
+    border-style: solid;
+    border-color: #d0d0d7; }
   .ter-table tr td {
     padding: 12px;
     font-weight: 300; }
   .ter-table tr:nth-child(even) td {
     background-color: transparent; }
   .ter-table tr:nth-child(odd) td {
-    background-color: #f3f3f7; }
+    background-color: #f9f9fb; }
 
 .ter-nav-tabs__list {
   margin: 0 0 28px 0;
@@ -4988,9 +4994,9 @@ body.has-open-nav {
   border-right: 0px;
   border-bottom: 1px solid #d0d0d7; }
   .ter-nav-tabs__list-item a {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
+    font-size: 14px;
     padding: 8px 16px;
     border-radius: 0.125rem;
     text-decoration: none;
@@ -5072,9 +5078,9 @@ body.has-open-nav {
   padding: 0;
   margin: 0; }
   .ter-compact-tabs__list-item a {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight: 400;
+    font-size: 14px;
     padding: 8px 16px;
     border-radius: 0.125rem;
     text-decoration: none;
@@ -5139,7 +5145,6 @@ body.has-open-nav {
     box-shadow: 0px 4px 8px 0px rgba(54, 53, 69, 0.1), 0px 4px 8px 0px rgba(54, 53, 69, 0.1);
     z-index: 100;
     line-height: 1.5;
-    font-weight: 400;
     content: attr(data-tooltip);
     background: #262533;
     color: #ffffff;
@@ -5224,7 +5229,6 @@ body.has-open-nav {
     z-index: 100;
     font-size: 14px;
     line-height: 1.5;
-    font-weight: 400;
     display: none;
     background-color: #262533;
     padding: 16px;
@@ -5350,9 +5354,9 @@ body.has-open-nav {
     padding: 0; }
 
 .ter-tree-menu__list-item {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  font-size: 14px;
   position: relative;
   padding: 0 0 0 12px; }
   .ter-tree-menu__list-item a,

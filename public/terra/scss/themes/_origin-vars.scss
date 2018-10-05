@@ -58,6 +58,9 @@ $emotive-colors: map-merge((
 ), $emotive-colors);
 
 // create color palette map
+@function color($key) {
+  @return map-get($color-palette, $key);
+}
 $color-palette: map-collect(
     $brand-colors,
     $emotive-colors,
@@ -98,6 +101,9 @@ $font-weight: map-merge((
 ), $font-weight);
 
 // type scale
+@function type-scale($key: 'base') {
+  @return map-get($type-scale, $key);
+}
 $type-scale: () !default;
 $type-scale: map-merge((
     'micro': 12px,
@@ -110,13 +116,8 @@ $type-scale: map-merge((
     'mega': 72px
 ), $type-scale);
 
-// font size
-@function font-size($key: 'base') {
-  @return map-get($type-scale, $key);
-}
-
 // type setting
-$base-font-size: font-size('base');
+$base-font-size: 16px;
 $scale: 1.75;
 $base-line-height: $base-font-size * $scale;
 $line-height: (
@@ -200,137 +201,151 @@ $box-shadows: (
     )
 );
 
+
+
 // globals
 $border-radius-base: border-radius('sm');
 
 // navigation tabs
-$nav-tabs-link-color: grayscale('gray-7');
-$nav-tabs-link-hover: grayscale('dark-1');
-$nav-tabs-border-color: grayscale('gray-2');
+$nav-tabs-link-color: color('gray-7');
+$nav-tabs-link-hover: color('dark-1');
+$nav-tabs-border-color: color('gray-2');
 
 // compact tabs
-$compact-tabs-link-color: grayscale('gray-7');
-$compact-tabs-link-hover: grayscale('dark-1');
-$compact-tabs-underline-color: grayscale('dark-1');
+$compact-tabs-link-color: color('gray-7');
+$compact-tabs-link-hover: color('dark-1');
+$compact-tabs-underline-color: color('dark-1');
 
 // pagination
-$pagination-border-color: grayscale('gray-2');
+$pagination-border-color: color('gray-2');
 
 // body
-$body-bg-color: grayscale('white');
+$body-bg-color: color('light-1');
 $body-font-color: type-color('normal');
 
 // headers
-$header-font-color: grayscale('dark-1');
+$header-font-color: color('dark-1');
 $header-font-weight: font-weight('bold');
 
 // links
-$link-color: brand-color('brand-1');
+$link-color: color('brand-1');
 $link-hover-color: darken($link-color, 10%);
 $link-highlight: true;
-$link-highlight-color: lighten(brand-color('brand-1'), 30%);
-$link-inverse-color: grayscale('gray-4');
+$link-highlight-color: lighten(color('brand-1'), 30%);
+$link-inverse-color: color('gray-4');
 $link-inverse-hover-color: darken($link-inverse-color, 10%);
 
 // navigation bar
 $navbar-height: height('md');
-$navbar-bg: grayscale('white');
+$navbar-bg: color('white');
+$navbar-font-size: type-scale('sm');
 $navbar-link-color: $link-color;
 $navbar-link-hover: $link-hover-color;
 $navbar-border-width: 1px;
-$navbar-border-color: grayscale('gray-1');
-$navbar-menu-icon-color: grayscale('gray-3');
-$navbar-inverse-bg: grayscale('dark-0');
-$navbar-inverse-border-color: grayscale('dark-0');
+$navbar-border-color: color('gray-1');
+$navbar-menu-icon-color: color('gray-3');
+$navbar-inverse-bg: color('dark-0');
+$navbar-inverse-border-color: color('dark-0');
 $navbar-inverse-link-color: $link-inverse-color;
 $navbar-inverse-link-hover-color: $link-inverse-hover-color;
 
 // mega menu
-$mega-menu-bg: grayscale('white');
+$mega-menu-bg: color('white');
 // $mega-menu-offset: calc(-1 * #{spacing('mini')});
 $mega-menu-offset: 0px;
 $mega-menu-type-color: type-color('normal');
-$mega-menu-link-color: brand-color('brand-1');
+$mega-menu-link-color: color('brand-1');
 $mega-menu-link-hover: darken($link-color, 10%);
 
 // buttons
 $button-border-radius: $border-radius-base;
+$button-font-size: type-scale('sm');
 $button-border-size: 1px;
-$button-icon-color: grayscale('gray-4');
-$button-icon-hover: grayscale('gray-6');
-$button-outline-text-color: grayscale('gray-10');
-$button-outline-border-color: brand-color('brand-1');
+$button-icon-color: color('gray-4');
+$button-icon-hover: color('gray-6');
+$button-outline-text-color: color('gray-10');
+$button-outline-border-color: color('brand-1');
 $button-outline-inverse-text-color: text-color('inverse');
-$button-outline-inverse-border-color: grayscale('white');
+$button-outline-inverse-border-color: color('white');
 
 // tooltips
-$tooltip-bg: grayscale('dark-1');
-$tooltip-text-color: grayscale('white');
+$tooltip-bg: color('dark-1');
+$tooltip-text-color: color('white');
 $tooltip-border-radius: $border-radius-base;
 
 // cards
-$card-bg: grayscale('white');
+$card-bg: color('white');
 $card-border-radius: $border-radius-base;
-$card-border-size: 1px;
-$card-border-color: grayscale('gray-2');
+$card-border-width: 0px;
+$card-border-color: color('gray-2');
 
 // dropdowns
+$dropdown-item-font-size: type-scale('sm');
 $dropdown-border-size: 1px;
-$dropdown-border-color: grayscale('gray-4');
+$dropdown-border-color: color('gray-4');
 $dropdown-border-radius: $border-radius-base;
-$dropdown-bg: grayscale('white');
-$dropdown-link-color: grayscale('dark-1');
-$dropdown-link-hover-bg: grayscale('light-1');
-$drodown-arrow-color: grayscale('gray-6');
-$dropdown-no-link-color: grayscale('gray-6');
+$dropdown-bg: color('white');
+$dropdown-link-color: color('dark-1');
+$dropdown-link-hover-bg: color('light-1');
+$drodown-arrow-color: color('gray-6');
+$dropdown-no-link-color: color('gray-6');
 
 // panels
-$panel-bg: grayscale('white');
-$panel-border-color: grayscale('light-1');
+$panel-bg: color('white');
+$panel-border-color: color('light-1');
 
 // accordion
-$accordion-bg: grayscale('white');
-$accordion-expanded-bg: grayscale('light-1');
-$accordion-border-color: grayscale('gray-4');
-$accordion-arrow-color: grayscale('gray-4');
-$accordion-border-radius: $border-radius-base;
+$accordion-bg: color('white');
+$accordion-expanded-bg: color('light-1');
+$accordion-border-width: .15rem 0 0 0;
+$accordion-border-color: color('gray-0');
+$accordion-arrow-color: color('gray-4');
+$accordion-border-radius: border-radius('none');
 
-// form input
-$input-bg: grayscale('white');
-$input-text-color: brand-color(text-2);
-$input-border-radius: $border-radius-base;
-$input-border-color: grayscale('gray-4');
-$input-border-size: .05rem;
-$input-label-color: grayscale('dark-1');
-$input-placeholder-color: grayscale('gray-2');
-$input-focus-border-color: brand-color('brand-1');
-$input-inverse-bg: grayscale('gray-9');
-$input-inverse-text-color: grayscale('gray-4');
-$input-inverse-border-color: grayscale('dark-0');
+// form inputs
+$input-bg: color('white');
+$input-text-color: color('text-2');
+$input-font-size: type-scale('sm');
+$input-border-radius: border-radius('none');
+$input-border-color: $input-bg;
+$input-border-width: 0 0 .15rem 0;
+$input-label-font-size: type-scale('sm');
+$input-label-color: color('dark-1');
+$input-placeholder-color: color('gray-2');
+$input-focus-border-color: color('brand-1');
+$input-inverse-bg: color('gray-10');
+$input-inverse-text-color: color('gray-4');
+$input-inverse-border-color: color('dark-0');
+$fieldset-legend-font-size: type-scale('sm');
+$fieldset-legend-font-weight: font-weight('bold');
 
 // checkboxes
-$checkbox-border-color: $input-border-color;
-$checkbox-fill-color: brand-color('brand-1');
+$checkbox-border-color: color('gray-5');
+$checkbox-fill-color: color('brand-1');
 
 // radio buttons
-$radio-border-color: $input-border-color;
-$radio-fill-color: brand-color('brand-1');
+$radio-border-color: color('gray-5');
+$radio-fill-color: color('brand-1');
 
 // tables
-$table-header-bg: brand-color('brand-1');
+$table-header-border-width: 0 0 .15rem 0;
+$table-header-border-color: color('gray-2');
+$table-header-color: inherit;
+$table-header-bg: transparent;
 $table-row-bg-even: transparent;
-$table-row-bg-odd: grayscale('light-1');
+$table-row-bg-odd: color('light-0');
 
 // modals
-$modal-bg: grayscale('white');
-$modal-overlay-bg: grayscale('dark-1');
+$modal-bg: color('white');
+$modal-overlay-bg: color('dark-1');
 
 // alerts
 $alert-border-radius: $border-radius-base;
 
 // tree menu
-$tree-menu-link-color: grayscale('gray-4');
-$tree-menu-link-hover: grayscale('gray-10');
+$tree-menu-font-size: type-scale('sm');
+$tree-menu-link-color: color('gray-4');
+$tree-menu-link-hover: color('gray-10');
 
 // viewport breakpoints
 $breakpoint-xs: 600px;
@@ -339,8 +354,8 @@ $breakpoint-md: 1200px;
 $breakpoint-lg: 1800px;
 
 // YIQ contrast colors
-$yiq-contrasted-dark-default: grayscale('dark-1') !default;
-$yiq-contrasted-light-default: grayscale('white') !default;
+$yiq-contrasted-dark-default: color('dark-1') !default;
+$yiq-contrasted-light-default: color('white') !default;
 $yiq-contrasted-threshold: 128 !default;
 $yiq-debug: false !default;
 

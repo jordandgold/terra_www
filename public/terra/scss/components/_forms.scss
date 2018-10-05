@@ -22,7 +22,9 @@
     box-sizing: border-box;
     .is-inverse & {
         color: $input-inverse-text-color;
-        border: $input-border-size solid $input-inverse-border-color;
+        border-width: $input-border-width;
+        border-style: solid;
+        border-color: $input-inverse-border-color;
         background-color: $input-inverse-bg;
     }
 }

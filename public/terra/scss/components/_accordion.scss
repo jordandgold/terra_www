@@ -53,14 +53,12 @@
 	margin-bottom: spacing('sm');
 	.ter-accordion {
 		margin-bottom: 0;
-		border-bottom: 0;
-		border-radius: 0px;
 		&:first-child {
 			border-top-left-radius: $accordion-border-radius;
 			border-top-right-radius: $accordion-border-radius;
 		}
 		&:last-child {
-			border-bottom: 1px solid $accordion-border-color;
+			border-width: $accordion-border-width;
 			border-bottom-left-radius: $accordion-border-radius;
 			border-bottom-right-radius: $accordion-border-radius;
 		}

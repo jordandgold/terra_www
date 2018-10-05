@@ -1,9 +1,10 @@
 .ter-card {
-	@include depth(1);
     background: $card-bg;
     position: relative;
-    margin-bottom: map-get($spacing-scale, medium);
-    border: $card-border-size solid $card-border-color;
+    margin-bottom: spacing('md');
+    border-width: $card-border-width;
+    border-style: solid;
+    border-color: $card-border-color;
     border-radius: $card-border-radius;
 	&__body {
 		padding: spacing('md');

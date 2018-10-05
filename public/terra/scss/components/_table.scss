@@ -20,8 +20,11 @@
 		th {
 			padding: spacing('xxs');
 			background-color: $table-header-bg;
-			color: yiq-contrast-color($table-header-bg);
+			color: $table-header-color;
 			font-weight: font-weight('light');
+			border-width: $table-header-border-width;
+			border-style: solid;
+			border-color: $table-header-border-color;
 		}
 		td {
 			padding: spacing('xxs');

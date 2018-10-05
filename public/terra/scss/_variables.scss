@@ -277,7 +277,7 @@ $tooltip-border-radius: $border-radius-base;
 // cards
 $card-bg: color('white');
 $card-border-radius: $border-radius-base;
-$card-border-size: 1px;
+$card-border-width: 1px;
 $card-border-color: color('gray-2');
 
 // dropdowns
@@ -298,7 +298,7 @@ $panel-border-color: color('light-1');
 // accordion
 $accordion-bg: color('white');
 $accordion-expanded-bg: color('light-1');
-$accordion-border-size: .05rem;
+$accordion-border-width: .05rem;
 $accordion-border-color: color('gray-4');
 $accordion-arrow-color: color('gray-4');
 $accordion-border-radius: $border-radius-base;
@@ -329,6 +329,9 @@ $radio-border-color: $input-border-color;
 $radio-fill-color: color('brand-1');
 
 // tables
+$table-header-border-width: 0;
+$table-header-border-color: transparent;
+$table-header-color: type-color('inverse');
 $table-header-bg: color('brand-1');
 $table-row-bg-even: transparent;
 $table-row-bg-odd: color('light-1');
