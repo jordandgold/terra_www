@@ -341,6 +341,11 @@ $modal-overlay-bg: color('dark-1');
 
 // alerts
 $alert-border-radius: $border-radius-base;
+$alert-padding: spacing('xs');
+
+// notifications
+$notification-border-radius: $border-radius-base;
+$notification-padding: spacing('xs');
 
 // tree menu
 $tree-menu-font-size: type-scale('sm');

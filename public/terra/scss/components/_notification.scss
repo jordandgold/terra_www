@@ -7,10 +7,11 @@
 @mixin notification-base() {
     @include type-setting();
     @include depth(4);
-    padding: spacing('sm');
+    padding: $notification-padding;
     display: block;
-    margin-bottom: spacing('sm');
     position: relative;
+    border-radius: $notification-border-radius;
+    margin-bottom: spacing('sm');
     &__close {
         position: absolute;
         top: 1rem;
