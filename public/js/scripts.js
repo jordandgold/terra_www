@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
 	$('#theme-switcher').on('has-changed', function(){
 
 		var stylesheet = $(this).val();
-		$('link').attr('href','/css/' + stylesheet + '.css');
+		$('link[rel="stylesheet"]').attr('href','/css/' + stylesheet + '.css');
 
 	});
 
