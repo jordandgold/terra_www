@@ -97,7 +97,7 @@
 	        $styledSelect.text($(this).text()).removeClass('active');
 	        $this.val(rel).trigger('has-changed');
 	        $list.removeClass('is-open');
-	        console.log($this.val());
+	        // console.log($this.val());
 	        // select corresponding value
 	    });
 	  	
