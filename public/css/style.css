@@ -1543,8 +1543,8 @@ html {
   align-content: stretch; }
 
 :root {
-  --gutter-width: var(--spacing-md);
-  --outer-margin: var(--spacing-md);
+  --gutter-width: var(--spacing-lg);
+  --outer-margin: var(--spacing-lg);
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 600px;
@@ -5624,11 +5624,11 @@ code {
   .markup-panel pre[class*="language-"] {
     margin-top: 0; }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .page.has-sidebar {
     display: flex; } }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .page.has-sidebar .main-content {
     flex: 1; } }
 

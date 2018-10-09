@@ -224,11 +224,11 @@ code {
 }
 .page {
     &.has-sidebar {
-        @include for-size("tablet-portrait-up") {
+        @include for-size("tablet-landscape-up") {
             display: flex;
         }
         .main-content {
-            @include for-size("tablet-portrait-up") {
+            @include for-size("tablet-landscape-up") {
                 flex: 1;
             }
         }
