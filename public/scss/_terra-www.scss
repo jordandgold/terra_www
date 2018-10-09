@@ -222,6 +222,18 @@ code {
         margin-top: 0;
     }
 }
+.page {
+    &.has-sidebar {
+        @include for-size("tablet-portrait-up") {
+            display: flex;
+        }
+        .main-content {
+            @include for-size("tablet-portrait-up") {
+                flex: 1;
+            }
+        }
+    }
+}
 
 .main-content {
     height: auto;

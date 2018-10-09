@@ -5624,6 +5624,14 @@ code {
   .markup-panel pre[class*="language-"] {
     margin-top: 0; }
 
+@media (min-width: 600px) {
+  .page.has-sidebar {
+    display: flex; } }
+
+@media (min-width: 600px) {
+  .page.has-sidebar .main-content {
+    flex: 1; } }
+
 .main-content {
   height: auto; }
 
