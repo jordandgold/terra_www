@@ -1543,8 +1543,8 @@ html {
   align-content: stretch; }
 
 :root {
-  --gutter-width: var(--spacing-lg);
-  --outer-margin: var(--spacing-lg);
+  --gutter-width: var(--spacing-md);
+  --outer-margin: var(--spacing-md);
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 600px;
