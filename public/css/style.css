@@ -5475,13 +5475,13 @@ body.has-open-nav {
   width: 43.2px;
   display: inline-block; }
 
-.markup-panel div.d-flex,
-.markup-panel div.d-inline-flex {
+.markup-panel.flex-example div.d-flex,
+.markup-panel.flex-example div.d-inline-flex {
   border: 1px solid #e2e2e7;
   padding: 12px;
   margin-bottom: 12px; }
-  .markup-panel div.d-flex > div,
-  .markup-panel div.d-inline-flex > div {
+  .markup-panel.flex-example div.d-flex > div,
+  .markup-panel.flex-example div.d-inline-flex > div {
     border: 1px solid #0076a6;
     padding: 12px;
     color: #ffffff;
