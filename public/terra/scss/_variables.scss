@@ -108,6 +108,7 @@ $font-weight: map-merge((
 $type-scale: () !default;
 $type-scale: map-merge((
     'micro': 12px,
+    'xs': 14px,
     'sm': 16px,
     'base': 20px,
     'md': 28px,
