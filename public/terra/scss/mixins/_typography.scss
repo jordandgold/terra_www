@@ -1,5 +1,4 @@
 // header type setting
-
 @mixin header-type-setting($level: 'base', $weight: $header-font-weight) {
 	font-size: map-get($type-scale, $level);
 	line-height: 1.25;
@@ -9,27 +8,23 @@
 }
 
 // general type setting
-
 @mixin type-setting($level: 'base') {
 	font-size: map-get($type-scale, $level);
 	line-height: 1.5;
 }
 
 // paragraph type setting
-
 @mixin paragraph-type-setting {
 	@include type-setting('base');
 	margin: 0 0 $base-line-height 0;
 }
 
 // sets font-size
-
 @mixin font-size($size) {
 	@include type-setting($size);
 }
 
 // headings
-
 @mixin heading-1 {
 	@include header-type-setting('super');
 	padding-bottom: spacing('sm');

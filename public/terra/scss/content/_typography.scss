@@ -2,39 +2,86 @@
 // Typography
 //
 
+
 // body type settings
+
 body, html {
-	@include font-sans-serif;
+	font-family: $body-font-family;
 	@include type-setting('base');
 }
 
+
+
 // paragraph type setting
+
 p {
 	@include paragraph-type-setting;
 }
 
+
 // heading type setting
+
 h1,
-.heading-1 {
+.h1 {
 	@include heading-1;
 }
 
 h2,
-.heading-2 {
+.h2 {
 	@include heading-2;
 }
 
 h3,
-.heading-3 {
+.h3 {
 	@include heading-3;
 }
 
 h4,
-.heading-4 {
+.h4 {
 	@include heading-4;
 }
 
 h5,
-.heading-5 {
+.h5 {
 	@include heading-5;
+}
+
+
+// font-size utility classes
+
+.font-size-micro {
+	@include font-size('micro');
+}
+
+.font-size-xs {
+	@include font-size('xs');
+}
+
+.font-size-sm,
+small {
+	@include font-size('sm');
+}
+
+.font-size-base {
+	@include font-size('base');
+}
+
+.font-size-md {
+	@include font-size('md');
+}
+
+.font-size-lg {
+	@include font-size('lg');
+}
+
+.font-size-xl {
+	@include font-size('xl');
+}
+
+.font-size-super {
+	@include font-size('super');
+}
+
+.font-size-mega {
+	@include font-size('mega');
 }
