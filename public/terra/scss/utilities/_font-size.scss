@@ -6,9 +6,18 @@
 	@include font-size('micro');
 }
 
+.font-size-xs,
+small {
+	@include font-size('xs');
+}
+
 .font-size-sm,
 small {
 	@include font-size('sm');
+}
+
+.font-size-base {
+	@include font-size('base');
 }
 
 .font-size-md {
