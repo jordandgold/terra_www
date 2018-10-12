@@ -1,43 +1,63 @@
 <div class="page-section__sub-section">
-	<h4>Spacing Scale</h4>
-	<p>The spacing scale is a set of predefined values that can be utilized across interfaces and components to keep spacing consistent between and within components.</p>
-	<p>By default, the spacing scale is as follows:</p>
-	<ul class="list-unstyled list-condensed">
-		<li><b>none:</b> 0px</li>
-		<li><b>micro:</b> 4px</li>
-		<li><b>mini:</b> 8px</li>
-		<li><b>xxs:</b> 12px</li>
-		<li><b>xs:</b> 16px</li>
-		<li><b>sm:</b> 24px</li>
-		<li><b>md:</b> 32px</li>
-		<li><b>lg:</b> 48px</li>
-		<li><b>xl:</b> 64px</li>
-		<li><b>xxl:</b> 72px</li>
-		<li><b>super:</b> 96px</li>
-		<li><b>mega:</b> 144px</li>
+	<h4>Display Classes</h4>
+	<p>Terra's responsive set of display utility classes allows full control over the display property of objects across various screen sizes.</p>
+	<p>
+		For all screen sizes: <code>.d-{property}</code><br />
+		For <code>sm</code>, <code>md</code> and <code>lg</code> screens: <code>.d-{breakpoint}-{property}</code><br />
+	</p>
+	<p>Where <code>{breakpoint}</code> is one of the following:</p>
+	<ul class="list-condensed">
+		<li><code>sm</code> for small screen sizes and up</li>
+		<li><code>md</code> for medium screen sizes and up</li>
+		<li><code>lg</code> for large screen sizes and up</li>
+	</ul>
+	<p>Where <code>{property}</code> is one of the following:</p>
+	<ul class="list-condensed">
+		<li><code>inline</code></li>
+		<li><code>inline-block</code></li>
+		<li><code>block</code></li>
+		<li><code>flex</code></li>
+		<li><code>inline-flex</code></li>
+		<li><code>table</code></li>
+		<li><code>table-cell</code></li>
+		<li><code>table-row</code></li>
+		<li><code>none</code></li>
 	</ul>
 </div>
 <div class="page-section__sub-section">
-	<h4>Padding</h4>
-	<p>Padding classes can define padding on all sides <code>.pad-*</code>, vertical padding <code>.pad-v-*</code>, horizontal padding <code>.pad-h-*</code>, or you can also specify top <code>.pad-top-*</code>, left <code>.pad-left-*</code>, bottom <code>.pad-bottom-*</code> and right <code>.pad-right-*</code>.</p>
-	<p>The <code>*</code> will be replaced with whichever number from the spacing scale. For example, to have xxs padding on all sides of an object, you would add the class: <code>.pad-all-xxs</code>.
+	<h4>Basic Usage</h4>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="box pad-xxs">
-	.pad-3
+<div class="d-block pad-xs bg-dark color-light">
+	.d-block
+</div>
+<div class="d-block pad-xs bg-light color-dark">
+	.d-block
+</div>
+		</div>
+		<pre><code class="language-markup"></code></pre>
+	</div>
+	<div class="markup-panel">
+		<div class="markup-panel__example">
+<div class="d-inline-block pad-xs bg-dark color-light">
+	.d-inline-block
+</div>
+<div class="d-inline-block pad-xs bg-light color-dark">
+	.d-inline-block
 </div>
 		</div>
 		<pre><code class="language-markup"></code></pre>
 	</div>
 </div>
 <div class="page-section__sub-section">
-	<h4>Margin</h4>
-	<p>Margin classes follow the same pattern as padding. Margin classes can define margin on all sides <code>.margin-*</code>, vertical margin <code>.margin-v-*</code>, horizontal margin <code>.margin-h-*</code>, or you can also specify top <code>.margin-top-*</code>, left <code>.margin-left-*</code>, bottom <code>.margin-bottom-*</code> and right <code>.margin-right-*</code>.</p>
-	<p>To have an lg margin on the left side of an object, you would add the class: <code>.margin-left-lg</code>.
+	<h4>Responsive Usage</h4>
 	<div class="markup-panel">
 		<div class="markup-panel__example">
-<div class="box pad-xxs margin-left-lg">
-	.margin-left-lg
+<div class="d-block d-md-inline-block pad-xs bg-dark color-light">
+	.d-block .d-md-inline-block
+</div>
+<div class="d-inline-block d-md-block pad-xs bg-light color-dark">
+	.d-inline-block .d-md-block
 </div>
 		</div>
 		<pre><code class="language-markup"></code></pre>
