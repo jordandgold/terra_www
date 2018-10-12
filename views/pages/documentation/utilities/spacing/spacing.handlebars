@@ -1,8 +1,33 @@
 <div class="page-section__sub-section">
-	<h4>Spacing Scale</h4>
-	<p>The spacing scale is a set of predefined values that can be utilized across interfaces and components to keep spacing consistent between and within components.</p>
-	<p>By default, the spacing scale is as follows:</p>
-	<ul class="list-unstyled list-condensed">
+	<h4>Spacing Classes</h4>
+	<p>The Terra spacing scale is a set of predefined values that can be utilized across interfaces and components to keep spacing consistent between and within components.</p>
+	<p>
+		For spacing on all sides, the class follows this pattern: <code>.{property}-{size}</code><br />
+		With a direction, the classes follow this pattern: <code>.{property}-{direction}-{size}</code><br />
+		Responsive spacing classes follow this pattern: <code>.{property}-{direction}-{breakpoint}-{size}</code>
+	</p>
+	<p>Where <code>{property}</code> is one of the following:</p>
+	<ul class="list-condensed">
+		<li><code>pad</code> for padding</li>
+		<li><code>margin</code> for margin</li>
+	</ul>
+	<p>Where <code>{breakpoint}</code> is one of the following:</p>
+	<ul class="list-condensed">
+		<li><code>sm</code> for small screen sizes and up</li>
+		<li><code>md</code> for medium screen sizes and up</li>
+		<li><code>lg</code> for large screen sizes and up</li>
+	</ul>
+	<p>Where <code>{direction}</code> is one of the following:</p>
+	<ul class="list-condensed">
+		<li><code>t</code> for top</li>
+		<li><code>r</code> for right</li>
+		<li><code>b</code> for bottom</li>
+		<li><code>l</code> for left</li>
+		<li><code>h</code> for horizontal, or left and right</li>
+		<li><code>v</code> for vertical, or top and bottom</li>
+	</ul>
+	<p>Where <code>{size}</code> is one of the following:</p>
+	<ul class="list-condensed">
 		<li><b>none:</b> 0px</li>
 		<li><b>micro:</b> 4px</li>
 		<li><b>mini:</b> 8px</li>
