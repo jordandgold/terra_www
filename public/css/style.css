@@ -6155,13 +6155,6 @@ body.has-open-nav {
     .ter-pagination__list-item.is-active span:hover {
       border-bottom: 1px solid #b4b4c0; }
 
-.panel {
-  display: block;
-  padding: 24px;
-  background: #ffffff;
-  border: 3px solid #f3f3f7;
-  margin: 24px 0; }
-
 .ter-table {
   width: 100%;
   border-spacing: 1px;
