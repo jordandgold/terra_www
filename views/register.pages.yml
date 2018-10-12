@@ -18,5 +18,5 @@
   url: documentation/layout/flexbox
 - name: spacing
   url: documentation/utilities/spacing
-- name: hidden
-  url: documentation/utilities/hidden
+- name: display
+  url: documentation/utilities/display
