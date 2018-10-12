@@ -53,6 +53,66 @@
 .d-none {
   display: none; }
 
+@media only screen and (min-width: 600px) {
+  .d-sm-inline {
+    display: inline; }
+  .d-sm-inline-block {
+    display: inline-block; }
+  .d-sm-block {
+    display: block; }
+  .d-sm-flex {
+    display: flex; }
+  .d-sm-inline-flex {
+    display: inline-flex; }
+  .d-sm-table {
+    display: table; }
+  .d-sm-table-cell {
+    display: table-cell; }
+  .d-sm-table-row {
+    display: table-row; }
+  .d-sm-none {
+    display: none; } }
+
+@media only screen and (min-width: 900px) {
+  .d-md-inline {
+    display: inline; }
+  .d-md-inline-block {
+    display: inline-block; }
+  .d-md-block {
+    display: block; }
+  .d-md-flex {
+    display: flex; }
+  .d-md-inline-flex {
+    display: inline-flex; }
+  .d-md-table {
+    display: table; }
+  .d-md-table-cell {
+    display: table-cell; }
+  .d-md-table-row {
+    display: table-row; }
+  .d-md-none {
+    display: none; } }
+
+@media only screen and (min-width: 1200px) {
+  .d-lg-inline {
+    display: inline; }
+  .d-lg-inline-block {
+    display: inline-block; }
+  .d-lg-block {
+    display: block; }
+  .d-lg-flex {
+    display: flex; }
+  .d-lg-inline-flex {
+    display: inline-flex; }
+  .d-lg-table {
+    display: table; }
+  .d-lg-table-cell {
+    display: table-cell; }
+  .d-lg-table-row {
+    display: table-row; }
+  .d-lg-none {
+    display: none; } }
+
 /**
  * Height
  */
@@ -749,27 +809,27 @@
   text-align: center; }
 
 @media only screen and (min-width: 600px) {
-  .text-left-sm {
+  .text-sm-left {
     text-align: left; }
-  .text-right-sm {
+  .text-sm-right {
     text-align: right; }
-  .text-center-sm {
+  .text-sm-center {
     text-align: center; } }
 
 @media only screen and (min-width: 900px) {
-  .text-left-md {
+  .text-md-left {
     text-align: left; }
-  .text-right-md {
+  .text-md-right {
     text-align: right; }
-  .text-center-md {
+  .text-md-center {
     text-align: center; } }
 
 @media only screen and (min-width: 1200px) {
-  .text-left-lg {
+  .text-lg-left {
     text-align: left; }
-  .text-right-lg {
+  .text-lg-right {
     text-align: right; }
-  .text-center-lg {
+  .text-lg-center {
     text-align: center; } }
 
 /**
