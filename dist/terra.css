@@ -4976,25 +4976,25 @@ a.ter-button--icon {
       .ter-input__wrap input[type="file"]::-webkit-input-placeholder,
       .ter-input__wrap input[type="password"]::-webkit-input-placeholder,
       .ter-input__wrap textarea::-webkit-input-placeholder {
-        color: #d0d0d7; }
+        color: #9d9da6; }
       .ter-input__wrap input[type="text"]:-ms-input-placeholder,
       .ter-input__wrap input[type="email"]:-ms-input-placeholder,
       .ter-input__wrap input[type="file"]:-ms-input-placeholder,
       .ter-input__wrap input[type="password"]:-ms-input-placeholder,
       .ter-input__wrap textarea:-ms-input-placeholder {
-        color: #d0d0d7; }
+        color: #9d9da6; }
       .ter-input__wrap input[type="text"]::-ms-input-placeholder,
       .ter-input__wrap input[type="email"]::-ms-input-placeholder,
       .ter-input__wrap input[type="file"]::-ms-input-placeholder,
       .ter-input__wrap input[type="password"]::-ms-input-placeholder,
       .ter-input__wrap textarea::-ms-input-placeholder {
-        color: #d0d0d7; }
+        color: #9d9da6; }
       .ter-input__wrap input[type="text"]::placeholder,
       .ter-input__wrap input[type="email"]::placeholder,
       .ter-input__wrap input[type="file"]::placeholder,
       .ter-input__wrap input[type="password"]::placeholder,
       .ter-input__wrap textarea::placeholder {
-        color: #d0d0d7; }
+        color: #9d9da6; }
       .ter-input__wrap input[type="text"]:disabled,
       .ter-input__wrap input[type="email"]:disabled,
       .ter-input__wrap input[type="file"]:disabled,
@@ -5035,6 +5035,28 @@ a.ter-button--icon {
       color: #ce2740; }
     .has-success .ter-input__message {
       color: #1cb260; }
+  .ter-input--chunky input[type="text"],
+  .ter-input--chunky input[type="email"],
+  .ter-input--chunky input[type="file"],
+  .ter-input--chunky input[type="password"],
+  .ter-input--chunky textarea {
+    font-size: 20px;
+    padding: 24px 16px 4px 16px; }
+  .ter-input--chunky .ter-input__wrap {
+    position: relative; }
+  .ter-input--chunky .ter-input__label {
+    font-size: 20px;
+    color: #9d9da6;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 10;
+    padding-bottom: 0; }
+  .ter-input--chunky.has-value .ter-input__label {
+    font-size: 14px;
+    top: 16px; }
 
 .ter-checkbox,
 .ter-radio {

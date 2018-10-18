@@ -110,6 +110,35 @@
             color: emotive-color('success');
         }
     }
+    &--chunky {
+        input[type="text"],
+        input[type="email"],
+        input[type="file"],
+        input[type="password"],
+        textarea {
+            font-size: $input-chunky-font-size;
+            padding: spacing('sm') spacing('xs') spacing('micro') spacing('xs');
+        }
+        .ter-input__wrap {
+            position: relative;
+        }
+        .ter-input__label {
+            font-size: $input-chunky-font-size;
+            color: $input-chunk-label-color;
+            position: absolute;
+            top: 50%;
+            left: spacing('xs');
+            transform: translateY(-50%);
+            z-index: 10;
+            padding-bottom: 0;
+        }
+        &.has-value {
+            .ter-input__label {
+                font-size: type-scale('xs');
+                top: spacing('xs');
+            }
+        }
+    }
 }
 
 .ter-checkbox,

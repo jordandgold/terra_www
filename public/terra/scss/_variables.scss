@@ -336,8 +336,11 @@ $input-border-width: .05rem;
 $input-label-font-size: type-scale('sm');
 $input-label-color: color('dark-1');
 
-$input-placeholder-color: color('gray-2');
+$input-placeholder-color: color('gray-5');
 $input-focus-border-color: color('brand-1');
+
+$input-chunky-font-size: type-scale('base');
+$input-chunk-label-color: $input-placeholder-color;
 
 $input-inverse-bg: color('gray-10');
 $input-inverse-text-color: color('gray-4');
