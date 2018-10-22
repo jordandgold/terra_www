@@ -37,7 +37,7 @@
 						padding: spacing('micro') 0;
 						display: block;
 						> a:not(.ter-button) {
-							@include type-setting();
+							@include type-setting('sm');
 							color: $mega-menu-link-hover;
 							margin: 0;
 							text-decoration: none;
@@ -83,9 +83,10 @@
 		}
 	}
 	&__list-head {
-		@include type-setting('mini');
+		@include type-setting('sm');
         padding: spacing('mini') 0;
         text-transform: uppercase;
+        font-weight: font-weight('bold');
         color: $mega-menu-type-color !important;
         .is-inverse & {
             color: $mega-menu-type-color !important;

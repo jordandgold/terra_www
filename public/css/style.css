@@ -5536,7 +5536,7 @@ ol {
         padding: 4px 0;
         display: block; }
         .ter-mega-menu__list li > ul > li > a:not(.ter-button) {
-          font-size: 20px;
+          font-size: 16px;
           line-height: 1.5;
           color: #0076a6;
           margin: 0;
@@ -5585,9 +5585,11 @@ ol {
         padding: 12px 0; } }
 
 .ter-mega-menu__list-head {
+  font-size: 16px;
   line-height: 1.5;
   padding: 8px 0;
   text-transform: uppercase;
+  font-weight: 600;
   color: #262533 !important; }
   .is-inverse .ter-mega-menu__list-head {
     color: #262533 !important; }
@@ -5793,7 +5795,6 @@ body.has-open-nav {
           color: #93939e;
           text-decoration: none; }
     .ter-navbar__brand img {
-      height: 32px;
       padding: 16px 0; }
   .ter-navbar__nav {
     box-shadow: 0px 4px 12px 0px rgba(54, 53, 69, 0.1), 0px 12px 16px 4px rgba(54, 53, 69, 0.05);
