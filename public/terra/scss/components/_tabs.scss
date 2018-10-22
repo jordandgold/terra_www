@@ -19,35 +19,38 @@
 		flex-grow: 1;
 		padding: 0;
 		margin: 0;
-		border-left: 1px solid transparentize($nav-tabs-border-color, 0.75);
-    	border-top: 1px solid transparentize($nav-tabs-border-color, 0.75);
+		border-left: $nav-tabs-border-size solid transparentize($nav-tabs-border-color, 0.75);
+    	border-top: $nav-tabs-border-size solid transparentize($nav-tabs-border-color, 0.75);
     	border-right: 0px;
-		border-bottom: 1px solid $nav-tabs-border-color;
+		border-bottom: $nav-tabs-border-size solid $nav-tabs-border-color;
 		a {
 			@include button-base();
 			@include border-radius('all', 'none');
 			color: $nav-tabs-link-color;
 			display: block;
 			padding: spacing('xxs') spacing('xs');
+			background-color: $nav-tabs-link-bg;
+			font-weight: $nav-tabs-font-weight;
 			&:hover {
 				color: $nav-tabs-link-hover;
 			}
 		}
 		&.is-active {
-			border-left: 1px solid $nav-tabs-border-color;
-	    	border-top: 1px solid $nav-tabs-border-color;
-	    	border-right: 1px solid $nav-tabs-border-color;
+			border-left: $nav-tabs-border-size solid $nav-tabs-border-color;
+	    	border-top: $nav-tabs-border-size solid $nav-tabs-border-color;
+	    	border-right: $nav-tabs-border-size solid $nav-tabs-border-color;
 			border-bottom: 0px;
 			a {
 				color: $nav-tabs-link-hover;
+				background-color: $nav-tabs-active-link-bg;
 			}
 		}
-		&.is-active + li > a {
+		&.is-active + li {
 			border-left: 0px;
 		}
 		&:last-child {
 			a {
-				border-right: 1px solid transparentize($nav-tabs-border-color, 0.75);
+				border-right: $nav-tabs-border-size solid transparentize($nav-tabs-border-color, 0.75);
 			}
 		}
 	}
@@ -71,7 +74,6 @@
 		padding: 0;
 		margin: 0;
 		a {
-			@include button-base();
 			@include border-radius('all', 'none');
 			color: $compact-tabs-link-color;
 			display: block;

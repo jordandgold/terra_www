@@ -210,7 +210,11 @@ $body-font-family: $font-sans-serif;
 
 $nav-tabs-link-color: color('gray-7');
 $nav-tabs-link-hover: color('dark-1');
-$nav-tabs-border-color: color('gray-2');
+$nav-tabs-border-color: color('dark-0');
+$nav-tabs-border-size: 2px;
+$nav-tabs-link-bg: color('light-1');
+$nav-tabs-active-link-bg: transparent;
+$nav-tabs-font-weight: font-weight('bold');
 
 
 // compact tabs
