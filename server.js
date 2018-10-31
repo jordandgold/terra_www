@@ -1,13 +1,13 @@
 'use strict';
 
-var auth = require('http-auth');
+// var auth = require('http-auth');
 
 
-var basic = auth.basic(
-    {
-      file: __dirname + "/users.htpasswd"
-    }
-);
+// var basic = auth.basic(
+//     {
+//       file: __dirname + "/users.htpasswd"
+//     }
+// );
 
 
 
@@ -17,7 +17,7 @@ var express = require('express'),
     fileSync = require('fs'),
 	app = express();
 
-app.use(auth.connect(basic));
+// app.use(auth.connect(basic));
 
 
 // Create `ExpressHandlebars` instance with a default layout.
