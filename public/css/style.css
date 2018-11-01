@@ -3856,7 +3856,7 @@ h5,
   font-weight: 600;
   color: #262533;
   display: block;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
   margin: 0; }
 
 .font-size-micro {
@@ -4759,7 +4759,7 @@ a.ter-button--icon {
     font-weight: 600;
     color: #262533;
     display: block;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
     margin: 0; }
   .ter-card__image {
     overflow: hidden; }

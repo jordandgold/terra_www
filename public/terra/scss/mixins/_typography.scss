@@ -51,6 +51,6 @@
 
 @mixin heading-5 {
 	@include header-type-setting('base');
-	padding-bottom: spacing('xs');
+	padding-bottom: spacing('mini');
 	margin: 0;
 }
