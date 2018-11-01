@@ -21,7 +21,7 @@
 				tabScope = selectedItem.parent().parent().parent().data('controls'),
 				tabContentWrapper = $(tabScope),
 				selectedContent = tabContentWrapper.find('li[data-content="'+selectedTab+'"]'),
-				slectedContentHeight = selectedContent.innerHeight();
+				slectedContentHeight = selectedContent.outerHeight();
 			
 			$('[data-controls="'+tabScope+'"]').find('a[data-content]').parent().removeClass('is-active');
 			selectedItem.parent().addClass('is-active');
