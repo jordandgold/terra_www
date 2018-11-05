@@ -6,13 +6,19 @@
     border-style: solid;
     border-color: $card-border-color;
     border-radius: $card-border-radius;
+    &[href] {
+    	display: block;
+    }
 	&__body {
+		display: block;
 		padding: spacing('md');
 	}
 	&__title {
+		display: block;
 		@include heading-5();
 	}
 	&__image {
+		display: block;
 		overflow: hidden;
 		&--top {
 			@include border-radius('top-left','none');
@@ -27,6 +33,19 @@
 		> img {
 			width: 100%;
 			height: auto;
+		}
+	}
+}
+
+.is-inverse {
+	.ter-card {
+		a, .link {
+			color: $link-color;
+			text-decoration: none;
+			&:hover {
+				color: $link-hover-color;
+				text-decoration: none;
+			}
 		}
 	}
 }

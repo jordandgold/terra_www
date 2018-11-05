@@ -4789,9 +4789,13 @@ a.ter-button--icon {
   border-style: solid;
   border-color: #d0d0d7;
   border-radius: 0; }
+  .ter-card[href] {
+    display: block; }
   .ter-card__body {
+    display: block;
     padding: 32px; }
   .ter-card__title {
+    display: block;
     font-size: 20px;
     line-height: 1.25;
     font-weight: 600;
@@ -4800,6 +4804,7 @@ a.ter-button--icon {
     padding-bottom: 8px;
     margin: 0; }
   .ter-card__image {
+    display: block;
     overflow: hidden; }
     .ter-card__image--top {
       border-top-left-radius: 0;
@@ -4812,6 +4817,13 @@ a.ter-button--icon {
     .ter-card__image > img {
       width: 100%;
       height: auto; }
+
+.is-inverse .ter-card a, .is-inverse .ter-card .link {
+  color: #009AD9;
+  text-decoration: none; }
+  .is-inverse .ter-card a:hover, .is-inverse .ter-card .link:hover {
+    color: #0076a6;
+    text-decoration: none; }
 
 /*
  * Terra Design System: v.1.0.0
