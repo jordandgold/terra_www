@@ -1,14 +1,14 @@
 .ter-modal {
-	@include depth(2);
+    @include depth(2);
     width: 100%;
     margin: spacing('xs');
-	position: relative;
+    position: relative;
     transition: transform 225ms ease-in-out;
     width: auto;
-	&__title {
-		@include type-setting();
-		padding-bottom: spacing('sm');
-	}
+    &__title {
+        @include type-setting();
+        padding-bottom: spacing('sm');
+    }
     &__content {
         padding: spacing('lg');
     }
@@ -17,7 +17,7 @@
         margin: 0 auto;
         position: relative;
     }
-	&__close {
+    &__close {
         position: absolute;
         top: spacing('sm');
         right: spacing('sm');
@@ -27,8 +27,8 @@
         background: transparent;
         border: 0;
         &:after {
-        	@include icon-base();
-        	content: "\f00d";
+            @include icon-base();
+            content: "\f00d";
         }
         &:hover {
             opacity: 0.6;
@@ -53,16 +53,18 @@ body.has-modal-open {
     opacity: 0;
     transition: all 0.25s ease-in-out;
     &.is-open {
-        opacity:1;
-        visibility:visible;
+        opacity: 1;
+        visibility: visible;
+        overflow: scroll;
         .ter-modal {
-            transform: translateY(-50%);
+            transform: translateY(0px);
         }
     }
     .ter-modal {
         position: relative;
-        top: 50%;
-        transform: translateY(calc(-50% + 20px));
+        top: 0;
+        padding: spacing('xxl') 0;
+        transform: translateY(20px);
         width: 600px;
         margin: 0 auto;
         &__wrap {
