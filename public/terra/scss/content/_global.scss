@@ -15,7 +15,11 @@ body {
 a,
 a:visited,
 a:active,
-a:focus {
+a:focus,
+.link,
+.link:visited,
+.link:active,
+.link:focus {
   font-weight: font-weight(0);
   color: $link-color;
   transition: color 200ms ease;
@@ -23,6 +27,13 @@ a:focus {
   &:hover {
     color: $link-hover-color;
     text-decoration: none;
+    cursor: pointer;
+  }
+  .is-inverse & {
+    color: $link-inverse-color;
+    &:hover {
+      color: $link-inverse-hover-color;
+    }
   }
 }
 

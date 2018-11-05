@@ -21,6 +21,9 @@ body.has-open-nav {
 	position: relative;
 	width: 100%;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
+	&.has-sub-nav {
+		height: auto;
+	}
 	&.is-inverse {
 		background: $navbar-inverse-bg;
 		border-bottom: $navbar-border-width solid $navbar-inverse-border-color;

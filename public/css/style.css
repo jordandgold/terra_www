@@ -3347,16 +3347,43 @@ body.no-nav {
 a,
 a:visited,
 a:active,
-a:focus {
+a:focus,
+.link,
+.link:visited,
+.link:active,
+.link:focus {
   color: #009AD9;
   transition: color 200ms ease;
   text-decoration: none; }
   a:hover,
   a:visited:hover,
   a:active:hover,
-  a:focus:hover {
+  a:focus:hover,
+  .link:hover,
+  .link:visited:hover,
+  .link:active:hover,
+  .link:focus:hover {
     color: #0076a6;
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer; }
+  .is-inverse a, .is-inverse
+  a:visited, .is-inverse
+  a:active, .is-inverse
+  a:focus, .is-inverse
+  .link, .is-inverse
+  .link:visited, .is-inverse
+  .link:active, .is-inverse
+  .link:focus {
+    color: #aeaeb6; }
+    .is-inverse a:hover, .is-inverse
+    a:visited:hover, .is-inverse
+    a:active:hover, .is-inverse
+    a:focus:hover, .is-inverse
+    .link:hover, .is-inverse
+    .link:visited:hover, .is-inverse
+    .link:active:hover, .is-inverse
+    .link:focus:hover {
+      color: #93939e; }
 
 hr {
   width: 100%;
@@ -5731,6 +5758,8 @@ body.has-open-nav {
   position: relative;
   width: 100%;
   border-bottom: 1px solid #e2e2e7; }
+  .ter-navbar.has-sub-nav {
+    height: auto; }
   .ter-navbar.is-inverse {
     background: #363545;
     border-bottom: 1px solid #363545; }
