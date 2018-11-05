@@ -280,8 +280,10 @@ $button-icon-color: color('gray-4');
 $button-icon-hover: color('gray-6');
 $button-outline-text-color: color('gray-10');
 $button-outline-border-color: color('brand-1');
-$button-outline-inverse-text-color: text-color('inverse');
+$button-outline-hover-color: type-color('inverse');
+$button-outline-inverse-text-color: type-color('inverse');
 $button-outline-inverse-border-color: color('white');
+$button-outline-inverse-hover-color: type-color('normal');
 
 
 // tooltips

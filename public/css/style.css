@@ -4637,9 +4637,20 @@ a.ter-button--outline {
   .ter-button--outline i:before,
   a.ter-button--outline i:before {
     color: #474655; }
+  .ter-button--outline:hover,
+  a.ter-button--outline:hover {
+    background-color: #009AD9;
+    border-color: #009AD9;
+    color: #ffffff; }
   .is-inverse .ter-button--outline, .is-inverse
   a.ter-button--outline {
-    color: #ffffff; }
+    color: #ffffff;
+    border-color: #ffffff; }
+    .is-inverse .ter-button--outline:hover, .is-inverse
+    a.ter-button--outline:hover {
+      border-color: #ffffff;
+      background: #ffffff;
+      color: #262533; }
 
 .ter-button--ghost,
 a.ter-button--ghost {

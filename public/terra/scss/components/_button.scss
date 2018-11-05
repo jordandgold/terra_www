@@ -29,8 +29,19 @@ a.ter-button--outline {
         $button-outline-text-color,
         $button-outline-border-color,
     );
+    &:hover {
+        background-color: $button-outline-border-color;
+        border-color: $button-outline-border-color;
+        color: $button-outline-hover-color;
+    }
     .is-inverse & {
-        color: type-color('inverse');
+        color: $button-outline-inverse-text-color;
+        border-color: $button-outline-inverse-border-color;
+        &:hover {
+            border-color: $button-outline-inverse-border-color;
+            background: $button-outline-inverse-border-color;
+            color: $button-outline-inverse-hover-color;
+        }
     }
 }
 .ter-button--ghost,
