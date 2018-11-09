@@ -67,7 +67,6 @@ ul.list-inline {
 
 ul,
 ol {
-	@include type-setting();
 	margin: 0 0 $base-line-height 0;
 	li {
 		padding: spacing('micro') 0;
