@@ -78,6 +78,6 @@ app.get('*', function(req, res){
   res.render('pages/404/404', {layout: 'full-width', title: '404 | Terra Design System'});
 });
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log('server listening on: 3000');
+app.listen(process.env.PORT || 3001, function () {
+    console.log('server listening on: 3001');
 });
