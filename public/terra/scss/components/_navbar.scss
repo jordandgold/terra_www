@@ -105,29 +105,27 @@ body.has-open-nav {
         background: $navbar-bg;
         display: none;
         flex: 1;
-        justify-content: flex-end;
 		@include for-size(tablet-landscape-up) {
 			@include box-shadow("none");
-			display: inline-block;
+			display: flex;
 			width: initial;
 			position: static;
 			height: calc(#{$navbar-height} - #{$navbar-border-width});
         	top: unset;
         	left: unset;
-        	display: flex;
+    	    justify-content: flex-end;
 	    }
 	    .is-inverse & {
 			background: $navbar-inverse-bg;
 		}
 	}
     &__menu {
-        display: block;
-        width: 100%;
         height: auto;
         padding: spacing('xs') 0;
         margin: 0;
-        float: right;
         @include for-size(tablet-landscape-down) {
+        	display: block;
+        	width: 100%;
         	padding: 0;
         	overflow: scroll;
         	max-height: 75vh;
@@ -139,8 +137,8 @@ body.has-open-nav {
         	margin-right: auto;
         }
     	@include for-size(tablet-landscape-up) {
-    		display: table;
-    		width: initial;
+    		display: inline-block;
+    		width: auto;
     		padding-top: 0;
     		padding-bottom: 0;
     		height: $navbar-height;
@@ -158,7 +156,7 @@ body.has-open-nav {
 			border-bottom: 0px;
 		}
 		@include for-size(tablet-landscape-up) {
-			display: table-cell;
+			display: inline;
 			width: initial;
 			padding: 0 spacing('xs');
 			vertical-align: middle;
