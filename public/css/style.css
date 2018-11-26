@@ -6757,6 +6757,9 @@ body.has-open-nav {
         -webkit-transform: translateY(-3px);
                 transform: translateY(-3px); }
 
+.side-nav {
+  scroll: auto; }
+
 .ter-navbar--terra {
   z-index: 901; }
 
