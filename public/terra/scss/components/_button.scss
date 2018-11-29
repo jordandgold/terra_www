@@ -61,6 +61,15 @@ a.ter-button--ghost {
     }
 }
 
+// disabled button
+.ter-button:disabled,
+a.ter-button:disabled {
+    cursor: not-allowed;
+    color: $input-disabled-color;
+    border-color: $input-disabled-border-color;
+    background-color: $input-disabled-bg;
+}
+
 // button sizing
 .ter-button--large,
 a.ter-button--large {

@@ -355,7 +355,7 @@ $input-inverse-border-color: color('dark-0');
 $fieldset-legend-font-size: type-scale('sm');
 $fieldset-legend-font-weight: font-weight('bold');
 
-$input-disabled-color: transparentize($input-border-color, .7);
+$input-disabled-color: transparentize($input-border-color, .2);
 $input-disabled-border-color: transparentize($input-border-color, .7);
 $input-disabled-bg: transparentize($input-border-color, .95);
 
