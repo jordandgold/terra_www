@@ -2653,6 +2653,10 @@ html {
 *:after {
   box-sizing: inherit; }
 
+b,
+strong {
+  font-weight: bold; }
+
 .flex-row {
   flex-direction: row; }
 
@@ -4684,6 +4688,13 @@ a.ter-button--ghost {
   a.ter-button--ghost:active {
     box-shadow: none; }
 
+.ter-button:disabled,
+a.ter-button:disabled {
+  cursor: not-allowed;
+  color: rgba(174, 174, 182, 0.8);
+  border-color: rgba(174, 174, 182, 0.3);
+  background-color: rgba(174, 174, 182, 0.05); }
+
 .ter-button--large,
 a.ter-button--large {
   font-size: 20px;
@@ -5049,7 +5060,7 @@ a.ter-button--icon {
       .ter-input__wrap input[type="file"]:disabled,
       .ter-input__wrap input[type="password"]:disabled,
       .ter-input__wrap textarea:disabled {
-        color: rgba(174, 174, 182, 0.3);
+        color: rgba(174, 174, 182, 0.8);
         border-color: rgba(174, 174, 182, 0.3);
         background: rgba(174, 174, 182, 0.05);
         cursor: not-allowed; }
@@ -5855,29 +5866,27 @@ body.has-open-nav {
     width: 100%;
     background: #ffffff;
     display: none;
-    flex: 1;
-    justify-content: flex-end; }
+    flex: 1; }
     @media (min-width: 900px) {
       .ter-navbar__nav {
         box-shadow: none;
-        display: inline-block;
+        display: flex;
         width: initial;
         position: static;
         height: calc(72px - 1px);
         top: unset;
         left: unset;
-        display: flex; } }
+        justify-content: flex-end; } }
     .is-inverse .ter-navbar__nav {
       background: #363545; }
   .ter-navbar__menu {
-    display: block;
-    width: 100%;
     height: auto;
     padding: 16px 0;
-    margin: 0;
-    float: right; }
+    margin: 0; }
     @media (max-width: 899px) {
       .ter-navbar__menu {
+        display: block;
+        width: 100%;
         padding: 0;
         overflow: scroll;
         max-height: 75vh; } }
@@ -5887,8 +5896,8 @@ body.has-open-nav {
       margin-right: auto; }
     @media (min-width: 900px) {
       .ter-navbar__menu {
-        display: table;
-        width: initial;
+        display: inline-block;
+        width: auto;
         padding-top: 0;
         padding-bottom: 0;
         height: 72px; } }
@@ -5904,7 +5913,7 @@ body.has-open-nav {
       border-bottom: 0px; }
     @media (min-width: 900px) {
       .ter-navbar__menu-item {
-        display: table-cell;
+        display: inline;
         width: initial;
         padding: 0 16px;
         vertical-align: middle;
