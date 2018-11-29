@@ -5,7 +5,7 @@ page:
   parent: 'Components'
   tagline: 'Show and hide content with the use of the Accordion'
 mixins:
-  content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
+  content: <p>123456Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ultricies dolor.</p>
   mixins:
     - name: 'test()'
       parameters: 'bgColor'
