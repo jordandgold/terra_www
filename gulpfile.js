@@ -32,7 +32,7 @@ gulp.task('sass:themes', function () {
   var processors = [
       autoprefixer({browsers: ['last 1 version']}),
   ];
-  return gulp.src('./public/scss/themes/*.scss')
+  return gulp.src('./public/terra/scss/themes/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest('./public/css/'));
