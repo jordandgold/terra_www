@@ -1,0 +1,428 @@
+/**
+ * Variables
+ */
+
+// import fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+
+// grayscale
+@function grayscale($key: 'dark-0') {
+  @return map-get($grayscale, $key);
+}
+$grayscale: () !default;
+$grayscale: map-merge((
+    'white':   #ffffff,
+    'light-0': #f9f9fb,
+    'light-1': #f3f3f7,
+    'gray-0':  #eaeaef,
+    'gray-1':  #e2e2e7,
+    'gray-2':  #d0d0d7,
+    'gray-3':  #bfbfc6,
+    'gray-4':  #aeaeb6,
+    'gray-5':  #9d9da6,
+    'gray-6':  #8c8b96,
+    'gray-7':  #7b7a86,
+    'gray-8':  #6a6976,
+    'gray-9':  #595868,
+    'gray-10': #474655,
+    'dark-0':  #363545,
+    'dark-1':  #262533,
+    'dark-2':  #1b1a26,
+    'dark-3':  #0b0a12,
+    'black':   #000000,
+), $grayscale);
+
+// brand colors
+@function brand-color($key: 'brand-1') {
+  @return map-get($brand-colors, $key);
+}
+$brand-colors: () !default;
+$brand-colors: map-merge((
+    'brand-1':  #009AD9,
+    'brand-2':  #FFBE00,
+    'accent-1': #005F9E,
+), $brand-colors);
+
+// emotive colors
+@function emotive-color($key: 'info') {
+  @return map-get($emotive-colors, $key);
+}
+$emotive-colors: () !default;
+$emotive-colors: map-merge((
+    'primary':      brand-color('brand-1'),
+    'secondary':    brand-color('accent-1'),
+    'danger':       #ce2740,
+    'success':      #1cb260,
+    'warning':      #FFBE00,
+    'light':        grayscale('light-1'),
+    'dark':         grayscale('dark-0'),
+), $emotive-colors);
+
+// create color palette map
+@function color($key) {
+  @return map-get($color-palette, $key);
+}
+$color-palette: map-collect(
+    $brand-colors,
+    $emotive-colors,
+    $grayscale
+);
+
+// type colors
+@function type-color($key: 'normal') {
+  @return map-get($type-colors, $key);
+}
+$type-colors: () !default;
+$type-colors: map-merge((
+    'normal':   grayscale('dark-1'),
+    'inverse':  grayscale('white'),
+), $type-colors);
+
+// font weight
+@function font-weight($key: 'normal') {
+  @return map-get($font-weight, $key);
+}
+$font-weight: () !default;
+$font-weight: map-merge((
+    'light': 300,
+    'normal': 400,
+    'bold': 600,
+    'black': 800,
+), $font-weight);
+
+// type scale
+@function type-scale($key: 'base') {
+  @return map-get($type-scale, $key);
+}
+$type-scale: () !default;
+$type-scale: map-merge((
+    'micro': 12px,
+    'sm': 16px,
+    'base': 20px,
+    'md': 28px,
+    'lg': 36px,
+    'xl': 44px,
+    'super': 52px,
+    'mega': 72px
+), $type-scale);
+
+// type setting
+$base-font-size: type-scale('base');
+$scale: 1.75;
+$base-line-height: $base-font-size * $scale;
+$line-height: (
+    -1: $base-line-height,
+    0: $base-line-height,
+    1: $base-line-height * 1,
+    2: $base-line-height * 1,
+    3: $base-line-height * 2,
+    4: $base-line-height * 2,
+    5: $base-line-height * 2,
+    6: $base-line-height * 2,
+);
+
+// border radius
+@function border-radius($key) {
+  @return map-get($border-radius-scale, $key);
+}
+$border-radius-scale: () !default;
+$border-radius-scale: map-merge((
+    'none': 0,
+    'sm': .125rem,
+    'md': .25rem,
+    'lg': .5rem,
+    'xl': 1rem,
+), $border-radius-scale);
+
+// heights
+@function height($key) {
+  @return map-get($height-scale, $key);
+}
+$height-scale: () !default;
+$height-scale: map-merge((
+    'xxs': 24px,
+    'xs': 32px,
+    'sm': 48px,
+    'md': 64px,
+    'lg': 72px,
+    'xl': 96px,
+    'xxl': 120px,
+), $height-scale);
+
+// spacing scale
+@function spacing($key) {
+  @return map-get($spacing-scale, $key);
+}
+$spacing-scale: () !default;
+$spacing-scale: map-merge((
+    'none': 0px,
+    'micro': 4px,
+    'mini': 8px,
+    'xxs': 12px,
+    'xs': 16px,
+    'sm': 24px,
+    'md': 32px,
+    'lg': 48px,
+    'xl': 64px,
+    'xxl': 72px,
+    'super': 96px,
+    'mega': 144px,
+), $spacing-scale);
+
+// box shadow
+$box-shadows: (
+    'none': none,
+    1: (
+        0px 4px 8px 0px rgba(54,53,69,.2),
+        0px 4px 8px 0px rgba(54,53,69,.1)
+    ),
+    2:  ( 
+        0px 4px 12px 0px rgba(54,53,69,.2),
+        0px 12px 16px 4px rgba(54,53,69,.1)
+    ),
+    3: (
+        0px 8px 24px 0px rgba(54,53,69,.2),
+        0px 16px 20px 0px rgba(54,53,69,.1)
+    ),
+    4: (
+        0px 16px 28px 0px rgba(54,53,69,.2),
+        0px 16px 40px 0px rgba(54,53,69,.1)
+    )
+);
+
+// font family
+
+$font-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+$font-serif: georgia, times, serif;
+$font-code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+
+// globals
+
+$body-bg-color: color('white');
+$body-font-color: type-color('normal');
+$border-radius-base: border-radius('none');
+$body-font-family: $font-sans-serif;
+
+
+// navigation tabs
+
+$nav-tabs-link-color: color('gray-7');
+$nav-tabs-link-hover: color('dark-1');
+$nav-tabs-border-color: color('dark-0');
+$nav-tabs-border-size: 2px;
+$nav-tabs-link-bg: color('light-1');
+$nav-tabs-active-link-bg: transparent;
+$nav-tabs-font-weight: font-weight('bold');
+
+
+// compact tabs
+
+$compact-tabs-link-color: color('gray-7');
+$compact-tabs-link-hover: color('dark-1');
+$compact-tabs-underline-color: color('dark-1');
+
+
+// pagination
+
+$pagination-border-color: color('gray-2');
+
+
+// headers
+
+$header-font-color: color('dark-1');
+$header-font-weight: font-weight('black');
+
+
+// links
+
+$link-color: color('brand-1');
+$link-hover-color: darken($link-color, 10%);
+$link-highlight: true;
+$link-highlight-color: lighten(color('brand-1'), 30%);
+$link-inverse-color: color('gray-4');
+$link-inverse-hover-color: darken($link-inverse-color, 10%);
+
+
+// navigation bar
+
+$navbar-height: height('lg');
+$navbar-bg: color('light-1');
+$navbar-font-size: type-scale('sm');
+$navbar-link-color: color('accent-1');
+$navbar-link-hover: $navbar-link-color;
+$navbar-link-hover-bg: color('gray-1');
+$navbar-border-width: 1px;
+$navbar-border-color: color('gray-1');
+$navbar-menu-icon-color: color('gray-3');
+$navbar-inverse-bg: color('dark-0');
+$navbar-inverse-border-color: color('dark-0');
+$navbar-inverse-link-color: $link-inverse-color;
+$navbar-inverse-link-hover-color: $link-inverse-hover-color;
+
+$sub-navbar-height: $navbar-height;
+$sub-navbar-bg: color('gray-1');
+$sub-navbar-link-color: color('gray-10');
+$sub-navbar-link-hover: color('gray-10');
+$sub-navbar-font-size: $navbar-font-size;
+
+
+// mega menu
+
+$mega-menu-bg: color('white');
+// $mega-menu-offset: calc(-1 * #{spacing('mini')});
+$mega-menu-offset: 0px;
+$mega-menu-type-color: type-color('normal');
+$mega-menu-link-color: color('brand-1');
+$mega-menu-link-hover: darken($link-color, 10%);
+
+
+// buttons
+
+$button-border-radius: $border-radius-base;
+$button-font-size: type-scale('sm');
+$button-border-size: 1px;
+$button-icon-color: color('gray-4');
+$button-icon-hover: color('gray-6');
+$button-outline-text-color: color('gray-10');
+$button-outline-border-color: color('brand-1');
+$button-outline-inverse-text-color: type-color('inverse');
+$button-outline-inverse-border-color: color('white');
+$button-outline-hover-color: type-color('inverse');
+
+
+// tooltips
+
+$tooltip-bg: color('dark-1');
+$tooltip-text-color: color('white');
+$tooltip-border-radius: $border-radius-base;
+
+
+// cards
+
+$card-bg: color('white');
+$card-border-radius: $border-radius-base;
+$card-border-width: 0px;
+$card-border-color: color('gray-2');
+
+
+// dropdowns
+
+$dropdown-item-font-size: type-scale('sm');
+$dropdown-border-size: 1px;
+$dropdown-border-color: color('gray-4');
+$dropdown-border-radius: $border-radius-base;
+$dropdown-bg: color('white');
+$dropdown-link-color: color('dark-1');
+$dropdown-link-hover-bg: color('light-1');
+$drodown-arrow-color: color('gray-6');
+$dropdown-no-link-color: color('gray-6');
+
+
+// panels
+
+$panel-bg: color('white');
+$panel-border-color: color('light-1');
+
+
+// accordion
+
+$accordion-bg: color('white');
+$accordion-expanded-bg: color('light-1');
+$accordion-border-width: .05rem;
+$accordion-border-color: color('gray-4');
+$accordion-arrow-color: color('gray-4');
+$accordion-border-radius: $border-radius-base;
+
+
+// form inputs
+
+$input-bg: color('white');
+$input-text-color: color(text-2);
+$input-font-size: type-scale('sm');
+$input-border-radius: $border-radius-base;
+$input-border-color: color('gray-4');
+$input-border-width: .05rem;
+
+$input-label-font-size: type-scale('sm');
+$input-label-color: color('dark-1');
+
+$input-placeholder-color: color('gray-5');
+$input-focus-border-color: color('brand-1');
+
+$input-chunky-font-size: type-scale('base');
+$input-chunk-label-color: $input-placeholder-color;
+
+$input-inverse-bg: color('gray-10');
+$input-inverse-text-color: color('gray-4');
+$input-inverse-border-color: color('dark-0');
+
+$fieldset-legend-font-size: type-scale('sm');
+$fieldset-legend-font-weight: font-weight('bold');
+
+$input-disabled-color: transparentize($input-border-color, .7);
+$input-disabled-border-color: transparentize($input-border-color, .7);
+$input-disabled-bg: transparentize($input-border-color, .95);
+
+
+// checkboxes
+
+$checkbox-border-color: $input-border-color;
+$checkbox-fill-color: color('brand-1');
+
+
+// radio buttons
+
+$radio-border-color: $input-border-color;
+$radio-fill-color: color('brand-1');
+
+
+// tables
+
+$table-header-border-width: 0;
+$table-header-border-color: transparent;
+$table-header-color: type-color('inverse');
+$table-header-bg: color('brand-1');
+$table-row-bg-even: transparent;
+$table-row-bg-odd: color('light-1');
+
+
+// modals
+
+$modal-bg: color('white');
+$modal-overlay-bg: color('dark-1');
+
+
+// alerts
+
+$alert-border-radius: $border-radius-base;
+$alert-padding: spacing('sm');
+
+
+// notifications
+
+$notification-border-radius: $border-radius-base;
+$notification-padding: spacing('sm');
+
+
+// tree menu
+
+$tree-menu-font-size: type-scale('sm');
+$tree-menu-link-color: color('gray-4');
+$tree-menu-link-hover: color('gray-10');
+
+
+// viewport breakpoints
+
+$breakpoint-xs: 600px;
+$breakpoint-sm: 900px;
+$breakpoint-md: 1200px;
+$breakpoint-lg: 1800px;
+
+// YIQ contrast colors
+
+$yiq-contrasted-dark-default: color('dark-1') !default;
+$yiq-contrasted-light-default: color('white') !default;
+$yiq-contrasted-threshold: 128 !default;
+$yiq-debug: false !default;
+
