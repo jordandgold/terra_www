@@ -7,7 +7,7 @@
 
 	'use strict';
 
-	$('[data-close=alert]').click(function() {
+	$('body').on('click', '[data-close=alert]', function() {
 		$(this).parent().toggle();
 	});
 
