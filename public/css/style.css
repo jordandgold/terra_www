@@ -2331,6 +2331,39 @@
     vertical-align: text-bottom; } }
 
 /**
+ * Z-index
+ */
+.z-level {
+  z-index: z-index(1); }
+
+.z-level {
+  z-index: z-index(2); }
+
+.z-level {
+  z-index: z-index(3); }
+
+.z-level {
+  z-index: z-index(4); }
+
+.z-level {
+  z-index: z-index(5); }
+
+.z-level {
+  z-index: z-index(6); }
+
+.z-level {
+  z-index: z-index(7); }
+
+.z-level {
+  z-index: z-index(8); }
+
+.z-level {
+  z-index: z-index(9); }
+
+.z-level {
+  z-index: z-index(10); }
+
+/**
 
     Media Queries
 
