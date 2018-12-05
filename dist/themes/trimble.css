@@ -2335,6 +2335,39 @@
     vertical-align: text-bottom; } }
 
 /**
+ * Z-index
+ */
+.z-1 {
+  z-index: 100; }
+
+.z-2 {
+  z-index: 200; }
+
+.z-3 {
+  z-index: 300; }
+
+.z-4 {
+  z-index: 400; }
+
+.z-5 {
+  z-index: 500; }
+
+.z-6 {
+  z-index: 600; }
+
+.z-7 {
+  z-index: 700; }
+
+.z-8 {
+  z-index: 800; }
+
+.z-9 {
+  z-index: 900; }
+
+.z-10 {
+  z-index: 1000; }
+
+/**
 
     Media Queries
 
@@ -5786,7 +5819,6 @@ body.has-open-nav {
   overflow: hidden; }
 
 .ter-navbar {
-  z-index: 900;
   height: 72px;
   background: #f3f3f7;
   transition: -webkit-transform .5s ease;
@@ -5813,7 +5845,6 @@ body.has-open-nav {
   @media (min-width: 900px) {
     .ter-navbar > .container-fluid {
       display: flex;
-      justify-content: space-between;
       width: -webkit-fill-available;
       width: -moz-available;
       width: stretch; } }

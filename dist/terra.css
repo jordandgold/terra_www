@@ -5841,7 +5841,6 @@ body.has-open-nav {
   @media (min-width: 900px) {
     .ter-navbar > .container-fluid {
       display: flex;
-      justify-content: space-between;
       width: -webkit-fill-available;
       width: -moz-available;
       width: stretch; } }
