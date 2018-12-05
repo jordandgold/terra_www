@@ -2333,35 +2333,35 @@
 /**
  * Z-index
  */
-.z-level {
-  z-index: z-index(1); }
+.z-1 {
+  z-index: 100; }
 
-.z-level {
-  z-index: z-index(2); }
+.z-2 {
+  z-index: 200; }
 
-.z-level {
-  z-index: z-index(3); }
+.z-3 {
+  z-index: 300; }
 
-.z-level {
-  z-index: z-index(4); }
+.z-4 {
+  z-index: 400; }
 
-.z-level {
-  z-index: z-index(5); }
+.z-5 {
+  z-index: 500; }
 
-.z-level {
-  z-index: z-index(6); }
+.z-6 {
+  z-index: 600; }
 
-.z-level {
-  z-index: z-index(7); }
+.z-7 {
+  z-index: 700; }
 
-.z-level {
-  z-index: z-index(8); }
+.z-8 {
+  z-index: 800; }
 
-.z-level {
-  z-index: z-index(9); }
+.z-9 {
+  z-index: 900; }
 
-.z-level {
-  z-index: z-index(10); }
+.z-10 {
+  z-index: 1000; }
 
 /**
 
@@ -5815,7 +5815,6 @@ body.has-open-nav {
   overflow: hidden; }
 
 .ter-navbar {
-  z-index: 900;
   height: 72px;
   background: #ffffff;
   transition: -webkit-transform .5s ease;

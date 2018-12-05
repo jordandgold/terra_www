@@ -17,7 +17,7 @@ $z-scale: map-merge((
 ), $z-scale);
 
 @each $level, $value in $z-scale {
-    .z-#{level} {
-        z-index: z-index($value);
+    .z-#{$level} {
+        @include z-index($value);
     }
 }
