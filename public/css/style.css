@@ -4860,13 +4860,14 @@ a.ter-button--icon {
     .ter-card__image > img {
       width: 100%;
       height: auto; }
-
-.is-inverse .ter-card a, .is-inverse .ter-card .link {
-  color: #009AD9;
-  text-decoration: none; }
-  .is-inverse .ter-card a:hover, .is-inverse .ter-card .link:hover {
-    color: #0076a6;
+  .is-inverse .ter-card *:not(a):not(.link) {
+    color: #262533 !important; }
+  .is-inverse .ter-card a, .is-inverse .ter-card .link {
+    color: #009AD9;
     text-decoration: none; }
+    .is-inverse .ter-card a:hover, .is-inverse .ter-card .link:hover {
+      color: #0076a6;
+      text-decoration: none; }
 
 /*
  * Terra Design System: v.1.0.0
