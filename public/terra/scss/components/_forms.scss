@@ -405,6 +405,9 @@ fieldset {
             background: $dropdown-link-hover-bg;
             text-decoration: none;
         }
+        .is-inverse & {
+            color: $dropdown-link-color !important;
+        }
     }
     [rel="hide"] {
         display: none;

@@ -5493,6 +5493,8 @@ fieldset {
       color: #101015;
       background: #f3f3f7;
       text-decoration: none; }
+    .is-inverse .select-options__item {
+      color: #262533 !important; }
   .select-options [rel="hide"] {
     display: none; }
   .select-options__no-results {
