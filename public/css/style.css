@@ -2331,6 +2331,39 @@
     vertical-align: text-bottom; } }
 
 /**
+ * Z-index
+ */
+.z-1 {
+  z-index: 100; }
+
+.z-2 {
+  z-index: 200; }
+
+.z-3 {
+  z-index: 300; }
+
+.z-4 {
+  z-index: 400; }
+
+.z-5 {
+  z-index: 500; }
+
+.z-6 {
+  z-index: 600; }
+
+.z-7 {
+  z-index: 700; }
+
+.z-8 {
+  z-index: 800; }
+
+.z-9 {
+  z-index: 900; }
+
+.z-10 {
+  z-index: 1000; }
+
+/**
 
     Media Queries
 
@@ -4827,13 +4860,14 @@ a.ter-button--icon {
     .ter-card__image > img {
       width: 100%;
       height: auto; }
-
-.is-inverse .ter-card a, .is-inverse .ter-card .link {
-  color: #009AD9;
-  text-decoration: none; }
-  .is-inverse .ter-card a:hover, .is-inverse .ter-card .link:hover {
-    color: #0076a6;
+  .is-inverse .ter-card *:not(a):not(.link) {
+    color: #262533 !important; }
+  .is-inverse .ter-card a, .is-inverse .ter-card .link {
+    color: #009AD9;
     text-decoration: none; }
+    .is-inverse .ter-card a:hover, .is-inverse .ter-card .link:hover {
+      color: #0076a6;
+      text-decoration: none; }
 
 /*
  * Terra Design System: v.1.0.0
@@ -5459,6 +5493,8 @@ fieldset {
       color: #101015;
       background: #f3f3f7;
       text-decoration: none; }
+    .is-inverse .select-options__item {
+      color: #262533 !important; }
   .select-options [rel="hide"] {
     display: none; }
   .select-options__no-results {
@@ -5782,7 +5818,6 @@ body.has-open-nav {
   overflow: hidden; }
 
 .ter-navbar {
-  z-index: 900;
   height: 72px;
   background: #ffffff;
   transition: -webkit-transform .5s ease;
@@ -5809,7 +5844,6 @@ body.has-open-nav {
   @media (min-width: 900px) {
     .ter-navbar > .container-fluid {
       display: flex;
-      justify-content: space-between;
       width: -webkit-fill-available;
       width: -moz-available;
       width: stretch; } }

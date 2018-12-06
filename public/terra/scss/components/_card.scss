@@ -34,10 +34,10 @@
 			height: auto;
 		}
 	}
-}
-
-.is-inverse {
-	.ter-card {
+	.is-inverse & {
+		*:not(a):not(.link) {
+			color: type-color('normal') !important;
+		}
 		a, .link {
 			color: $link-color;
 			text-decoration: none;
