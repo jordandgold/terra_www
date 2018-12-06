@@ -22,3 +22,5 @@
   url: documentation/utilities/display
 - name: origin-test
   url: origin-test
+- name: sketchup-test
+  url: sketchup-test
