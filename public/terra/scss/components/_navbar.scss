@@ -14,7 +14,6 @@ body.has-open-nav {
 }
 
 .ter-navbar {
-	@include z-index(9);
 	height: $navbar-height;
 	background: $navbar-bg;
 	transition: transform .5s ease;
@@ -39,7 +38,7 @@ body.has-open-nav {
 		@include clearfix();
 		@include for-size(tablet-landscape-up) {
 	    	display: flex;
-	    	justify-content: space-between;
+	    	// justify-content: space-between;
 			width: stretch;
 		}
 	}
