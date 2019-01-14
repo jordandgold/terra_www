@@ -1,6 +1,9 @@
-.gitignore
-node_modules
+node_modules/
 .idea
 server.js
 cgi-bin
 .well-known
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

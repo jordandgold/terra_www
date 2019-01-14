@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server.default.js localhost 3000"
+    "start": "nodemon ./server.js localhost 3000"
   },
   "author": "Jordan Gold <jordandgold@gmail.com>",
   "license": "BSD",
