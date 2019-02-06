@@ -7,7 +7,7 @@
 
 body, html {
 	font-family: $body-font-family;
-	@include type-setting('base');
+	@include type-setting('xs');
 }
 
 
@@ -59,11 +59,11 @@ h5,
 
 .font-size-sm,
 small {
-	@include font-size('sm');
+	@include font-size('xxs');
 }
 
 .font-size-base {
-	@include font-size('base');
+	@include font-size('xs');
 }
 
 .font-size-md {
@@ -84,4 +84,12 @@ small {
 
 .font-size-mega {
 	@include font-size('mega');
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
 }

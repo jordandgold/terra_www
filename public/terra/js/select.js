@@ -8,7 +8,9 @@
   'use strict';
 
 	$('select.ter-select:not([multiple])').each(function(){
-	    var $this = $(this), numberOfOptions = $(this).children('option').length;
+	    var $this = $(this),
+	    	numberOfOptions = $(this).children('option').length,
+    		dropDirection = $(this).attr('direction');
 	  
 	    $this.addClass('select-hidden'); 
 	    $this.wrap('<div class="select"></div>');
@@ -18,7 +20,7 @@
 	    $styledSelect.text($this.children('option').eq(0).text());
 	  
 	    var $list = $('<ul />', {
-	        'class': 'select-options'
+	        'class': 'select-options drop-' + dropDirection
     	}).insertAfter($styledSelect);
 
 	    // add search functionality
@@ -97,8 +99,10 @@
 	        $styledSelect.text($(this).text()).removeClass('active');
 	        $this.val(rel).trigger('has-changed');
 	        $list.removeClass('is-open');
-	        // console.log($this.val());
-	        // select corresponding value
+
+	        // var optionValue = $this.children('option').filter(function () { return $(this).html() == rel; }).val();
+	        // $this.val(optionValue).change();
+	        $this.val(rel).change();
 	    });
 	  	
 		// hide dropdown when you click out
@@ -115,6 +119,9 @@
 	});
 
 	$('select.ter-select[multiple]').each(function(){
+
+		console.log('sanity 1');
+
 	    var $this = $(this), numberOfOptions = $(this).children('option').length;
 	  
 	    $this.addClass('select-hidden'); 
@@ -210,7 +217,10 @@
 	        var rel = $(this).attr('rel');
 
 	        // select corresponding value
-	        $this.find('option[value="' + rel + '"]').attr('selected', true);
+	        // $this.find('option[text="' + rel + '"]').attr('selected', true);
+	        // var optionValue = $this.children('option').filter(function () { return $(this).html() == rel; }).val();
+	        // $this.val(optionValue).change();
+	        $this.val(rel).change();
 	    });
 
 	    // prevent dropdown from closing

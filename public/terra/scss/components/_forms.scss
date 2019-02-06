@@ -371,6 +371,14 @@ fieldset {
       opacity: 1;
       transform: translateY(1px);
     }
+    &.drop-up{
+        top: unset;
+        bottom: calc(100%);
+        transform: translateY(10px);
+        &.is-open {
+            transform: translateY(1px);
+        }
+    }
     &__wrap {
         max-height: (height('sm') * 5);
         overflow: scroll;
@@ -404,9 +412,6 @@ fieldset {
             color: darken($dropdown-link-color, 10%);
             background: $dropdown-link-hover-bg;
             text-decoration: none;
-        }
-        .is-inverse & {
-            color: $dropdown-link-color !important;
         }
     }
     [rel="hide"] {

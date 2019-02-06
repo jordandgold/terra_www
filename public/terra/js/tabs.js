@@ -7,7 +7,7 @@
 
 	'use strict';
 
-	var tabItems = $('.ter-tabs__nav a');
+	var tabItems = $('.ter-tabs__nav[data-controls] a');
 
 	tabItems.on('click', function(event){
 

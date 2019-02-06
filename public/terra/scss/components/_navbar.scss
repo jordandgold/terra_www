@@ -5,7 +5,7 @@
 
 // fix for body top-margin
 body.has-nav {
-	padding-top: $navbar-height;
+	padding-top: calc(#{$navbar-height} + #{$navbar-universal-height});
 }
 
 // prevent body scrolling when mobile nav is open
@@ -14,7 +14,10 @@ body.has-open-nav {
 }
 
 .ter-navbar {
-	height: $navbar-height;
+	@include z-index(9);
+	// height: $navbar-height;
+	// universal header
+	height: auto;
 	background: $navbar-bg;
 	transition: transform .5s ease;
 	position: relative;
@@ -38,7 +41,7 @@ body.has-open-nav {
 		@include clearfix();
 		@include for-size(tablet-landscape-up) {
 	    	display: flex;
-	    	// justify-content: space-between;
+	    	justify-content: space-between;
 			width: stretch;
 		}
 	}
@@ -98,7 +101,7 @@ body.has-open-nav {
 	&__nav {
 		@include box-shadow(2);
         position: absolute;
-        top: $navbar-height;
+        top: calc(#{$navbar-height} + #{$navbar-universal-height});
         left: 0;
         width: 100%;
         background: $navbar-bg;
@@ -129,51 +132,78 @@ body.has-open-nav {
         	overflow: scroll;
         	max-height: 75vh;
         }
-        &--right {
-        	margin-left: auto;
-        }
-        &--left {
-        	margin-right: auto;
-        }
     	@include for-size(tablet-landscape-up) {
-    		display: inline-block;
+    		display: flex;
+    		align-items: center;
     		width: auto;
     		padding-top: 0;
     		padding-bottom: 0;
     		height: $navbar-height;
 	    }
+	    &--right {
+        	margin-left: auto;
+        }
+        &--left {
+        	margin-right: auto;
+        }
 	}
 	&__menu-item {
 		display: block;
         width: 100%;
-        padding-left: var(--outer-margin);
-		padding-right: var(--outer-margin);
-		padding-top: spacing('xs');
-		padding-bottom: spacing('xs');
+        padding-left: 0;
+		padding-right: 0;
+		padding-top: 0;
+		padding-bottom: 0;
 		border-bottom: 1px solid $navbar-border-color;
+		&.is-open {
+			> a:not(.ter-button) {
+				background-color: $navbar-link-hover-bg;
+				&.ter-dropdown__toggle,
+				&.ter-mega-menu__trigger {
+					&:after {
+						color: $navbar-link-color;
+					}
+				}
+			}
+		}
 		&:last-child {
 			border-bottom: 0px;
 		}
 		@include for-size(tablet-landscape-up) {
 			display: inline;
 			width: initial;
-			padding: 0 spacing('xs');
+			padding: 0;
 			vertical-align: middle;
 			border: 0px;
 	    }
 	    > a:not(.ter-button) {
 			@include type-setting();
 			font-size: $navbar-font-size;
+			font-weight: font-weight('black');
 			color: $navbar-link-color;
 			margin: 0;
-			padding: 0;
+			padding-left: var(--outer-margin);
+			padding-right: var(--outer-margin);
+			padding-top: spacing('xs');
+			padding-bottom: spacing('xs');
 			text-decoration: none;
+			text-transform: uppercase;
 			display: inline-block;
 			height: $navbar-height;
 			line-height: $navbar-height;
+			position: relative;
+			@include for-size(tablet-landscape-up) {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: spacing('sm');
+				padding-right: spacing('sm');
+			}
 			&:hover {
-				color: $navbar-link-hover;
+				color: $navbar-link-color;
 				text-decoration: none;
+				&:before {
+					background: color('gray-2');
+				}
 			}
 			@include for-size(tablet-landscape-down) {
 				@include type-setting();
@@ -189,24 +219,44 @@ body.has-open-nav {
 			}
 		}
 		&.ter-dropdown {
-			@include for-size(tablet-landscape-down) {
-				padding-left: var(--outer-margin);
-				padding-right: var(--outer-margin);
-			}
 			.ter-dropdown__toggle {
+				&:after {
+					color: color('gray-3');
+				}
 				@include for-size(tablet-landscape-down) {
 					&:after {
 						position: absolute;
-						right: 0;
+						right: var(--outer-margin);
 						top: 50%;
 						transform: translateY(-50%);
 					}
 				}
+				&:hover {
+					&:after {
+						color: $navbar-link-color;
+					}
+				}
 			}
 			.ter-dropdown__menu {
+				border: 0px;
+				background: $navbar-link-hover-bg;
+				@include for-size(tablet-landscape-up) {
+					top: calc(#{$navbar-height} - 1px);
+				}
 				@include for-size(tablet-landscape-down) {
 					box-shadow: unset;
 					background: transparent;
+					position: unset;
+				    float: unset;
+				    display: none;
+				    visibility: visible;
+				    opacity: 1;
+				    border: 0px;
+				    background: transparent;
+				    border-radius: 0px;
+				    padding-top: spacing('xxs');
+					padding-bottom: spacing('xxs');
+				    margin: 0;
 				}
 				a {
 					@include for-size(tablet-landscape-down) {
@@ -215,8 +265,8 @@ body.has-open-nav {
 						display: block;
 						line-height: initial;
 						height: auto;
-						padding-left: 0;
-						padding-right: 0;
+						padding-left: var(--outer-margin);
+						padding-right: var(--outer-margin);
 						&:hover {
 							@include for-size(tablet-landscape-down) {
 								color: $dropdown-link-color;
@@ -232,18 +282,6 @@ body.has-open-nav {
 							}
 						}
 					}
-				}
-				@include for-size(tablet-landscape-down) {
-					position: unset;
-				    float: unset;
-				    display: none;
-				    visibility: visible;
-				    opacity: 1;
-				    border: 0px;
-				    background: transparent;
-				    border-radius: 0px;
-				    padding: 0;
-				    margin: 0;
 				}
 				.ter-dropdown__item--no-link {
 					@include for-size(tablet-landscape-down) {
@@ -274,7 +312,8 @@ body.has-open-nav {
 // secondary navbar
 .ter-secondary-navbar {
 	@include z-index(9);
-	height: $navbar-height;
+	// height: $navbar-height;
+	height: auto;
 	background: $navbar-bg;
 	transition: transform .5s ease;
 	position: fixed;
@@ -283,7 +322,8 @@ body.has-open-nav {
 	justify-content: space-between;
 	width: stretch;
 	border-bottom: $navbar-border-width solid $navbar-border-color;
-	transform: translateY(calc(#{($navbar-height + $navbar-border-width) * -1}));
+	// transform: translateY(calc(#{($navbar-height + $navbar-border-width) * -1}));
+	transform: translateY(-100%);
 	&.is-shown {
 		transform: translateY(0);
 	}

@@ -1,4 +1,5 @@
-@mixin list-inline() {
+@mixin list-inline {
+	display: flex;
 	margin: 0;
 	padding: 0;
 	&:after {
@@ -6,34 +7,25 @@
 		display: block;
 		clear: both;
 	}
-	> li {
-	    display: inline-block;
-	    list-style: none;
-	}
 	&--left {
-		text-align: left;
-		> li {
-			margin-left: 0;
-			margin-right: spacing('xxs');
-			padding: 0;
-		}
+		justify-content: flex-start;
 	}
 	&--center {
-		text-align: center;
-		> li {
-			margin-left: spacing('xxs');
-			margin-right: 0;
-			padding: 0;
-		}
+		justify-content: center;
 	}
 	&--right {
-		text-align: right;
-		> li {
-			display: inline-block;
-			margin-left: spacing('xxs');
-			margin-right: 0;
-			padding: 0;
-		}
+		justify-content: flex-end;
+	}
+	li {
+	    display: inline-block;
+	    list-style: none;
+	    padding: 0 spacing('micro');
+	}
+	li:first-child {
+		padding-left: 0;
+	}
+	li:last-child {
+		padding-right: 0;
 	}
 }
 

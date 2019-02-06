@@ -14,7 +14,7 @@
 
     &:before {
         @include depth(1);
-        @include type-setting('mini');
+        font-size: $tooltip-font-size;
         content: attr(data-tooltip);
         background: $tooltip-bg;
         color: $tooltip-text-color;
@@ -124,8 +124,7 @@
 
     &__content {
         @include depth(1);
-        @include type-setting('sm');
-
+        font-size: $tooltip-font-size;
         display: none;
         background-color: $tooltip-bg;
         padding: spacing("xs");

@@ -1,11 +1,11 @@
 :root {
   --gutter-width: var(--spacing-md);
-  --outer-margin: var(--spacing-md);
+  --outer-margin: var(--spacing-sm);
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 600px;
   --sm-min: 900px;
-  --md-min: 1200px;
+  --md-min: 1280px;
   --container-sm: calc(var(--sm-min) + var(--gutter-width));
   --container-md: calc(var(--md-min) + var(--gutter-width));
   --container-lg: calc(var(--lg-min) + var(--gutter-width));
@@ -22,8 +22,11 @@
 }
 
 .container-fluid {
-  padding-right: var(--outer-margin, 2rem);
-  padding-left: var(--outer-margin, 2rem);
+  // padding-right: var(--outer-margin, 2rem);
+  // padding-left: var(--outer-margin, 2rem);
+  // todo: bw: I'm just making this change quickly, but it should be done as a calculation as above
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 @mixin container {
@@ -33,7 +36,7 @@
 
 .wrap {
   box-sizing: border-box;
-  max-width: 70rem;
+  max-width: 64rem;
   margin: 0 auto;
 }
 

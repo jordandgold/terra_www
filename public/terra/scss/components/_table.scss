@@ -3,7 +3,6 @@
 	tr {
 		th {
 			margin: 0;
-			text-align: left;
 			border: 0;
 		}
 		td {
@@ -14,21 +13,19 @@
 
 .ter-table {
 	@include table-base();
-	border-spacing: 1px;
-	font-weight: font-weight('light');
+	border-spacing: spacing('xs');
 	tr {
 		th {
-			padding: spacing('xxs');
+			padding: spacing('xs');
 			background-color: $table-header-bg;
 			color: $table-header-color;
-			font-weight: font-weight('light');
 			border-width: $table-header-border-width;
 			border-style: solid;
 			border-color: $table-header-border-color;
 		}
 		td {
-			padding: spacing('xxs');
-			font-weight: font-weight('light');
+			vertical-align: top;
+			padding: spacing('xs');
 		}
 		&:nth-child(even) {
 			td {
@@ -38,6 +35,21 @@
 		&:nth-child(odd) {
 			td {
 				background-color: $table-row-bg-odd;
+			}
+		}
+	}
+	&--transparent {
+		tr {
+			&:nth-child(even),
+			&:nth-child(odd) {
+				th,
+				td {
+					background-color: transparent;
+				}
+			}
+			th,
+			td {
+				background-color: transparent;
 			}
 		}
 	}

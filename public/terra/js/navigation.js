@@ -50,14 +50,27 @@
 
 	// mobile solution for mega menu
 	var $html = $('html');
+
+	$html.on('click', function(e) {
+		$('.ter-mega-menu.is-open').removeClass('is-open');
+	});
+
+	$html.on('click', '.ter-mega-menu__menu', function(e) {
+		e.stopPropagation();
+	});
   
   	$html.on('click', '.ter-mega-menu__trigger', function(e) {
+
 		e.preventDefault();
-		if($(this).next('.ter-mega-menu').hasClass('is-open')) {
-		  	$(this).next('.ter-mega-menu').removeClass('is-open');
+		e.stopPropagation();
+
+		if($(this).parent().hasClass('is-open')) {
+		  	$(this).parent().removeClass('is-open');
 	  	} else {
-		  	$(this).next('.ter-mega-menu').toggleClass('is-open');
+	  		$('.ter-navbar__menu-item.is-open').removeClass('is-open');
+		  	$(this).parent().toggleClass('is-open');
 	  	}
+
 	});
 
 	function hideNavBar() {
@@ -84,15 +97,17 @@
 
 	function showSecondaryNavBar() {
 
-		var currentTop = $(window).scrollTop(),
-			trigger = secondaryNav.data('trigger'),
-			triggerTop = $(trigger).offset().top;
+		secondaryNav.each(function(event){
+			var currentTop = $(window).scrollTop(),
+				triggerElement = $(this).attr('data-trigger'),
+				triggerElementTop = $(triggerElement).offset().top;
 
-		if (currentTop > triggerTop) {
-			secondaryNav.addClass('is-shown');
-		} else {
-			secondaryNav.removeClass('is-shown');
-		}
+			if (currentTop > triggerElementTop) {
+				$(this).addClass('is-shown');
+			} else {
+				$(this).removeClass('is-shown');
+			}
+		});
 
 	}
 

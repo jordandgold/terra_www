@@ -1,7 +1,7 @@
 // header type setting
 @mixin header-type-setting($level: 'base', $weight: $header-font-weight) {
 	font-size: map-get($type-scale, $level);
-	line-height: 1.25;
+	line-height: 1.5;
 	font-weight: $weight;
 	color: $header-font-color;
 	display: block;

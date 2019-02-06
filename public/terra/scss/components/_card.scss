@@ -5,6 +5,8 @@
     border-style: solid;
     border-color: $card-border-color;
     border-radius: $card-border-radius;
+    display: flex;
+	flex-direction: column;
     &[href] {
     	display: block;
     }
@@ -34,10 +36,10 @@
 			height: auto;
 		}
 	}
-	.is-inverse & {
-		*:not(a):not(.link) {
-			color: type-color('normal') !important;
-		}
+}
+
+.is-inverse {
+	.ter-card {
 		a, .link {
 			color: $link-color;
 			text-decoration: none;

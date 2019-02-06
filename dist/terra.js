@@ -181,14 +181,27 @@
 
 	// mobile solution for mega menu
 	var $html = $('html');
+
+	$html.on('click', function(e) {
+		$('.ter-mega-menu.is-open').removeClass('is-open');
+	});
+
+	$html.on('click', '.ter-mega-menu__menu', function(e) {
+		e.stopPropagation();
+	});
   
   	$html.on('click', '.ter-mega-menu__trigger', function(e) {
+
 		e.preventDefault();
-		if($(this).next('.ter-mega-menu').hasClass('is-open')) {
-		  	$(this).next('.ter-mega-menu').removeClass('is-open');
+		e.stopPropagation();
+
+		if($(this).parent().hasClass('is-open')) {
+		  	$(this).parent().removeClass('is-open');
 	  	} else {
-		  	$(this).next('.ter-mega-menu').toggleClass('is-open');
+	  		$('.ter-navbar__menu-item.is-open').removeClass('is-open');
+		  	$(this).parent().toggleClass('is-open');
 	  	}
+
 	});
 
 	function hideNavBar() {
@@ -215,15 +228,17 @@
 
 	function showSecondaryNavBar() {
 
-		var currentTop = $(window).scrollTop(),
-			trigger = secondaryNav.data('trigger'),
-			triggerTop = $(trigger).offset().top;
+		secondaryNav.each(function(event){
+			var currentTop = $(window).scrollTop(),
+				triggerElement = $(this).attr('data-trigger'),
+				triggerElementTop = $(triggerElement).offset().top;
 
-		if (currentTop > triggerTop) {
-			secondaryNav.addClass('is-shown');
-		} else {
-			secondaryNav.removeClass('is-shown');
-		}
+			if (currentTop > triggerElementTop) {
+				$(this).addClass('is-shown');
+			} else {
+				$(this).removeClass('is-shown');
+			}
+		});
 
 	}
 
@@ -238,7 +253,9 @@
   'use strict';
 
 	$('select.ter-select:not([multiple])').each(function(){
-	    var $this = $(this), numberOfOptions = $(this).children('option').length;
+	    var $this = $(this),
+	    	numberOfOptions = $(this).children('option').length,
+    		dropDirection = $(this).attr('direction');
 	  
 	    $this.addClass('select-hidden'); 
 	    $this.wrap('<div class="select"></div>');
@@ -248,7 +265,7 @@
 	    $styledSelect.text($this.children('option').eq(0).text());
 	  
 	    var $list = $('<ul />', {
-	        'class': 'select-options'
+	        'class': 'select-options drop-' + dropDirection
     	}).insertAfter($styledSelect);
 
 	    // add search functionality
@@ -327,8 +344,10 @@
 	        $styledSelect.text($(this).text()).removeClass('active');
 	        $this.val(rel).trigger('has-changed');
 	        $list.removeClass('is-open');
-	        // console.log($this.val());
-	        // select corresponding value
+
+	        // var optionValue = $this.children('option').filter(function () { return $(this).html() == rel; }).val();
+	        // $this.val(optionValue).change();
+	        $this.val(rel).change();
 	    });
 	  	
 		// hide dropdown when you click out
@@ -345,6 +364,9 @@
 	});
 
 	$('select.ter-select[multiple]').each(function(){
+
+		console.log('sanity 1');
+
 	    var $this = $(this), numberOfOptions = $(this).children('option').length;
 	  
 	    $this.addClass('select-hidden'); 
@@ -440,7 +462,10 @@
 	        var rel = $(this).attr('rel');
 
 	        // select corresponding value
-	        $this.find('option[value="' + rel + '"]').attr('selected', true);
+	        // $this.find('option[text="' + rel + '"]').attr('selected', true);
+	        // var optionValue = $this.children('option').filter(function () { return $(this).html() == rel; }).val();
+	        // $this.val(optionValue).change();
+	        $this.val(rel).change();
 	    });
 
 	    // prevent dropdown from closing
@@ -483,7 +508,7 @@
 
 	'use strict';
 
-	var tabItems = $('.ter-tabs__nav a');
+	var tabItems = $('.ter-tabs__nav[data-controls] a');
 
 	tabItems.on('click', function(event){
 
@@ -573,17 +598,17 @@
 
 (function($, window, document){
   
-	'use strict';
+    'use strict';
 
-	$('.ter-tree-menu__list li.is-expanded').next('ul').show();
+    $('.ter-tree-menu__list li.is-expanded').next('ul').show();
 
     $('.ter-tree-menu__list li.is-expandable > a').click(function () {
-    	if ($(this).parent().hasClass('is-expanded')) {
-    		$(this).next('ul').slideToggle(200).parent().toggleClass('is-expanded');
-    	} else {
-    		$(this).parent().siblings('.is-expanded').find('ul').slideToggle(200).parent().toggleClass('is-expanded');
-    		$(this).next('ul').slideToggle(200).parent().toggleClass('is-expanded');
-    	}
+        if ($(this).parent().hasClass('is-expanded')) {
+            $(this).next('ul').slideToggle(200).parent().toggleClass('is-expanded');
+        } else {
+            $(this).parent().siblings('.is-expanded').find('ul').slideToggle(200).parent().toggleClass('is-expanded');
+            $(this).next('ul').slideToggle(200).parent().toggleClass('is-expanded');
+        }
     });     
 
 })(jQuery, window, document);
