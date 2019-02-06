@@ -3,9 +3,17 @@
  * _navbar.scss
  */
 
+// set top navbar height
+$total-navbar-height: null;
+@if $has-universal-navbar == false {
+    $total-navbar-height: $navbar-height;
+} @else {
+    $total-navbar-height: calc(#{$navbar-height} + #{$navbar-universal-height});
+}
+
 // fix for body top-margin
 body.has-nav {
-	padding-top: calc(#{$navbar-height} + #{$navbar-universal-height});
+	padding-top: $total-navbar-height;
 }
 
 // prevent body scrolling when mobile nav is open
@@ -101,7 +109,7 @@ body.has-open-nav {
 	&__nav {
 		@include box-shadow(2);
         position: absolute;
-        top: calc(#{$navbar-height} + #{$navbar-universal-height});
+        top: $total-navbar-height;
         left: 0;
         width: 100%;
         background: $navbar-bg;

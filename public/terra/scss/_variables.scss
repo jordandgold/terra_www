@@ -263,6 +263,8 @@ $link-inverse-hover-color: darken($link-inverse-color, 10%);
 // navigation bar
 
 $navbar-height: height('lg');
+// set to true if using module
+$has-universal-navbar: false;
 $navbar-universal-height: height('xs');
 $navbar-bg: color('light-0');
 $navbar-font-size: type-scale('micro');
