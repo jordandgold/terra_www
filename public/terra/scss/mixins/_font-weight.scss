@@ -1,7 +1,0 @@
-//
-// Font weight
-//
-
-@mixin font-weight($weight) {
-  font-weight: map-get($font-weight, $weight);
-}

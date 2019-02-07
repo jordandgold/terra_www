@@ -27,7 +27,6 @@
 				}
 				&__price {
 					@include heading-3;
-					@include font-weight(-1);
 					display: block;
 					text-align: center;
 				}

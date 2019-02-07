@@ -89,50 +89,46 @@ $type-colors: map-merge((
 
 // font weight
 @function font-weight($key: 'normal') {
-  @return map-get($font-weight, $key);
+  @return map-get($font-weight-scale, $key);
 }
-$font-weight: () !default;
-$font-weight: map-merge((
+$font-weight-scale: () !default;
+$font-weight-scale: map-merge((
     'light': 300,
     'normal': 400,
-    'bold': 600,
-    'black': 800,
-), $font-weight);
+    'bold': 700,
+    'extra-bold': 800,
+), $font-weight-scale);
 
 // type scale
-@function type-scale($key: 'xs') {
-  @return map-get($type-scale, $key);
+@function font-size($key: 'base') {
+  @return map-get($font-size-scale, $key);
 }
-$type-scale: () !default;
-$type-scale: map-merge((
+$font-size-scale: () !default;
+$font-size-scale: map-merge((
     'nano': 12px,
     'micro': 14px,
-    'xxs': 16px,
-    'xs': 20px,
-    'sm': 24px,
-    'md': 28px,
-    'lg': 32px,
-    'xl': 36px,
-    'xxl': 40px,
-    'huge': 48px,
-    'mega': 56px,
-    'jumbo': 80px
-), $type-scale);
+    'sm': 16px,
+    'base': 20px,
+    'md': 24px,
+    'lg': 28px,
+    'xl': 32px,
+    'xxl': 36px,
+    'huge': 40px,
+    'mega': 48px,
+    'jumbo': 56px,
+    'massive': 80px
+), $font-size-scale);
 
-// type setting
-$base-font-size: type-scale('xs');
-$scale: 1.75;
-$base-line-height: $base-font-size * $scale;
-$line-height: (
-    -1: $base-line-height,
-    0: $base-line-height,
-    1: $base-line-height * 1,
-    2: $base-line-height * 1,
-    3: $base-line-height * 2,
-    4: $base-line-height * 2,
-    5: $base-line-height * 2,
-    6: $base-line-height * 2,
-);
+// line-height scale
+@function line-height($key: 'regular') {
+  @return map-get($line-height-scale, $key);
+}
+$line-height-scale: () !default;
+$line-height-scale: map-merge((
+    'tight': 1.15,
+    'regular': 1.4,
+    'loose': 1.65
+), $line-height-scale);
 
 // border radius
 @function border-radius($key) {

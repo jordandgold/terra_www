@@ -34,7 +34,7 @@ ul.list-inline {
 }
 
 @mixin list-base {
-	margin: 0 0 $base-line-height 0;
+	margin: 0 0 1.5em 0;
 	> li {
 		padding: spacing('xxs') 0;
 	}
@@ -59,7 +59,7 @@ ul.list-inline {
 
 ul,
 ol {
-	margin: 0 0 $base-line-height 0;
+	margin: 0 0 1.5em 0;
 	li {
 		padding: spacing('micro') 0;
 	}

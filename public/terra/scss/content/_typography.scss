@@ -7,7 +7,7 @@
 
 body, html {
 	font-family: $body-font-family;
-	@include type-setting('xs');
+	@include type-setting('base');
 }
 
 
