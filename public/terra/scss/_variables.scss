@@ -105,6 +105,7 @@ $font-weight: map-merge((
 }
 $type-scale: () !default;
 $type-scale: map-merge((
+    'nano': 12px,
     'micro': 14px,
     'xxs': 16px,
     'xs': 20px,
@@ -354,7 +355,7 @@ $accordion-border-radius: $border-radius-base;
 
 $input-bg: color('white');
 $input-text-color: color(text-2);
-$input-font-size: type-scale('sm');
+$input-font-size: type-scale('xxs');
 $input-border-radius: $border-radius-base;
 $input-border-color: color('gray-4');
 $input-border-width: .05rem;
@@ -422,7 +423,7 @@ $notification-padding: spacing('sm');
 
 // tree menu
 
-$tree-menu-font-size: type-scale('sm');
+$tree-menu-font-size: type-scale('xxs');
 $tree-menu-link-color: color('gray-4');
 $tree-menu-link-hover: color('gray-10');
 

@@ -23,8 +23,6 @@ body.has-open-nav {
 
 .ter-navbar {
 	@include z-index(9);
-	// height: $navbar-height;
-	// universal header
 	height: auto;
 	background: $navbar-bg;
 	transition: transform .5s ease;
@@ -187,15 +185,13 @@ body.has-open-nav {
 	    > a:not(.ter-button) {
 			@include type-setting();
 			font-size: $navbar-font-size;
-			font-weight: font-weight('black');
 			color: $navbar-link-color;
 			margin: 0;
 			padding-left: var(--outer-margin);
 			padding-right: var(--outer-margin);
 			padding-top: spacing('xs');
 			padding-bottom: spacing('xs');
-			text-decoration: none;
-			text-transform: uppercase;
+			text-decoration: none;;
 			display: inline-block;
 			height: $navbar-height;
 			line-height: $navbar-height;

@@ -5141,7 +5141,7 @@ a.ter-button--icon {
     .ter-input__wrap input[type="password"],
     .ter-input__wrap textarea {
       line-height: 1.5;
-      font-size: 24px;
+      font-size: 16px;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -5379,7 +5379,7 @@ a.ter-button--icon {
 
 select {
   line-height: 1.5;
-  font-size: 24px;
+  font-size: 16px;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -5438,7 +5438,7 @@ fieldset {
     flex: 1; }
   .ter-search-bar__submit {
     line-height: 1.5;
-    font-size: 24px;
+    font-size: 16px;
     box-sizing: border-box;
     padding: 8px 16px;
     position: relative;
@@ -5473,7 +5473,7 @@ fieldset {
 
 .select-styled {
   line-height: 1.5;
-  font-size: 24px;
+  font-size: 16px;
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -5565,7 +5565,7 @@ fieldset {
     position: relative; }
     .select-options__search-filter input {
       line-height: 1.5;
-      font-size: 24px;
+      font-size: 16px;
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -6070,7 +6070,6 @@ body.has-open-nav {
     .ter-navbar__menu-item > a:not(.ter-button) {
       line-height: 1.5;
       font-size: 14px;
-      font-weight: 800;
       color: #363545;
       margin: 0;
       padding-left: var(--outer-margin);
@@ -6078,7 +6077,6 @@ body.has-open-nav {
       padding-top: 16px;
       padding-bottom: 16px;
       text-decoration: none;
-      text-transform: uppercase;
       display: inline-block;
       height: 72px;
       line-height: 72px;
@@ -6813,7 +6811,7 @@ body.has-open-nav {
 
 .ter-tree-menu__list-item {
   line-height: 1.5;
-  font-size: 24px;
+  font-size: 16px;
   position: relative;
   padding: 0 0 0 12px; }
   .ter-tree-menu__list-item a,
