@@ -21,6 +21,7 @@
 		a:visited,
 		a:active,
 		a:focus {
+			font-size: $tree-menu-font-size;
 			color: $tree-menu-link-color;
 			text-decoration: none;
 			&:hover {

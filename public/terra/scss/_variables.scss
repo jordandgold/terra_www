@@ -264,7 +264,7 @@ $navbar-height: height('lg');
 $has-universal-navbar: false;
 $navbar-universal-height: height('xs');
 $navbar-bg: color('light-0');
-$navbar-font-size: type-scale('micro');
+$navbar-font-size: font-size('sm');
 $navbar-link-color: color('dark-0');
 $navbar-link-hover: color('accent-1');
 $navbar-link-hover-bg: color('gray-0');
@@ -290,7 +290,7 @@ $mega-menu-link-hover: darken($link-color, 10%);
 // buttons
 
 $button-border-radius: $border-radius-base;
-$button-font-size: type-scale('xxs');
+$button-font-size: font-size('xxs');
 $button-border-size: 1px;
 $button-icon-color: color('gray-4');
 $button-icon-hover: color('gray-6');
@@ -320,7 +320,7 @@ $card-border-color: color('gray-2');
 
 // dropdowns
 
-$dropdown-item-font-size: type-scale('xxs');
+$dropdown-item-font-size: font-size('xxs');
 $dropdown-border-size: 1px;
 $dropdown-border-color: color('gray-4');
 $dropdown-border-radius: $border-radius-base;
@@ -351,25 +351,25 @@ $accordion-border-radius: $border-radius-base;
 
 $input-bg: color('white');
 $input-text-color: color(text-2);
-$input-font-size: type-scale('xxs');
+$input-font-size: font-size('xxs');
 $input-border-radius: $border-radius-base;
 $input-border-color: color('gray-4');
 $input-border-width: .05rem;
 
-$input-label-font-size: type-scale('sm');
+$input-label-font-size: font-size('sm');
 $input-label-color: color('dark-1');
 
 $input-placeholder-color: color('gray-5');
 $input-focus-border-color: color('brand-1');
 
-$input-chunky-font-size: type-scale('xs');
+$input-chunky-font-size: font-size('xs');
 $input-chunk-label-color: $input-placeholder-color;
 
 $input-inverse-bg: color('gray-10');
 $input-inverse-text-color: color('gray-4');
 $input-inverse-border-color: color('dark-0');
 
-$fieldset-legend-font-size: type-scale('sm');
+$fieldset-legend-font-size: font-size('sm');
 $fieldset-legend-font-weight: font-weight('bold');
 
 $input-disabled-color: transparentize($input-border-color, .7);
@@ -419,7 +419,7 @@ $notification-padding: spacing('sm');
 
 // tree menu
 
-$tree-menu-font-size: type-scale('xxs');
+$tree-menu-font-size: font-size('sm');
 $tree-menu-link-color: color('gray-4');
 $tree-menu-link-hover: color('gray-10');
 

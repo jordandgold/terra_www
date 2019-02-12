@@ -2917,7 +2917,7 @@ html {
 
 :root {
   --gutter-width: var(--spacing-md);
-  --outer-margin: var(--spacing-sm);
+  --outer-margin: var(--spacing-md);
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 600px;
@@ -2931,13 +2931,9 @@ html {
   margin-right: auto;
   margin-left: auto; }
 
-.flush {
-  margin-left: calc(-1 * var(--outer-margin, 2rem));
-  margin-right: calc(-1 * var(--outer-margin, 2rem)); }
-
 .container-fluid {
-  padding-right: 16px;
-  padding-left: 16px; }
+  padding-right: var(--outer-margin, 2rem);
+  padding-left: var(--outer-margin, 2rem); }
 
 .wrap {
   box-sizing: border-box;
@@ -4590,7 +4586,6 @@ button {
 a.ter-button {
   font-size: 20px;
   line-height: 1.4;
-  font-size: type-scale("xxs");
   padding: 12px 48px;
   border-radius: 0;
   text-decoration: none;
@@ -5087,7 +5082,6 @@ a.ter-button--icon {
     .ter-dropdown__item a {
       font-size: 20px;
       line-height: 1.4;
-      font-size: type-scale("xxs");
       color: #262533;
       padding: 8px 16px;
       display: block;
@@ -5128,7 +5122,7 @@ a.ter-button--icon {
   .ter-input__label {
     font-size: 20px;
     line-height: 1.4;
-    font-size: type-scale("sm");
+    font-size: 16px;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -5147,7 +5141,6 @@ a.ter-button--icon {
     .ter-input__wrap textarea {
       font-size: 20px;
       line-height: 1.4;
-      font-size: type-scale("xxs");
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -5263,12 +5256,10 @@ a.ter-button--icon {
   .ter-input--chunky input[type="file"],
   .ter-input--chunky input[type="password"],
   .ter-input--chunky textarea {
-    font-size: type-scale("xs");
     padding: 24px 16px 4px 16px; }
   .ter-input--chunky .ter-input__wrap {
     position: relative; }
   .ter-input--chunky .ter-input__label {
-    font-size: type-scale("xs");
     color: #9d9da6;
     position: absolute;
     top: 50%;
@@ -5290,7 +5281,7 @@ a.ter-button--icon {
   .ter-radio__label {
     font-size: 20px;
     line-height: 1.4;
-    font-size: type-scale("sm");
+    font-size: 16px;
     display: block;
     padding-bottom: 8px;
     color: #262533; }
@@ -5308,7 +5299,7 @@ a.ter-button--icon {
 .ter-radio__label {
   font-size: 20px;
   line-height: 1.4;
-  font-size: type-scale("sm");
+  font-size: 16px;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -5350,7 +5341,7 @@ a.ter-button--icon {
 .ter-checkbox__label {
   font-size: 20px;
   line-height: 1.4;
-  font-size: type-scale("sm");
+  font-size: 16px;
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -5383,7 +5374,7 @@ a.ter-button--icon {
   .ter-radio-group__label {
     font-size: 20px;
     line-height: 1.4;
-    font-size: type-scale("sm");
+    font-size: 16px;
     padding-bottom: 12px; }
   .ter-radio-group .ter-radio {
     padding-top: 0px;
@@ -5392,7 +5383,6 @@ a.ter-button--icon {
 select {
   font-size: 20px;
   line-height: 1.4;
-  font-size: type-scale("xxs");
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -5452,7 +5442,6 @@ fieldset {
   .ter-search-bar__submit {
     font-size: 20px;
     line-height: 1.4;
-    font-size: type-scale("xxs");
     box-sizing: border-box;
     padding: 8px 16px;
     position: relative;
@@ -5488,7 +5477,6 @@ fieldset {
 .select-styled {
   font-size: 20px;
   line-height: 1.4;
-  font-size: type-scale("xxs");
   box-sizing: border-box;
   padding: 8px 16px;
   position: relative;
@@ -5581,7 +5569,6 @@ fieldset {
     .select-options__search-filter input {
       font-size: 20px;
       line-height: 1.4;
-      font-size: type-scale("xxs");
       box-sizing: border-box;
       padding: 8px 16px;
       position: relative;
@@ -5621,7 +5608,6 @@ fieldset {
   .select-options__item {
     font-size: 20px;
     line-height: 1.4;
-    font-size: type-scale("xxs");
     color: #262533;
     padding: 8px 16px;
     display: block;
@@ -5640,7 +5626,7 @@ fieldset {
 .ter-fieldset__legend {
   font-size: 20px;
   line-height: 1.4;
-  font-size: type-scale("sm");
+  font-size: 16px;
   font-weight: 700; }
 
 ul.list-inline {
@@ -6089,7 +6075,7 @@ body.has-open-nav {
     .ter-navbar__menu-item > a:not(.ter-button) {
       font-size: 20px;
       line-height: 1.4;
-      font-size: type-scale("micro");
+      font-size: 16px;
       color: #363545;
       margin: 0;
       padding-left: var(--outer-margin);
@@ -6503,7 +6489,6 @@ body.has-open-nav {
   .ter-nav-tabs__list-item a {
     font-size: 20px;
     line-height: 1.4;
-    font-size: type-scale("xxs");
     padding: 12px 48px;
     border-radius: 0;
     text-decoration: none;
@@ -6836,13 +6821,14 @@ body.has-open-nav {
 .ter-tree-menu__list-item {
   font-size: 20px;
   line-height: 1.4;
-  font-size: type-scale("xxs");
+  font-size: 16px;
   position: relative;
   padding: 0 0 0 12px; }
   .ter-tree-menu__list-item a,
   .ter-tree-menu__list-item a:visited,
   .ter-tree-menu__list-item a:active,
   .ter-tree-menu__list-item a:focus {
+    font-size: 16px;
     color: #aeaeb6;
     text-decoration: none; }
     .ter-tree-menu__list-item a:hover,

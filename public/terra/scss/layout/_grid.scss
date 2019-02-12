@@ -1,6 +1,6 @@
 :root {
   --gutter-width: var(--spacing-md);
-  --outer-margin: var(--spacing-sm);
+  --outer-margin: var(--spacing-md);
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 600px;
@@ -16,22 +16,13 @@
   margin-left: auto;
 }
 
-.flush {
-  margin-left: calc(-1 * #{var(--outer-margin, 2rem)});
-  margin-right: calc(-1 * #{var(--outer-margin, 2rem)});
-}
-
-.container-fluid {
-  // padding-right: var(--outer-margin, 2rem);
-  // padding-left: var(--outer-margin, 2rem);
-  // todo: bw: I'm just making this change quickly, but it should be done as a calculation as above
-  padding-right: 16px;
-  padding-left: 16px;
-}
-
 @mixin container {
   padding-right: var(--outer-margin, 2rem);
   padding-left: var(--outer-margin, 2rem);
+}
+
+.container-fluid {
+  @include container();
 }
 
 .wrap {
