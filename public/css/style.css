@@ -4928,7 +4928,9 @@ a.ter-button--icon {
     .ter-split-button button:last-of-type {
       margin-right: 0px;
       border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px; }
+      border-bottom-left-radius: 0px;
+      padding-left: 1em;
+      padding-right: 1em; }
     .ter-split-button button:only-of-type {
       margin-right: 0px;
       border-radius: initial; }
@@ -5911,11 +5913,11 @@ body.has-modal-open {
   .ter-modal--full-page .ter-modal {
     position: relative;
     top: 0;
-    padding: 72px 0;
+    padding: 0;
     -webkit-transform: translateY(20px);
             transform: translateY(20px);
     width: 600px;
-    margin: 0 auto; }
+    margin: 72px auto; }
     @media (min-width: 1200px) {
       .ter-modal--full-page .ter-modal__wrap {
         width: 100%; } }

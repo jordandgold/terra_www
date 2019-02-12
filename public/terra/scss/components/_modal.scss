@@ -63,10 +63,10 @@ body.has-modal-open {
     .ter-modal {
         position: relative;
         top: 0;
-        padding: spacing('xxl') 0;
+        padding: 0;
         transform: translateY(20px);
         width: 600px;
-        margin: 0 auto;
+        margin: spacing('xxl') auto;
         &__wrap {
             @include for-size(desktop-up) {
                 width: 100%;
