@@ -5,7 +5,7 @@
 
 (function($, window, document){
   
-  'use strict';
+	'use strict';
 
 	$('select.ter-select:not([multiple])').each(function(){
 	    var $this = $(this),
@@ -31,7 +31,7 @@
 	    	}).appendTo($list);
 
 			var $searchFilterInput = $('<input />', {
-		        'id': 'searchFilter',
+		        'class': 'select-options__search-filter-input',
 		        'type': 'text',
 		        'placeholder': 'search'
 	    	}).appendTo($searchFilter);
@@ -39,9 +39,9 @@
 	    	$list.append('<div rel="hide" class="select-options__no-results">No results found</div>');
 
 	    	// keyup search functionality
-	    	$searchFilterInput.on('keyup', function(e){
+	    	$searchFilterInput.on('keyup', function(event){
 
-	    		e.preventDefault();
+	    		event.preventDefault(event);
 
 	    		var options = $list.find('.select-options__wrap').children('li:not([rel="hide"])'),
 	    			filter = $(this).val().toUpperCase();
@@ -82,26 +82,34 @@
 	    }
 	  
 	    var $listItems = $list.children('.select-options__wrap').children('li');
-	  
-	    $styledSelect.click(function(e) {
-	        e.stopPropagation();
+	  	
+	  	// open the select
+	    $styledSelect.click(function(event) {
+	        event.stopPropagation();
+
+	        // hide all other selects
 	        $('div.select-styled.active').not(this).each(function(){
 	            $(this).removeClass('active').next('ul.select-options').toggleClass('is-open');
 	        });
+
+	        // open selected select
 	        $(this).toggleClass('active').next('ul.select-options').toggleClass('is-open');
+	        setTimeout(function() {
+	        	$(this).next('.select-options').find('input.select-options__search-filter-input').focus();
+	        }, 3000);
 	    });
 	  
-		//
-	    $listItems.click(function(e) {
-	        e.stopPropagation();
+		// select an option
+	    $listItems.click(function(event) {
+	        event.stopPropagation();
+
 	        var rel = $(this).attr('rel');
+
 	        // replace text with selected option
 	        $styledSelect.text($(this).text()).removeClass('active');
 	        $this.val(rel).trigger('has-changed');
 	        $list.removeClass('is-open');
 
-	        // var optionValue = $this.children('option').filter(function () { return $(this).html() == rel; }).val();
-	        // $this.val(optionValue).change();
 	        $this.val(rel).change();
 	    });
 	  	
@@ -119,8 +127,6 @@
 	});
 
 	$('select.ter-select[multiple]').each(function(){
-
-		console.log('sanity 1');
 
 	    var $this = $(this), numberOfOptions = $(this).children('option').length;
 	  
