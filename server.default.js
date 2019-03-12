@@ -30,7 +30,7 @@ var hbs = exphbs.create({
 });
 
 
-var helpers = require('handlebars-helpers')();
+var helpers = require('handlebars-helpers');
 
 var path = require('path');
 
