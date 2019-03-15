@@ -21,16 +21,16 @@ var express = require('express'),
 // app.use(auth.connect(basic));
 
 
+var helpers = require('handlebars-helpers')();
+
 // Create `ExpressHandlebars` instance with a default layout.
 var hbs = exphbs.create({
     defaultLayout: 'full-width',
     partialsDir: [
         'views/components/'
     ],
+    helpers: helpers,
 });
-
-
-var helpers = require('handlebars-helpers');
 
 var path = require('path');
 
